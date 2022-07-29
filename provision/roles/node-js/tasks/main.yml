@@ -1,0 +1,24 @@
+---
+- name: Install EPEL repository
+  dnf:
+    name: epel-release
+    state: present
+
+- name: Install Node 16
+  dnf:
+    name: "@nodejs:16/common"
+    state: present
+
+
+- name: Register Node and NPM versions
+  command: "{{ item }} -v"
+  register: node_v
+  with_items:
+    - node
+    - npm
+
+- name: Print Node and NPM versions
+  debug:
+    msg: "{% for result in node_v.results %}\
+            {{ result.item }}: {{ result.stdout }}
+          {% endfor %}"

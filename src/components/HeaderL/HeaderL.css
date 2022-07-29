@@ -1,0 +1,17 @@
+.headerL {
+    margin-top: 30px;
+    grid-column: 2 / 7;
+}
+
+h2 {
+    font-size: 44pt;
+    font-weight: bold;
+    /*font-weight: 800;*/
+    margin: 0;
+}
+
+@media only screen and (max-width: 1024px){
+    h2 {
+        font-size: 34pt;
+    }
+}

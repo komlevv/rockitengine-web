@@ -1,0 +1,12 @@
+.imageFullWide {
+    grid-column: 1 / -1;
+    width:100%;
+    /*background-color: #919191;*/
+}
+
+@media only screen and (max-width: 768px){
+    .imageFullWide {
+        height: 300px;
+        object-fit: cover;
+    }
+}

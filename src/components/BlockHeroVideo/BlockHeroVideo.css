@@ -1,0 +1,9 @@
+.blockHeroVideo {
+    composes: grid12 from '../App/App.css';
+    grid-column: 1 /-1;
+    /*background-color: #6290b4;*/
+}
+
+.heroText {
+    grid-column: 1 / -1;
+}

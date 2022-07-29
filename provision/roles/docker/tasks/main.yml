@@ -1,0 +1,35 @@
+---
+- name: docker ce repository is present
+  get_url:
+    url: https://download.docker.com/linux/centos/docker-ce.repo
+    dest: /etc/yum.repos.d/docker-ce.repo
+
+- name: docker dependencies are present
+  yum:
+    name:
+    - device-mapper-persistent-data
+    - lvm2
+    state: present
+
+- name: docker ce is present
+  yum:
+    name: docker-ce-18.09.*
+    state: present
+
+- name: /etc/docker/ dir is present and docker daemon config is deployed
+  copy:
+    src: daemon.json
+    dest: /etc/docker/
+
+- name: docker daemon is enabled and started
+  service:
+    name: docker
+    state: started
+    enabled: yes
+
+- name: vagrant user is in the docker group
+  user:
+    name: vagrant
+    groups: docker
+    append: yes
+

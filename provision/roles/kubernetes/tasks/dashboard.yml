@@ -1,0 +1,22 @@
+---
+# todo dashboard code might cause bugs in k8s setup, disabled for now
+# set up dashboard UI
+- name: dashboard UI - dashboard UI is installed
+  command: 'kubectl apply -f {{ kube_dashboard.url }}'
+
+- name: dashboard UI - dashboard admin user config is copied to ~
+  copy:
+    src: dashboard-adminuser.yaml
+    dest: ~/dashboard-adminuser.yaml
+
+- name: dashboard UI - dashboard admin user config is applied
+  command: 'kubectl apply -f ~/dashboard-adminuser.yaml'
+
+- name: dashboard UI - get bearer token
+  shell: "kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}')"
+  register: bearer_token
+
+- name: dashboard UI - print bearer token
+  debug:
+    msg: "{{ bearer_token.stdout }}"
+

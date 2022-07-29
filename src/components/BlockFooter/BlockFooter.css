@@ -1,0 +1,37 @@
+.blockFooter {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1360px) minmax(0, 1fr);
+    padding: 0 100px 100px 100px;
+    background-color: #000000;
+}
+
+.footerContainer {
+    composes: grid12 from '../App/App.css';
+    grid-column: 2;
+}
+
+.footerContainer > a {
+    background-color: #000000;
+    color: white;
+    grid-column: 1 / -1;
+}
+
+
+.footerContainer > a > h2 {
+    margin-top: 0;
+}
+.footerContainer > a > svg {
+    margin-top: 20px;
+    width: 180px;
+}
+
+@media only screen and (max-width: 1024px){
+    .blockFooter{
+        padding: 0 20px 20px 20px;
+    }
+}
+@media only screen and (max-width: 576px){
+    .blockFooter{
+        padding: 0 10px 10px 10px;
+    }
+}

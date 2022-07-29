@@ -1,0 +1,6 @@
+---
+- include_tasks: server.yml
+  when: inventory_hostname == "controller"
+
+- include_tasks: client.yml
+

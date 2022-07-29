@@ -1,0 +1,15 @@
+---
+# todo this fails on clean install, need better handling
+# check if registry is present
+- name: clean up after previous registry installation
+  command: "{{item}} /registry"
+  with_items:
+    - docker stop
+    - docker rm
+  ignore_errors: yes
+  register: registry_cleanup_result
+
+# todo refactor ports here and in daemon.json to single source of truth
+# this role assumes controller.local dns name is available which might not be the case
+- name: start private repository server on port 5000
+  command: "docker run -d -p 5000:5000 --restart=always --name registry registry:2"

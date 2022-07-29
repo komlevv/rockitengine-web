@@ -1,0 +1,7 @@
+### provision centos 8 box for RockitEngine website
+---
+- hosts: all
+  become: yes
+  roles:
+    - node-js
+    - package-json

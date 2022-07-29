@@ -1,0 +1,33 @@
+.blockTools {
+    grid-column: 1 / -1;
+    composes: grid12 from '../App/App.css';
+}
+
+.toolsContainer {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    gap: 20px;
+}
+
+.toolsContainer > div {
+    grid-column: span 2;
+}
+
+.toolsContainer > div > div {
+    padding-bottom: 20px;
+}
+
+.toolsHeader {
+    font-size: 20pt;
+    font-weight: 300;
+    white-space: nowrap;
+}
+
+@media only screen and (max-width: 1024px) {
+    .toolsContainer {
+    }
+    .toolsContainer > div {
+        grid-column: span 5;
+    }
+}

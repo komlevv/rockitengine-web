@@ -1,0 +1,12 @@
+---
+- name: Install package.json
+  command: npm install
+  become: yes
+  become_user: "{{ npm_user }}"
+  args:
+    chdir: "{{ package_json_dir }}"
+  register: npm_install
+
+- name: Print npm install result
+  debug:
+    msg: "{{ npm_install.stdout }}"

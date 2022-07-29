@@ -1,0 +1,43 @@
+---
+# install kubectl
+- name: kubernetes repo is present
+  yum_repository:
+    name: 'kubernetes'
+    description: 'Kubernetes'
+    baseurl: '{{ kube_repo.baseurl }}'
+    enabled: yes
+    exclude: 'kube*'
+    gpgcheck: yes
+    gpgkey: '{{ kube_repo.key_yum }} {{ kube_repo.key_rpm }}'
+    repo_gpgcheck: yes
+
+- name: kubectl is present
+  yum:
+    name: kubectl-1.15.*
+    state: present
+    disable_excludes: kubernetes
+
+- name: install python and pip
+  yum:
+    name: python-pip
+    state: present
+
+- name: install pexpect
+  pip:
+    name: pexpect
+
+# setup access to master node
+- name: copy .kube config from master to controller
+  expect:
+    command: scp -r root@{{ hostvars.kubemaster.ansible_host }}:/root/.kube /home/vagrant/.kube
+    echo: yes
+    responses:
+      .*\(yes\/no\)\?: "yes"
+      .*password: "vagrant"
+
+- name: change .kube config owner and group to vagrant
+  file:
+    dest: /home/vagrant/.kube
+    recurse: yes
+    owner: vagrant
+    group: vagrant

@@ -1,0 +1,18 @@
+---
+kube_repo:
+  baseurl: https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64
+  key_yum: https://packages.cloud.google.com/yum/doc/yum-key.gpg
+  key_rpm: https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+
+flannel:
+  manifest_url_rbac: https://raw.githubusercontent.com/coreos/flannel/master/Documentation/k8s-manifests/kube-flannel-rbac.yml
+  manifest_url: https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+
+# todo this url is no longer valid
+kube_dashboard:
+  url: https://raw.githubusercontent.com/kubernetes/dashboard/master/aio/deploy/recommended/kubernetes-dashboard.yaml
+
+pod_network_cidr: '10.244.0.0/16' # range 10.244.0.0 to 10.244.255.255
+# when using flannel with kubeadm and cidr 192.168.1.0/24, we get this error:
+# Error registering network: failed to acquire lease: node  pod cidr not assigned
+# https://github.com/coreos/flannel/issues/728#issuecomment-308878912

@@ -1,0 +1,9 @@
+.blockContainer {
+    grid-column: 1 / -1;
+    composes: grid12 from '../App/App.css';
+    /*background-color: #d7c8e9;*/
+}
+
+.blockContainer > p {
+    grid-column: 1 / -1;
+}

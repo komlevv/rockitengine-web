@@ -1,0 +1,53 @@
+---
+- name: kube master is initialized with kubeadm init
+  command: >
+    kubeadm init
+    --pod-network-cidr={{ pod_network_cidr }}
+    --apiserver-advertise-address={{ hostvars.kubemaster.ansible_host }}
+  register: kubeadm_init
+
+- name: kubeadm output ie printed to the console
+  debug: msg='{{ kubeadm_init.stdout }}'
+
+# make sure kubernetes is working for non-root user
+# todo this creates .kube under /root dir, since script is running from root
+# use non root instead for the whole script?
+- name: .kube directory is present
+  file:
+    path: ~/.kube
+    state: directory
+
+- name: the kubectl admin.conf is symlinked to ~/.kube/conf
+  file:
+    src: /etc/kubernetes/admin.conf
+    dest: ~/.kube/config
+    state: link
+
+- name: flannel RBAC is deployed
+  command: 'kubectl apply -f {{ flannel.manifest_url_rbac }}'
+
+#- name: copy flannel config file to ~
+#  copy:
+#    src: kube-flannel.yml
+#    dest: ~/kube-flannel.yml
+#    force: yes
+
+- name: flannel main config is present in ~
+  get_url:
+    url: '{{ flannel.manifest_url }}'
+    dest: ~/kube-flannel.yml
+    force: yes
+
+# todo this might fail if kube-flannel.yml is changed on remote host.
+# need to test against faulty file & implement fallback
+- name: flannel main config network matches kubeadm
+  replace:
+    path: ~/kube-flannel.yml
+    regexp: '10\.244\.0\.0\/16'
+    replace: '{{ pod_network_cidr }}'
+
+- name: flannel main manifest is deployed
+  command: 'kubectl apply -f ~/kube-flannel.yml'
+
+- name: running pods is allowed on the master
+  command: 'kubectl taint nodes --all node-role.kubernetes.io/master-'

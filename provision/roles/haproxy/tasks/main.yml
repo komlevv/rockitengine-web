@@ -1,0 +1,110 @@
+---
+# https://fossies.org/linux/haproxy/INSTALL
+# https://upcloud.com/community/tutorials/haproxy-load-balancer-centos/
+- name: Install dependencies
+  yum:
+    name:
+      - gcc
+      - pcre-static
+      - pcre-devel
+      - openssl-devel
+      - systemd-devel
+      - readline-devel # lua
+    state: present
+
+- name: Create build directories
+  file:
+    path: "{{ item }}"
+    state: directory
+  with_items:
+    - "{{ lua.build_dir }}"
+    - "{{ haproxy.build_dir }}"
+
+#- name: Download Lua source code
+#  unarchive:
+#    src: "{{ lua.src_url }}"
+#    dest: "{{ lua.build_dir }}"
+#    remote_src: true
+
+- name: Download source codes
+  unarchive:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    remote_src: true
+    extra_opts:
+      - --strip=1
+  with_items:
+    - { src: "{{lua.src_url}}", dest: "{{ lua.build_dir }}" }
+    - { src: "{{haproxy.src_url}}", dest: "{{ haproxy.build_dir }}" }
+
+- name: Build Lua
+  make:
+    chdir: "{{ lua.build_dir }}"
+    target: linux
+
+# using ansible make doesn't work here
+# PARAM: "{{ var }}" gets interpolated to quoted 'PARAM=var'
+# ansible defaults to gmake intead of make
+- name: Configure Haproxy build
+  shell: >
+    gmake TARGET=linux-glibc USE_OPENSSL=1 USE_ZLIB=1 USE_LUA=1
+    USE_PCRE=1 USE_SYSTEMD=1 LUA_INC={{ lua.build_dir }}/src
+    LUA_LIB={{ lua.build_dir }}/src
+  args:
+    chdir: "{{ haproxy.build_dir }}"
+
+- name: Build Haproxy
+  make:
+    chdir: "{{ haproxy.build_dir }}"
+    target: install
+
+- name: Create files and directories for Haproxy records
+  file:
+    path: "{{ item.path }}"
+    state: "{{ item.state }}"
+  with_items:
+    - { path: /etc/haproxy, state: directory }
+    - { path: /var/lib/haproxy, state: directory }
+    - { path: /var/lib/haproxy/stats, state: touch }
+
+- name: Symlink to allow running Haproxy commands as a normal user
+  file:
+    src: /usr/local/sbin/haproxy
+    dest: /usr/sbin/haproxy
+    state: link
+
+- name: Add Haproxy user
+  user: name=haproxy
+
+- name: Create Haproxy config file
+  template:
+    src: haproxy.cfg.j2
+    dest: /etc/haproxy/haproxy.cfg
+    mode: 0644
+    owner: haproxy
+    group: haproxy
+
+- name: Create Haproxy service
+  template:
+    src: haproxy.service.j2
+    dest: /lib/systemd/system/haproxy.service
+    mode: 0644
+
+- name: Enable and start Haproxy service
+  systemd:
+    name: haproxy
+    enabled: yes
+    state: started
+
+#  Add firewall rules if firewalld is running
+#  firewall-cmd --permanent --zone=public --add-service=http
+#  firewall-cmd --permanent --zone=public --add-port=8181/tcp
+#  firewall-cmd --reload
+-
+- name: Remove Lua & Haproxy build artifacts
+  file:
+    state: absent
+    path: "{{item}}"
+  with_items:
+    - "{{ lua.build_dir }}/"
+    - "{{ haproxy.build_dir }}/"

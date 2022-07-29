@@ -1,0 +1,97 @@
+---
+- fail:
+    msg: The interface eth2 is not defined
+  when: ansible_eth2 is not defined
+
+- name: Set static IP for LAN Bridge (eth2)
+  shell: ifconfig eth2 {{ lan_host }} netmask {{ lan_spec.netmask }} up
+
+- name: Update facts
+  setup:
+
+# todo use only hostvars here
+- name: Create persistent interface config for LAN Bridge (eth2)
+  template:
+    src: ifcfg.j2
+    dest: "{{ ifcfg_basename }}{{ item.iface }}"
+    mode: 0644
+    owner: root
+  with_items:
+    - iface: "{{ vbox_spec.iface_edge_name }}"
+      nmask: "{{ ansible_eth2.ipv4.netmask }}"
+      ipv4: "{{ ansible_eth2.ipv4.address }}"
+      hwaddr: "{{ ansible_eth2.macaddress }}"
+
+- name: Create default route for LAN Bridge (eth2)
+  template:
+    src: route.j2
+    dest: "{{ route_basename }}{{ item.iface }}"
+    mode: 0644
+    owner: root
+  with_items:
+    - iface: "{{ vbox_spec.iface_edge_name }}"
+      gateway: "{{ lan_spec.gateway }}"
+
+- name: Rename LAN Bridge (eth2)
+  shell: |
+    ip link set eth2 down
+    ip link set eth2 name {{ vbox_spec.iface_edge_name }}
+    ip link set {{ vbox_spec.iface_edge_name }} up
+
+- name: Override sysctl.conf
+  template:
+    src: sysctl.conf.j2
+    dest: /etc/sysctl.conf
+    mode: 0644
+    owner: root
+
+- name: Reload sysctl config
+  shell: sysctl -p
+
+- name: Install iptables service
+  yum:
+    name: iptables-services
+    state: present
+
+- name: Enable and start iptables service
+  systemd:
+    name: iptables
+    state: started
+    enabled: yes
+
+- name: Flush iptables rules
+  iptables:
+    flush: yes
+
+# https://serverfault.com/questions/564866/how-to-set-up-linux-server-as-a-router-with-nat
+# todo handle ipv6 rules
+- name: Setup NAT on Bridge interface
+  iptables:
+    table: nat
+    chain: POSTROUTING
+    out_interface: "{{ vbox_spec.iface_edge_name }}"
+    jump: MASQUERADE
+
+- name: Accept traffic from Nat Network (eth0)
+  iptables:
+    chain: INPUT
+    in_interface: eth0
+    jump: ACCEPT
+
+- name: Allow established connections from Bridge interface
+  iptables:
+    chain: INPUT
+    in_interface: "{{ vbox_spec.iface_edge_name }}"
+    ctstate: ESTABLISHED,RELATED
+    jump: ACCEPT
+
+- name: Allow outgoing connections
+  iptables:
+    chain: OUTPUT
+    jump: ACCEPT
+
+- name: Save iptables rules
+  command: service iptables save
+  args:
+    warn: no # disable ansible 'use service module' warning
+

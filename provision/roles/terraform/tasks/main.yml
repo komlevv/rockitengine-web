@@ -1,0 +1,15 @@
+---
+- name: unzip is installed
+  yum:
+    name: unzip
+    state: present
+
+- name: install terraform binary
+  unarchive:
+    src: https://releases.hashicorp.com/terraform/0.12.3/terraform_0.12.3_linux_amd64.zip
+    dest: /usr/local/bin
+    remote_src: yes
+    creates: /usr/local/bin/terraform
+    owner: vagrant
+    group: vagrant
+    mode: 0711

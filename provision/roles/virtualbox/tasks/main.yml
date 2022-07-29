@@ -1,0 +1,56 @@
+---
+- name: Virtualbox repository is enabled
+  get_url:
+    url: http://download.virtualbox.org/virtualbox/rpm/rhel/virtualbox.repo
+    dest: /etc/yum.repos.d/virtualbox.repo
+
+- name: EPEL repository is enabled
+  yum:
+    name: epel-release
+    state: present
+
+- name: Kernel version is registered
+  command: uname -r
+  register: kernel_ver
+
+- name: Virtualbox dependencies are installed
+  yum:
+    name:
+    - binutils
+    - gcc
+    - make
+    - patch
+    - libgomp
+    - glibc-headers
+    - glibc-devel
+    - kernel-devel
+    - "kernel-devel-{{kernel_ver.stdout}}"
+    - kernel-headers
+    - dkms
+    state: present
+
+- name: Virtualbox 5.2 is installed
+  yum:
+    name: VirtualBox-5.2
+    state: present
+
+- name: Virtualbox kernel is rebuilt
+  command: /usr/lib/virtualbox/vboxdrv.sh setup
+
+- name: Vagrant and root are in vboxusers group
+  user:
+    name: "{{ item }}"
+    groups: vboxusers
+    append: yes
+  with_items:
+  - vagrant
+  - root
+
+# todo rewrite this using templates
+#- name: Virtualbox Extension pack is downloaded
+#  get_url:
+#    url: https://download.virtualbox.org/virtualbox/5.2.22/Oracle_VM_VirtualBox_Extension_Pack-5.2.22.vbox-extpack
+#    dest: /tmp/Oracle_VM_VirtualBox_Extension_Pack-5.2.22.vbox-extpack
+#
+#- name: Virtualbox Extension pack is installed
+#  command: yes | vboxmanage extpack install --replace /tmp/Oracle_VM_VirtualBox_Extension_Pack-5.2.22.vbox-extpack

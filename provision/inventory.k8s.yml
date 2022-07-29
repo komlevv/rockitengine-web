@@ -1,0 +1,34 @@
+all:
+  hosts:
+    kubemaster:
+      ansible_host: 10.0.10.100
+      vagrant_ssh_hostport: 2222
+      ansible_private_key_file: /vagrant_keys/kubemaster/virtualbox/private_key
+      k8s_role: master
+    kubenode01:
+      ansible_host: 10.0.10.101
+      vagrant_ssh_hostport: 2223
+      ansible_private_key_file: /vagrant_keys/kubenode01/virtualbox/private_key
+      k8s_role: node
+    controller:
+      ansible_host: 10.0.10.1
+      lan_host: 192.168.33.1
+      ansible_connection: local
+      vagrant_ssh_hostport: 2224
+  children:
+    k8s:
+      hosts:
+        kubemaster:
+        kubenode01:
+  vars:
+    lan_spec:
+      gateway: 192.168.0.1
+      netmask: 255.255.0.0
+      bridge_adapter_name: Intel(R) 82579V Gigabit Network Connection
+    vbox_spec:
+      natnet_name: myNAT
+      natnet_cidr: 10.0.0.0/16
+      natnet_mask: 255.255.0.0
+      exe_path: "C:/Program Files/Oracle/VirtualBox/vboxmanage.exe"
+      iface_ssh_name: vssh0
+      iface_edge_name: edge0

@@ -1,0 +1,8 @@
+---
+lua:
+  src_url: https://www.lua.org/ftp/lua-5.3.5.tar.gz
+  build_dir: /tmp/lua-5.3.5
+
+haproxy:
+  src_url: https://www.haproxy.org/download/2.0/src/haproxy-2.0.3.tar.gz
+  build_dir: /tmp/haproxy-2.0.3

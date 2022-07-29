@@ -1,0 +1,21 @@
+---
+- name: install helm
+  unarchive:
+    src: https://storage.googleapis.com/kubernetes-helm/helm-v2.14.1-linux-amd64.tar.gz
+    dest: /usr/local/bin
+    extra_opts:
+      - --strip=1
+      - --wildcards
+      - '*/helm'
+    remote_src: True
+
+- name: init helm for vagrant user
+  command: helm init
+  register: helm_init_result
+  become: yes
+  become_user: vagrant
+
+- name: display init result
+  debug:
+    msg: '{{helm_init_result.stdout}}'
+

@@ -1,0 +1,93 @@
+.navBarContainer {
+    z-index: 2;
+    top: 0;
+    position: fixed;
+    width: 100%;
+}
+
+
+.navBar {
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: #1a1a1a;
+    /*background-color: white;*/
+    color:white;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    gap: 50px;
+    transition: transform 150ms ease-in-out;
+}
+
+.logo {
+    margin-right: auto;
+}
+
+
+.navBar > a:hover {
+    /*color: red;*/
+}
+
+
+.navBarHide {
+    transform: translateY(-100%);
+}
+
+.navIcon {
+    display: none;
+    align-self: center;
+}
+
+.navIcon:hover {
+    cursor: pointer;
+    /* todo figure out better transition here */
+    /*filter: invert(11%) sepia(99%) saturate(6978%) hue-rotate(7deg) brightness(109%) contrast(116%);*/
+}
+
+.overlay {
+    z-index: 1;
+    background-color: #1a1a1a;
+    position: fixed;
+    width:100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.stopScroll{
+    height: 100%;
+    overflow: hidden;
+}
+
+.overlayHide {
+    display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+    .navBar {
+        padding-left: 20px;
+        padding-right: 20px;
+        height: 80px;
+        gap: 40px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .navBar > a {
+        display: none;
+    }
+
+    .navIcon {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .navBar {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

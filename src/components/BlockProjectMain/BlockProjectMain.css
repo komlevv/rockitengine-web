@@ -1,0 +1,75 @@
+.blockProjectMain {
+    grid-column: 1 / -1;
+    composes: grid12 from '../App/App.css';
+}
+
+.blockProjectMain > h1 {
+    grid-column: 1 / -1;
+}
+
+.blockProjectMain > p {
+    grid-column: 1 / 5;
+}
+
+.blockProjectMainLogo {
+    grid-column: 1 / -1;
+    /*background-color: grey;*/
+    color: white;
+}
+
+
+.projectMainItemL, .projectMainItemR {
+    /*background-color: #f0f0f0;*/
+    font-weight: 800;
+    font-size: 18pt;
+}
+
+.projectMainItemL {
+    grid-column: 9 / span 2;
+}
+
+.projectMainItemR {
+    grid-column: 11 / span 2;
+}
+
+.projectMainItemText {
+    border-top: 1px solid grey;
+    padding-top: 10px;
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 16pt;
+}
+
+
+@media only screen and (max-width: 1280px) {
+    .projectMainItemText {
+        font-size: 14pt;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .blockProjectMain > p {
+        grid-column: 1 / span 7;
+    }
+    .projectMainItemL, .projectMainItemR {
+        font-size: 14pt;
+    }
+
+    .projectMainItemText {
+        font-size: 12pt;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .blockProjectMain > p {
+        grid-column: 1 / -1;
+    }
+
+    .projectMainItemL {
+        grid-column: 1 / span 4;
+    }
+
+    .projectMainItemR {
+        grid-column: 5 / span 4;
+    }
+}
+

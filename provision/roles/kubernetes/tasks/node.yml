@@ -1,0 +1,10 @@
+---
+- name: join node to k8s master
+  shell: "{{ k8s_join_command }}"
+  args:
+    creates: /etc/kubernetes/kubelet.conf
+  register: join_node_result
+
+- name: print join node result
+  debug:
+    msg: "{{ join_node_result.stdout }}"

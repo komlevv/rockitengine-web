@@ -1,0 +1,232 @@
+/* todo too much boilerplate here, rewrite in sass or something modular*/
+@value defaultAccent: #EECCAA;
+
+@value equinoxAccent: #0070BE;
+
+@value chopardAccent: #1C60E8;
+
+@value spotifyHuluAccent: #1ED560;
+
+@value greyGooseAccent: #0054CE;
+
+@value jMUpgradeAccent: #658269;
+
+@value awayAccent: #EF3C29;
+
+@value cartierAccent: #99140A;
+
+@value johnHardyAAAccent: #AFA74A;
+
+@value johnHardyJMAccent: #B17F4A;
+
+@value defaultTransition: all 0.3s ease-in-out;
+
+/* -----common----- */
+
+.defaultHover, .equinoxHover, .chopardHover,
+.spotifyHuluHover, .greyGooseHover,.jMUpgradeHover, .awayHover,
+.cartierHover, .johnHardyAAHover, .johnHardyJMHover
+{
+    transition: defaultTransition;
+}
+
+/* -----default----- */
+
+.defaultHover:hover {
+    color: defaultAccent;
+}
+
+.defaultMenuHover {
+    transition: defaultTransition;
+    position: relative;
+}
+
+.defaultMenuHover::before {
+    content: '';
+    background: defaultAccent;
+    display: block;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+.defaultMenuHover:hover {
+    color: defaultAccent;
+    background-position: 0;
+}
+
+.defaultMenuHover:hover::before {
+    width: 100%;
+}
+
+/* -----equinox----- */
+.equinoxHover:hover {
+    color: equinoxAccent;
+}
+
+.equinoxMenuHover {
+    composes: defaultMenuHover;
+}
+
+.equinoxMenuHover:hover {
+    color: equinoxAccent;
+}
+
+.equinoxMenuHover:before {
+    background: equinoxAccent;
+}
+
+/* -----chopard----- */
+
+.chopardHover:hover {
+    color: chopardAccent;
+}
+
+.chopardMenuHover {
+    composes: defaultMenuHover;
+}
+
+.chopardMenuHover:hover {
+    color: chopardAccent;
+}
+
+.chopardMenuHover:before {
+    background: chopardAccent;
+}
+
+/* -----spotify----- */
+
+.spotifyHuluHover {
+    transition: defaultTransition;
+}
+
+.spotifyHuluHover:hover {
+    color: spotifyHuluAccent;
+}
+
+.spotifyHuluMenuHover {
+    composes: defaultMenuHover;
+}
+
+.spotifyHuluMenuHover:hover {
+    color: spotifyHuluAccent
+}
+
+.spotifyHuluMenuHover:before {
+    background: spotifyHuluAccent;
+}
+
+/* -----goose----- */
+
+.greyGooseHover {
+    transition: defaultTransition;
+}
+
+.greyGooseHover:hover {
+    color: greyGooseAccent;
+}
+
+.greyGooseMenuHover {
+    composes: defaultMenuHover;
+}
+
+.greyGooseMenuHover:hover {
+    color: greyGooseAccent;
+}
+
+.greyGooseMenuHover:before {
+    background: greyGooseAccent;
+}
+
+/* -----jmu----- */
+.jMUpgradeHover:hover {
+    color: jMUpgradeAccent;
+}
+
+.jMUpgradeMenuHover {
+    composes: defaultMenuHover;
+}
+
+.jMUpgradeMenuHover:hover {
+    color: jMUpgradeAccent;
+}
+
+.jMUpgradeMenuHover:before {
+    background: jMUpgradeAccent;
+}
+
+/* -----away----- */
+
+.awayHover:hover {
+    color: awayAccent;
+}
+
+.awayMenuHover {
+    composes: defaultMenuHover;
+}
+
+.awayMenuHover:hover {
+    color: awayAccent;
+}
+
+.awayMenuHover:before {
+    background: awayAccent;
+}
+
+/* -----cartier----- */
+
+.cartierHover:hover {
+    color: cartierAccent;
+}
+
+.cartierMenuHover {
+    composes: defaultMenuHover;
+}
+
+.cartierMenuHover:hover {
+    color: cartierAccent;
+}
+
+.cartierMenuHover:before {
+    background: cartierAccent;
+}
+
+/* -----johnhardyAA----- */
+
+.johnHardyAAHover:hover {
+    color: johnHardyAAAccent;
+}
+
+.johnHardyAAMenuHover {
+    composes: defaultMenuHover;
+}
+
+.johnHardyAAMenuHover:hover {
+    color: johnHardyAAAccent;
+}
+
+.johnHardyAAMenuHover:before {
+    background: johnHardyAAAccent;
+}
+
+/* -----johnhardyJH----- */
+
+.johnHardyJMHover:hover {
+    color: johnHardyJMAccent;
+}
+
+.johnHardyJMMenuHover {
+    composes: defaultMenuHover;
+}
+
+.johnHardyJMMenuHover:before {
+    background: johnHardyJMAccent;
+}
+
+.johnHardyJMMenuHover:hover {
+    color: johnHardyJMAccent;
+}
+

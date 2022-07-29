@@ -1,0 +1,29 @@
+### provision both k8s and skaffold
+---
+- hosts: all
+  become: yes
+  roles:
+
+- hosts: all
+  become: yes
+  roles:
+    - static-networking
+    - docker
+    - map_hosts
+    # todo docker-private-registry assumes map_hosts role was run, need to refactor this
+    - docker-private-registry
+
+- hosts: k8s
+  become: yes
+  roles:
+    - kubernetes
+
+- hosts: controller
+  become: yes
+  roles:
+    - haproxy
+    - kubectl-controller
+    # todo skaffold relies on kubectl controller, need to decouple or merge?
+    - skaffold
+    - terraform
+

@@ -1,0 +1,5 @@
+.video {
+    grid-column: 1 / -1;
+    width:100%;
+    /*background-color: #e4ff00;*/
+}

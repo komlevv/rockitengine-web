@@ -1,0 +1,17 @@
+.bannerLogo {
+    color:white;
+    grid-column: span 5;
+    justify-self: end;
+    /*background-color: #4af9b6;*/
+    align-self: start;
+    margin-top:30px;
+}
+
+@media only screen and (max-width: 576px){
+    .bannerLogo{
+        justify-self: start;
+        align-self: start;
+        grid-column: 2 / -2;
+        margin-top: 0;
+    }
+}

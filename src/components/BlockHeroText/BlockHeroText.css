@@ -1,0 +1,20 @@
+.blockHeroText {
+    composes: grid12 from '../App/App.css';
+    grid-column: 1 / -1;
+}
+
+.blockHeroText > h1 {
+    grid-column: 1 / -1;
+}
+
+.blockHeroText > p {
+    grid-column: 1 / span 5;
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .blockHeroText > p {
+        grid-column: 1 / -1;
+    }
+}
+

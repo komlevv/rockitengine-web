@@ -1,0 +1,19 @@
+.blockContact {
+    grid-column: 1 /-1;
+    composes: grid12 from '../App/App.css';
+}
+
+.blockContact > a {
+    grid-column: 1 / -1;
+}
+
+.blockContact > a > h3 {
+    margin-top:0;
+}
+
+
+@media only screen and (max-width: 576px){
+    .blockContact > a > h3 {
+        font-size: 12pt;
+    }
+}

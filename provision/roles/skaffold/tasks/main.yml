@@ -1,0 +1,16 @@
+---
+- name: install skaffold
+  get_url:
+    url: '{{ skaffold_url }}'
+    dest: '{{ skaffold_bin_dest }}'
+    mode: 0777
+    owner: vagrant
+    group: vagrant
+
+- name: get skaffold version info
+  command: '{{ skaffold_bin_dest }} version'
+  register: skaffold_version_command
+
+- name: print skaffold version to console
+  debug:
+    msg: "{{ skaffold_version_command.stdout }}"

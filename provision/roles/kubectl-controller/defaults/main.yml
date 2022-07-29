@@ -1,0 +1,5 @@
+---
+kube_repo:
+  baseurl: https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64
+  key_yum: https://packages.cloud.google.com/yum/doc/yum-key.gpg
+  key_rpm: https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg

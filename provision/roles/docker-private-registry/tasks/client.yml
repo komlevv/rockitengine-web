@@ -1,0 +1,25 @@
+---
+# override systemd service here. another way to do this is to append
+# "insecure-registries": ["192.168.33.100:5000"] to /etc/docker/daemon.json
+# keys in daemon.json and ExecStart should not overlap
+- name: make sure docker.service.d/ dir exists
+  file:
+    path: /etc/systemd/system/docker.service.d/
+    state: directory
+
+- name: override dockerd start to ensure docker reads config from /etc/docker/daemon.json
+  template:
+    src: override.conf.j2
+    dest: /etc/systemd/system/docker.service.d/override.conf
+
+# todo daemon.json is duplicated here and in docker role, refactor
+- name: override /etc/docker/daemon.json with insecure registry config
+  template:
+    src: daemon.json.j2
+    dest: /etc/docker/daemon.json
+
+- name: restart docker service
+  systemd:
+    name: docker
+    state: restarted
+    daemon_reload: yes

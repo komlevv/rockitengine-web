@@ -1,0 +1,3 @@
+---
+skaffold_url: https://storage.googleapis.com/skaffold/releases/latest/skaffold-linux-amd64
+skaffold_bin_dest: /usr/local/bin/skaffold

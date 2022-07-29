@@ -1,0 +1,94 @@
+# Before this task each machine has following interfaces:
+# eth0: Virtualbox NAT Network (static ipv4)
+# eth1: Private NAT for Vagrant ssh (static ipv4, same IP for each machine)
+# lo: loopback (127.0.0.1)
+# The controller machine has additional interface:
+# eth2: Bridge to Home LAN (static ipv4)
+# Changes after provision:
+# eth1 renamed
+# eth2 renamed
+---
+- fail:
+    msg: The interface {{ item.iface }} is not defined
+  when: "item.when"
+  with_items:
+    - iface: eth0
+      when: "{{ ansible_eth0 is not defined }}"
+    - iface: eth1
+      when: "{{ ansible_eth1 is not defined }}"
+
+- set_fact:
+    ifcfg_basename: /etc/sysconfig/network-scripts/ifcfg-
+    route_basename: /etc/sysconfig/network-scripts/route-
+
+- name: Override /etc/sysconfig/network config
+  template:
+    src: etc-sysconfig-network.j2
+    dest: /etc/sysconfig/network
+    mode: 0644
+    owner: root
+
+- name: Override DNS config
+  template:
+    src: resolv.conf.j2
+    dest: /etc/resolv.conf
+    mode: 0644
+    owner: root
+
+- name: Set static IP for Nat Network (eth0)
+  shell: ifconfig eth0 {{ ansible_host }} netmask {{ vbox_spec.natnet_mask }} up
+
+- name: Create persistent interface config for Nat Network (eth0) and Private NAT (eth1)
+  template:
+    src: ifcfg.j2
+    dest: "{{ ifcfg_basename }}{{ item.iface }}"
+    mode: 0644
+    owner: root
+  with_items:
+    - iface: "eth0"
+      nmask: "{{ vbox_spec.natnet_mask }}"
+      ipv4: "{{ ansible_eth0.ipv4.address }}"
+      hwaddr: "{{ ansible_eth0.macaddress }}"
+    - iface: "{{ vbox_spec.iface_ssh_name }}"
+      nmask: "{{ ansible_eth1.ipv4.netmask }}"
+      ipv4: "{{ ansible_eth1.ipv4.address }}"
+      hwaddr: "{{ ansible_eth1.macaddress }}"
+
+- name: Rename Private NAT (eth1)
+  shell: |
+    ip link set eth1 down
+    ip link set eth1 name {{ vbox_spec.iface_ssh_name }}
+    ip link set {{ vbox_spec.iface_ssh_name }} up
+
+- include_tasks: controller.yml
+  when: inventory_hostname == "controller"
+
+- name: Create default route for Nat Network (eth0)
+  template:
+    src: route.j2
+    dest: "{{ route_basename }}{{ item.iface }}"
+    mode: 0644
+    owner: root
+  with_items:
+    - iface: "eth0"
+      gateway: "{{ hostvars.controller.ansible_host }}"
+  when: ansible_hostname != "controller"
+
+- name: Stop and disable NetworkManager service
+  service:
+    name: NetworkManager
+    state: stopped
+    enabled: no
+
+# network service restart will fail if the available interfaces'
+# names don't match ifcfg-* names. probably best to reboot here instead
+# of renaming interfaces on the fly, but time esp with multiple machines
+- name: Restart network service
+  service:
+    name: network
+    state: restarted
+
+- name: Update facts
+  setup:
+
+# todo test basic connectivity between nodes - ping google/etc
