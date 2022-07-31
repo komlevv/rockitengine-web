@@ -1,8 +1,8 @@
 import s from './HeaderM.css';
 
-const HeaderM = ({headerText}) => {
+const HeaderM = ({headerText, innerRef}) => {
     return (
-        <h3 className={s.headerM}>{headerText}</h3>
+        <h3 ref={innerRef} className={s.headerM}>{headerText}</h3>
     )
 }
 

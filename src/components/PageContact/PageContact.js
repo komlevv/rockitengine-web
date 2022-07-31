@@ -8,6 +8,7 @@ import {THEMES, useTheme} from "../../contexts/themeContext";
 import {useSetTheme} from "../../hooks/useSetTheme";
 import {useAnimateRefs} from "../../hooks/useAnimateRefs";
 import Divider from "../Divider/Divider";
+import {mapContentWithRefs} from "../../utils/utils";
 
 const data = {
     main: {
@@ -19,27 +20,31 @@ const data = {
     e: "hello@rockitengine.com"
 }
 
+const content = [
+    <BlockHeroText headerText={data.main.h}
+                   paragraphText={data.main.p}/>,
+    <BlockContainer>
+        <Divider/>
+        <a
+            style={{fontSize: "28px",}}
+            href={`mailto:${data.e}`}
+            // className={theme.hoverStyle}
+        >
+            {data.e}
+        </a>
+    </BlockContainer>,
+    <BlockContainer>
+        <Video autoplay loop muted src={videoMain} poster={imgMain}/>
+    </BlockContainer>,
+].flat()
+
 const PageContact = () => {
     useSetTheme(THEMES.DEFAULT);
-    const {theme} = useTheme();
-    const animateRefs = useAnimateRefs(3);
+    // const {theme} = useTheme();
+    const animateRefs = useAnimateRefs(content.length);
     return (
         <>
-            <BlockHeroText innerRef={animateRefs[0]}
-                           headerText={data.main.h}
-                           paragraphText={data.main.p}/>
-            <BlockContainer innerRef={animateRefs[1]}>
-                <Divider/>
-                <a
-                    style={{fontSize: "28px",}}
-                    href={`mailto:${data.e}`}
-                    className={theme.hoverStyle}>
-                    {data.e}
-                </a>
-            </BlockContainer>
-            <BlockContainer innerRef={animateRefs[2]}>
-                <Video autoplay loop muted src={videoMain} poster={imgMain}/>
-            </BlockContainer>
+            {mapContentWithRefs(content, animateRefs)}
         </>
     )
 };

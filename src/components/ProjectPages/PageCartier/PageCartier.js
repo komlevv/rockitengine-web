@@ -11,44 +11,44 @@ import Video from "../../Video/Video.js";
 import {data} from "./data.js";
 import {data as dataNext} from "../PageGreyGoose/data"
 import {THEMES} from "../../../contexts/themeContext";
-import BlockContainer from "../../BlockContainer/BlockContainer";
 import {useSetTheme} from "../../../hooks/useSetTheme";
 import {useAnimateRefs} from "../../../hooks/useAnimateRefs";
+import {mapContentWithRefs} from "../../../utils/utils";
+
+const content = [
+    <BlockProjectMain data={data.main}/>,
+    <BlockOverview data={data.overview}/>,
+    <Video controls src={data.media.video[0]} poster={data.media.imgWide[0]}/>,
+    <GridContainerHalf>
+        <HeaderS headerText={data.other.a.h}/>
+    </GridContainerHalf>,
+    <GridContainerHalf>
+        <Video controls loop src={data.media.videoSquare[0]} poster={data.media.imgSquare[0]}/>
+    </GridContainerHalf>,
+    <GridContainerHalf>
+        <Video controls loop src={data.media.videoSquare[1]} poster={data.media.imgSquare[1]}/>
+    </GridContainerHalf>,
+    <GridContainerHalf>
+        <Paragraph paragraphText={data.other.a.p}/>
+    </GridContainerHalf>,
+    <GridContainerHalf>
+        <Video controls loop src={data.media.videoSquare[2]} poster={data.media.imgSquare[2]}/>
+    </GridContainerHalf>,
+    <GridContainerHalf>
+        <Video controls loop src={data.media.videoSquare[3]} poster={data.media.imgSquare[3]}/>
+    </GridContainerHalf>,
+    <BlockHeroTextM headerText={data.other.b.h} paragraphText={data.other.b.p}/>,
+    <Video controls loop src={data.media.video[1]} poster={data.media.imgWide[1]}/>,
+    <BlockProjectNext data={dataNext.next}/>,
+    <BlockContact/>
+].flat()
 
 const PageCartier = () => {
     useSetTheme(THEMES.CARTIER);
-    const animateRefs = useAnimateRefs(13);
+    const animateRefs = useAnimateRefs(content.length);
     return (
         <>
-            <BlockProjectMain innerRef={animateRefs[0]} data={data.main}/>
-            <BlockOverview innerRef={animateRefs[1]} data={data.overview}/>
-            <BlockContainer>
-                <Video controls innerRef={animateRefs[2]}
-                       src={data.media.video[0]} poster={data.media.imgWide[0]}/>
-                <GridContainerHalf innerRef={animateRefs[3]}>
-                    <HeaderS headerText={data.other.a.h}/>
-                </GridContainerHalf>
-                <GridContainerHalf innerRef={animateRefs[4]}>
-                    <Video controls loop src={data.media.videoSquare[0]} poster={data.media.imgSquare[0]}/>
-                </GridContainerHalf>
-                <GridContainerHalf innerRef={animateRefs[5]}>
-                    <Video controls loop src={data.media.videoSquare[1]} poster={data.media.imgSquare[1]}/>
-                </GridContainerHalf>
-                <GridContainerHalf innerRef={animateRefs[6]}>
-                    <Paragraph paragraphText={data.other.a.p}/>
-                </GridContainerHalf>
-                <GridContainerHalf innerRef={animateRefs[7]}>
-                    <Video controls loop src={data.media.videoSquare[2]} poster={data.media.imgSquare[2]}/>
-                </GridContainerHalf>
-                <GridContainerHalf innerRef={animateRefs[8]}>
-                    <Video controls loop src={data.media.videoSquare[3]} poster={data.media.imgSquare[3]}/>
-                </GridContainerHalf>
-                <BlockHeroTextM innerRef={animateRefs[9]}
-                                headerText={data.other.b.h} paragraphText={data.other.b.p}/>
-                <Video controls innerRef={animateRefs[10]} loop src={data.media.video[1]} poster={data.media.imgWide[1]}/>
-            </BlockContainer>
-            <BlockProjectNext innerRef={animateRefs[11]} data={dataNext.next}/>
-            <BlockContact innerRef={animateRefs[12]}/>
+            {mapContentWithRefs(content, animateRefs)}
         </>
     )
 };

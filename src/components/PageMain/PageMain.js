@@ -7,19 +7,23 @@ import BlockContact from "../BlockContact/BlockContact";
 import {THEMES} from "../../contexts/themeContext";
 import {useSetTheme} from "../../hooks/useSetTheme";
 import {useAnimateRefs} from "../../hooks/useAnimateRefs";
+import {mapContentWithRefs} from "../../utils/utils";
 
+const content = [
+    <BlockHeroVideo/>,
+    <BlockServices/>,
+    <BlockProjects/>,
+    <BlockClients/>,
+    <BlockAbout/>,
+    <BlockContact/>
+].flat()
 
 const PageMain = () => {
     useSetTheme(THEMES.DEFAULT);
-    const animateRefs = useAnimateRefs(5);
+    const animateRefs = useAnimateRefs(content.length);
     return (
         <>
-            <BlockHeroVideo innerRef={animateRefs[0]}/>
-            <BlockServices innerRef={animateRefs[1]}/>
-            <BlockProjects />
-            <BlockClients innerRef={animateRefs[2]}/>
-            <BlockAbout innerRef={animateRefs[3]}/>
-            <BlockContact innerRef={animateRefs[4]}/>
+            {mapContentWithRefs(content, animateRefs)}
         </>
     )
 }

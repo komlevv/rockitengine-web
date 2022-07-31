@@ -17,6 +17,7 @@ import {data as dataGreyGoose} from '../ProjectPages/PageGreyGoose/data.js'
 import {ROUTES} from "../App/ROUTES";
 import {useAnimateRefs} from "../../hooks/useAnimateRefs";
 import Divider from "../Divider/Divider";
+import {mapContentWithRefs} from "../../utils/utils";
 
 const dataPages = [
     dataEquinox,
@@ -39,24 +40,27 @@ const data = {
     buttonText: "See all projects"
 }
 
-const BlockProjects = () => {
-    const animateRefs = useAnimateRefs(5);
+const content = [
+    <Divider/>,
+    <HeaderM headerText={data.h}/>,
+    dataPages.slice(0, 5).map((dataPage, i) => (
+        <BannerHero
+            key={i}
+            linkTo={dataPage.next.banner.linkTo}
+            headerText={dataPage.next.banner.h}
+            paragraphText={dataPage.next.banner.p}
+            imgSrc={dataPage.next.banner.imgShort}
+            logoSrc={dataPage.next.banner.logo}
+            fontColor={dataPage.next.banner.fontColor}
+        />)),
+    <Button href={ROUTES.PROJECTS} buttonText={data.buttonText}/>
+].flat()
+
+const BlockProjects = ({innerRef}) => {
+    const animateRefs = useAnimateRefs(content.length);
     return (
-        <div ref={animateRefs[0]} className={s.blockProjects}>
-            <Divider/>
-            <HeaderM headerText={data.h}/>
-            {dataPages.slice(0, 5).map((dataPage, i) => (
-                <BannerHero
-                    innerRef={animateRefs[i]}
-                    key={i}
-                    linkTo={dataPage.next.banner.linkTo}
-                    headerText={dataPage.next.banner.h}
-                    paragraphText={dataPage.next.banner.p}
-                    imgSrc={dataPage.next.banner.imgShort}
-                    logoSrc={dataPage.next.banner.logo}
-                    fontColor={dataPage.next.banner.fontColor}
-                />))}
-            <Button href={ROUTES.PROJECTS} buttonText={data.buttonText}/>
+        <div ref={innerRef} className={s.blockProjects}>
+            {mapContentWithRefs(content, animateRefs)}
         </div>
     )
 }

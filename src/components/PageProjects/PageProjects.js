@@ -20,6 +20,7 @@ import {THEMES, useTheme} from "../../contexts/themeContext";
 import {useSetTheme} from "../../hooks/useSetTheme";
 import {useAnimateRefs} from "../../hooks/useAnimateRefs";
 import Divider from "../Divider/Divider";
+import {mapContentWithRefs} from "../../utils/utils";
 
 const data = {
     main: {
@@ -45,31 +46,31 @@ const data = {
     }
 }
 
+const content = [
+    <BlockHeroText headerText={data.main.h}
+                   paragraphText={data.main.p}/>,
+    <Divider/>,
+    <HeaderM headerText={data.cases.h}/>,
+    data.cases.items.map((dataPage, i) => (
+        <BannerHero
+            linkTo={dataPage.next.banner.linkTo}
+            key={i}
+            headerText={dataPage.next.banner.h}
+            paragraphText={dataPage.next.banner.p}
+            imgSrc={dataPage.next.banner.imgShort}
+            logoSrc={dataPage.next.banner.logo}
+            fontColor={dataPage.next.banner.fontColor}
+        />)),
+    <BlockClients/>,
+    <BlockContact/>
+].flat()
+
 const PageProjects = () => {
     useSetTheme(THEMES.DEFAULT);
-    const animateRefs = useAnimateRefs(13);
+    const animateRefs = useAnimateRefs(content.length);
     return (
         <>
-            <BlockHeroText innerRef={animateRefs[0]}
-                           headerText={data.main.h}
-                           paragraphText={data.main.p}/>
-            <BlockContainer innerRef={animateRefs[1]}>
-                <Divider/>
-                <HeaderM headerText={data.cases.h}/>
-                {data.cases.items.map((dataPage, i) => (
-                    <BannerHero
-                        innerRef={animateRefs[i+2]}
-                        linkTo={dataPage.next.banner.linkTo}
-                        key={i}
-                        headerText={dataPage.next.banner.h}
-                        paragraphText={dataPage.next.banner.p}
-                        imgSrc={dataPage.next.banner.imgShort}
-                        logoSrc={dataPage.next.banner.logo}
-                        fontColor={dataPage.next.banner.fontColor}
-                    />))}
-            </BlockContainer>
-            <BlockClients innerRef={animateRefs[11]}/>
-            <BlockContact innerRef={animateRefs[12]}/>
+            {mapContentWithRefs(content, animateRefs)}
         </>
     )
 };
