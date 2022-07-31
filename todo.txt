@@ -1,18 +1,22 @@
+todo refactor PageContact <a> link into fn component
+
+todo study React.cloneElement() performance / drawbacks
+
+todo fix block padding: <GridContainer/>'s
+    direct children set their own padding-bottom 30px
+    use import @value for single source
+
 todo move index.html to src
 
 todo replace webpack with express
 
 todo setup docker
 
-todo rework page architecture components to avoid hardcoding/counting animation refs
-
 todo &nbsp text
 
 todo turn videos on and off when in viewport, or play on hover
 
 todo eslint
-
-todo commit to git
 
 todo make color data single sourced
 
