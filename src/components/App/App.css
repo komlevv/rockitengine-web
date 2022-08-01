@@ -1,5 +1,6 @@
 /* global css */
 /* todo add css reset here*/
+@value blockPaddingBottom: 30px;
 
 html, body, :global(#root) {
     line-height: 1;

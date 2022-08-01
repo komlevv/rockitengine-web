@@ -1,6 +1,9 @@
+@value blockPaddingBottom from "../App/App.css";
+
 .blockHeroVideo {
     composes: grid12 from '../App/App.css';
     grid-column: 1 /-1;
+    padding-bottom: blockPaddingBottom;
     /*background-color: #6290b4;*/
 }
 

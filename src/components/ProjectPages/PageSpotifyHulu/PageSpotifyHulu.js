@@ -18,6 +18,7 @@ import {THEMES} from "../../../contexts/themeContext";
 import {useSetTheme} from "../../../hooks/useSetTheme";
 import {useAnimateRefs} from "../../../hooks/useAnimateRefs";
 import {mapContentWithRefs} from "../../../utils/utils";
+import Gap from "../../Gap/Gap";
 
 const content = [
     <BlockProjectMain data={data.main}/>,
@@ -34,10 +35,12 @@ const content = [
         <Paragraph paragraphText={data.other.a.p}/></GridContainerHalf>,
     <ImageHalfWide src={data.media.imgVertical[1]}/>,
     <ImageFullWide src={data.media.imgWide[1]}/>,
+    <Gap/>,
     <BlockHeroTextM headerText={data.other.b.h} paragraphText={data.other.b.p}/>,
     data.media.imgWide.slice(2, 6).map((img, i) => (
         <ImageFullWide key={i} src={img}/>
     )),
+    <Gap/>,
     <BlockHeroTextM headerText={data.other.d.h} paragraphText={data.other.d.p}/>,
     data.media.imgSquareS.slice(0, 6).map((img, i) => (
         <ImageOneThird key={i} src={img}/>
@@ -46,6 +49,7 @@ const content = [
     <ImageOneThird src={data.media.imgSquareS[6]}/>,
     <ImageOneThird src={data.media.imgSquareS[7]}/>,
     <ImageTwoThird src={data.media.imgSquareSD[1]}/>,
+    <Gap/>,
     <BlockProjectNext data={dataNext.next}/>,
     <BlockContact/>
 ].flat()

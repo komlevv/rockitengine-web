@@ -26,8 +26,6 @@ const content = [
     <BlockContainer>
         <Divider/>
         <LinkContact/>
-    </BlockContainer>,
-    <BlockContainer>
         <Video autoplay loop muted src={videoMain} poster={imgMain}/>
     </BlockContainer>,
 ].flat()

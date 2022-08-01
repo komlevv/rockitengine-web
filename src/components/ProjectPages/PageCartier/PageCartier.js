@@ -14,6 +14,7 @@ import {THEMES} from "../../../contexts/themeContext";
 import {useSetTheme} from "../../../hooks/useSetTheme";
 import {useAnimateRefs} from "../../../hooks/useAnimateRefs";
 import {mapContentWithRefs} from "../../../utils/utils";
+import Gap from "../../Gap/Gap";
 
 const content = [
     <BlockProjectMain data={data.main}/>,
@@ -37,8 +38,10 @@ const content = [
     <GridContainerHalf>
         <Video controls loop src={data.media.videoSquare[3]} poster={data.media.imgSquare[3]}/>
     </GridContainerHalf>,
+    <Gap/>,
     <BlockHeroTextM headerText={data.other.b.h} paragraphText={data.other.b.p}/>,
     <Video controls loop src={data.media.video[1]} poster={data.media.imgWide[1]}/>,
+    <Gap/>,
     <BlockProjectNext data={dataNext.next}/>,
     <BlockContact/>
 ].flat()

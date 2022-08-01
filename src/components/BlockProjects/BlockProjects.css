@@ -1,6 +1,9 @@
+@value blockPaddingBottom from "../App/App.css";
+
 .blockProjects {
     grid-column: 1 /-1;
     composes: grid12 from '../App/App.css';
+    padding-bottom: blockPaddingBottom;
 }
 
 .blockProjects > a:last-child {

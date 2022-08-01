@@ -21,6 +21,7 @@ import {useSetTheme} from "../../hooks/useSetTheme";
 import {useAnimateRefs} from "../../hooks/useAnimateRefs";
 import Divider from "../Divider/Divider";
 import {mapContentWithRefs} from "../../utils/utils";
+import Gap from "../Gap/Gap";
 
 const data = {
     main: {
@@ -46,6 +47,7 @@ const data = {
     }
 }
 
+
 const content = [
     <BlockHeroText headerText={data.main.h}
                    paragraphText={data.main.p}/>,
@@ -61,6 +63,7 @@ const content = [
             logoSrc={dataPage.next.banner.logo}
             fontColor={dataPage.next.banner.fontColor}
         />)),
+    <Gap/>,
     <BlockClients/>,
     <BlockContact/>
 ].flat()

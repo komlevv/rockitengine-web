@@ -11,6 +11,7 @@ import {useSetTheme} from "../../hooks/useSetTheme";
 import {useAnimateRefs} from "../../hooks/useAnimateRefs";
 import Divider from "../Divider/Divider";
 import {mapContentWithRefs} from "../../utils/utils";
+import Gap from "../Gap/Gap";
 
 const content = [
     <BlockHeroText headerText={data.main.h}
@@ -23,6 +24,7 @@ const content = [
     Object.keys(data.ourValues.items).map((el, i) => (
         <ListItemBig key={i} data={data.ourValues.items[el]}/>
     )),
+    <Gap/>,
     <BlockContainer>
         <Divider/>
         <HeaderM headerText={data.work.h}/>
@@ -31,6 +33,7 @@ const content = [
     Object.keys(data.work.items).map((el, i) => (
         <ListItemBig key={i} data={data.work.items[el]}/>
     )),
+    <Gap/>,
     <BlockContainer>
         <Divider/>
         <HeaderM headerText={data.process.h}/>
@@ -39,6 +42,7 @@ const content = [
     Object.keys(data.process.items).map((el, i) => (
         <ListItemBig key={i} data={data.process.items[el]}/>
     )),
+    <Gap/>,
     <BlockTeaserProjects/>,
     <BlockContact/>
 ].flat()

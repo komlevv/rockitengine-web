@@ -13,6 +13,7 @@ import {useSetTheme} from "../../hooks/useSetTheme";
 import Video from "../Video/Video";
 import Divider from "../Divider/Divider";
 import {mapContentWithRefs} from "../../utils/utils";
+import Gap from "../Gap/Gap";
 
 const content = [
     <BlockHeroText headerText={data.main.h}
@@ -26,6 +27,7 @@ const content = [
         <ListItemBig key={i}
                      data={data.services.items[el]}/>
     )),
+    <Gap/>,
     <BlockContainer>
         <Divider/>
         <HeaderM headerText={data.reel.h}/>
