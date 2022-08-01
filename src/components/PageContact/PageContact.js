@@ -4,11 +4,12 @@ import imgMain from "./images/contact-main.jpg";
 import BlockContainer from "../BlockContainer/BlockContainer";
 import Video from "../Video/Video.js";
 import Span from "../Span/Span.js";
-import {THEMES, useTheme} from "../../contexts/themeContext";
+import {THEMES} from "../../contexts/themeContext";
 import {useSetTheme} from "../../hooks/useSetTheme";
 import {useAnimateRefs} from "../../hooks/useAnimateRefs";
 import Divider from "../Divider/Divider";
 import {mapContentWithRefs} from "../../utils/utils";
+import LinkContact from "../LinkContact/LinkContact.js"
 
 const data = {
     main: {
@@ -17,7 +18,6 @@ const data = {
             "an agency, or a startup looking to grow and scale-up," +
             "send us a message and spark a change, today. "
     },
-    e: "hello@rockitengine.com"
 }
 
 const content = [
@@ -25,13 +25,7 @@ const content = [
                    paragraphText={data.main.p}/>,
     <BlockContainer>
         <Divider/>
-        <a
-            style={{fontSize: "28px",}}
-            href={`mailto:${data.e}`}
-            // className={theme.hoverStyle}
-        >
-            {data.e}
-        </a>
+        <LinkContact/>
     </BlockContainer>,
     <BlockContainer>
         <Video autoplay loop muted src={videoMain} poster={imgMain}/>
@@ -40,7 +34,6 @@ const content = [
 
 const PageContact = () => {
     useSetTheme(THEMES.DEFAULT);
-    // const {theme} = useTheme();
     const animateRefs = useAnimateRefs(content.length);
     return (
         <>
