@@ -18,9 +18,9 @@ const middleware = webpackMiddleware(compiler, {
 app.use(middleware)
 app.use(webpackHotMiddleware(compiler))
 app.use(express.static(path.join(__dirname, '../dist/')))
-app.get('/', (req, res) => {
+app.get('/*', (req, res) => {
     res.write(middleware.context.outputFileSystem.readFileSync(
-        path.join(__dirname, 'dist/index.html')))
+        path.join(__dirname, '../dist/index.html')))
     res.end()
 })
 
