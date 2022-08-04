@@ -2,7 +2,11 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-    entry: path.resolve(__dirname, './src/index.js'),
+    mode: 'development',
+    entry: [
+        'webpack-hot-middleware/client?reload=true',
+        path.resolve(__dirname, './src/index.js')
+    ],
     module: {
         rules: [
             {
@@ -55,7 +59,9 @@ module.exports = {
         path: path.resolve(__dirname, './dist'),
         filename: 'bundle.js',
     },
-    plugins: [],
+    plugins: [
+        new webpack.HotModuleReplacementPlugin(),
+    ],
     devServer: {
         static: path.resolve(__dirname, './dist'),
         hot: true,
