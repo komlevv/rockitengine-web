@@ -1,9 +1,5 @@
-import s from './GridContainer.css'
+import s from './GridContainer.css';
 
-const GridContainer = ({children}) => (
-    <div className={s.gridContainer}>
-        {children}
-    </div>
-)
+const GridContainer = ({ children }) => <div className={s.gridContainer}>{children}</div>;
 
 export default GridContainer;

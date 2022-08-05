@@ -2,14 +2,35 @@
   "root": true,
   "extends": [
     "airbnb",
-    "airbnb/hooks"
+    "airbnb/hooks",
+    "prettier"
   ],
-  "overrides": [
-    {
-      "files": ["*"],
-      "rules": {
-        "import/no-import-module-exports": "off"
+  "plugins": [
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "printWidth": 100
       }
-    }
-  ]
+    ],
+    "import/no-import-module-exports": "off",
+    "jsx-a11y/media-has-caption": "off",
+    "react/jsx-filename-extension": "off",
+    "react/function-component-definition": [
+      "error",
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    // todo fix index keys and delete this line
+    "react/no-array-index-key": "warn",
+    "react/jsx-props-no-spreading": "warn",
+    "react-hooks/exhaustive-deps": "warn",
+    "import/prefer-default-export": "warn"
+  }
 }

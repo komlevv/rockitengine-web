@@ -6,8 +6,6 @@ import s from './Gap.css';
 // using this to speed up release, but ideally a separate component should
 // be generated for such cases, and GridContainer should set padding-bottom
 // for direct children
-const Gap = () => (
-    <div className={s.gap}></div>
-)
+const Gap = () => <div className={s.gap} />;
 
 export default Gap;

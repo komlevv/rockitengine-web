@@ -1,14 +1,11 @@
-import s from "./Video.css"
-import {createRef, useEffect} from "react";
+import { createRef, useEffect } from 'react';
+import s from './Video.css';
 
-const Video = ({
-                 src, poster, loop, muted,
-                 controls, autoplay, innerRef = createRef()
-               }) => {
+const Video = ({ src, poster, loop, muted, controls, autoplay, innerRef = createRef() }) => {
   useEffect(() => {
     // tbd, see https://github.com/facebook/react/issues/10389
-    muted && innerRef.current.setAttribute('muted', '')
-  })
+    if (muted) innerRef.current.setAttribute('muted', '');
+  });
   return (
     <video
       ref={innerRef}
@@ -19,10 +16,10 @@ const Video = ({
       muted={muted}
       autoPlay={autoplay}
     >
-      <source src={src} type="video/mp4"/>
+      <source src={src} type="video/mp4" />
       Your browser does not support the video tag.
     </video>
-  )
-}
+  );
+};
 
 export default Video;
