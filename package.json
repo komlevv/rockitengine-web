@@ -1,16 +1,14 @@
 {
-  "name": "react_tutorial",
+  "name": "rockitengine-web",
   "version": "1.0.0",
-  "description": "react test tutorial",
+  "description": "Rockitengine website",
   "main": "src/test.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon -L --exec babel-node src/index.js",
     "dev": "webpack serve --config ./webpack.config.js --mode development",
-    "express": "nodemon --config nodemon.dev.json -L -r @babel/register ./src/server.js"
+    "express": "nodemon --config nodemon.dev.json -L -r @babel/register ./src/server.js",
+    "lint": "npx eslint . --ext .js"
   },
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.18.10",
     "@babel/node": "^7.16.8",
