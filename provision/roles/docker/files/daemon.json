@@ -10,5 +10,6 @@
   "storage-opts": [
     "overlay2.override_kernel_check=true"
   ],
-  "bridge": "none"
+  "bridge": "none",
+  "iptables": "false"
 }

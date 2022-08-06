@@ -16,10 +16,10 @@
     name: docker-ce-20.*
     state: present
 
-- name: /etc/docker/ dir is present and docker daemon config is deployed
-  copy:
-    src: daemon.json
-    dest: /etc/docker/
+#- name: /etc/docker/ dir is present and docker daemon config is deployed
+#  copy:
+#    src: daemon.json
+#    dest: /etc/docker/
 
 - name: docker daemon is enabled and started
   service:
