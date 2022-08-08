@@ -19,7 +19,7 @@ nodes = {
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   nodes.each do |node_name, node_ip|
     config.vm.define node_name do |node_config|
-      node_config.vm.box = "bento/centos-stream-8" # todo replace with own build here
+      node_config.vm.box = "almalinux/8" # todo replace with own build here
       node_config.vm.synced_folder "./provision", "/provision/"
       node_config.vm.network :private_network, ip: node_ip
       node_config.vm.hostname = "#{node_name}"
