@@ -1,6 +1,13 @@
 version: "3.9"  # optional since v1.27.0
 services:
   web:
+    # Turn off label separation for the container
+    # Selinux blocks read/write in mounted folders
+    # https://github.com/containers/podman/issues/3683
+    # vboxsf(when using synced_folders) does not support labeling
+    # this is for dev only. works during run, but not build
+    security_opt:
+      - label:disable
     build: .
     ports:
       - "8080:8080"
