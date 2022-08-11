@@ -5,4 +5,4 @@
   roles:
     - node-js
     - package-json
-    - docker
+    - podman

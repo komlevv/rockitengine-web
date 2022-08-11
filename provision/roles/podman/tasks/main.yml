@@ -1,0 +1,30 @@
+# Playbook to deploy rootless Podman
+---
+- name: Install Podman & Podman-docker CLI
+  dnf:
+    name:
+      - podman-4.1.*
+      - podman-docker-4.1.*
+    state: present
+
+- name: Install docker-compose
+  get_url:
+    url: https://github.com/docker/compose/releases/download/v2.9.0/docker-compose-linux-x86_64
+    dest: /usr/local/bin/docker-compose
+    mode: 0777
+    owner: vagrant
+    group: vagrant
+
+- name: Set environment variables for docker-compose to work with podman
+  copy:
+    src: podman_env.sh
+    dest: /etc/profile.d/
+
+- name: Start rootless podman socket
+  become_user: vagrant
+  systemd:
+    name: podman.socket
+    state: started
+    enabled: yes
+    scope: user
+
