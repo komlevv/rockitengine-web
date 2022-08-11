@@ -40,7 +40,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       node_config.vm.provision :shell, inline: $set_env_vars
       node_config.vm.provision :ansible_local, run: "always" do |ansible|
         ansible.compatibility_mode = "2.0"
-        ansible.playbook = "/provision/provision.rockitengine.yml"
+        ansible.playbook = "/provision/provision.dev.yml"
       end
       # ssh starts in /vagrant dir
       node_config.ssh.extra_args = ["-t", "cd /vagrant; bash --login"]

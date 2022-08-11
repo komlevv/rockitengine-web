@@ -1,0 +1,6 @@
+#provision production environment
+#---
+#- hosts: remote_machines
+#  become: yes
+#  roles:
+#    - docker

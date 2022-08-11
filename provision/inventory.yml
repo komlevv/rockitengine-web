@@ -1,0 +1,4 @@
+remote_machines:
+  hosts:
+    vm01:
+      ansible_host: 107.152.43.183

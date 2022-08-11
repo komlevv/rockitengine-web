@@ -1,0 +1,22 @@
+---
+- name: Upgrade AlmaLinux to latest release 8.*
+  hosts: remote_machines
+  become: yes
+  tasks:
+    - name: Dnf refresh & upgrade
+      shell: dnf -y upgrade --refresh
+    - name: Dnf clean
+      shell: dnf clean all
+    - name: Install the AlmaLinux rpm from a remote repo
+      dnf:
+        name: 'https://repo.almalinux.org/almalinux/almalinux-release-latest-8.x86_64.rpm'
+        state: present
+    - name: Dnf refresh & upgrade
+      shell: dnf -y upgrade --refresh
+    - name: Reboot
+      reboot:
+    - name: Print OS version
+      debug: msg="{{ item }}"
+      with_items:
+        - "{{ ansible_distribution }}"
+        - "{{ ansible_distribution_version }}"
