@@ -3,6 +3,7 @@ import { transformFileAsync } from '@babel/core';
 import path from 'path';
 import { promises as fs } from 'fs';
 import { prodConfig } from '../webpack.config';
+import packageJson from '../package.json';
 
 const srcDir = path.join(__dirname, '..', 'src');
 const distDir = path.join(__dirname, '..', 'dist');
@@ -68,7 +69,13 @@ const bundle = () =>
       .writeFile(path.join(distDir, 'server.js'), compiled.code)
       .then(() => console.log('written server.js')),
     fs
-      .copyFile(path.join(__dirname, '../package.json'), path.join(distDir, 'package.json'))
+      .writeFile(
+        path.join(distDir, 'package.json'),
+        JSON.stringify({
+          version: `${packageJson.version}-build-${Date.now()}`,
+          dependencies: { ...packageJson.dependencies },
+        })
+      )
       .then(() => console.log('written package.json')),
   ]);
   log('Done building');
