@@ -11,9 +11,12 @@ export ANSIBLE_STDOUT_CALLBACK=yaml
 EOF
 SCRIPT
 
+# load local inventory
+require 'yaml'
+inventory_local = YAML.load_file('./provision/inventory.yml')["local_machines"]["hosts"]
+
 nodes = {
-    :node01 => "192.168.56.40",
-    # :packer02 => "192.168.34.41"
+  :node01 => inventory_local["vm01"]["ansible_host"],
 }
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|

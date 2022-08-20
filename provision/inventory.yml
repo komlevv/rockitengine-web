@@ -2,3 +2,8 @@ remote_machines:
   hosts:
     vm01:
       ansible_host: 107.152.43.183
+
+local_machines:
+  hosts:
+    vm01:
+      ansible_host: 192.168.56.40
