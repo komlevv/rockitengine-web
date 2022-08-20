@@ -1,6 +1,7 @@
 {
   "watch": [
-    "src/server.js",
+    "src/server.dev.js",
+    "src/server.prod.js",
     "webpack.config.js"
   ],
   "ext": "js"

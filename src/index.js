@@ -8,4 +8,4 @@ import './favicon.ico';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
 
-module.hot.accept();
+if (module.hot) module.hot.accept();

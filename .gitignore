@@ -1,7 +1,9 @@
 node_modules/
 .idea/
 .vagrant/
+dist/
 !dist/.gitkeep
+package-lock.json
 notes.txt
 .DS_Store
 *.iml

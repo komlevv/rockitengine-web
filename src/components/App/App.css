@@ -11,7 +11,7 @@ html, body, :global(#root) {
 
 body {
     /*background-color: lightgrey;*/
-    font-family: 'Circular', sans-serif;
+    font-family: 'RECircular', sans-serif;
 }
 
 .grid12 {
