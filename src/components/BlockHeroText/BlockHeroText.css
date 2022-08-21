@@ -1,23 +1,21 @@
 @value blockPaddingBottom from "../App/App.css";
 
 .blockHeroText {
-    composes: grid12 from '../App/App.css';
-    grid-column: 1 / -1;
-    padding-bottom: blockPaddingBottom;
+  composes: grid12 from "../App/App.css";
+  grid-column: 1 / -1;
+  padding-bottom: blockPaddingBottom;
 }
 
 .blockHeroText > h1 {
-    grid-column: 1 / -1;
+  grid-column: 1 / -1;
 }
 
 .blockHeroText > p {
-    grid-column: 1 / span 5;
+  grid-column: 1 / span 5;
 }
-
 
 @media only screen and (max-width: 1024px) {
-    .blockHeroText > p {
-        grid-column: 1 / -1;
-    }
+  .blockHeroText > p {
+    grid-column: 1 / -1;
+  }
 }
-

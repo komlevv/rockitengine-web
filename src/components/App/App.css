@@ -1,48 +1,53 @@
 /* global css */
-/* todo add css reset here*/
+/* todo add css reset here */
 @value blockPaddingBottom: 30px;
 
-html, body, :global(#root) {
-    line-height: 1;
-    height: 100%;
-    width: 100%;
-    margin: 0;
+html,
+body,
+:global(#root) {
+  line-height: 1;
+  height: 100%;
+  width: 100%;
+  margin: 0;
 }
 
 body {
-    /*background-color: lightgrey;*/
-    font-family: 'RECircular', sans-serif;
+  /* background-color: lightgrey; */
+  font-family: RECircular, sans-serif;
 }
 
 .grid12 {
-    /*background-color: lightpink;*/
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 20px;
+  /* background-color: lightpink; */
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
 }
 
-
-p, a, ul {
-    font-size: 15pt;
-    font-weight: 300;
-    margin: 0;
-    padding: 0;
+p,
+a,
+ul {
+  font-size: 15pt;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
 }
 
-a, ul {
-    color: black;
-    text-decoration: none;
+a,
+ul {
+  color: black;
+  text-decoration: none;
 }
 
 ul {
-    list-style-position: inside;
+  list-style-position: inside;
 }
 
 sup {
-    font-size: 70%;
+  font-size: 70%;
 }
 
-body,a{
-    background-color: #1a1a1a;
-    color:white;
+body,
+a {
+  background-color: #1a1a1a;
+  color: white;
 }

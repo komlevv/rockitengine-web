@@ -12,7 +12,8 @@
     "prettier/prettier": [
       "error",
       {
-        "printWidth": 100
+        "printWidth": 100,
+        "endOfLine": "lf"
       }
     ],
     "import/no-import-module-exports": "off",

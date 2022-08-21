@@ -1,22 +1,21 @@
 @value blockPaddingBottom from "../App/App.css";
 
 .blockContact {
-    grid-column: 1 /-1;
-    composes: grid12 from '../App/App.css';
-    padding-bottom: blockPaddingBottom;
+  grid-column: 1 /-1;
+  composes: grid12 from "../App/App.css";
+  padding-bottom: blockPaddingBottom;
 }
 
 .blockContact > a {
-    grid-column: 1 / -1;
+  grid-column: 1 / -1;
 }
 
 .blockContact > a > h3 {
-    margin-top:0;
+  margin-top: 0;
 }
 
-
-@media only screen and (max-width: 576px){
-    .blockContact > a > h3 {
-        font-size: 12pt;
-    }
+@media only screen and (max-width: 576px) {
+  .blockContact > a > h3 {
+    font-size: 12pt;
+  }
 }

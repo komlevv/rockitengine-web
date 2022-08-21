@@ -1,28 +1,29 @@
 .gridContainer {
-    composes: grid12 from '../App/App.css';
-    max-width: 1360px;
-    padding: 120px 100px 100px 100px;
-    margin: auto;
-    /*background-color: #feead4;*/
+  composes: grid12 from "../App/App.css";
+  max-width: 1360px;
+  padding: 120px 100px 100px;
+  margin: auto;
+  /* background-color: #feead4; */
 }
 
 .gridContainer > * {
-    /*margin-bottom: 40px;*/
-    /*padding-bottom: 30px;*/
+  /* margin-bottom: 40px; */
+  /* padding-bottom: 30px; */
 }
 
-@media only screen and (max-width: 1024px){
-    .gridContainer {
-        padding: 110px 20px 20px 20px;
-    }
+@media only screen and (max-width: 1024px) {
+  .gridContainer {
+    padding: 110px 20px 20px;
+  }
 }
 
-@media only screen and (max-width: 576px){
-    .gridContainer {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    .gridContainer > * {
-        /*margin-bottom: 0;*/
-    }
+@media only screen and (max-width: 576px) {
+  .gridContainer {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .gridContainer > * {
+    /* margin-bottom: 0; */
+  }
 }

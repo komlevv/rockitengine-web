@@ -1,10 +1,10 @@
-.listItem{
-    font-size: 12pt;
-    font-weight: 500;
-    /*background-color: #f0d6b7;*/
-    /*border-top: 1px solid grey;*/
-    padding-top: 15px;
-    grid-column: span 2;
-    height: 20px;
-    line-height: 1.2;
+.listItem {
+  font-size: 12pt;
+  font-weight: 500;
+  /* background-color: #f0d6b7; */
+  /* border-top: 1px solid grey; */
+  padding-top: 15px;
+  grid-column: span 2;
+  height: 20px;
+  line-height: 1.2;
 }

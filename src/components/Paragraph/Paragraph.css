@@ -1,17 +1,17 @@
 .paragraph {
-    grid-column: 1 / 5;
-    line-height: 1.5;
-    /*background-color: aquamarine;*/
+  grid-column: 1 / 5;
+  line-height: 1.5;
+  /* background-color: aquamarine; */
 }
 
-@media only screen and (max-width: 1280px){
-    .paragraph {
-        grid-column: 1 / -1;
-    }
+@media only screen and (max-width: 1280px) {
+  .paragraph {
+    grid-column: 1 / -1;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
-    .paragraph {
-        font-size: 14pt;
-    }
+  .paragraph {
+    font-size: 14pt;
+  }
 }

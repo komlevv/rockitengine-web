@@ -1,56 +1,56 @@
 .listItemBig {
-    grid-column: 1 / -1;
-    composes: grid12 from '../App/App.css';
-    margin-top: 10px;
-    margin-bottom: 10px;
+  grid-column: 1 / -1;
+  composes: grid12 from "../App/App.css";
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .listItemBigNumber {
-    grid-column: 1;
-    /*background-color: darkorange;*/
+  grid-column: 1;
+  /* background-color: darkorange; */
 }
 
 .listItemBigHeader {
-    grid-column: 2 / span 3;
-    /*background-color: cornflowerblue;*/
+  grid-column: 2 / span 3;
+  /* background-color: cornflowerblue; */
 }
 
 .listItemBig > p {
-    grid-column: 7 / span 6;
+  grid-column: 7 / span 6;
 }
 
 .listItemBigSubBlock {
-    grid-column: 7 / span 6;
-    /*background-color: #b3e1e1;*/
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
+  grid-column: 7 / span 6;
+  /* background-color: #b3e1e1; */
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
 }
 
 .listItemBigSubGap {
-    /*   don't delete this */
+  /*   don't delete this */
 }
 
 @media only screen and (max-width: 768px) {
-    .listItemBigHeader {
-        grid-column: span 9;
-    }
+  .listItemBigHeader {
+    grid-column: span 9;
+  }
 
-    .listItemBigSubBlock {
-        grid-column: 1 / -1;
-        grid-template-columns: repeat(10, 1fr);
-        gap: 20px;
-    }
+  .listItemBigSubBlock {
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 20px;
+  }
 
-    .listItemBigSubBlock > div {
-        grid-column: span 5;
-    }
+  .listItemBigSubBlock > div {
+    grid-column: span 5;
+  }
 
-    .listItemBigSubGap {
-        display: none;
-    }
+  .listItemBigSubGap {
+    display: none;
+  }
 
-    .listItemBig > p {
-        grid-column: 1 / -1;
-    }
+  .listItemBig > p {
+    grid-column: 1 / -1;
+  }
 }

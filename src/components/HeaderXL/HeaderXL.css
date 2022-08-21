@@ -1,24 +1,24 @@
 h1 {
-    font-size: 64pt;
-    font-weight: bold;
-    /*font-weight: 800;*/
-    margin: 0;
+  font-size: 64pt;
+  font-weight: bold;
+  /* font-weight: 800; */
+  margin: 0;
 }
 
-@media only screen and (max-width: 1280px){
-    h1 {
-        font-size: 54pt;
-    }
+@media only screen and (max-width: 1280px) {
+  h1 {
+    font-size: 54pt;
+  }
 }
 
-@media only screen and (max-width: 1024px){
-    h1 {
-        font-size: 44pt;
-    }
+@media only screen and (max-width: 1024px) {
+  h1 {
+    font-size: 44pt;
+  }
 }
 
-@media only screen and (max-width: 576px){
-    h1 {
-        font-size: 34pt;
-    }
+@media only screen and (max-width: 576px) {
+  h1 {
+    font-size: 34pt;
+  }
 }

@@ -1,28 +1,28 @@
 .button {
-    grid-column: 1 / -1;
-    width: 200px;
-    padding-top: 7px;
-    padding-bottom: 10px;
-    text-align: center;
-    white-space: nowrap;
-    /*justify-self: center;*/
-    transition: 0.5s;
-    position: relative;
+  grid-column: 1 / -1;
+  width: 200px;
+  padding-top: 7px;
+  padding-bottom: 10px;
+  text-align: center;
+  white-space: nowrap;
+  /* justify-self: center; */
+  transition: 0.5s;
+  position: relative;
 }
 
 .button:hover {
-    /* keep 0.09px here, rendering bug causes flicker on Chrome */
-    box-shadow: inset 210px 0 0 0.09px #faf8f3;
-    color: black;
-    background-color: white;
+  /* keep 0.09px here, rendering bug causes flicker on Chrome */
+  box-shadow: inset 210px 0 0 0.09px #faf8f3;
+  color: black;
+  background-color: white;
 }
 
-.button:before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left:0;
-    width: 201px;
-    height: 38px;
-    box-shadow: 4px 4px #8d7b4e;
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 201px;
+  height: 38px;
+  box-shadow: 4px 4px #8d7b4e;
 }

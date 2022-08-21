@@ -1,43 +1,45 @@
 @value blockPaddingBottom from "../App/App.css";
 
 .services {
-    grid-column: 1 /-1;
-    composes: grid12 from '../App/App.css';
-    padding-bottom: blockPaddingBottom;
+  grid-column: 1 /-1;
+  composes: grid12 from "../App/App.css";
+  padding-bottom: blockPaddingBottom;
 }
+
 .services > a {
-    color:white;
+  color: white;
 }
 
 .listL {
-    grid-column: 7 / 9;
-    /*background-color: aquamarine;*/
+  grid-column: 7 / 9;
+  /* background-color: aquamarine; */
 }
 
 .listR {
-    grid-column: 10 / 12;
-    /*background-color: aquamarine;*/
+  grid-column: 10 / 12;
+  /* background-color: aquamarine; */
 }
 
-.listL > ul > li, .listR > ul > li {
-    color: white;
-    margin-bottom: 10px;
-    white-space: nowrap;
+.listL > ul > li,
+.listR > ul > li {
+  color: white;
+  margin-bottom: 10px;
+  white-space: nowrap;
 }
-
 /* media queries */
 @media only screen and (max-width: 1280px) {
-    .listL {
-        grid-column: 1 / span 3;
-    }
+  .listL {
+    grid-column: 1 / span 3;
+  }
 
-    .listR {
-        grid-column: 5 / span 3;
-    }
+  .listR {
+    grid-column: 5 / span 3;
+  }
 }
 
 @media only screen and (max-width: 768px) {
-    .listL, .listR {
-        grid-column: 1 / -1;
-    }
+  .listL,
+  .listR {
+    grid-column: 1 / -1;
+  }
 }
