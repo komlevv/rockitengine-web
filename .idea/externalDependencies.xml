@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalDependencies">
+    <plugin id="IdeaVIM" />
+    <plugin id="com.sburlyaev.terminal.plugin" />
+    <plugin id="intellij.prettierJS" />
+    <plugin id="ir.msdehghan.plugins.ansible" />
+    <plugin id="org.jetbrains.plugins.node-remote-interpreter" />
+    <plugin id="org.jetbrains.plugins.ruby" />
+    <plugin id="org.jetbrains.plugins.vagrant" />
+  </component>
+</project>
