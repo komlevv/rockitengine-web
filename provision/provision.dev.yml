@@ -1,6 +1,6 @@
 ### provision centos 8 box for RockitEngine website
 ---
-- hosts: all
+- hosts: local_machines
   become: yes
   roles:
     - node-js

@@ -16,7 +16,7 @@ require 'yaml'
 inventory_local = YAML.load_file('./provision/inventory.yml')["local_machines"]["hosts"]
 
 nodes = {
-  :node01 => inventory_local["vm01"]["ansible_host"],
+  :node01 => inventory_local["vm_local"]["ansible_host"],
 }
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|

@@ -1,0 +1,25 @@
+---
+- name: Enable http
+  firewalld:
+    zone: public
+    service: http
+    permanent: yes
+    immediate: yes
+    state: enabled
+
+- name: Enable https
+  firewalld:
+    zone: public
+    service: https
+    permanent: yes
+    immediate: yes
+    state: enabled
+
+# rootless podman cannot bind to privileged ports
+- name: Allow binding privileged ports from 80 and up
+  sysctl:
+    name: net.ipv4.ip_unprivileged_port_start
+    value: "80"
+    sysctl_set: yes
+    state: present
+    reload: yes
