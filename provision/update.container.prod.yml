@@ -1,0 +1,5 @@
+# playbook to update container to latest v, this is tbd
+---
+- hosts: remote_machines
+  roles:
+    - podman-service-autostart

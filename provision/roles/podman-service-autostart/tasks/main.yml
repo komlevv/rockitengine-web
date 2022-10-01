@@ -1,0 +1,27 @@
+# Persist podman container after reboot
+---
+- name: Allow systemd services to be started at boot without login for vagrant
+  command: loginctl enable-linger vagrant
+
+- name: Copy service file
+  copy:
+    src: container-rockitengine-web.service
+    dest: /home/vagrant/.config/systemd/user/
+
+- name: Get vagrant uid
+  command: id -u vagrant
+  register: vagrant_uid
+
+- name: Enable and start container service
+  systemd:
+    daemon_reload: yes
+    scope: user
+    name: container-rockitengine-web.service
+    state: started
+    enabled: yes
+  environment:
+    # sysctl --user commands won't work without XDG_RUNTIME_DIR set
+    XDG_RUNTIME_DIR: "/run/user/{{ vagrant_uid.stdout }}"
+
+- name: Prune old stopped containers
+  command: podman container prune -f
