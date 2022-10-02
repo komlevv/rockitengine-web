@@ -1,5 +1,6 @@
+# Role for Nginx reverse proxy
+# This assumes Let's Encrypt certificates are present, see nginx.conf
 ---
-# Install nginx
 - name: Stop nginx service
   systemd:
     name: nginx
@@ -31,7 +32,6 @@
 - include_role:
     name: firewalld-allow-http-https
 
-# Configure reverse proxy
 - name: Copy Nginx reverse proxy config
   copy:
     src: nginx.conf

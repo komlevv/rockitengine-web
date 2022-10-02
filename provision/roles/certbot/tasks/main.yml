@@ -1,0 +1,36 @@
+---
+- name: Install EPEL repository
+  dnf:
+    name: epel-release
+    state: present
+
+- name: Install Certbot
+  dnf:
+    name: certbot
+
+- name: Check if certificate exists
+  stat:
+    path: /etc/letsencrypt/live/rockitengine.com/fullchain.pem
+  register: le_cert
+
+# ! standalone certbot binds to port 80, make sure no one is using it
+- name: Check if port 80 is free to use
+  command: lsof -i:80
+  register: port_free
+  ignore_errors: yes
+
+- name: Fail when if port 80 is already in use
+  fail: msg="Certbot standalone needs to bind to port 80, which is already in use by another process.\n{{ port_free.stdout }}"
+  when: port_free.stdout != ""
+
+- name: Obtain cert if it doesn't exist
+  command: certbot certonly --standalone --noninteractive --agree-tos -m hello@rockitengine.com -d rockitengine.com -d www.rockitengine.com
+  when: not le_cert.stat.exists
+
+- name: Add cron job to renew the certificate
+  cron:
+    name: Certbot renewal
+    minute: "0"
+    hour: "0"
+    user: root
+    job: "certbot renew --quiet"
