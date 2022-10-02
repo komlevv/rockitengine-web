@@ -1,19 +1,6 @@
 ---
-- name: Enable http
-  firewalld:
-    zone: public
-    service: http
-    permanent: yes
-    immediate: yes
-    state: enabled
-
-- name: Enable https
-  firewalld:
-    zone: public
-    service: https
-    permanent: yes
-    immediate: yes
-    state: enabled
+- include_role:
+    name: firewalld-allow-http-https
 
 # rootless podman cannot bind to privileged ports
 - name: Allow binding privileged ports from 80 and up

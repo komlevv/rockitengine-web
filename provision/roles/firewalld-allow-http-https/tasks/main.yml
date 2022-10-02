@@ -1,0 +1,17 @@
+# Open ports 80 and 443 in firewalld
+---
+- name: Enable http
+  firewalld:
+    zone: public
+    service: http
+    permanent: yes
+    immediate: yes
+    state: enabled
+
+- name: Enable https
+  firewalld:
+    zone: public
+    service: https
+    permanent: yes
+    immediate: yes
+    state: enabled
