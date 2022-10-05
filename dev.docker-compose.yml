@@ -8,7 +8,10 @@ services:
     # this is for dev only. works during run, but not build
     security_opt:
       - label:disable
-    build: .
+    image: docker.localhost/rockitengine/web-dev
+    build:
+      context: .
+      dockerfile: dev.Dockerfile
     ports:
       - "8080:8080"
     volumes:
