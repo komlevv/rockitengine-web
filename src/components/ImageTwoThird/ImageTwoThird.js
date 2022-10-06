@@ -1,7 +1,6 @@
 import s from './ImageTwoThird.css';
+import Image from '../Image/Image';
 
-const ImageTwoThird = ({ src, innerRef }) => (
-  <img ref={innerRef} className={s.imageTwoThird} src={src} alt="" />
-);
+const ImageTwoThird = (props) => <Image className={s.imageTwoThird} {...props} />;
 
 export default ImageTwoThird;

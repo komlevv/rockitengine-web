@@ -20,7 +20,7 @@ const content = [
   <BlockContainer>
     <Divider />
     <HeaderM headerText={data.services.h} />
-    <ImageFullWide src={data.media.imgWide[0]} />
+    <ImageFullWide loading="eager" src={data.media.imgWide[0]} />
   </BlockContainer>,
   Object.keys(data.services.items).map((el, i) => (
     <ListItemBig key={i} data={data.services.items[el]} />

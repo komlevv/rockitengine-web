@@ -18,7 +18,7 @@ const content = [
   <BlockContainer>
     <Divider />
     <HeaderM headerText={data.ourValues.h} />
-    <ImageFullWide src={data.media.imgWide[0]} />
+    <ImageFullWide loading="eager" src={data.media.imgWide[0]} />
   </BlockContainer>,
   Object.keys(data.ourValues.items).map((el, i) => (
     <ListItemBig key={i} data={data.ourValues.items[el]} />

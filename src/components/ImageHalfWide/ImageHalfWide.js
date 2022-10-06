@@ -1,7 +1,6 @@
 import s from './ImageHalfWide.css';
+import Image from '../Image/Image';
 
-const ImageHalfWide = ({ src, innerRef }) => (
-  <img ref={innerRef} className={s.imageHalfWide} src={src} alt="" />
-);
+const ImageHalfWide = (props) => <Image className={s.imageHalfWide} {...props} />;
 
 export default ImageHalfWide;
