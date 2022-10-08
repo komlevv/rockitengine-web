@@ -1,0 +1,9 @@
+.imgGrid {
+  composes: grid12 from "../App/App.css";
+  overflow: hidden;
+}
+
+.imgThumbBlur {
+  filter: blur(10px);
+  transform: scale(1.2);
+}

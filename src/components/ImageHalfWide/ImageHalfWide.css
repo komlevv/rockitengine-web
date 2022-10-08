@@ -1,11 +1,15 @@
-.imageHalfWide {
-  grid-column: span 6;
+.image {
+  grid-column: 1 / -1;
+  grid-row: 1;
   width: 100%;
-  /* background-color: #b3e1e1; */
+}
+
+.container {
+  grid-column: span 6;
 }
 
 @media only screen and (max-width: 1024px) {
-  .imageHalfWide {
+  .container {
     grid-column: span 12;
   }
 }

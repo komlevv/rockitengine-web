@@ -1,11 +1,15 @@
-.imageFullWide {
+.image {
   grid-column: 1 / -1;
+  grid-row: 1;
   width: 100%;
-  /* background-color: #919191; */
+}
+
+.container {
+  grid-column: 1 / -1;
 }
 
 @media only screen and (max-width: 768px) {
-  .imageFullWide {
+  .image {
     height: 300px;
     object-fit: cover;
   }

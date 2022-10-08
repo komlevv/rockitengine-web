@@ -12,7 +12,7 @@ const BlockClients = ({ innerRef }) => (
   <div ref={innerRef} className={s.blockClients}>
     <Divider />
     <HeaderM accent headerText={data.h} />
-    <Image src={clientLogosImg} />
+    <img src={clientLogosImg} alt="" />
   </div>
 );
 

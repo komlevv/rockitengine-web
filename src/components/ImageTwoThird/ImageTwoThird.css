@@ -1,17 +1,21 @@
-.imageTwoThird {
-  grid-column: span 8;
+.image {
+  grid-column: 1 / -1;
+  grid-row: 1;
   width: 100%;
-  /* background-color: #b3e1e1; */
+}
+
+.container {
+  grid-column: span 8;
 }
 
 @media only screen and (max-width: 1024px) {
-  .imageTwoThird {
+  .container {
     grid-column: span 12;
   }
 }
 
 @media only screen and (max-width: 576px) {
-  .imageTwoThird {
+  .image {
     height: 220px;
     object-fit: cover;
   }
