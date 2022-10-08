@@ -9,15 +9,24 @@ import videoSquare3 from './videos/cartier-square-3.mp4';
 import videoSquare4 from './videos/cartier-square-4.mp4';
 
 import imgMain from './images/cartier-main.jpg';
+import imgMainThumb from './images/cartier-main-thumb.jpg';
 import imgNext from './images/cartier-next.jpg';
+import imgNextThumb from './images/cartier-next-thumb.jpg';
 
 import imgWide1 from './images/cartier-wide-1.jpg';
+import imgWide1Thumb from './images/cartier-wide-1-thumb.jpg';
 import imgWide2 from './images/cartier-wide-2.jpg';
+import imgWide2Thumb from './images/cartier-wide-2-thumb.jpg';
 
 import imgSquare1 from './images/cartier-square-1.jpg';
+import imgSquare1Thumb from './images/cartier-square-1-thumb.jpg';
 import imgSquare2 from './images/cartier-square-2.jpg';
+import imgSquare2Thumb from './images/cartier-square-2-thumb.jpg';
 import imgSquare3 from './images/cartier-square-3.jpg';
+import imgSquare3Thumb from './images/cartier-square-3-thumb.jpg';
 import imgSquare4 from './images/cartier-square-4.jpg';
+import imgSquare4Thumb from './images/cartier-square-4-thumb.jpg';
+
 import { ROUTES } from '../../App/ROUTES';
 import Span from '../../Span/Span';
 
@@ -101,5 +110,15 @@ export const data = {
     video: [videoWide1, videoWide2],
     videoVertical: [],
     videoSquare: [videoSquare1, videoSquare2, videoSquare3, videoSquare4],
+    thumbs: [
+      imgMainThumb,
+      imgNextThumb,
+      imgWide1Thumb,
+      imgWide2Thumb,
+      imgSquare1Thumb,
+      imgSquare2Thumb,
+      imgSquare3Thumb,
+      imgSquare4Thumb,
+    ],
   },
 };

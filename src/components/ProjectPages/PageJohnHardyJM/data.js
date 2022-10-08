@@ -12,39 +12,68 @@ import videoVertical5 from './videos/jh-legends-jm-vertical-5.mp4';
 import videoVertical6 from './videos/jh-legends-jm-vertical-6.mp4';
 
 import imgMain from './images/jh-legends-jm-main.jpg';
+import imgMainThumb from './images/jh-legends-jm-main-thumb.jpg';
 import imgNext from './images/jh-legends-jm-next.jpg';
+import imgNextThumb from './images/jh-legends-jm-next-thumb.jpg';
 // import imgNextShort from './images/jh-legends-jm-next-short.jpg';
 
 import imgWide1 from './images/jh-legends-jm-wide-1.jpg';
+import imgWide1Thumb from './images/jh-legends-jm-wide-1-thumb.jpg';
 import imgWide2 from './images/jh-legends-jm-wide-2.jpg';
+import imgWide2Thumb from './images/jh-legends-jm-wide-2-thumb.jpg';
 import imgWide3 from './images/jh-legends-jm-wide-3.jpg';
+import imgWide3Thumb from './images/jh-legends-jm-wide-3-thumb.jpg';
 import imgWide4 from './images/jh-legends-jm-wide-4.jpg';
+import imgWide4Thumb from './images/jh-legends-jm-wide-4-thumb.jpg';
 
 import imgSquare1 from './images/jh-legends-jm-square-1.jpg';
+import imgSquare1Thumb from './images/jh-legends-jm-square-1-thumb.jpg';
 import imgSquare2 from './images/jh-legends-jm-square-2.jpg';
+import imgSquare2Thumb from './images/jh-legends-jm-square-2-thumb.jpg';
 import imgSquare3 from './images/jh-legends-jm-square-3.jpg';
+import imgSquare3Thumb from './images/jh-legends-jm-square-3-thumb.jpg';
 import imgSquare4 from './images/jh-legends-jm-square-4.jpg';
+import imgSquare4Thumb from './images/jh-legends-jm-square-4-thumb.jpg';
 import imgSquare5 from './images/jh-legends-jm-square-5.jpg';
+import imgSquare5Thumb from './images/jh-legends-jm-square-5-thumb.jpg';
 import imgSquare6 from './images/jh-legends-jm-square-6.jpg';
+import imgSquare6Thumb from './images/jh-legends-jm-square-6-thumb.jpg';
 
 import imgSquareS1 from './images/jh-legends-jm-square-s-1.jpg';
+import imgSquareS1Thumb from './images/jh-legends-jm-square-s-1-thumb.jpg';
 import imgSquareS2 from './images/jh-legends-jm-square-s-2.jpg';
+import imgSquareS2Thumb from './images/jh-legends-jm-square-s-2-thumb.jpg';
 import imgSquareS3 from './images/jh-legends-jm-square-s-3.jpg';
+import imgSquareS3Thumb from './images/jh-legends-jm-square-s-3-thumb.jpg';
 import imgSquareS4 from './images/jh-legends-jm-square-s-4.jpg';
+import imgSquareS4Thumb from './images/jh-legends-jm-square-s-4-thumb.jpg';
 import imgSquareS5 from './images/jh-legends-jm-square-s-5.jpg';
+import imgSquareS5Thumb from './images/jh-legends-jm-square-s-5-thumb.jpg';
 import imgSquareS6 from './images/jh-legends-jm-square-s-6.jpg';
+import imgSquareS6Thumb from './images/jh-legends-jm-square-s-6-thumb.jpg';
 import imgSquareS7 from './images/jh-legends-jm-square-s-7.jpg';
+import imgSquareS7Thumb from './images/jh-legends-jm-square-s-7-thumb.jpg';
 import imgSquareS8 from './images/jh-legends-jm-square-s-8.jpg';
+import imgSquareS8Thumb from './images/jh-legends-jm-square-s-8-thumb.jpg';
 
 import imgSquareSD1 from './images/jh-legends-jm-square-sd-1.jpg';
+import imgSquareSD1Thumb from './images/jh-legends-jm-square-sd-1-thumb.jpg';
 import imgSquareSD2 from './images/jh-legends-jm-square-sd-2.jpg';
+import imgSquareSD2Thumb from './images/jh-legends-jm-square-sd-2-thumb.jpg';
 
 import imgVertical1 from './images/jh-legends-jm-vertical-1.jpg';
+import imgVertical1Thumb from './images/jh-legends-jm-vertical-1-thumb.jpg';
 import imgVertical2 from './images/jh-legends-jm-vertical-2.jpg';
+import imgVertical2Thumb from './images/jh-legends-jm-vertical-2-thumb.jpg';
 import imgVertical3 from './images/jh-legends-jm-vertical-3.jpg';
+import imgVertical3Thumb from './images/jh-legends-jm-vertical-3-thumb.jpg';
 import imgVertical4 from './images/jh-legends-jm-vertical-4.jpg';
+import imgVertical4Thumb from './images/jh-legends-jm-vertical-4-thumb.jpg';
 import imgVertical5 from './images/jh-legends-jm-vertical-5.jpg';
+import imgVertical5Thumb from './images/jh-legends-jm-vertical-5-thumb.jpg';
 import imgVertical6 from './images/jh-legends-jm-vertical-6.jpg';
+import imgVertical6Thumb from './images/jh-legends-jm-vertical-6-thumb.jpg';
+
 import { ROUTES } from '../../App/ROUTES';
 import Span from '../../Span/Span';
 
@@ -213,6 +242,36 @@ export const data = {
       videoVertical4,
       videoVertical5,
       videoVertical6,
+    ],
+    thumbs: [
+      imgMainThumb,
+      imgNextThumb,
+      imgWide1Thumb,
+      imgWide2Thumb,
+      imgWide3Thumb,
+      imgWide4Thumb,
+      imgSquare1Thumb,
+      imgSquare2Thumb,
+      imgSquare3Thumb,
+      imgSquare4Thumb,
+      imgSquare5Thumb,
+      imgSquare6Thumb,
+      imgSquareS1Thumb,
+      imgSquareS2Thumb,
+      imgSquareS3Thumb,
+      imgSquareS4Thumb,
+      imgSquareS5Thumb,
+      imgSquareS6Thumb,
+      imgSquareS7Thumb,
+      imgSquareS8Thumb,
+      imgSquareSD1Thumb,
+      imgSquareSD2Thumb,
+      imgVertical1Thumb,
+      imgVertical2Thumb,
+      imgVertical3Thumb,
+      imgVertical4Thumb,
+      imgVertical5Thumb,
+      imgVertical6Thumb,
     ],
   },
 };

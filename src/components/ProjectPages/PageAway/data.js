@@ -7,27 +7,46 @@ import videoVertical1 from './videos/away-vertical-1.mp4';
 import videoVertical2 from './videos/away-vertical-2.mp4';
 
 import imgMain from './images/away-main.jpg';
+import imgMainThumb from './images/away-main-thumb.jpg';
 import imgNext from './images/away-next.jpg';
+import imgNextThumb from './images/away-next-thumb.jpg';
 
 import imgWide1 from './images/away-wide-1.jpg';
+import imgWide1Thumb from './images/away-wide-1-thumb.jpg';
 import imgWide2 from './images/away-wide-2.jpg';
+import imgWide2Thumb from './images/away-wide-2-thumb.jpg';
 import imgWide3 from './images/away-wide-3.jpg';
+import imgWide3Thumb from './images/away-wide-3-thumb.jpg';
 
 import imgSquareS1 from './images/away-square-s-1.jpg';
+import imgSquareS1Thumb from './images/away-square-s-1-thumb.jpg';
 import imgSquareS2 from './images/away-square-s-2.jpg';
+import imgSquareS2Thumb from './images/away-square-s-2-thumb.jpg';
 import imgSquareS3 from './images/away-square-s-3.jpg';
+import imgSquareS3Thumb from './images/away-square-s-3-thumb.jpg';
 import imgSquareS4 from './images/away-square-s-4.jpg';
+import imgSquareS4Thumb from './images/away-square-s-4-thumb.jpg';
 
 import imgSquareSD1 from './images/away-square-sd-1.jpg';
+import imgSquareSD1Thumb from './images/away-square-sd-1-thumb.jpg';
 
 import imgVertical1 from './images/away-vertical-1.jpg';
+import imgVertical1Thumb from './images/away-vertical-1-thumb.jpg';
 import imgVertical2 from './images/away-vertical-2.jpg';
+import imgVertical2Thumb from './images/away-vertical-2-thumb.jpg';
 import imgVertical3 from './images/away-vertical-3.jpg';
+import imgVertical3Thumb from './images/away-vertical-3-thumb.jpg';
 import imgVertical4 from './images/away-vertical-4.jpg';
+import imgVertical4Thumb from './images/away-vertical-4-thumb.jpg';
 import imgVertical5 from './images/away-vertical-5.jpg';
+import imgVertical5Thumb from './images/away-vertical-5-thumb.jpg';
 import imgVertical6 from './images/away-vertical-6.jpg';
+import imgVertical6Thumb from './images/away-vertical-6-thumb.jpg';
 import imgVertical7 from './images/away-vertical-7.jpg';
+import imgVertical7Thumb from './images/away-vertical-7-thumb.jpg';
 import imgVertical8 from './images/away-vertical-8.jpg';
+import imgVertical8Thumb from './images/away-vertical-8-thumb.jpg';
+
 import { ROUTES } from '../../App/ROUTES';
 import Span from '../../Span/Span';
 
@@ -125,5 +144,25 @@ export const data = {
     ],
     video: [videoWide1, videoWide2],
     videoVertical: [videoVertical1, videoVertical2],
+    thumbs: [
+      imgMainThumb,
+      imgNextThumb,
+      imgWide1Thumb,
+      imgWide2Thumb,
+      imgWide3Thumb,
+      imgSquareS1Thumb,
+      imgSquareS2Thumb,
+      imgSquareS3Thumb,
+      imgSquareS4Thumb,
+      imgSquareSD1Thumb,
+      imgVertical1Thumb,
+      imgVertical2Thumb,
+      imgVertical3Thumb,
+      imgVertical4Thumb,
+      imgVertical5Thumb,
+      imgVertical6Thumb,
+      imgVertical7Thumb,
+      imgVertical8Thumb,
+    ],
   },
 };

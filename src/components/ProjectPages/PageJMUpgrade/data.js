@@ -7,31 +7,53 @@ import videoWide4 from './videos/jm-upgrade-wide-4.mp4';
 import videoWide5 from './videos/jm-upgrade-wide-5.mp4';
 
 import imgMain from './images/jm-upgrade-main.jpg';
+import imgMainThumb from './images/jm-upgrade-main-thumb.jpg';
 import imgNext from './images/jm-upgrade-next.jpg';
+import imgNextThumb from './images/jm-upgrade-next-thumb.jpg';
 // import imgNextShort from './images/jm-upgrade-next-short.jpg';
 
 import imgWide1 from './images/jm-upgrade-wide-1.jpg';
+import imgWide1Thumb from './images/jm-upgrade-wide-1-thumb.jpg';
 import imgWide2 from './images/jm-upgrade-wide-2.jpg';
+import imgWide2Thumb from './images/jm-upgrade-wide-2-thumb.jpg';
 import imgWide3 from './images/jm-upgrade-wide-3.jpg';
+import imgWide3Thumb from './images/jm-upgrade-wide-3-thumb.jpg';
 import imgWide4 from './images/jm-upgrade-wide-4.jpg';
+import imgWide4Thumb from './images/jm-upgrade-wide-4-thumb.jpg';
 import imgWide5 from './images/jm-upgrade-wide-5.jpg';
+import imgWide5Thumb from './images/jm-upgrade-wide-5-thumb.jpg';
 import imgWide6 from './images/jm-upgrade-wide-6.jpg';
+import imgWide6Thumb from './images/jm-upgrade-wide-6-thumb.jpg';
 
 import imgSquare1 from './images/jm-upgrade-square-1.jpg';
+import imgSquare1Thumb from './images/jm-upgrade-square-1-thumb.jpg';
 import imgSquare2 from './images/jm-upgrade-square-2.jpg';
+import imgSquare2Thumb from './images/jm-upgrade-square-2-thumb.jpg';
 import imgSquare3 from './images/jm-upgrade-square-3.jpg';
+import imgSquare3Thumb from './images/jm-upgrade-square-3-thumb.jpg';
 import imgSquare4 from './images/jm-upgrade-square-4.jpg';
+import imgSquare4Thumb from './images/jm-upgrade-square-4-thumb.jpg';
 import imgSquare5 from './images/jm-upgrade-square-5.jpg';
+import imgSquare5Thumb from './images/jm-upgrade-square-5-thumb.jpg';
 import imgSquare6 from './images/jm-upgrade-square-6.jpg';
+import imgSquare6Thumb from './images/jm-upgrade-square-6-thumb.jpg';
 
 import imgSquareS1 from './images/jm-upgrade-square-s-1.jpg';
+import imgSquareS1Thumb from './images/jm-upgrade-square-s-1-thumb.jpg';
 import imgSquareS2 from './images/jm-upgrade-square-s-2.jpg';
+import imgSquareS2Thumb from './images/jm-upgrade-square-s-2-thumb.jpg';
 import imgSquareS3 from './images/jm-upgrade-square-s-3.jpg';
+import imgSquareS3Thumb from './images/jm-upgrade-square-s-3-thumb.jpg';
 import imgSquareS4 from './images/jm-upgrade-square-s-4.jpg';
+import imgSquareS4Thumb from './images/jm-upgrade-square-s-4-thumb.jpg';
 import imgSquareS5 from './images/jm-upgrade-square-s-5.jpg';
+import imgSquareS5Thumb from './images/jm-upgrade-square-s-5-thumb.jpg';
 import imgSquareS6 from './images/jm-upgrade-square-s-6.jpg';
+import imgSquareS6Thumb from './images/jm-upgrade-square-s-6-thumb.jpg';
 
 import imgVertical1 from './images/jm-upgrade-vertical-1.jpg';
+import imgVertical1Thumb from './images/jm-upgrade-vertical-1-thumb.jpg';
+
 import { ROUTES } from '../../App/ROUTES';
 import Span from '../../Span/Span';
 
@@ -152,5 +174,28 @@ export const data = {
     imgSquareSD: [],
     imgVertical: [imgVertical1],
     video: [videoWide1, videoWide2, videoWide3, videoWide4, videoWide5],
+    thumbs: [
+      imgMainThumb,
+      imgNextThumb,
+      imgWide1Thumb,
+      imgWide2Thumb,
+      imgWide3Thumb,
+      imgWide4Thumb,
+      imgWide5Thumb,
+      imgWide6Thumb,
+      imgSquare1Thumb,
+      imgSquare2Thumb,
+      imgSquare3Thumb,
+      imgSquare4Thumb,
+      imgSquare5Thumb,
+      imgSquare6Thumb,
+      imgSquareS1Thumb,
+      imgSquareS2Thumb,
+      imgSquareS3Thumb,
+      imgSquareS4Thumb,
+      imgSquareS5Thumb,
+      imgSquareS6Thumb,
+      imgVertical1Thumb,
+    ],
   },
 };

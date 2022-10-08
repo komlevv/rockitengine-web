@@ -4,37 +4,64 @@ import Span from '../../Span/Span';
 import logoChopard from './images/chopard-loves-london-logo.svg';
 
 import imgMain from './images/chopard-loves-london-main.jpg';
+import imgMainThumb from './images/chopard-loves-london-main-thumb.jpg';
 import imgNext from './images/chopard-loves-london-next.jpg';
+import imgNextThumb from './images/chopard-loves-london-next-thumb.jpg';
 
 import imgWide1 from './images/chopard-loves-london-wide-1.jpg';
+import imgWide1Thumb from './images/chopard-loves-london-wide-1-thumb.jpg';
 import imgWide2 from './images/chopard-loves-london-wide-2.jpg';
+import imgWide2Thumb from './images/chopard-loves-london-wide-2-thumb.jpg';
 import imgWide3 from './images/chopard-loves-london-wide-3.jpg';
+import imgWide3Thumb from './images/chopard-loves-london-wide-3-thumb.jpg';
 import imgWide4 from './images/chopard-loves-london-wide-4.jpg';
+import imgWide4Thumb from './images/chopard-loves-london-wide-4-thumb.jpg';
 import imgWide5 from './images/chopard-loves-london-wide-5.jpg';
+import imgWide5Thumb from './images/chopard-loves-london-wide-5-thumb.jpg';
 
 import imgSquare1 from './images/chopard-loves-london-square-1.jpg';
+import imgSquare1Thumb from './images/chopard-loves-london-square-1-thumb.jpg';
 import imgSquare2 from './images/chopard-loves-london-square-2.jpg';
+import imgSquare2Thumb from './images/chopard-loves-london-square-2-thumb.jpg';
 import imgSquare3 from './images/chopard-loves-london-square-3.jpg';
+import imgSquare3Thumb from './images/chopard-loves-london-square-3-thumb.jpg';
 import imgSquare4 from './images/chopard-loves-london-square-4.jpg';
+import imgSquare4Thumb from './images/chopard-loves-london-square-4-thumb.jpg';
 import imgSquare5 from './images/chopard-loves-london-square-5.jpg';
+import imgSquare5Thumb from './images/chopard-loves-london-square-5-thumb.jpg';
 import imgSquare6 from './images/chopard-loves-london-square-6.jpg';
+import imgSquare6Thumb from './images/chopard-loves-london-square-6-thumb.jpg';
 import imgSquare7 from './images/chopard-loves-london-square-7.jpg';
+import imgSquare7Thumb from './images/chopard-loves-london-square-7-thumb.jpg';
 import imgSquare8 from './images/chopard-loves-london-square-8.jpg';
+import imgSquare8Thumb from './images/chopard-loves-london-square-8-thumb.jpg';
 
 import imgSquareS1 from './images/chopard-loves-london-square-s-1.jpg';
+import imgSquareS1Thumb from './images/chopard-loves-london-square-s-1-thumb.jpg';
 import imgSquareS2 from './images/chopard-loves-london-square-s-2.jpg';
+import imgSquareS2Thumb from './images/chopard-loves-london-square-s-2-thumb.jpg';
 import imgSquareS3 from './images/chopard-loves-london-square-s-3.jpg';
+import imgSquareS3Thumb from './images/chopard-loves-london-square-s-3-thumb.jpg';
 import imgSquareS4 from './images/chopard-loves-london-square-s-4.jpg';
+import imgSquareS4Thumb from './images/chopard-loves-london-square-s-4-thumb.jpg';
 import imgSquareS5 from './images/chopard-loves-london-square-s-5.jpg';
+import imgSquareS5Thumb from './images/chopard-loves-london-square-s-5-thumb.jpg';
 import imgSquareS6 from './images/chopard-loves-london-square-s-6.jpg';
+import imgSquareS6Thumb from './images/chopard-loves-london-square-s-6-thumb.jpg';
 import imgSquareS7 from './images/chopard-loves-london-square-s-7.jpg';
+import imgSquareS7Thumb from './images/chopard-loves-london-square-s-7-thumb.jpg';
 import imgSquareS8 from './images/chopard-loves-london-square-s-8.jpg';
+import imgSquareS8Thumb from './images/chopard-loves-london-square-s-8-thumb.jpg';
 
 import imgSquareSD1 from './images/chopard-loves-london-square-sd-1.jpg';
+import imgSquareSD1Thumb from './images/chopard-loves-london-square-sd-1-thumb.jpg';
 import imgSquareSD2 from './images/chopard-loves-london-square-sd-2.jpg';
+import imgSquareSD2Thumb from './images/chopard-loves-london-square-sd-2-thumb.jpg';
 
 import imgVertical1 from './images/chopard-loves-london-vertical-1.jpg';
+import imgVertical1Thumb from './images/chopard-loves-london-vertical-1-thumb.jpg';
 import imgVertical2 from './images/chopard-loves-london-vertical-2.jpg';
+import imgVertical2Thumb from './images/chopard-loves-london-vertical-2-thumb.jpg';
 
 export const data = {
   main: {
@@ -186,5 +213,34 @@ export const data = {
     imgSquareSD: [imgSquareSD1, imgSquareSD2],
     imgVertical: [imgVertical1, imgVertical2],
     video: [],
+    thumbs: [
+      imgMainThumb,
+      imgNextThumb,
+      imgWide1Thumb,
+      imgWide2Thumb,
+      imgWide3Thumb,
+      imgWide4Thumb,
+      imgWide5Thumb,
+      imgSquare1Thumb,
+      imgSquare2Thumb,
+      imgSquare3Thumb,
+      imgSquare4Thumb,
+      imgSquare5Thumb,
+      imgSquare6Thumb,
+      imgSquare7Thumb,
+      imgSquare8Thumb,
+      imgSquareS1Thumb,
+      imgSquareS2Thumb,
+      imgSquareS3Thumb,
+      imgSquareS4Thumb,
+      imgSquareS5Thumb,
+      imgSquareS6Thumb,
+      imgSquareS7Thumb,
+      imgSquareS8Thumb,
+      imgSquareSD1Thumb,
+      imgSquareSD2Thumb,
+      imgVertical1Thumb,
+      imgVertical2Thumb,
+    ],
   },
 };

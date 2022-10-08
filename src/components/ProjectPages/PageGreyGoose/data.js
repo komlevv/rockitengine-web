@@ -1,35 +1,62 @@
 import logoGGVertical from './images/grey-goose-logo-black-v.svg';
 
 import imgMain from './images/grey-goose-main.jpg';
+import imgMainThumb from './images/grey-goose-main-thumb.jpg';
 import imgNext from './images/grey-goose-next.jpg';
+import imgNextThumb from './images/grey-goose-next-thumb.jpg';
 
 import imgWide1 from './images/grey-goose-wide-1.jpg';
+import imgWide1Thumb from './images/grey-goose-wide-1-thumb.jpg';
 import imgWide2 from './images/grey-goose-wide-2.jpg';
+import imgWide2Thumb from './images/grey-goose-wide-2-thumb.jpg';
 import imgWide3 from './images/grey-goose-wide-3.jpg';
+import imgWide3Thumb from './images/grey-goose-wide-3-thumb.jpg';
 import imgWide4 from './images/grey-goose-wide-4.jpg';
+import imgWide4Thumb from './images/grey-goose-wide-4-thumb.jpg';
 import imgWide5 from './images/grey-goose-wide-5.jpg';
+import imgWide5Thumb from './images/grey-goose-wide-5-thumb.jpg';
 import imgWide6 from './images/grey-goose-wide-6.jpg';
+import imgWide6Thumb from './images/grey-goose-wide-6-thumb.jpg';
 
 import imgSquare1 from './images/grey-goose-square-1.jpg';
+import imgSquare1Thumb from './images/grey-goose-square-1-thumb.jpg';
 import imgSquare2 from './images/grey-goose-square-2.jpg';
+import imgSquare2Thumb from './images/grey-goose-square-2-thumb.jpg';
 
 import imgSquareS1 from './images/grey-goose-square-s-1.jpg';
+import imgSquareS1Thumb from './images/grey-goose-square-s-1-thumb.jpg';
 import imgSquareS2 from './images/grey-goose-square-s-2.jpg';
+import imgSquareS2Thumb from './images/grey-goose-square-s-2-thumb.jpg';
 import imgSquareS3 from './images/grey-goose-square-s-3.jpg';
+import imgSquareS3Thumb from './images/grey-goose-square-s-3-thumb.jpg';
 import imgSquareS4 from './images/grey-goose-square-s-4.jpg';
+import imgSquareS4Thumb from './images/grey-goose-square-s-4-thumb.jpg';
 import imgSquareS5 from './images/grey-goose-square-s-5.jpg';
+import imgSquareS5Thumb from './images/grey-goose-square-s-5-thumb.jpg';
 import imgSquareS6 from './images/grey-goose-square-s-6.jpg';
+import imgSquareS6Thumb from './images/grey-goose-square-s-6-thumb.jpg';
 import imgSquareS7 from './images/grey-goose-square-s-7.jpg';
+import imgSquareS7Thumb from './images/grey-goose-square-s-7-thumb.jpg';
 import imgSquareS8 from './images/grey-goose-square-s-8.jpg';
+import imgSquareS8Thumb from './images/grey-goose-square-s-8-thumb.jpg';
 import imgSquareS9 from './images/grey-goose-square-s-9.jpg';
+import imgSquareS9Thumb from './images/grey-goose-square-s-9-thumb.jpg';
 import imgSquareS10 from './images/grey-goose-square-s-10.jpg';
+import imgSquareS10Thumb from './images/grey-goose-square-s-10-thumb.jpg';
 import imgSquareS11 from './images/grey-goose-square-s-11.jpg';
+import imgSquareS11Thumb from './images/grey-goose-square-s-11-thumb.jpg';
 import imgSquareS12 from './images/grey-goose-square-s-12.jpg';
+import imgSquareS12Thumb from './images/grey-goose-square-s-12-thumb.jpg';
 
 import imgVertical1 from './images/grey-goose-vertical-1.jpg';
+import imgVertical1Thumb from './images/grey-goose-vertical-1-thumb.jpg';
 import imgVertical2 from './images/grey-goose-vertical-2.jpg';
+import imgVertical2Thumb from './images/grey-goose-vertical-2-thumb.jpg';
 import imgVertical3 from './images/grey-goose-vertical-3.jpg';
+import imgVertical3Thumb from './images/grey-goose-vertical-3-thumb.jpg';
 import imgVertical4 from './images/grey-goose-vertical-4.jpg';
+import imgVertical4Thumb from './images/grey-goose-vertical-4-thumb.jpg';
+
 import { ROUTES } from '../../App/ROUTES';
 import Span from '../../Span/Span';
 
@@ -152,5 +179,33 @@ export const data = {
     momentsimgSquareSD: [],
     imgVertical: [imgVertical1, imgVertical2, imgVertical3, imgVertical4],
     video: [],
+    thumbs: [
+      imgMainThumb,
+      imgNextThumb,
+      imgWide1Thumb,
+      imgWide2Thumb,
+      imgWide3Thumb,
+      imgWide4Thumb,
+      imgWide5Thumb,
+      imgWide6Thumb,
+      imgSquare1Thumb,
+      imgSquare2Thumb,
+      imgSquareS1Thumb,
+      imgSquareS2Thumb,
+      imgSquareS3Thumb,
+      imgSquareS4Thumb,
+      imgSquareS5Thumb,
+      imgSquareS6Thumb,
+      imgSquareS7Thumb,
+      imgSquareS8Thumb,
+      imgSquareS9Thumb,
+      imgSquareS10Thumb,
+      imgSquareS11Thumb,
+      imgSquareS12Thumb,
+      imgVertical1Thumb,
+      imgVertical2Thumb,
+      imgVertical3Thumb,
+      imgVertical4Thumb,
+    ],
   },
 };

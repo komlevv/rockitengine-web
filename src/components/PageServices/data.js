@@ -1,5 +1,8 @@
 import imgWide1 from './images/services-main.jpg';
+import imgWide1Thumb from './images/services-main-thumb.jpg';
 import imgWide2 from './images/services-reel.jpg';
+import imgWide2Thumb from './images/services-reel-thumb.jpg';
+
 import Span from '../Span/Span';
 import VideoReel from './videos/reel.mp4';
 
@@ -182,5 +185,6 @@ export const data = {
     imgSquareSD: [],
     imgVertical: [],
     video: [VideoReel],
+    thumbs: [imgWide1Thumb, imgWide2Thumb],
   },
 };
