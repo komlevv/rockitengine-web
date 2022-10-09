@@ -1,6 +1,6 @@
 .paragraph {
   grid-column: 1 / 5;
-  line-height: 1.5;
+  line-height: 1.7;
   /* background-color: aquamarine; */
 }
 
@@ -12,6 +12,6 @@
 
 @media only screen and (max-width: 1024px) {
   .paragraph {
-    font-size: 14pt;
+    font-size: 12pt;
   }
 }

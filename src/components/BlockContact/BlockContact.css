@@ -16,6 +16,6 @@
 
 @media only screen and (max-width: 576px) {
   .blockContact > a > h3 {
-    font-size: 12pt;
+    font-size: 10pt;
   }
 }

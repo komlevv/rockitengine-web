@@ -1,0 +1,39 @@
+@font-face {
+  font-family: ReBNL;
+  font-weight: 300;
+  font-style: normal;
+  src: url("./bnl-light.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: ReBNL;
+  font-weight: normal;
+  font-style: normal;
+  src: url("./bnl-book.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: ReBNL;
+  font-weight: 500;
+  font-style: normal;
+  src: url("./bnl-medium.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: ReBNL;
+  font-weight: bold;
+  font-style: normal;
+  src: url("./bnl-bold.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: ReBNL;
+  font-weight: 800;
+  font-style: normal;
+  src: url("./bnl-black.otf") format("opentype");
+  font-display: swap;
+}

@@ -5,7 +5,7 @@
 html,
 body,
 :global(#root) {
-  line-height: 1;
+  line-height: 1.1;
   height: 100%;
   width: 100%;
   margin: 0;
@@ -13,7 +13,8 @@ body,
 
 body {
   /* background-color: lightgrey; */
-  font-family: RECircular, sans-serif;
+  font-family: ReBNL, sans-serif;
+  letter-spacing: 0.05rem;
 }
 
 .grid12 {
@@ -26,7 +27,7 @@ body {
 p,
 a,
 ul {
-  font-size: 15pt;
+  font-size: 13pt;
   font-weight: 300;
   margin: 0;
   padding: 0;
