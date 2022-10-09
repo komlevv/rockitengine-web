@@ -19,7 +19,15 @@ const Image = ({ loading = 'lazy', cls, src, innerRef, ...props }) => {
         alt=""
       />
       <Spinner style={!visible ? {} : { display: 'none' }} />
-      <img onLoad={onLoad} className={cls.image} src={src} alt="" loading={loading} {...props} />
+      <img
+        style={!visible ? { visibility: 'hidden' } : {}}
+        onLoad={onLoad}
+        className={cls.image}
+        src={src}
+        alt=""
+        loading={loading}
+        {...props}
+      />
     </div>
   );
 };
