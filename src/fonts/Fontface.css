@@ -6,6 +6,7 @@
   /* see https://github.com/prettier/prettier/issues/2595 */
   src: url("./circular/circular-light.woff") format("woff"),
     url("./circular/circular-light.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
@@ -14,6 +15,7 @@
   font-style: normal;
   src: url("./circular/circular-book.woff") format("woff"),
     url("./circular/circular-book.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
@@ -22,6 +24,7 @@
   font-style: italic;
   src: url("./circular/circular-bookitalic.woff") format("woff"),
     url("./circular/circular-bookitalic.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
@@ -30,6 +33,7 @@
   font-style: normal;
   src: url("./circular/circular-medium.woff") format("woff"),
     url("./circular/circular-medium.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
@@ -38,6 +42,7 @@
   font-style: italic;
   src: url("./circular/circular-mediumitalic.woff") format("woff"),
     url("./circular/circular-mediumitalic.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
@@ -46,6 +51,7 @@
   font-style: normal;
   src: url("./circular/circular-bold.woff") format("woff"),
     url("./circular/circular-bold.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
@@ -54,6 +60,7 @@
   font-style: italic;
   src: url("./circular/circular-bolditalic.woff") format("woff"),
     url("./circular/circular-bolditalic.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
@@ -62,6 +69,7 @@
   font-style: normal;
   src: url("./circular/circular-black.woff") format("woff"),
     url("./circular/circular-black.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
@@ -70,4 +78,5 @@
   font-style: italic;
   src: url("./circular/circular-blackitalic.woff") format("woff"),
     url("./circular/circular-blackitalic.ttf") format("truetype");
+  font-display: swap;
 }
