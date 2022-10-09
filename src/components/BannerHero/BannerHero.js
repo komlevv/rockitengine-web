@@ -1,34 +1,22 @@
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import s from './BannerHero.css';
 import Paragraph from '../Paragraph/Paragraph';
 import HeaderL from '../HeaderL/HeaderL';
-import BannerLogo from '../BannerLogo/BannerLogo';
+import Image from '../Image/Image';
 
-const BannerHero = ({
-  headerText,
-  paragraphText,
-  fontColor,
-  imgSrc,
-  logoSrc,
-  linkTo = '#',
-  innerRef,
-}) => (
-  <Link
-    ref={innerRef}
-    to={linkTo}
-    className={s.bannerHero}
-    style={{
-      backgroundImage: `url(${imgSrc})`,
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center',
-      backgroundSize: 'cover',
-      color: `${fontColor}`,
-    }}
-  >
-    <HeaderL headerText={headerText} />
-    <BannerLogo invert img={logoSrc} />
-    <Paragraph paragraphText={paragraphText} />
-  </Link>
-);
+const BannerHero = ({ headerText, paragraphText, imgSrc, logoSrc, linkTo = '#', innerRef }) => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate(linkTo);
+  };
+  return (
+    <div className={s.bannerHero} ref={innerRef} role="button" tabIndex={0} onClick={handleClick}>
+      <Image src={imgSrc} cls={s} />
+      <HeaderL headerText={headerText} />
+      <img alt="" style={{ filter: 'invert(100%)' }} className={s.bannerLogo} src={logoSrc} />
+      <Paragraph paragraphText={paragraphText} />
+    </div>
+  );
+};
 
 export default BannerHero;

@@ -18,6 +18,7 @@
     ],
     "import/no-import-module-exports": "off",
     "jsx-a11y/media-has-caption": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
     "react/jsx-filename-extension": "off",
     "react/function-component-definition": [
       "error",
