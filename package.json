@@ -5,6 +5,7 @@
   "scripts": {
     "express": "NODE_ENV=development nodemon --config nodemon.dev.json -L -r @babel/register src/server.dev.js",
     "build-all": "node -r @babel/register tools/build.js",
+    "clean": "node -r @babel/register tools/clean.js",
     "lint-js": "npx eslint . --ext .js",
     "lint-css": "npx stylelint \"**/*.css\""
   },
