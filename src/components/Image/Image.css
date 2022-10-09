@@ -1,6 +1,7 @@
 .imgGrid {
   display: grid;
   overflow: hidden;
+  background-color: #232323;
 }
 
 .imgThumbBlur {
