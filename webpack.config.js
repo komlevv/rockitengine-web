@@ -34,7 +34,21 @@ const common = {
               modules: true,
             },
           },
-          { loader: 'postcss-loader' },
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [
+                  [
+                    'autoprefixer',
+                    {
+                      // Options
+                    },
+                  ],
+                ],
+              },
+            },
+          },
         ],
       },
       {
