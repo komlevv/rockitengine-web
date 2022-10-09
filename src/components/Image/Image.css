@@ -1,5 +1,5 @@
 .imgGrid {
-  composes: grid12 from "../App/App.css";
+  display: grid;
   overflow: hidden;
 }
 
