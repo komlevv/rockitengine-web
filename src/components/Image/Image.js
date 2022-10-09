@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import s from './Image.css';
+import Spinner from '../Spinner/Spinner';
 
 // Progressive image loading
 const Image = ({ loading = 'lazy', cls, src, innerRef, ...props }) => {
@@ -17,6 +18,7 @@ const Image = ({ loading = 'lazy', cls, src, innerRef, ...props }) => {
         className={`${cls.image} ${s.imgThumbBlur}`}
         alt=""
       />
+      <Spinner style={!visible ? {} : { display: 'none' }} />
       <img onLoad={onLoad} className={cls.image} src={src} alt="" loading={loading} {...props} />
     </div>
   );
