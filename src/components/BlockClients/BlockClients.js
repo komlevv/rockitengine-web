@@ -1,8 +1,8 @@
 import s from './BlockClients.css';
 import HeaderM from '../HeaderM/HeaderM';
-import clientLogosImg from './images/client-logos.png';
+import clientLogosImgL from './images/client-logos.png';
+import clientLogosImgS from './images/client-logos-2.png';
 import Divider from '../Divider/Divider';
-import Image from '../Image/Image';
 
 const data = {
   h: 'Our Clients',
@@ -12,7 +12,8 @@ const BlockClients = ({ innerRef }) => (
   <div ref={innerRef} className={s.blockClients}>
     <Divider />
     <HeaderM accent headerText={data.h} />
-    <img src={clientLogosImg} alt="" />
+    <img className={s.imgClientsL} src={clientLogosImgL} alt="" />
+    <img className={s.imgClientsS} src={clientLogosImgS} alt="" />
   </div>
 );
 
