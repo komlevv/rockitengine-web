@@ -22,7 +22,7 @@ import Gap from '../../Gap/Gap';
 const content = [
   <BlockProjectMain data={data.main} />,
   <BlockOverview data={data.overview} />,
-  <Video autoplay muted loop src={data.media.video[0]} poster={data.media.imgWide[0]} />,
+  <Video controls muted loop src={data.media.video[0]} poster={data.media.imgWide[0]} />,
   <Gap />,
   <BlockHeroTextM headerText={data.other.a.h} paragraphText={data.other.a.p} />,
   <Video controls muted loop src={data.media.video[1]} poster={data.media.imgWide[1]} />,
