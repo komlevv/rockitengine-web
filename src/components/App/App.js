@@ -9,20 +9,20 @@ import GridContainer from '../GridContainer/GridContainer';
 import BlockFooter from '../BlockFooter/BlockFooter';
 
 import { ROUTES } from './ROUTES';
-import PageMain from '../PageMain/PageMain';
-import PageServices from '../PageServices/PageServices';
-import PageProjects from '../PageProjects/PageProjects';
-import PageAbout from '../PageAbout/PageAbout';
-import PageContact from '../PageContact/PageContact';
-import PageEquinox from '../ProjectPages/PageEquinox/PageEquinox';
-import PageGreyGoose from '../ProjectPages/PageGreyGoose/PageGreyGoose';
-import PageSpotifyHulu from '../ProjectPages/PageSpotifyHulu/PageSpotifyHulu';
-import PageChopard from '../ProjectPages/PageChopard/PageChopard';
-import PageJMUpgrade from '../ProjectPages/PageJMUpgrade/PageJMUpgrade';
-import PageJohnHardyJM from '../ProjectPages/PageJohnHardyJM/PageJohnHardyJM';
-import PageJohnHardyAA from '../ProjectPages/PageJohnHardyAA/PageJohnHardyAA';
-import PageAway from '../ProjectPages/PageAway/PageAway';
-import PageCartier from '../ProjectPages/PageCartier/PageCartier';
+import PageMain from '../Pages/PageMain/PageMain';
+import PageServices from '../Pages/PageServices/PageServices';
+import PageProjects from '../Pages/PageProjects/PageProjects';
+import PageAbout from '../Pages/PageAbout/PageAbout';
+import PageContact from '../Pages/PageContact/PageContact';
+import PageEquinox from '../Pages/PageEquinox/PageEquinox';
+import PageGreyGoose from '../Pages/PageGreyGoose/PageGreyGoose';
+import PageSpotifyHulu from '../Pages/PageSpotifyHulu/PageSpotifyHulu';
+import PageChopard from '../Pages/PageChopard/PageChopard';
+import PageJMUpgrade from '../Pages/PageJMUpgrade/PageJMUpgrade';
+import PageJohnHardyJM from '../Pages/PageJohnHardyJM/PageJohnHardyJM';
+import PageJohnHardyAA from '../Pages/PageJohnHardyAA/PageJohnHardyAA';
+import PageAway from '../Pages/PageAway/PageAway';
+import PageCartier from '../Pages/PageCartier/PageCartier';
 import { ThemeProvider } from '../../contexts/themeContext';
 
 const ScrollToTop = () => {
