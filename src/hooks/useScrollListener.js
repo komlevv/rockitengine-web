@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import { useEffect, useState } from 'react';
 import s from '../components/NavBar/NavBar.css';
 import { throttle } from '../utils/utils';
