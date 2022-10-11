@@ -1,4 +1,4 @@
-import s from './BlockProjects.css';
+import s from './BlockProjects.scss';
 
 import HeaderM from '../HeaderM/HeaderM';
 import BannerHero from '../BannerHero/BannerHero';

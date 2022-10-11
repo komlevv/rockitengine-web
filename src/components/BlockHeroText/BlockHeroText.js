@@ -1,4 +1,4 @@
-import s from './BlockHeroText.css';
+import s from './BlockHeroText.scss';
 import HeaderXL from '../HeaderXL/HeaderXL';
 import Paragraph from '../Paragraph/Paragraph';
 

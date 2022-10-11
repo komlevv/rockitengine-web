@@ -1,4 +1,4 @@
-import s from './ImageOneThird.css';
+import s from './ImageOneThird.scss';
 import Image from '../Image/Image';
 
 const ImageOneThird = (props) => <Image cls={s} {...props} />;

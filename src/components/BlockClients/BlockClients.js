@@ -1,4 +1,4 @@
-import s from './BlockClients.css';
+import s from './BlockClients.scss';
 import HeaderM from '../HeaderM/HeaderM';
 import clientLogosImgL from './images/client-logos.png';
 import clientLogosImgS from './images/client-logos-2.png';

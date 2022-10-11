@@ -1,4 +1,4 @@
-import s from './BlockHeroVideo.css';
+import s from './BlockHeroVideo.scss';
 import HeaderXL from '../HeaderXL/HeaderXL';
 import Video from '../Video/Video';
 import Span from '../Span/Span';

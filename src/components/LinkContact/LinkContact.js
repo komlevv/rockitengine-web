@@ -1,5 +1,5 @@
 import { useTheme } from '../../contexts/themeContext';
-import s from './LinkContact.css';
+import s from './LinkContact.scss';
 
 const data = {
   e: 'hello@rockitengine.com',

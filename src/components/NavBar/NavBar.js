@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import s from './NavBar.css';
+import s from './NavBar.scss';
 import LogoRE from '../LogoRE/LogoRE';
 import hamIconImg from './images/hamburger-icon.svg';
 import hamIconImgClose from './images/hamburger-icon-close.svg';

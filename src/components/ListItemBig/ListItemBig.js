@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import s from './ListItemBig.css';
+import s from './ListItemBig.scss';
 import Paragraph from '../Paragraph/Paragraph';
 import ListItem from '../ListItem/ListItem';
 import HeaderS from '../HeaderS/HeaderS';

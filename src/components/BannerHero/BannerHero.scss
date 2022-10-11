@@ -1,7 +1,7 @@
 .bannerHero {
   cursor: pointer;
   grid-column: 1 /-1;
-  composes: grid12 from "../App/App.css";
+  composes: grid12 from "../App/App.scss";
   height: 460px;
 }
 

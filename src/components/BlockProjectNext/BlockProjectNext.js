@@ -1,4 +1,4 @@
-import s from './BlockProjectNext.css';
+import s from './BlockProjectNext.scss';
 import HeaderM from '../HeaderM/HeaderM';
 import BannerHero from '../BannerHero/BannerHero';
 import Divider from '../Divider/Divider';

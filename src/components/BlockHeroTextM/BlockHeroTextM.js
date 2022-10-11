@@ -1,4 +1,4 @@
-import s from './BlockHeroTextM.css';
+import s from './BlockHeroTextM.scss';
 import HeaderM from '../HeaderM/HeaderM';
 import Paragraph from '../Paragraph/Paragraph';
 import Divider from '../Divider/Divider';

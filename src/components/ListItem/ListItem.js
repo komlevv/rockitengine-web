@@ -1,4 +1,4 @@
-import s from './ListItem.css';
+import s from './ListItem.scss';
 
 const ListItem = ({ text, noBorder }) => (
   <div

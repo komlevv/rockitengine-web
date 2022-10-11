@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 
-import '../../fonts/bnl/Fontface.css';
-import './App.css';
+import '../../fonts/bnl/Fontface.scss';
+import './App.scss';
 
 import NavBar from '../NavBar/NavBar';
 import GridContainer from '../GridContainer/GridContainer';

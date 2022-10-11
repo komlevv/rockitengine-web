@@ -1,4 +1,4 @@
-import s from './BlockContact.css';
+import s from './BlockContact.scss';
 import HeaderM from '../HeaderM/HeaderM';
 import Paragraph from '../Paragraph/Paragraph';
 import { useTheme } from '../../contexts/themeContext';

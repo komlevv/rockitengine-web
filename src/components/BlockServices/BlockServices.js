@@ -1,4 +1,4 @@
-import s from './BlockServices.css';
+import s from './BlockServices.scss';
 import HeaderM from '../HeaderM/HeaderM';
 import Paragraph from '../Paragraph/Paragraph';
 import Button from '../Button/Button';

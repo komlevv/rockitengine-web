@@ -6,7 +6,7 @@
 }
 
 .footerContainer {
-  composes: grid12 from "../App/App.css";
+  composes: grid12 from "../App/App.scss";
   grid-column: 2;
 }
 

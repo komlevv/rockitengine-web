@@ -1,6 +1,6 @@
 .blockProjectMain {
   grid-column: 1 / -1;
-  composes: grid12 from "../App/App.css";
+  composes: grid12 from "../App/App.scss";
 }
 
 .blockProjectMain > h1 {

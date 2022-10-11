@@ -1,4 +1,4 @@
-import s from './BlockContainer.css';
+import s from './BlockContainer.scss';
 
 const BlockContainer = ({ children, innerRef }) => (
   <div ref={innerRef} className={s.blockContainer}>

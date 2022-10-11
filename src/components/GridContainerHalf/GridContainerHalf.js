@@ -1,4 +1,4 @@
-import s from './GridContainerHalf.css';
+import s from './GridContainerHalf.scss';
 
 const GridContainerHalf = ({ children, innerRef }) => (
   <div ref={innerRef} className={s.gridContainerHalf}>

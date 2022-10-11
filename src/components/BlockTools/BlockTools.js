@@ -1,4 +1,4 @@
-import s from './BlockTools.css';
+import s from './BlockTools.scss';
 import HeaderM from '../HeaderM/HeaderM';
 import Paragraph from '../Paragraph/Paragraph';
 import ListItem from '../ListItem/ListItem';

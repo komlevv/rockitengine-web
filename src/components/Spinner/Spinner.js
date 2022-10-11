@@ -1,4 +1,4 @@
-import s from './Spinner.css';
+import s from './Spinner.scss';
 
 const Spinner = ({ style }) => (
   <div className={s.container} style={style}>

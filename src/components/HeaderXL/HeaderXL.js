@@ -1,4 +1,4 @@
-import './HeaderXL.css';
+import './HeaderXL.scss';
 
 const HeaderXL = ({ headerText }) => <h1>{headerText}</h1>;
 

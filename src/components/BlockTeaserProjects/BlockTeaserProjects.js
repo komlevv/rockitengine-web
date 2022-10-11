@@ -1,4 +1,4 @@
-import s from './BlockTeaserProjects.css';
+import s from './BlockTeaserProjects.scss';
 import HeaderM from '../HeaderM/HeaderM';
 import Paragraph from '../Paragraph/Paragraph';
 import Button from '../Button/Button';

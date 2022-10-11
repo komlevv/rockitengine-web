@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import s from './BannerHero.css';
+import s from './BannerHero.scss';
 import Paragraph from '../Paragraph/Paragraph';
 import HeaderL from '../HeaderL/HeaderL';
 import Image from '../Image/Image';

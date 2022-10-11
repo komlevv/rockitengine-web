@@ -1,0 +1,7 @@
+@value blockPaddingBottom from "../App/App.scss";
+
+.blockProjectNext {
+  grid-column: 1 / -1;
+  composes: grid12 from "../App/App.scss";
+  padding-bottom: blockPaddingBottom;
+}

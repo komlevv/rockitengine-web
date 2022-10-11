@@ -1,4 +1,4 @@
-import s from './BlockProjectMain.css';
+import s from './BlockProjectMain.scss';
 import HeaderXL from '../HeaderXL/HeaderXL';
 import Paragraph from '../Paragraph/Paragraph';
 import ImageFullWide from '../ImageFullWide/ImageFullWide';

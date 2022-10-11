@@ -1,4 +1,4 @@
-import s from './BlockAbout.css';
+import s from './BlockAbout.scss';
 import HeaderM from '../HeaderM/HeaderM';
 import Paragraph from '../Paragraph/Paragraph';
 import Button from '../Button/Button';

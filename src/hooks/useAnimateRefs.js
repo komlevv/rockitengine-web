@@ -1,5 +1,5 @@
 import { createRef, useLayoutEffect, useRef } from 'react';
-import s from './useAnimateRefs.css';
+import s from './useAnimateRefs.scss';
 import { randomChoice } from '../utils/utils';
 
 export const useAnimateRefs = (itemsLength) => {

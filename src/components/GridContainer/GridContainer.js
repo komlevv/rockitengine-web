@@ -1,4 +1,4 @@
-import s from './GridContainer.css';
+import s from './GridContainer.scss';
 
 const GridContainer = ({ children }) => <div className={s.gridContainer}>{children}</div>;
 

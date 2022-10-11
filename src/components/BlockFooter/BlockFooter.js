@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import s from './BlockFooter.css';
+import s from './BlockFooter.scss';
 import HeaderL from '../HeaderL/HeaderL';
 import Divider from '../Divider/Divider';
 import { NAVLINKS, ROUTES } from '../App/ROUTES';

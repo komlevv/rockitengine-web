@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import s from '../components/NavBar/NavBar.css';
+import s from '../components/NavBar/NavBar.scss';
 import { throttle } from '../utils/utils';
 
 export const useScrollListener = () => {

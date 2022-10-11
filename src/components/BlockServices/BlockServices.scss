@@ -1,8 +1,8 @@
-@value blockPaddingBottom from "../App/App.css";
+@value blockPaddingBottom from "../App/App.scss";
 
 .services {
   grid-column: 1 /-1;
-  composes: grid12 from "../App/App.css";
+  composes: grid12 from "../App/App.scss";
   padding-bottom: blockPaddingBottom;
 }
 

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import s from './BannerSub.css';
+import s from './BannerSub.scss';
 import BannerLogo from '../BannerLogo/BannerLogo';
 import Paragraph from '../Paragraph/Paragraph';
 import HeaderM from '../HeaderM/HeaderM';

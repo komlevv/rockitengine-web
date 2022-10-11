@@ -1,4 +1,4 @@
-import s from './Gap.css';
+import s from './Gap.scss';
 
 // this is a hack for edge cases where animated group of components
 // does not have a parent container and is mapped directly into content[].

@@ -1,5 +1,5 @@
 .blockHeroTextM {
-  composes: grid12 from "../App/App.css";
+  composes: grid12 from "../App/App.scss";
   grid-column: 1 / -1;
   /* margin-top: 40px; */
   margin-bottom: 20px;

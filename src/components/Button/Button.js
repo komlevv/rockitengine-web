@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import s from './Button.css';
+import s from './Button.scss';
 import { useTheme } from '../../contexts/themeContext';
 
 const Button = ({ buttonText, href = '#' }) => {

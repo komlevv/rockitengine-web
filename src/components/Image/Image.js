@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import s from './Image.css';
+import s from './Image.scss';
 import Spinner from '../Spinner/Spinner';
 
 // Progressive image loading

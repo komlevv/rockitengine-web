@@ -1,4 +1,4 @@
-import './HeaderS.css';
+import './HeaderS.scss';
 
 const HeaderS = ({ headerText }) => <h4>{headerText}</h4>;
 

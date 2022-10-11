@@ -1,4 +1,4 @@
-import s from './HeaderM.css';
+import s from './HeaderM.scss';
 
 const HeaderM = ({ headerText, innerRef }) => (
   <h3 ref={innerRef} className={s.headerM}>

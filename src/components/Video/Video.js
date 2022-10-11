@@ -1,5 +1,5 @@
 import { createRef, useEffect, useState } from 'react';
-import s from './Video.css';
+import s from './Video.scss';
 import Image from '../Image/Image';
 import Spinner from '../Spinner/Spinner';
 

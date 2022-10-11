@@ -1,4 +1,4 @@
-import s from './Paragraph.css';
+import s from './Paragraph.scss';
 
 const Paragraph = ({ paragraphText }) => <p className={s.paragraph}>{paragraphText}</p>;
 
