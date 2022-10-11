@@ -11,6 +11,7 @@ import ImageTwoThird from '../../ImageTwoThird/ImageTwoThird';
 import HeaderS from '../../HeaderS/HeaderS';
 import Paragraph from '../../Paragraph/Paragraph';
 import Video from '../../Video/Video';
+import VideoHalfWide from '../../VideoHalfWide/VideoHalfWide';
 
 import { data } from './data';
 import { data as dataNext } from '../PageCartier/data';
@@ -27,12 +28,18 @@ const content = [
   <GridContainerHalf>
     <HeaderS headerText={data.other.a.h} />
   </GridContainerHalf>,
-  <GridContainerHalf>
-    <Video controls loop src={data.media.videoVertical[0]} poster={data.media.imgVertical[0]} />
-  </GridContainerHalf>,
-  <GridContainerHalf>
-    <Video controls loop src={data.media.videoVertical[1]} poster={data.media.imgVertical[1]} />
-  </GridContainerHalf>,
+  <VideoHalfWide
+    controls
+    loop
+    src={data.media.videoVertical[0]}
+    poster={data.media.imgVertical[0]}
+  />,
+  <VideoHalfWide
+    controls
+    loop
+    src={data.media.videoVertical[1]}
+    poster={data.media.imgVertical[1]}
+  />,
   <GridContainerHalf>
     <Paragraph paragraphText={data.other.a.p} />
   </GridContainerHalf>,

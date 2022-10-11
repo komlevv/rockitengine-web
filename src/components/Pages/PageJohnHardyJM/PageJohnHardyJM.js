@@ -10,10 +10,11 @@ import ImageOneThird from '../../ImageOneThird/ImageOneThird';
 import ImageTwoThird from '../../ImageTwoThird/ImageTwoThird';
 import HeaderS from '../../HeaderS/HeaderS';
 import Paragraph from '../../Paragraph/Paragraph';
+import Video from '../../Video/Video';
+import VideoHalfWide from '../../VideoHalfWide/VideoHalfWide';
 
 import { data } from './data';
 import { data as dataNext } from '../PageSpotifyHulu/data';
-import Video from '../../Video/Video';
 import { THEMES } from '../../../contexts/themeContext';
 import { useSetTheme } from '../../../hooks/useSetTheme';
 import { useAnimateRefs } from '../../../hooks/useAnimateRefs';
@@ -27,39 +28,33 @@ const content = [
   <GridContainerHalf>
     <HeaderS headerText={data.other.a.h} />
   </GridContainerHalf>,
-  <GridContainerHalf>
-    <Video
-      controls
-      muted
-      loop
-      src={data.media.videoVertical[0]}
-      poster={data.media.imgVertical[0]}
-    />
-  </GridContainerHalf>,
-  <GridContainerHalf>
-    <Video
-      controls
-      muted
-      loop
-      src={data.media.videoVertical[1]}
-      poster={data.media.imgVertical[1]}
-    />
-  </GridContainerHalf>,
+  <VideoHalfWide
+    controls
+    muted
+    loop
+    src={data.media.videoVertical[0]}
+    poster={data.media.imgVertical[0]}
+  />,
+  <VideoHalfWide
+    controls
+    muted
+    loop
+    src={data.media.videoVertical[1]}
+    poster={data.media.imgVertical[1]}
+  />,
   <GridContainerHalf>
     <Paragraph paragraphText={data.other.a.p} />
   </GridContainerHalf>,
   <GridContainerHalf>
     <Paragraph paragraphText={data.other.b.p} />
   </GridContainerHalf>,
-  <GridContainerHalf>
-    <Video
-      controls
-      muted
-      loop
-      src={data.media.videoVertical[2]}
-      poster={data.media.imgVertical[2]}
-    />
-  </GridContainerHalf>,
+  <VideoHalfWide
+    controls
+    muted
+    loop
+    src={data.media.videoVertical[2]}
+    poster={data.media.imgVertical[2]}
+  />,
   <ImageFullWide src={data.media.imgWide[1]} />,
   <Gap />,
   <BlockHeroTextM headerText={data.other.e.h} paragraphText={data.other.e.p} />,
@@ -67,39 +62,33 @@ const content = [
   <GridContainerHalf>
     <HeaderS headerText={data.other.f.h} />
   </GridContainerHalf>,
-  <GridContainerHalf>
-    <Video
-      controls
-      muted
-      loop
-      src={data.media.videoVertical[3]}
-      poster={data.media.imgVertical[3]}
-    />
-  </GridContainerHalf>,
-  <GridContainerHalf>
-    <Video
-      controls
-      muted
-      loop
-      src={data.media.videoVertical[4]}
-      poster={data.media.imgVertical[4]}
-    />
-  </GridContainerHalf>,
+  <VideoHalfWide
+    controls
+    muted
+    loop
+    src={data.media.videoVertical[3]}
+    poster={data.media.imgVertical[3]}
+  />,
+  <VideoHalfWide
+    controls
+    muted
+    loop
+    src={data.media.videoVertical[4]}
+    poster={data.media.imgVertical[4]}
+  />,
   <GridContainerHalf>
     <Paragraph paragraphText={data.other.f.p} />
   </GridContainerHalf>,
   <GridContainerHalf>
     <Paragraph paragraphText={data.other.g.p} />
   </GridContainerHalf>,
-  <GridContainerHalf>
-    <Video
-      controls
-      muted
-      loop
-      src={data.media.videoVertical[5]}
-      poster={data.media.imgVertical[5]}
-    />
-  </GridContainerHalf>,
+  <VideoHalfWide
+    controls
+    muted
+    loop
+    src={data.media.videoVertical[5]}
+    poster={data.media.imgVertical[5]}
+  />,
   <Gap />,
   <BlockHeroTextM headerText={data.other.c.h} paragraphText={data.other.c.p} />,
   <Video controls loop src={data.media.video[1]} poster={data.media.imgWide[2]} />,

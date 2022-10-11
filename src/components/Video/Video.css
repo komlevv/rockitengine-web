@@ -1,5 +1,16 @@
-.video {
+.videoContainer {
+  grid-column: 1 / -1;
+  display: grid;
+}
+
+.container,
+.video,
+.image {
+  grid-row: 1;
   grid-column: 1 / -1;
   width: 100%;
-  /* background-color: #e4ff00; */
+}
+
+.video {
+  z-index: -1;
 }

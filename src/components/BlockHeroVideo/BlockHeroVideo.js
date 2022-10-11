@@ -3,6 +3,8 @@ import HeaderXL from '../HeaderXL/HeaderXL';
 import Video from '../Video/Video';
 import Span from '../Span/Span';
 import heroVideo from './heroVideo.mp4';
+import heroVideoPoster from './heroVideo.jpg';
+import './heroVideo-thumb.jpg';
 
 const data = {
   h: (
@@ -18,7 +20,7 @@ const BlockHeroVideo = ({ innerRef }) => (
     <div className={s.heroText}>
       <HeaderXL headerText={data.h} />
     </div>
-    <Video loop autoplay muted src={heroVideo} />
+    <Video loop autoplay muted src={heroVideo} poster={heroVideoPoster} />
   </div>
 );
 

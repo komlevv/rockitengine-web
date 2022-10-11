@@ -12,10 +12,6 @@
   /* background-color: yellow; */
 }
 
-.gridContainerHalf > video {
-  grid-column: 1 / -1;
-}
-
 @media only screen and (max-width: 1024px) {
   .gridContainerHalf {
     grid-column: span 12;

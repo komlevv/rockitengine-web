@@ -1,6 +1,7 @@
 import BlockHeroText from '../../BlockHeroText/BlockHeroText';
 import videoMain from './videos/contactVideo.mp4';
 import imgMain from './images/contact-main.jpg';
+import './images/contact-main-thumb.jpg';
 import BlockContainer from '../../BlockContainer/BlockContainer';
 import Video from '../../Video/Video';
 import Span from '../../Span/Span';

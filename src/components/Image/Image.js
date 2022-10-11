@@ -3,13 +3,22 @@ import s from './Image.css';
 import Spinner from '../Spinner/Spinner';
 
 // Progressive image loading
-const Image = ({ loading = 'lazy', cls, src, innerRef, ...props }) => {
+const Image = ({
+  spinner = true,
+  loading = 'lazy',
+  cls,
+  src,
+  innerRef,
+  containerStyle,
+  ...props
+}) => {
   const [visible, setVisible] = useState(false);
   const onLoad = () => {
     setVisible(true);
   };
   return (
-    <div ref={innerRef} className={`${cls.container} ${s.imgGrid}`}>
+    <div style={containerStyle} ref={innerRef} className={`${cls.container} ${s.imgGrid}`}>
+      {spinner && <Spinner style={!visible ? {} : { display: 'none' }} />}
       <img
         style={!visible ? {} : { visibility: 'hidden' }}
         // assume thumbnail src is same as src, but with -thumb.jpg suffix
@@ -18,7 +27,6 @@ const Image = ({ loading = 'lazy', cls, src, innerRef, ...props }) => {
         className={`${cls.image} ${s.imgThumbBlur}`}
         alt=""
       />
-      <Spinner style={!visible ? {} : { display: 'none' }} />
       <img
         style={!visible ? { visibility: 'hidden' } : {}}
         onLoad={onLoad}

@@ -7,6 +7,7 @@ import GridContainerHalf from '../../GridContainerHalf/GridContainerHalf';
 import HeaderS from '../../HeaderS/HeaderS';
 import Paragraph from '../../Paragraph/Paragraph';
 import Video from '../../Video/Video';
+import VideoHalfWide from '../../VideoHalfWide/VideoHalfWide';
 
 import { data } from './data';
 import { data as dataNext } from '../PageGreyGoose/data';
@@ -23,21 +24,13 @@ const content = [
   <GridContainerHalf>
     <HeaderS headerText={data.other.a.h} />
   </GridContainerHalf>,
-  <GridContainerHalf>
-    <Video controls loop src={data.media.videoSquare[0]} poster={data.media.imgSquare[0]} />
-  </GridContainerHalf>,
-  <GridContainerHalf>
-    <Video controls loop src={data.media.videoSquare[1]} poster={data.media.imgSquare[1]} />
-  </GridContainerHalf>,
+  <VideoHalfWide controls loop src={data.media.videoSquare[0]} poster={data.media.imgSquare[0]} />,
+  <VideoHalfWide controls loop src={data.media.videoSquare[1]} poster={data.media.imgSquare[1]} />,
   <GridContainerHalf>
     <Paragraph paragraphText={data.other.a.p} />
   </GridContainerHalf>,
-  <GridContainerHalf>
-    <Video controls loop src={data.media.videoSquare[2]} poster={data.media.imgSquare[2]} />
-  </GridContainerHalf>,
-  <GridContainerHalf>
-    <Video controls loop src={data.media.videoSquare[3]} poster={data.media.imgSquare[3]} />
-  </GridContainerHalf>,
+  <VideoHalfWide controls loop src={data.media.videoSquare[2]} poster={data.media.imgSquare[2]} />,
+  <VideoHalfWide controls loop src={data.media.videoSquare[3]} poster={data.media.imgSquare[3]} />,
   <Gap />,
   <BlockHeroTextM headerText={data.other.b.h} paragraphText={data.other.b.p} />,
   <Video controls loop src={data.media.video[1]} poster={data.media.imgWide[1]} />,
