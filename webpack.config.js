@@ -1,6 +1,7 @@
 /* eslint-disable global-require */
 const path = require('path');
 const webpack = require('webpack');
+const nodeExternals = require('webpack-node-externals');
 
 const common = {
   output: {
@@ -102,6 +103,18 @@ export const prodConfig = {
   ...common,
   mode: 'production',
   entry: path.resolve(__dirname, './src/index.js'),
+};
+
+export const serverConfig = {
+  ...common,
+  mode: 'production',
+  entry: path.resolve(__dirname, './src/server/server.prod.js'),
+  target: 'node',
+  externals: [nodeExternals()],
+  output: {
+    path: path.resolve(__dirname, './dist'),
+    filename: 'server.js',
+  },
 };
 
 export default devConfig;

@@ -1,8 +1,10 @@
 import path from 'path';
 import { promises as fs } from 'fs';
+import webpack from 'webpack';
 
-export const srcDir = path.join(__dirname, '..', 'src');
+// export const srcDir = path.join(__dirname, '..', 'src');
 export const distDir = path.join(__dirname, '..', 'dist');
+
 export const log = (msg) => {
   // https://telepathy.freedesktop.org/doc/telepathy-glib/telepathy-glib-debug-ansi.html
   const GREEN = '\x1b[32m';
@@ -31,3 +33,18 @@ export const clean = async () => {
     })
   ).then(() => log('Done wiping'));
 };
+
+export const bundle = (config) =>
+  new Promise((resolve, reject) => {
+    log(`Build ${config.entry} bundle..`);
+    const compiler = webpack(config);
+    compiler.run((err, stats) => {
+      if (err) {
+        reject(err);
+        return;
+      }
+      console.log(stats.toString({ colors: true }));
+      compiler.close((closeErr) => (closeErr ? reject(closeErr) : null));
+      resolve();
+    });
+  });
