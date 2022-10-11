@@ -1,25 +1,28 @@
-/* todo too much boilerplate here, rewrite in sass or something modular */
-@value defaultAccent: #EECCAA;
+/* todo too much boilerplate here, this needs a rewamp */
+$defaultAccent: #EECCAA;
+$equinoxAccent: #0070BE;
+$chopardAccent: #1C60E8;
+$spotifyHuluAccent: #1ED560;
+$greyGooseAccent: #0054CE;
+$jMUpgradeAccent: #658269;
+$awayAccent: #EF3C29;
+$cartierAccent: #99140A;
+$johnHardyAAAccent: #AFA74A;
+$johnHardyJMAccent: #B17F4A;
+$defaultTransition: all 0.3s ease-in-out;
 
-@value equinoxAccent: #0070BE;
-
-@value chopardAccent: #1C60E8;
-
-@value spotifyHuluAccent: #1ED560;
-
-@value greyGooseAccent: #0054CE;
-
-@value jMUpgradeAccent: #658269;
-
-@value awayAccent: #EF3C29;
-
-@value cartierAccent: #99140A;
-
-@value johnHardyAAAccent: #AFA74A;
-
-@value johnHardyJMAccent: #B17F4A;
-
-@value defaultTransition: all 0.3s ease-in-out;
+:export {
+  defaultAccent: $defaultAccent;
+  equinoxAccent: $equinoxAccent;
+  chopardAccent: $chopardAccent;
+  spotifyHuluAccent: $spotifyHuluAccent;
+  greyGooseAccent: $greyGooseAccent;
+  jMUpgradeAccent: $jMUpgradeAccent;
+  awayAccent: $awayAccent;
+  cartierAccent: $cartierAccent;
+  johnHardyAAAccent: $johnHardyAAAccent;
+  johnHardyJMAccent: $johnHardyJMAccent;
+}
 
 /* -----common----- */
 
@@ -33,23 +36,23 @@
 .cartierHover,
 .johnHardyAAHover,
 .johnHardyJMHover {
-  transition: defaultTransition;
+  transition: $defaultTransition;
 }
 
 /* -----default----- */
 
 .defaultHover:hover {
-  color: defaultAccent;
+  color: $defaultAccent;
 }
 
 .defaultMenuHover {
-  transition: defaultTransition;
+  transition: $defaultTransition;
   position: relative;
 }
 
 .defaultMenuHover::before {
   content: "";
-  background: defaultAccent;
+  background: $defaultAccent;
   display: block;
   position: absolute;
   bottom: -8px;
@@ -60,7 +63,7 @@
 }
 
 .defaultMenuHover:hover {
-  color: defaultAccent;
+  color: $defaultAccent;
   background-position: 0;
 }
 
@@ -71,25 +74,25 @@
 /* -----equinox----- */
 
 .equinoxHover:hover {
-  color: equinoxAccent;
+  color: $equinoxAccent;
 }
 
 .equinoxMenuHover {
   composes: defaultMenuHover;
 }
 
-.equinoxMenuHover:hover {
-  color: equinoxAccent;
+.equinoxMenuHover:hover, {
+  color: $equinoxAccent;
 }
 
 .equinoxMenuHover::before {
-  background: equinoxAccent;
+  background: $equinoxAccent;
 }
 
 /* -----chopard----- */
 
 .chopardHover:hover {
-  color: chopardAccent;
+  color: $chopardAccent;
 }
 
 .chopardMenuHover {
@@ -97,21 +100,21 @@
 }
 
 .chopardMenuHover:hover {
-  color: chopardAccent;
+  color: $chopardAccent;
 }
 
 .chopardMenuHover::before {
-  background: chopardAccent;
+  background: $chopardAccent;
 }
 
 /* -----spotify----- */
 
 .spotifyHuluHover {
-  transition: defaultTransition;
+  transition: $defaultTransition;
 }
 
 .spotifyHuluHover:hover {
-  color: spotifyHuluAccent;
+  color: $spotifyHuluAccent;
 }
 
 .spotifyHuluMenuHover {
@@ -119,21 +122,21 @@
 }
 
 .spotifyHuluMenuHover:hover {
-  color: spotifyHuluAccent;
+  color: $spotifyHuluAccent;
 }
 
 .spotifyHuluMenuHover::before {
-  background: spotifyHuluAccent;
+  background: $spotifyHuluAccent;
 }
 
 /* -----goose----- */
 
 .greyGooseHover {
-  transition: defaultTransition;
+  transition: $defaultTransition;
 }
 
 .greyGooseHover:hover {
-  color: greyGooseAccent;
+  color: $greyGooseAccent;
 }
 
 .greyGooseMenuHover {
@@ -141,17 +144,17 @@
 }
 
 .greyGooseMenuHover:hover {
-  color: greyGooseAccent;
+  color: $greyGooseAccent;
 }
 
 .greyGooseMenuHover::before {
-  background: greyGooseAccent;
+  background: $greyGooseAccent;
 }
 
 /* -----jmu----- */
 
 .jMUpgradeHover:hover {
-  color: jMUpgradeAccent;
+  color: $jMUpgradeAccent;
 }
 
 .jMUpgradeMenuHover {
@@ -159,17 +162,17 @@
 }
 
 .jMUpgradeMenuHover:hover {
-  color: jMUpgradeAccent;
+  color: $jMUpgradeAccent;
 }
 
 .jMUpgradeMenuHover::before {
-  background: jMUpgradeAccent;
+  background: $jMUpgradeAccent;
 }
 
 /* -----away----- */
 
 .awayHover:hover {
-  color: awayAccent;
+  color: $awayAccent;
 }
 
 .awayMenuHover {
@@ -177,17 +180,17 @@
 }
 
 .awayMenuHover:hover {
-  color: awayAccent;
+  color: $awayAccent;
 }
 
 .awayMenuHover::before {
-  background: awayAccent;
+  background: $awayAccent;
 }
 
 /* -----cartier----- */
 
 .cartierHover:hover {
-  color: cartierAccent;
+  color: $cartierAccent;
 }
 
 .cartierMenuHover {
@@ -195,17 +198,17 @@
 }
 
 .cartierMenuHover:hover {
-  color: cartierAccent;
+  color: $cartierAccent;
 }
 
 .cartierMenuHover::before {
-  background: cartierAccent;
+  background: $cartierAccent;
 }
 
 /* -----johnhardyAA----- */
 
 .johnHardyAAHover:hover {
-  color: johnHardyAAAccent;
+  color: $johnHardyAAAccent;
 }
 
 .johnHardyAAMenuHover {
@@ -213,17 +216,17 @@
 }
 
 .johnHardyAAMenuHover:hover {
-  color: johnHardyAAAccent;
+  color: $johnHardyAAAccent;
 }
 
 .johnHardyAAMenuHover::before {
-  background: johnHardyAAAccent;
+  background: $johnHardyAAAccent;
 }
 
 /* -----johnhardyJH----- */
 
 .johnHardyJMHover:hover {
-  color: johnHardyJMAccent;
+  color: $johnHardyJMAccent;
 }
 
 .johnHardyJMMenuHover {
@@ -231,9 +234,9 @@
 }
 
 .johnHardyJMMenuHover::before {
-  background: johnHardyJMAccent;
+  background: $johnHardyJMAccent;
 }
 
 .johnHardyJMMenuHover:hover {
-  color: johnHardyJMAccent;
+  color: $johnHardyJMAccent;
 }
