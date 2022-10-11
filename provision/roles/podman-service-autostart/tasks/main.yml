@@ -12,12 +12,19 @@
   command: id -u vagrant
   register: vagrant_uid
 
-- name: Enable and start container service
+- name: Pull latest image
+  containers.podman.podman_image:
+    name: docker.io/rockitengine/web
+    tag: latest
+    pull: yes
+    force: yes
+
+- name: Start/restart container service
   systemd:
     daemon_reload: yes
     scope: user
     name: container-rockitengine-web.service
-    state: started
+    state: restarted
     enabled: yes
   environment:
     # sysctl --user commands won't work without XDG_RUNTIME_DIR set
