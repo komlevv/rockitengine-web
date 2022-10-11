@@ -4,12 +4,9 @@ import webpack from 'webpack';
 import webpackMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 import { devConfig } from '../webpack.config';
-import { app, listen, environment, host, port } from './server.prod';
+import { listen, environment, host, port, DevError } from './server.common';
 
-const DevError = (msg) => ({
-  name: 'DevError',
-  message: `${msg}`,
-});
+const app = express();
 
 if (environment === 'development') {
   // use webpack hot reloading
@@ -33,4 +30,4 @@ if (environment === 'development') {
   );
 }
 
-listen();
+listen(app);
