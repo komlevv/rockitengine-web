@@ -1,5 +1,4 @@
-import { useEffect } from 'react';
-import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import '../../fonts/bnl/Fontface.scss';
 import './App.scss';
@@ -24,15 +23,7 @@ import PageJohnHardyAA from '../Pages/PageJohnHardyAA/PageJohnHardyAA';
 import PageAway from '../Pages/PageAway/PageAway';
 import PageCartier from '../Pages/PageCartier/PageCartier';
 import { ThemeProvider } from '../../contexts/themeContext';
-
-const ScrollToTop = () => {
-  const { pathname } = useLocation();
-  useEffect(() => {
-    // eslint-disable-next-line no-undef
-    window.scrollTo(0, 0);
-  }, [pathname]);
-  return null;
-};
+import ScrollToTop from '../ScrollToTop/ScrollToTop';
 
 const App = () => (
   <BrowserRouter>
