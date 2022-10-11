@@ -1,0 +1,10 @@
+.linkContact {
+  font-size: 26pt;
+  grid-column: 1 / -1;
+}
+
+@media only screen and (max-width: 576px) {
+  .linkContact {
+    font-size: 7vw;
+  }
+}

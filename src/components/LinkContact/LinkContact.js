@@ -1,4 +1,5 @@
 import { useTheme } from '../../contexts/themeContext';
+import s from './LinkContact.css';
 
 const data = {
   e: 'hello@rockitengine.com',
@@ -7,7 +8,7 @@ const data = {
 const LinkContact = () => {
   const { theme } = useTheme();
   return (
-    <a style={{ fontSize: '28px' }} href={`mailto:${data.e}`} className={theme.hoverStyle}>
+    <a href={`mailto:${data.e}`} className={`${theme.hoverStyle} ${s.linkContact}`}>
       {data.e}
     </a>
   );
