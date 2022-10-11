@@ -25,9 +25,7 @@ if (environment === 'development') {
     res.end();
   });
 } else {
-  throw DevError(
-    `Environment is not set to development, nothing to do. Current environment: ${environment}`
-  );
+  throw DevError(`Environment should be set to 'development'. Current environment: ${environment}`);
 }
 
 listen(app);

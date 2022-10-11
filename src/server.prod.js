@@ -11,9 +11,7 @@ if (environment === 'production') {
   });
   listen();
 } else {
-  throw DevError(
-    `Environment is not set to development, nothing to do. Current environment: ${environment}`
-  );
+  throw DevError(`Environment should be set to 'production'. Current environment: ${environment}`);
 }
 
 export { listen, environment, host, port, app };
