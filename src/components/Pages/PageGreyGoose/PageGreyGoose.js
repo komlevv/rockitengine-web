@@ -15,7 +15,7 @@ import { data as dataNext } from '../PageEquinox/data';
 import { THEMES } from '../../../contexts/themeContext';
 import { useSetTheme } from '../../../hooks/useSetTheme';
 import { useAnimateRefs } from '../../../hooks/useAnimateRefs';
-import { mapContentWithRefs } from '../../../utils/utils';
+import { mapContentWithRefs, uuid } from '../../../utils/utils';
 import Gap from '../../Gap/Gap';
 
 const content = [
@@ -27,8 +27,8 @@ const content = [
   <ImageFullWide src={data.media.imgWide[1]} />,
   <GridContainerHalf>
     <HeaderS headerText={data.other.d.h} />
-    {data.other.d.items.map((itemText, i) => (
-      <ListItem text={itemText} key={i} />
+    {data.other.d.items.map((itemText) => (
+      <ListItem text={itemText} key={uuid()} />
     ))}
   </GridContainerHalf>,
   <ImageHalfWide src={data.media.imgWide[2]} />,
@@ -45,7 +45,7 @@ const content = [
   <ImageFullWide src={data.media.imgWide[5]} />,
   <Gap />,
   <BlockHeroTextM headerText={data.other.c.h} paragraphText={data.other.c.p} />,
-  data.media.imgSquareS.map((img, i) => <ImageOneThird key={i} src={img} />),
+  data.media.imgSquareS.map((img) => <ImageOneThird key={uuid()} src={img} />),
   <Gap />,
   <BlockProjectNext data={dataNext.next} />,
   <BlockContact />,

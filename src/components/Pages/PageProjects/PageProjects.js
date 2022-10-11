@@ -18,7 +18,7 @@ import { THEMES } from '../../../contexts/themeContext';
 import { useSetTheme } from '../../../hooks/useSetTheme';
 import { useAnimateRefs } from '../../../hooks/useAnimateRefs';
 import Divider from '../../Divider/Divider';
-import { mapContentWithRefs } from '../../../utils/utils';
+import { mapContentWithRefs, uuid } from '../../../utils/utils';
 import Gap from '../../Gap/Gap';
 
 const data = {
@@ -54,10 +54,10 @@ const content = [
   <BlockHeroText headerText={data.main.h} paragraphText={data.main.p} />,
   <Divider />,
   <HeaderM headerText={data.cases.h} />,
-  data.cases.items.map((dataPage, i) => (
+  data.cases.items.map((dataPage) => (
     <BannerHero
       linkTo={dataPage.next.banner.linkTo}
-      key={i}
+      key={uuid()}
       headerText={dataPage.next.banner.h}
       paragraphText={dataPage.next.banner.p}
       imgSrc={dataPage.next.banner.imgShort}

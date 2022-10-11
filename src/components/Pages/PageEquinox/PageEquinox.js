@@ -18,7 +18,7 @@ import { data as dataNext } from '../PageChopard/data';
 import { THEMES } from '../../../contexts/themeContext';
 import { useSetTheme } from '../../../hooks/useSetTheme';
 import { useAnimateRefs } from '../../../hooks/useAnimateRefs';
-import { mapContentWithRefs } from '../../../utils/utils';
+import { mapContentWithRefs, uuid } from '../../../utils/utils';
 import Gap from '../../Gap/Gap';
 
 const content = [
@@ -42,8 +42,8 @@ const content = [
   <ImageHalfWide src={data.media.imgVertical[2]} />,
   <GridContainerHalf>
     <HeaderS headerText={data.other.c.h} />
-    {data.other.c.items.map((itemText, i) => (
-      <ListItem text={itemText} key={i} />
+    {data.other.c.items.map((itemText) => (
+      <ListItem text={itemText} key={uuid()} />
     ))}
   </GridContainerHalf>,
   <GridContainerHalf>
@@ -56,7 +56,7 @@ const content = [
   <Video controls src={data.media.video[0]} poster={data.media.imgWide[4]} />,
   <Gap />,
   <BlockHeroTextM headerText={data.other.f.h} paragraphText={data.other.f.p} />,
-  data.media.imgSquareS.slice(0, 6).map((img, i) => <ImageOneThird key={i} src={img} />),
+  data.media.imgSquareS.slice(0, 6).map((img) => <ImageOneThird key={uuid()} src={img} />),
   <ImageTwoThird src={data.media.imgSquareSD[0]} />,
   <ImageOneThird src={data.media.imgSquareS[6]} />,
   <ImageOneThird src={data.media.imgSquareS[7]} />,

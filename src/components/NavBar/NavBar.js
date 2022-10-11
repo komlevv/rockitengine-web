@@ -8,6 +8,7 @@ import { useTheme } from '../../contexts/themeContext';
 import { ROUTES, NAVLINKS } from '../App/ROUTES';
 import { useNavScroll } from '../../hooks/useScrollListener';
 import LinkNav from '../LinkNav/LinkNav';
+import { uuid } from '../../utils/utils';
 
 const NavBar = () => {
   const { theme } = useTheme();
@@ -50,9 +51,9 @@ const NavBar = () => {
             src={hamIcon}
             onClick={handleHamIconClick}
           />
-          {NAVLINKS.map((link, i) => (
+          {NAVLINKS.map((link) => (
             <LinkNav
-              key={i}
+              key={uuid()}
               onClick={handleNavLinkClick}
               to={link.to}
               className={theme.hoverStyleMenu}
@@ -63,9 +64,9 @@ const NavBar = () => {
         </div>
       </div>
       <div className={`${s.overlay} ${overlayHide}`}>
-        {NAVLINKS.map((link, i) => (
+        {NAVLINKS.map((link) => (
           <LinkNav
-            key={i}
+            key={uuid()}
             onClick={handleNavLinkClick}
             to={link.to}
             className={theme.hoverStyleMenu}

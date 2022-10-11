@@ -5,6 +5,7 @@ import Divider from '../Divider/Divider';
 import { NAVLINKS, ROUTES } from '../App/ROUTES';
 import LogoRE from '../LogoRE/LogoRE';
 import { useTheme } from '../../contexts/themeContext';
+import { uuid } from '../../utils/utils';
 
 const BlockFooter = () => {
   const { theme } = useTheme();
@@ -15,8 +16,8 @@ const BlockFooter = () => {
           <LogoRE colorA={theme.accent} colorB="#fff" />
         </Link>
         <Divider />
-        {NAVLINKS.map((link, i) => (
-          <Link key={i} to={link.to} className={theme.hoverStyle}>
+        {NAVLINKS.map((link) => (
+          <Link key={uuid()} to={link.to} className={theme.hoverStyle}>
             <HeaderL headerText={link.text} />
           </Link>
         ))}

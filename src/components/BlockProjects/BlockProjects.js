@@ -16,7 +16,7 @@ import { data as dataGreyGoose } from '../Pages/PageGreyGoose/data';
 import { ROUTES } from '../App/ROUTES';
 import { useAnimateRefs } from '../../hooks/useAnimateRefs';
 import Divider from '../Divider/Divider';
-import { mapContentWithRefs } from '../../utils/utils';
+import { mapContentWithRefs, uuid } from '../../utils/utils';
 
 const dataPages = [
   dataEquinox,
@@ -45,9 +45,9 @@ const content = [
   <HeaderM headerText={data.h} />,
   dataPages
     .slice(0, 5)
-    .map((dataPage, i) => (
+    .map((dataPage) => (
       <BannerHero
-        key={i}
+        key={uuid()}
         linkTo={dataPage.next.banner.linkTo}
         headerText={dataPage.next.banner.h}
         paragraphText={dataPage.next.banner.p}

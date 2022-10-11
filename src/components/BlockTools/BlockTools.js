@@ -3,6 +3,7 @@ import HeaderM from '../HeaderM/HeaderM';
 import Paragraph from '../Paragraph/Paragraph';
 import ListItem from '../ListItem/ListItem';
 import Divider from '../Divider/Divider';
+import { uuid } from '../../utils/utils';
 
 const BlockTools = ({ data, innerRef }) => (
   <div ref={innerRef} className={s.blockTools}>
@@ -10,11 +11,11 @@ const BlockTools = ({ data, innerRef }) => (
     <HeaderM headerText={data.h} />
     <Paragraph paragraphText={data.p} />
     <div className={s.toolsContainer}>
-      {Object.values(data.items).map((v, i) => (
-        <div key={i}>
+      {Object.values(data.items).map((v) => (
+        <div key={uuid()}>
           <div className={s.toolsHeader}>{v.h}</div>
-          {v.subItems.map((subItem, i2) => (
-            <ListItem key={i2} text={subItem} />
+          {v.subItems.map((subItem) => (
+            <ListItem key={uuid()} text={subItem} />
           ))}
         </div>
       ))}

@@ -10,7 +10,7 @@ import { THEMES } from '../../../contexts/themeContext';
 import { useSetTheme } from '../../../hooks/useSetTheme';
 import { useAnimateRefs } from '../../../hooks/useAnimateRefs';
 import Divider from '../../Divider/Divider';
-import { mapContentWithRefs } from '../../../utils/utils';
+import { mapContentWithRefs, uuid } from '../../../utils/utils';
 import Gap from '../../Gap/Gap';
 
 const content = [
@@ -20,8 +20,8 @@ const content = [
     <HeaderM headerText={data.ourValues.h} />
     <ImageFullWide loading="eager" src={data.media.imgWide[0]} />
   </BlockContainer>,
-  Object.keys(data.ourValues.items).map((el, i) => (
-    <ListItemBig key={i} data={data.ourValues.items[el]} />
+  Object.keys(data.ourValues.items).map((el) => (
+    <ListItemBig key={uuid()} data={data.ourValues.items[el]} />
   )),
   <Gap />,
   <BlockContainer>
@@ -29,15 +29,15 @@ const content = [
     <HeaderM headerText={data.work.h} />
     <ImageFullWide src={data.media.imgWide[1]} />
   </BlockContainer>,
-  Object.keys(data.work.items).map((el, i) => <ListItemBig key={i} data={data.work.items[el]} />),
+  Object.keys(data.work.items).map((el) => <ListItemBig key={uuid()} data={data.work.items[el]} />),
   <Gap />,
   <BlockContainer>
     <Divider />
     <HeaderM headerText={data.process.h} />
     <ImageFullWide src={data.media.imgWide[2]} />
   </BlockContainer>,
-  Object.keys(data.process.items).map((el, i) => (
-    <ListItemBig key={i} data={data.process.items[el]} />
+  Object.keys(data.process.items).map((el) => (
+    <ListItemBig key={uuid()} data={data.process.items[el]} />
   )),
   <Gap />,
   <BlockTeaserProjects />,

@@ -36,8 +36,6 @@
     ],
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
-    // todo fix index keys and delete this line
-    "react/no-array-index-key": "warn",
     "react/jsx-props-no-spreading": "warn",
     "react-hooks/exhaustive-deps": "warn",
     "import/prefer-default-export": "warn",

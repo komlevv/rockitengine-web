@@ -18,7 +18,7 @@ import { data as dataNext } from '../PageAway/data';
 import { THEMES } from '../../../contexts/themeContext';
 import { useSetTheme } from '../../../hooks/useSetTheme';
 import { useAnimateRefs } from '../../../hooks/useAnimateRefs';
-import { mapContentWithRefs } from '../../../utils/utils';
+import { mapContentWithRefs, uuid } from '../../../utils/utils';
 import Gap from '../../Gap/Gap';
 
 const content = [
@@ -56,10 +56,10 @@ const content = [
   <Gap />,
   <BlockHeroTextM headerText={data.other.c.h} paragraphText={data.other.c.p} />,
   <Video controls src={data.media.video[1]} poster={data.media.imgWide[2]} />,
-  data.media.imgSquare.map((img, i) => <ImageHalfWide key={i} src={img} />),
+  data.media.imgSquare.map((img) => <ImageHalfWide key={uuid()} src={img} />),
   <Gap />,
   <BlockHeroTextM headerText={data.other.d.h} paragraphText={data.other.d.p} />,
-  data.media.imgSquareS.slice(0, 6).map((img, i) => <ImageOneThird key={1000 + i} src={img} />),
+  data.media.imgSquareS.slice(0, 6).map((img) => <ImageOneThird key={uuid()} src={img} />),
   <ImageTwoThird src={data.media.imgSquareSD[0]} />,
   <ImageOneThird src={data.media.imgSquareS[6]} />,
   <ImageOneThird src={data.media.imgSquareS[7]} />,

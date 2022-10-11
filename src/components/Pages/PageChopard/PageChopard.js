@@ -15,7 +15,7 @@ import { data as dataNext } from '../PageJMUpgrade/data';
 import { THEMES } from '../../../contexts/themeContext';
 import { useSetTheme } from '../../../hooks/useSetTheme';
 import { useAnimateRefs } from '../../../hooks/useAnimateRefs';
-import { mapContentWithRefs } from '../../../utils/utils';
+import { mapContentWithRefs, uuid } from '../../../utils/utils';
 import Gap from '../../Gap/Gap';
 
 const content = [
@@ -54,7 +54,7 @@ const content = [
   <ImageFullWide src={data.media.imgWide[4]} />,
   <Gap />,
   <BlockHeroTextM headerText={data.other.h.h} paragraphText={data.other.h.p} />,
-  data.media.imgSquareS.slice(0, 6).map((img, i) => <ImageOneThird key={i} src={img} />),
+  data.media.imgSquareS.slice(0, 6).map((img) => <ImageOneThird key={uuid()} src={img} />),
   <ImageTwoThird src={data.media.imgSquareSD[0]} />,
   <ImageOneThird src={data.media.imgSquareS[6]} />,
   <ImageOneThird src={data.media.imgSquareS[7]} />,

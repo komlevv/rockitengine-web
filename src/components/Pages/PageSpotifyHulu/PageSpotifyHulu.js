@@ -17,7 +17,7 @@ import { data as dataNext } from '../PageJohnHardyAA/data';
 import { THEMES } from '../../../contexts/themeContext';
 import { useSetTheme } from '../../../hooks/useSetTheme';
 import { useAnimateRefs } from '../../../hooks/useAnimateRefs';
-import { mapContentWithRefs } from '../../../utils/utils';
+import { mapContentWithRefs, uuid } from '../../../utils/utils';
 import Gap from '../../Gap/Gap';
 
 const content = [
@@ -27,8 +27,8 @@ const content = [
   <ImageHalfWide src={data.media.imgVertical[0]} />,
   <GridContainerHalf>
     <HeaderS headerText={data.other.c.h} />
-    {data.other.c.items.map((itemText, i) => (
-      <ListItem text={itemText} key={i} />
+    {data.other.c.items.map((itemText) => (
+      <ListItem text={itemText} key={uuid()} />
     ))}
   </GridContainerHalf>,
   <GridContainerHalf>
@@ -38,10 +38,10 @@ const content = [
   <ImageFullWide src={data.media.imgWide[1]} />,
   <Gap />,
   <BlockHeroTextM headerText={data.other.b.h} paragraphText={data.other.b.p} />,
-  data.media.imgWide.slice(2, 6).map((img, i) => <ImageFullWide key={i} src={img} />),
+  data.media.imgWide.slice(2, 6).map((img) => <ImageFullWide key={uuid()} src={img} />),
   <Gap />,
   <BlockHeroTextM headerText={data.other.d.h} paragraphText={data.other.d.p} />,
-  data.media.imgSquareS.slice(0, 6).map((img, i) => <ImageOneThird key={i} src={img} />),
+  data.media.imgSquareS.slice(0, 6).map((img) => <ImageOneThird key={uuid()} src={img} />),
   <ImageTwoThird src={data.media.imgSquareSD[0]} />,
   <ImageOneThird src={data.media.imgSquareS[6]} />,
   <ImageOneThird src={data.media.imgSquareS[7]} />,

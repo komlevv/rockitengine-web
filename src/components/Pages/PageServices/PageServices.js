@@ -12,7 +12,7 @@ import { useAnimateRefs } from '../../../hooks/useAnimateRefs';
 import { useSetTheme } from '../../../hooks/useSetTheme';
 import Video from '../../Video/Video';
 import Divider from '../../Divider/Divider';
-import { mapContentWithRefs } from '../../../utils/utils';
+import { mapContentWithRefs, uuid } from '../../../utils/utils';
 import Gap from '../../Gap/Gap';
 
 const content = [
@@ -22,8 +22,8 @@ const content = [
     <HeaderM headerText={data.services.h} />
     <ImageFullWide loading="eager" src={data.media.imgWide[0]} />
   </BlockContainer>,
-  Object.keys(data.services.items).map((el, i) => (
-    <ListItemBig key={i} data={data.services.items[el]} />
+  Object.keys(data.services.items).map((el) => (
+    <ListItemBig key={uuid()} data={data.services.items[el]} />
   )),
   <Gap />,
   <BlockContainer>

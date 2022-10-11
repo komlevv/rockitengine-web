@@ -4,6 +4,7 @@ import Paragraph from '../Paragraph/Paragraph';
 import Button from '../Button/Button';
 import { ROUTES } from '../App/ROUTES';
 import Divider from '../Divider/Divider';
+import { uuid } from '../../utils/utils';
 
 const data = {
   h: 'Our services',
@@ -30,15 +31,15 @@ const BlockServices = ({ innerRef }) => (
     <Paragraph paragraphText={data.p} />
     <div className={s.listL}>
       <ul>
-        {data.items.slice(0, 3).map((item, i) => (
-          <li key={i}>{item}</li>
+        {data.items.slice(0, 3).map((item) => (
+          <li key={uuid()}>{item}</li>
         ))}
       </ul>
     </div>
     <div className={s.listR}>
       <ul>
-        {data.items.slice(3).map((item, i) => (
-          <li key={i}>{item}</li>
+        {data.items.slice(3).map((item) => (
+          <li key={uuid()}>{item}</li>
         ))}
       </ul>
     </div>
