@@ -12,6 +12,9 @@
   "plugins": [
     "prettier"
   ],
+  "ignorePatterns": [
+    "/dist/*"
+  ],
   "rules": {
     "prettier/prettier": [
       "error",
