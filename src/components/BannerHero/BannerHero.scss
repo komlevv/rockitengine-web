@@ -1,3 +1,5 @@
+@use "../App/commonVars.scss";
+
 .bannerHero {
   cursor: pointer;
   grid-column: 1 /-1;
@@ -37,7 +39,7 @@
   object-fit: cover;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: commonVars.$screenXS) {
   .bannerHero {
     grid-template-rows: auto 1fr 1fr;
   }

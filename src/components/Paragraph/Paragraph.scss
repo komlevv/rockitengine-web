@@ -1,16 +1,18 @@
+@use "../App/commonVars.scss";
+
 .paragraph {
   grid-column: 1 / 5;
   line-height: 1.7;
   /* background-color: aquamarine; */
 }
 
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: commonVars.$screenL) {
   .paragraph {
     grid-column: 1 / -1;
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: commonVars.$screenM) {
   .paragraph {
     font-size: 12pt;
   }

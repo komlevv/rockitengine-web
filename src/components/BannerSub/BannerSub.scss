@@ -1,3 +1,5 @@
+@use "../App/commonVars.scss";
+
 .bannerSub {
   grid-column: span 6;
   /* background-color: azure; */
@@ -21,7 +23,7 @@
   margin-top: 0;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: commonVars.$screenXS) {
   .bannerSub {
     grid-column: span 12;
     grid-template-columns: repeat(12, 1fr);

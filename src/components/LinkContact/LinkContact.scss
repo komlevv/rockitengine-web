@@ -1,9 +1,11 @@
+@use "../App/commonVars.scss";
+
 .linkContact {
   font-size: 26pt;
   grid-column: 1 / -1;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: commonVars.$screenXS) {
   .linkContact {
     font-size: 7vw;
   }

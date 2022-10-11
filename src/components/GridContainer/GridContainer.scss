@@ -1,3 +1,5 @@
+@use "../App/commonVars.scss";
+
 .gridContainer {
   composes: grid12 from "../App/App.scss";
   max-width: 1360px;
@@ -11,13 +13,13 @@
   /* padding-bottom: 30px; */
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: commonVars.$screenM) {
   .gridContainer {
     padding: 110px 20px 20px;
   }
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: commonVars.$screenXS) {
   .gridContainer {
     padding-left: 10px;
     padding-right: 10px;

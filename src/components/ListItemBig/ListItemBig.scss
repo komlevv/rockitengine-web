@@ -1,3 +1,5 @@
+@use "../App/commonVars.scss";
+
 .listItemBig {
   grid-column: 1 / -1;
   composes: grid12 from "../App/App.scss";
@@ -31,7 +33,7 @@
   /*   don't delete this */
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: commonVars.$screenS) {
   .listItemBigHeader {
     grid-column: span 9;
   }

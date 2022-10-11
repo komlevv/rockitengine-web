@@ -1,3 +1,5 @@
+@use "../App/commonVars.scss";
+
 h1 {
   font-size: 61pt;
   font-weight: bold;
@@ -5,19 +7,19 @@ h1 {
   margin: 0;
 }
 
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: commonVars.$screenL) {
   h1 {
     font-size: 51pt;
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: commonVars.$screenM) {
   h1 {
     font-size: 41pt;
   }
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: commonVars.$screenXS) {
   h1 {
     font-size: 31pt;
   }

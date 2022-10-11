@@ -1,3 +1,5 @@
+@use "../App/commonVars.scss";
+
 .bannerLogo {
   color: white;
   grid-column: span 5;
@@ -7,7 +9,7 @@
   margin-top: 30px;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: commonVars.$screenXS) {
   .bannerLogo {
     justify-self: start;
     align-self: start;

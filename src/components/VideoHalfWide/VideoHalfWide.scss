@@ -1,9 +1,11 @@
+@use "../App/commonVars.scss";
+
 .container {
   grid-column: span 6;
   display: grid;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: commonVars.$screenM) {
   .container {
     grid-column: span 12;
   }

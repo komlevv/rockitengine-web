@@ -20,7 +20,7 @@
   display: none;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: commonVars.$screenXS) {
   .imgClientsS {
     display: inline;
   }
