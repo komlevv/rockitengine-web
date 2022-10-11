@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 const path = require('path');
 const webpack = require('webpack');
 
@@ -24,7 +25,7 @@ const common = {
         ],
       },
       {
-        test: /\.css$/,
+        test: /\.s[ac]ss$/i,
         use: [
           { loader: 'style-loader', options: { injectType: 'singletonStyleTag' } },
           {
@@ -47,6 +48,12 @@ const common = {
                   ],
                 ],
               },
+            },
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              implementation: require('sass'),
             },
           },
         ],

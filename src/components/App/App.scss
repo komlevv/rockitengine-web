@@ -2,6 +2,9 @@
 /* todo add css reset here */
 @value blockPaddingBottom: 30px;
 
+$test: 40px;
+$base-color: #c6538c;
+
 html,
 body,
 :global(#root) {
