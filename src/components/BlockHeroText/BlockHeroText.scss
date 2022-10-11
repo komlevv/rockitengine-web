@@ -1,9 +1,9 @@
-@value blockPaddingBottom from "../App/App.scss";
+@use "../App/commonVars";
 
 .blockHeroText {
   composes: grid12 from "../App/App.scss";
   grid-column: 1 / -1;
-  padding-bottom: blockPaddingBottom;
+  padding-bottom: commonVars.$blockPaddingBottom;
 }
 
 .blockHeroText > h1 {
