@@ -1,4 +1,5 @@
 import path from 'path';
+import { promises as fs } from 'fs';
 
 export const srcDir = path.join(__dirname, '..', 'src');
 export const distDir = path.join(__dirname, '..', 'dist');
@@ -10,4 +11,23 @@ export const log = (msg) => {
   const BOLD_OFF = '\x1b[22m';
   const color = `${GREEN}${BOLD}%s${BOLD_OFF}${GREEN_OFF}`;
   console.log(color, `[build]: ${msg}`);
+};
+
+export const clean = async () => {
+  log('Wipe dist dir..');
+  let files = await fs.readdir(distDir);
+  files = files.filter((f) => f !== '.gitkeep');
+  await Promise.all(
+    files.map(async (file) => {
+      const fullPath = path.join(distDir, file);
+      const fStat = await fs.stat(fullPath);
+      if (fStat.isDirectory()) {
+        await fs.rm(fullPath, { recursive: true, force: true });
+        console.log(`removed dir: ${fullPath}`);
+      } else {
+        await fs.unlink(fullPath);
+        console.log(`removed file: ${fullPath}`);
+      }
+    })
+  ).then(() => log('Done wiping'));
 };

@@ -3,7 +3,7 @@ import express from 'express';
 import webpack from 'webpack';
 import webpackMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
-import { devConfig } from '../webpack.config';
+import { devConfig } from '../../webpack.config';
 import { listen, environment, host, port, DevError } from './server.common';
 
 const app = express();

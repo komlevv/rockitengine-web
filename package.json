@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Rockitengine website",
   "scripts": {
-    "express": "NODE_ENV=development nodemon --config nodemon.dev.json -L -r @babel/register src/server.dev.js",
-    "express-prod": "NODE_ENV=production nodemon --config nodemon.dev.json -L -r @babel/register src/server.prod.js",
+    "express": "NODE_ENV=development nodemon --config nodemon.dev.json -L -r @babel/register src/server/server.dev.js",
+    "express-prod": "NODE_ENV=production nodemon --config nodemon.dev.json -L -r @babel/register src/server/server.prod.js",
     "build-all": "node -r @babel/register tools/build.js",
     "clean": "node -r @babel/register tools/clean.js",
     "lint-js": "npx eslint . --ext .js",

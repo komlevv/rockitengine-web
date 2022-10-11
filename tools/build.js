@@ -4,8 +4,7 @@ import path from 'path';
 import { promises as fs } from 'fs';
 import { prodConfig } from '../webpack.config';
 import packageJson from '../package.json';
-import { srcDir, distDir, log } from './common';
-import clean from './clean';
+import { clean, srcDir, distDir, log } from './common';
 
 const bundle = () =>
   new Promise((resolve, reject) => {
@@ -35,7 +34,7 @@ const bundle = () =>
     comments: false,
     presets: ['@babel/preset-env'],
   };
-  const compiled = await transformFileAsync(path.join(srcDir, 'server.prod.js'), babelOpts);
+  const compiled = await transformFileAsync(path.join(srcDir, '/server/server.prod.js'), babelOpts);
   console.log('compiled server.js');
 
   await Promise.all([
