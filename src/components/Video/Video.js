@@ -2,6 +2,7 @@ import { createRef, useEffect, useState } from 'react';
 import s from './Video.scss';
 import Image from '../Image/Image';
 import Spinner from '../Spinner/Spinner';
+import { canUseDOM } from '../../utils/utils';
 
 const Video = ({
   src,
@@ -18,6 +19,7 @@ const Video = ({
   const handleLoadedMetadata = () => {
     setVisible(false);
   };
+
   useEffect(() => {
     const instance = videoRef.current;
     // tbd, see https://github.com/facebook/react/issues/10389
@@ -27,6 +29,11 @@ const Video = ({
       instance.removeEventListener('loadedmetadata', handleLoadedMetadata);
     };
   }, [videoRef, muted]);
+
+  useEffect(() => {
+    if (canUseDOM() && videoRef.current.readyState >= 1) handleLoadedMetadata();
+  }, [videoRef]);
+
   return (
     <div ref={innerRef} className={containerCls || s.videoContainer}>
       <Spinner style={visible ? {} : { display: 'none' }} />
@@ -37,11 +44,10 @@ const Video = ({
         containerStyle={visible ? {} : { visibility: 'hidden' }}
       />
       <video
-        // todo: setting poster here makes poster image load twice
-        // on clients with disabled cache
         ref={videoRef}
         style={visible ? { display: 'none' } : {}}
         className={s.video}
+        // todo: setting poster here makes poster image load twice on clients with disabled cache
         poster={poster}
         preload="metadata"
         controls={controls}

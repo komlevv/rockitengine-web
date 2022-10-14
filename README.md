@@ -2,6 +2,11 @@
 * tbd
 
 ## Common commands:
+Build and launch development with docker-compose
+```bash
+docker-compose -f dev.docker-compose.yml build
+docker-compose -f dev.docker-compose.yml up
+```
 
 Build latest docker production image
 

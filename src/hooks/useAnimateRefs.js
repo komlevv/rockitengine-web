@@ -1,4 +1,4 @@
-import { createRef, useLayoutEffect, useRef } from 'react';
+import { createRef, useEffect, useRef } from 'react';
 import s from './useAnimateRefs.scss';
 import { randomChoice } from '../utils/utils';
 
@@ -19,7 +19,7 @@ export const useAnimateRefs = (itemsLength) => {
       }
     });
   };
-  useLayoutEffect(() => {
+  useEffect(() => {
     // set base css transition class for each ref
     const baseStyles = [s.animateBase, s.animateBaseA, s.animateBaseB];
     itemsRefs.current.forEach(

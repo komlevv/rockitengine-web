@@ -31,3 +31,9 @@ export const uuid = () => {
     .join('');
   /* eslint-enable */
 };
+
+// helpers for React SSR
+export const canUseDOM = () =>
+  !!(typeof window !== 'undefined' && window.document && window.document.createElement);
+export const canUseEventListeners = () => canUseDOM() && !!window.addEventListener;
+export const canUseViewport = () => canUseDOM() && !!window.screen;

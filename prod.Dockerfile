@@ -3,7 +3,7 @@ FROM node:16 as build
 WORKDIR /build
 
 COPY tools  ./tools/
-COPY .babelrc package.json webpack.config.js ./
+COPY .babelrc package.json webpack.config.babel.js ./
 RUN npm install
 COPY src ./src/
 
@@ -15,8 +15,7 @@ WORKDIR /app
 
 COPY --from=build /build/dist/fonts/ ./fonts/
 COPY --from=build /build/dist/media/ ./media/
-COPY --from=build /build/dist/index.html \
-                  /build/dist/bundle.js \
+COPY --from=build /build/dist/bundle.js \
                   /build/dist/server.js \
                   /build/dist/package.json \
                   ./

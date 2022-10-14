@@ -9,6 +9,9 @@
     "airbnb/hooks",
     "prettier"
   ],
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
   "plugins": [
     "prettier"
   ],

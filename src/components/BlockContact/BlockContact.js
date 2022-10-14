@@ -5,11 +5,11 @@ import { useTheme } from '../../contexts/themeContext';
 import Divider from '../Divider/Divider';
 
 const data = {
-  h: ['Contact', 'Say hello', 'Get in touch'],
+  h: ['Get in touch'],
   p: [
-    'Share your challenge with us and let’s get started. Send us an email at:',
-    'You have a project? We have experts!',
-    'If you have an idea, we have the solution! Let’s collaborate.',
+    // 'Share your challenge with us and let’s get started. Send us an email at:',
+    // 'You have a project? We have experts!',
+    // 'If you have an idea, we have the solution! Let’s collaborate.',
     'Drop us a message below and spark a change, today.',
   ],
   e: 'hello@rockitengine.com',

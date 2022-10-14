@@ -1,8 +1,8 @@
 {
   "watch": [
-    "src/server.dev.js",
-    "src/server.prod.js",
-    "webpack.config.js"
+    "src/server/serverDev.js",
+    "src/server/serverProd.js",
+    "webpack.config.babel.js"
   ],
   "ext": "js"
 }

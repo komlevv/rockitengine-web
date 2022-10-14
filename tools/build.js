@@ -1,13 +1,13 @@
 import path from 'path';
 import { promises as fs } from 'fs';
-import { prodConfig, serverConfig } from '../webpack.config';
+import { clientProdConfig, serverProdConfig } from '../webpack.config.babel';
 import packageJson from '../package.json';
 import { clean, distDir, log, bundle } from './common';
 
 (async () => {
   await clean();
-  await bundle(serverConfig);
-  await bundle(prodConfig);
+  await bundle(serverProdConfig);
+  await bundle(clientProdConfig);
   log('Write package.json..');
   await fs
     .writeFile(
