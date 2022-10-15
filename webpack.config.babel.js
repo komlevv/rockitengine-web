@@ -88,7 +88,7 @@ const common = {
         // https://stackoverflow.com/questions/68634225/
         type: 'asset/resource',
         generator: {
-          filename: './fonts/[contenthash][ext]',
+          filename: './fonts/[name][ext]',
         },
       },
       {
@@ -97,13 +97,13 @@ const common = {
       },
     ],
   },
+  plugins: [new MiniCssExtractPlugin()],
 };
 
 const clientProdConfig = {
   ...common,
   mode: PRODUCTION,
   entry: PATH_ENTRY_CLIENT,
-  plugins: [new MiniCssExtractPlugin()],
   output: { path: PATH_DIST, filename: NAME_OUTPUT_CLIENT },
 };
 
@@ -117,7 +117,6 @@ const serverProdConfig = {
     path: PATH_DIST,
     filename: NAME_OUTPUT_SERVER,
   },
-  plugins: [new MiniCssExtractPlugin()],
   module: {
     rules: [
       // js
@@ -165,7 +164,7 @@ const clientDevConfig = {
   name: 'client',
   entry: ['webpack-hot-middleware/client?reload=true', PATH_ENTRY_CLIENT],
   output: { path: PATH_DIST, filename: NAME_OUTPUT_CLIENT },
-  plugins: [new webpack.HotModuleReplacementPlugin(), new MiniCssExtractPlugin()],
+  plugins: [...common.plugins, new webpack.HotModuleReplacementPlugin()],
   devtool: DEVTOOL,
   watch: true,
   watchOptions: { poll: 1000 },

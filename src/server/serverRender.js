@@ -15,6 +15,11 @@ export const renderHtml = (req) => {
       <meta charset="UTF-8"/>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="description" content="Design &amp; Development agency">
+      <link href="/fonts/bnl-black.otf" rel="preload" as="font" crossorigin="">
+      <link href="/fonts/bnl-bold.otf" rel="preload" as="font" crossorigin="">
+      <link href="/fonts/bnl-book.otf" rel="preload" as="font" crossorigin="">
+      <link href="/fonts/bnl-light.otf" rel="preload" as="font" crossorigin="">
+      <link href="/fonts/bnl-medium.otf" rel="preload" as="font" crossorigin="">
       <script src="/bundle.js" defer></script>
       <link href="/main.css" rel="stylesheet">
       <title>RockitEngine - Design & Development</title>
