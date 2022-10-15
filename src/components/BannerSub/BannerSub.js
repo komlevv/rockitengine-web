@@ -12,10 +12,10 @@ const BannerSub = ({
   logoSrc,
   fontColor,
   linkTo = '#',
-  innerRef,
+  animationRef,
 }) => (
   <Link
-    ref={innerRef}
+    ref={animationRef}
     to={linkTo}
     className={s.bannerSub}
     style={{

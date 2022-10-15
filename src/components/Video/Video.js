@@ -11,7 +11,7 @@ const Video = ({
   muted,
   controls,
   autoplay,
-  innerRef = createRef(),
+  animationRef = createRef(),
   containerCls,
 }) => {
   const videoRef = createRef();
@@ -35,7 +35,7 @@ const Video = ({
   }, [videoRef]);
 
   return (
-    <div ref={innerRef} className={containerCls || s.videoContainer}>
+    <div ref={animationRef} className={containerCls || s.videoContainer}>
       <Spinner style={visible ? {} : { display: 'none' }} />
       <Image
         spinner={false}

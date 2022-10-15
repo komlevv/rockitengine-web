@@ -8,8 +8,8 @@ const data = {
   h: 'Our Clients',
 };
 
-const BlockClients = ({ innerRef }) => (
-  <div ref={innerRef} className={s.blockClients}>
+const BlockClients = ({ animationRef }) => (
+  <div ref={animationRef} className={s.blockClients}>
     <Divider />
     <HeaderM accent headerText={data.h} />
     <img className={s.imgClientsL} src={clientLogosImgL} alt="" />

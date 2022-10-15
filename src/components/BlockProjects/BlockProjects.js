@@ -59,10 +59,10 @@ const content = [
   <Button href={ROUTES.PROJECTS} buttonText={data.buttonText} />,
 ].flat();
 
-const BlockProjects = ({ innerRef }) => {
+const BlockProjects = ({ animationRef }) => {
   const animateRefs = useAnimateRefs(content.length);
   return (
-    <div ref={innerRef} className={s.blockProjects}>
+    <div ref={animationRef} className={s.blockProjects}>
       {mapContentWithRefs(content, animateRefs)}
     </div>
   );

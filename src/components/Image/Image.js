@@ -9,7 +9,7 @@ const Image = ({
   loading = 'lazy',
   cls,
   src,
-  innerRef,
+  animationRef,
   containerStyle,
   ...props
 }) => {
@@ -27,7 +27,7 @@ const Image = ({
   }, [imgRef]);
 
   return (
-    <div style={containerStyle} ref={innerRef} className={`${cls.container} ${s.imgGrid}`}>
+    <div style={containerStyle} ref={animationRef} className={`${cls.container} ${s.imgGrid}`}>
       {spinner && <Spinner style={!visible ? {} : { display: 'none' }} />}
       <img
         ref={imgRef}

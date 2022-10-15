@@ -24,8 +24,8 @@ const data = {
   ],
 };
 
-const BlockServices = ({ innerRef }) => (
-  <div ref={innerRef} className={s.services}>
+const BlockServices = ({ animationRef }) => (
+  <div ref={animationRef} className={s.services}>
     <Divider />
     <HeaderM accent headerText={data.h} />
     <Paragraph paragraphText={data.p} />

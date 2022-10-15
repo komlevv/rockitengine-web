@@ -13,8 +13,8 @@ const data = {
     'project shine. Whatever the question, we’ve got the answer.',
 };
 
-const BlockAbout = ({ innerRef }) => (
-  <div ref={innerRef} className={s.blockAbout}>
+const BlockAbout = ({ animationRef }) => (
+  <div ref={animationRef} className={s.blockAbout}>
     <Divider />
     <HeaderM accent headerText={data.h} />
     <Paragraph paragraphText={data.p} />

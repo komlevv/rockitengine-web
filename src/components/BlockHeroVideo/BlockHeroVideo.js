@@ -15,8 +15,8 @@ const data = {
   ),
 };
 
-const BlockHeroVideo = ({ innerRef }) => (
-  <div ref={innerRef} className={s.blockHeroVideo}>
+const BlockHeroVideo = ({ animationRef }) => (
+  <div ref={animationRef} className={s.blockHeroVideo}>
     <div className={s.heroText}>
       <HeaderXL headerText={data.h} />
     </div>

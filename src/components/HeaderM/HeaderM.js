@@ -1,7 +1,7 @@
 import s from './HeaderM.scss';
 
-const HeaderM = ({ headerText, innerRef }) => (
-  <h3 ref={innerRef} className={s.headerM}>
+const HeaderM = ({ headerText, animationRef }) => (
+  <h3 ref={animationRef} className={s.headerM}>
     {headerText}
   </h3>
 );

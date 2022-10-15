@@ -14,10 +14,10 @@ export const throttle = (func, timeFrame) => {
 export const randomChoice = (number) => Math.floor(Math.random() * number);
 
 export const mapContentWithRefs = (content, refsArr) =>
-  // map content, dynamically setting innerRef prop
+  // map content, dynamically setting animationRef prop
   content.map((component, i) => {
     const k = i + 1000;
-    return React.cloneElement(component, { innerRef: refsArr[i], key: k });
+    return React.cloneElement(component, { animationRef: refsArr[i], key: k });
   });
 
 const hex = [...Array(256).keys()].map((index) => index.toString(16).padStart(2, '0'));

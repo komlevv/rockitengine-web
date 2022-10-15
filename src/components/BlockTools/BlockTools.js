@@ -5,8 +5,8 @@ import ListItem from '../ListItem/ListItem';
 import Divider from '../Divider/Divider';
 import { uuid } from '../../utils/utils';
 
-const BlockTools = ({ data, innerRef }) => (
-  <div ref={innerRef} className={s.blockTools}>
+const BlockTools = ({ data, animationRef }) => (
+  <div ref={animationRef} className={s.blockTools}>
     <Divider />
     <HeaderM headerText={data.h} />
     <Paragraph paragraphText={data.p} />

@@ -18,10 +18,10 @@ const data = {
 // todo replace this with randomChoice from utils
 const random = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
-const BlockContact = ({ innerRef }) => {
+const BlockContact = ({ animationRef }) => {
   const { theme } = useTheme();
   return (
-    <div ref={innerRef} className={s.blockContact}>
+    <div ref={animationRef} className={s.blockContact}>
       <Divider />
       <HeaderM accent headerText={random(data.h)} />
       <Paragraph paragraphText={random(data.p)} />

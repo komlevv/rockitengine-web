@@ -7,8 +7,8 @@ import HeaderXS from '../HeaderXS/HeaderXS';
 import Divider from '../Divider/Divider';
 import { uuid } from '../../utils/utils';
 
-const ListItemBig = ({ data, innerRef }) => (
-  <div ref={innerRef} className={s.listItemBig}>
+const ListItemBig = ({ data, animationRef }) => (
+  <div ref={animationRef} className={s.listItemBig}>
     <Divider />
     <div className={s.listItemBigNumber}>
       <HeaderXS headerText={data.n} />

@@ -14,8 +14,8 @@ const data = {
   buttonText: 'See our projects',
 };
 
-const BlockTeaserProjects = ({ innerRef }) => (
-  <div ref={innerRef} className={s.blockTeaserProjects}>
+const BlockTeaserProjects = ({ animationRef }) => (
+  <div ref={animationRef} className={s.blockTeaserProjects}>
     <Divider />
     <HeaderM headerText={data.h} />
     <Paragraph paragraphText={data.p} />
