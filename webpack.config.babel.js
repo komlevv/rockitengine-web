@@ -105,6 +105,23 @@ const clientProdConfig = {
   mode: PRODUCTION,
   entry: PATH_ENTRY_CLIENT,
   output: { path: PATH_DIST, filename: NAME_OUTPUT_CLIENT },
+  module: {
+    rules: [
+      common.module.rules[0],
+      {
+        ...common.module.rules[1],
+        use: [
+          MiniCssExtractPlugin.loader,
+          common.module.rules[1].use[1],
+          common.module.rules[1].use[2],
+          common.module.rules[1].use[3],
+        ],
+      },
+      common.module.rules[2],
+      common.module.rules[3],
+      common.module.rules[4],
+    ],
+  },
 };
 
 const serverProdConfig = {

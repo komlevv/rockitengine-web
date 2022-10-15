@@ -17,6 +17,7 @@ COPY --from=build /build/dist/fonts/ ./fonts/
 COPY --from=build /build/dist/media/ ./media/
 COPY --from=build /build/dist/bundle.js \
                   /build/dist/server.js \
+                  /build/dist/main.css \
                   /build/dist/package.json \
                   ./
 RUN npm install
