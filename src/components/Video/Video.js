@@ -21,14 +21,17 @@ const Video = ({
   };
 
   useEffect(() => {
-    const instance = videoRef.current;
     // tbd, see https://github.com/facebook/react/issues/10389
-    if (muted) instance.setAttribute('muted', '');
+    if (muted) videoRef.current.setAttribute('muted', '');
+  }, [videoRef, muted]);
+
+  useEffect(() => {
+    const instance = videoRef.current;
     instance.addEventListener('loadedmetadata', handleLoadedMetadata);
     return () => {
       instance.removeEventListener('loadedmetadata', handleLoadedMetadata);
     };
-  }, [videoRef, muted]);
+  }, [videoRef]);
 
   useEffect(() => {
     if (canUseDOM() && videoRef.current.readyState >= 1) handleLoadedMetadata();
