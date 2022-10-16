@@ -7,10 +7,9 @@ import Video from '../../Video/Video';
 import Span from '../../Span/Span';
 import { THEMES } from '../../../contexts/themeContext';
 import { useSetTheme } from '../../../hooks/useSetTheme';
-import { useAnimateRefs } from '../../../hooks/useAnimateRefs';
 import Divider from '../../Divider/Divider';
-import { mapContentWithRefs } from '../../../utils/utils';
 import LinkContact from '../../LinkContact/LinkContact';
+import Animate from '../../Animate/Animate';
 
 const data = {
   main: {
@@ -26,19 +25,18 @@ const data = {
   },
 };
 
-const content = [
-  <BlockHeroText headerText={data.main.h} paragraphText={data.main.p} />,
-  <BlockContainer>
-    <Divider />
-    <LinkContact />
-    <Video autoplay loop muted src={videoMain} poster={imgMain} />
-  </BlockContainer>,
-].flat();
-
 const PageContact = () => {
   useSetTheme(THEMES.DEFAULT);
-  const animateRefs = useAnimateRefs(content.length);
-  return <>{mapContentWithRefs(content, animateRefs)}</>;
+  return (
+    <Animate>
+      <BlockHeroText headerText={data.main.h} paragraphText={data.main.p} />
+      <BlockContainer>
+        <Divider />
+        <LinkContact />
+        <Video autoplay loop muted src={videoMain} poster={imgMain} />
+      </BlockContainer>
+    </Animate>
+  );
 };
 
 export default PageContact;

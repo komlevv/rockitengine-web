@@ -1,27 +1,45 @@
+// const path = require('path');
+// const { createFsFromVolume, Volume } = require('memfs');
 const express = require('express');
 const webpack = require('webpack');
-const webpackMiddleware = require('webpack-dev-middleware');
-const webpackHotServerMiddleware = require('webpack-hot-server-middleware');
+const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
-const { clientDevConfig, serverDevConfig } = require('../../webpack.config.babel');
-const { host, port, environment, listen, DevError } = require('./serverCommon');
+const { clientConfig, serverConfig } = require('../../webpack.config.babel');
+const { listen } = require('./serverCommon');
+
+const requireUncached = (module) => {
+  delete require.cache[require.resolve(module)];
+  // eslint-disable-next-line global-require,import/no-dynamic-require
+  return require(module);
+};
 
 const app = express();
 
-if (environment === 'development') {
-  const compiler = webpack([clientDevConfig, serverDevConfig]);
-  app.use(
-    webpackMiddleware(compiler, {
-      publicPath: `http://${host}:${port}/`,
-      stats: { colors: true },
-      serverSideRender: true,
-    })
-  );
-  app.use(webpackHotMiddleware(compiler.compilers.find((c) => c.name === 'client')));
-  app.use(webpackHotServerMiddleware(compiler));
-  listen(app);
-} else {
-  throw DevError(
-    `Node environment should be set to 'development'. Current environment: ${environment}`
-  );
-}
+const compiler = webpack([clientConfig, serverConfig]);
+// const fs = createFsFromVolume(new Volume());
+// fs.join = path.join.bind(path);
+
+const devMiddleWare = webpackDevMiddleware(compiler, {
+  stats: { colors: true },
+  serverSideRender: true,
+  writeToDisk: true,
+  // outputFileSystem: fs,
+});
+app.use(devMiddleWare);
+app.use(webpackHotMiddleware(compiler.compilers.find((c) => c.name === 'client')));
+
+app.get('/*', (req, res) => {
+  // // // WIP
+  // https://stackoverflow.com/questions/38779924 https://github.com/streamich/memfs/issues/323
+  // attempt to require 'render' from memory, but this doesn't resolve node_modules
+  // const Module = module.constructor;
+  // const m = new Module();
+  // const serverModule = fs.readFileSync(path.join(compiler.outputPath, 'server.js'), 'utf8');
+  // m._compile(serverModule, 'server.js');
+  // const render = requireUncached(serverModule);
+  // // //
+  const render = requireUncached('../../dist/server.js');
+  render(req, res);
+});
+
+listen(app);

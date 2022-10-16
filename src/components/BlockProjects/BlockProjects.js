@@ -1,3 +1,4 @@
+import { useId } from 'react';
 import s from './BlockProjects.scss';
 
 import HeaderM from '../HeaderM/HeaderM';
@@ -14,9 +15,8 @@ import { data as dataJohnHardyAA } from '../Pages/PageJohnHardyAA/data';
 import { data as dataSpotifyHulu } from '../Pages/PageSpotifyHulu/data';
 import { data as dataGreyGoose } from '../Pages/PageGreyGoose/data';
 import { ROUTES } from '../App/ROUTES';
-import { useAnimateRefs } from '../../hooks/useAnimateRefs';
 import Divider from '../Divider/Divider';
-import { mapContentWithRefs, uuid } from '../../utils/utils';
+import Animate from '../Animate/Animate';
 
 const dataPages = [
   dataEquinox,
@@ -40,30 +40,26 @@ const data = {
   buttonText: 'See all projects',
 };
 
-const content = [
-  <Divider />,
-  <HeaderM headerText={data.h} />,
-  dataPages
-    .slice(0, 5)
-    .map((dataPage) => (
-      <BannerHero
-        key={uuid()}
-        linkTo={dataPage.next.banner.linkTo}
-        headerText={dataPage.next.banner.h}
-        paragraphText={dataPage.next.banner.p}
-        imgSrc={dataPage.next.banner.imgShort}
-        logoSrc={dataPage.next.banner.logo}
-        fontColor={dataPage.next.banner.fontColor}
-      />
-    )),
-  <Button href={ROUTES.PROJECTS} buttonText={data.buttonText} />,
-].flat();
-
 const BlockProjects = ({ animationRef }) => {
-  const animateRefs = useAnimateRefs(content.length);
+  const id = useId();
   return (
     <div ref={animationRef} className={s.blockProjects}>
-      {mapContentWithRefs(content, animateRefs)}
+      <Animate>
+        <Divider />
+        <HeaderM headerText={data.h} />
+        {dataPages.slice(0, 5).map((dataPage, i) => (
+          <BannerHero
+            key={`${id}-${i}`}
+            linkTo={dataPage.next.banner.linkTo}
+            headerText={dataPage.next.banner.h}
+            paragraphText={dataPage.next.banner.p}
+            imgSrc={dataPage.next.banner.imgShort}
+            logoSrc={dataPage.next.banner.logo}
+            fontColor={dataPage.next.banner.fontColor}
+          />
+        ))}
+        <Button href={ROUTES.PROJECTS} buttonText={data.buttonText} />
+      </Animate>
     </div>
   );
 };

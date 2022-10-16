@@ -1,39 +1,50 @@
-import ReactDOM from 'react-dom/server';
+import { renderToPipeableStream } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom/server';
 import './polyfill';
 import App from '../components/App/App';
 
-export const renderHtml = (req) => {
-  const html = ReactDOM.renderToString(
-    <StaticRouter location={req.url}>
-      <App />
-    </StaticRouter>
-  );
-  return `
+const Html = ({ children }) => (
   <html lang="en-US">
     <head>
-      <meta charset="UTF-8"/>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="description" content="Design &amp; Development agency">
-      <link href="/fonts/bnl-black.otf" rel="preload" as="font" crossorigin="">
-      <link href="/fonts/bnl-bold.otf" rel="preload" as="font" crossorigin="">
-      <link href="/fonts/bnl-book.otf" rel="preload" as="font" crossorigin="">
-      <link href="/fonts/bnl-light.otf" rel="preload" as="font" crossorigin="">
-      <link href="/fonts/bnl-medium.otf" rel="preload" as="font" crossorigin="">
-      <script src="/bundle.js" defer></script>
-      <link href="/main.css" rel="stylesheet">
+      <meta charSet="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="description" content="Design &amp; Development agency" />
+      <link href="/fonts/bnl-black.otf" rel="preload" as="font" crossOrigin="" />
+      <link href="/fonts/bnl-bold.otf" rel="preload" as="font" crossOrigin="" />
+      <link href="/fonts/bnl-book.otf" rel="preload" as="font" crossOrigin="" />
+      <link href="/fonts/bnl-light.otf" rel="preload" as="font" crossOrigin="" />
+      <link href="/fonts/bnl-medium.otf" rel="preload" as="font" crossOrigin="" />
+      <script src="/bundle.js" defer />
+      <link href="/main.css" rel="stylesheet" />
       <title>RockitEngine - Design & Development</title>
     </head>
     <body>
-    <div id="root">${html}</div>
+      <div id="root">{children}</div>
     </body>
-    </html>
-    `;
-};
+  </html>
+);
 
-const serverRender = () => (req, res, next) => {
-  res.status(200).send(renderHtml(req));
-  next();
+module.exports = function render(req, res) {
+  res.socket.on('error', (error) => {
+    console.error('Fatal', error);
+  });
+  let didError = false;
+  const stream = renderToPipeableStream(
+    <Html>
+      <StaticRouter location={req.url}>
+        <App />
+      </StaticRouter>
+    </Html>,
+    {
+      onShellReady() {
+        res.statusCode = didError ? 500 : 200;
+        res.setHeader('Content-type', 'text/html');
+        stream.pipe(res);
+      },
+      onError(x) {
+        didError = true;
+        console.error(x);
+      },
+    }
+  );
 };
-
-export default serverRender;

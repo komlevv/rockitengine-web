@@ -1,3 +1,4 @@
+import { useId } from 'react';
 import BlockHeroText from '../../BlockHeroText/BlockHeroText';
 import HeaderM from '../../HeaderM/HeaderM';
 import BannerHero from '../../BannerHero/BannerHero';
@@ -16,10 +17,9 @@ import { data as dataGreyGoose } from '../PageGreyGoose/data';
 import Span from '../../Span/Span';
 import { THEMES } from '../../../contexts/themeContext';
 import { useSetTheme } from '../../../hooks/useSetTheme';
-import { useAnimateRefs } from '../../../hooks/useAnimateRefs';
 import Divider from '../../Divider/Divider';
-import { mapContentWithRefs, uuid } from '../../../utils/utils';
 import Gap from '../../Gap/Gap';
+import Animate from '../../Animate/Animate';
 
 const data = {
   main: {
@@ -50,30 +50,30 @@ const data = {
   },
 };
 
-const content = [
-  <BlockHeroText headerText={data.main.h} paragraphText={data.main.p} />,
-  <Divider />,
-  <HeaderM headerText={data.cases.h} />,
-  data.cases.items.map((dataPage) => (
-    <BannerHero
-      linkTo={dataPage.next.banner.linkTo}
-      key={uuid()}
-      headerText={dataPage.next.banner.h}
-      paragraphText={dataPage.next.banner.p}
-      imgSrc={dataPage.next.banner.imgShort}
-      logoSrc={dataPage.next.banner.logo}
-      fontColor={dataPage.next.banner.fontColor}
-    />
-  )),
-  <Gap />,
-  <BlockClients />,
-  <BlockContact />,
-].flat();
-
 const PageProjects = () => {
+  const id = useId();
   useSetTheme(THEMES.DEFAULT);
-  const animateRefs = useAnimateRefs(content.length);
-  return <>{mapContentWithRefs(content, animateRefs)}</>;
+  return (
+    <Animate>
+      <BlockHeroText headerText={data.main.h} paragraphText={data.main.p} />
+      <Divider />
+      <HeaderM headerText={data.cases.h} />
+      {data.cases.items.map((dataPage, i) => (
+        <BannerHero
+          linkTo={dataPage.next.banner.linkTo}
+          key={`${id}-${i}`}
+          headerText={dataPage.next.banner.h}
+          paragraphText={dataPage.next.banner.p}
+          imgSrc={dataPage.next.banner.imgShort}
+          logoSrc={dataPage.next.banner.logo}
+          fontColor={dataPage.next.banner.fontColor}
+        />
+      ))}
+      <Gap />
+      <BlockClients />
+      <BlockContact />
+    </Animate>
+  );
 };
 
 export default PageProjects;

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useId, useState } from 'react';
 import { Link } from 'react-router-dom';
 import s from './NavBar.scss';
 import LogoRE from '../LogoRE/LogoRE';
@@ -8,9 +8,9 @@ import { useTheme } from '../../contexts/themeContext';
 import { ROUTES, NAVLINKS } from '../App/ROUTES';
 import { useNavScroll } from '../../hooks/useScrollListener';
 import LinkNav from '../LinkNav/LinkNav';
-import { uuid } from '../../utils/utils';
 
 const NavBar = () => {
+  const id = useId();
   const { theme } = useTheme();
   const navHideClass = useNavScroll();
   // handle behavior on small displays
@@ -18,19 +18,16 @@ const NavBar = () => {
   const [overlayHide, setOverlayHide] = useState(s.overlayHide);
   const handleHamIconClick = () => {
     if (hamIcon !== hamIconImgClose) {
-      // eslint-disable-next-line no-undef
       document.body.classList.add(s.stopScroll);
       setHamIcon(hamIconImgClose);
       setOverlayHide('');
     } else {
-      // eslint-disable-next-line no-undef
       document.body.classList.remove(s.stopScroll);
       setHamIcon(hamIconImg);
       setOverlayHide(s.overlayHide);
     }
   };
   const handleNavLinkClick = () => {
-    // eslint-disable-next-line no-undef
     document.body.classList.remove(s.stopScroll);
     setOverlayHide(s.overlayHide);
     setHamIcon(hamIconImg);
@@ -51,9 +48,10 @@ const NavBar = () => {
             src={hamIcon}
             onClick={handleHamIconClick}
           />
-          {NAVLINKS.map((link) => (
+
+          {NAVLINKS.map((link, i) => (
             <LinkNav
-              key={uuid()}
+              key={`${id}-${i}`}
               onClick={handleNavLinkClick}
               to={link.to}
               className={theme.hoverStyleMenu}
@@ -64,9 +62,9 @@ const NavBar = () => {
         </div>
       </div>
       <div className={`${s.overlay} ${overlayHide}`}>
-        {NAVLINKS.map((link) => (
+        {NAVLINKS.map((link, i) => (
           <LinkNav
-            key={uuid()}
+            key={`${id}-${i}`}
             onClick={handleNavLinkClick}
             to={link.to}
             className={theme.hoverStyleMenu}

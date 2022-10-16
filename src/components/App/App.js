@@ -1,13 +1,12 @@
 import { Route, Routes } from 'react-router-dom';
-
 import '../../fonts/bnl/Fontface.scss';
 import './App.scss';
 
 import NavBar from '../NavBar/NavBar';
 import GridContainer from '../GridContainer/GridContainer';
 import BlockFooter from '../BlockFooter/BlockFooter';
-
 import { ROUTES } from './ROUTES';
+
 import PageMain from '../Pages/PageMain/PageMain';
 import PageServices from '../Pages/PageServices/PageServices';
 import PageProjects from '../Pages/PageProjects/PageProjects';
