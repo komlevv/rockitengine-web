@@ -10,7 +10,13 @@ const BannerHero = ({ headerText, paragraphText, imgSrc, logoSrc, linkTo = '#', 
     navigate(linkTo);
   };
   return (
-    <div className={s.bannerHero} ref={animationRef} role="button" tabIndex={0} onClick={handleClick}>
+    <div
+      className={s.bannerHero}
+      ref={animationRef}
+      role="button"
+      tabIndex={0}
+      onClick={handleClick}
+    >
       <HeaderL headerText={headerText} />
       <img alt="" style={{ filter: 'invert(100%)' }} className={s.bannerLogo} src={logoSrc} />
       <Paragraph paragraphText={paragraphText} />
