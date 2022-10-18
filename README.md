@@ -8,10 +8,11 @@ docker-compose -f dev.docker-compose.yml build
 docker-compose -f dev.docker-compose.yml up
 ```
 
-Build latest docker production image
+Build & run latest docker production image
 
 ```bash
 docker build -t docker.io/rockitengine/web:latest -f prod.Dockerfile .
+docker run -d -p 8080:8080 docker.io/rockitengine/web:latest
 ```
 
 Login & push to Docker Hub
@@ -22,6 +23,7 @@ docker push docker.io/rockitengine/web:latest
 ```
 Update container on remote host
 ```bash
+# while in /provision/ folder
 ansible-playbook -i inventory.yml update.container.prod.yml
 ```
 
