@@ -8,6 +8,8 @@ const functionBodyToString = (fn) => {
   return fnString.substring(fnString.indexOf('{') + 1, fnString.lastIndexOf('}'));
 };
 
+const styleBaseFadeIn = { opacity: 0, transition: 'opacity 1s ease-in' };
+
 const handleFadeIn = () => {
   /* eslint-disable prefer-arrow-callback */
   setTimeout(
@@ -37,7 +39,7 @@ const Html = ({ children }) => (
       <link href="/main.css" rel="stylesheet" />
       <title>RockitEngine - Design & Development</title>
     </head>
-    <body style={{ opacity: 0, transition: 'opacity 1s ease-in;' }}>
+    <body style={styleBaseFadeIn}>
       <script dangerouslySetInnerHTML={{ __html: functionBodyToString(handleFadeIn) }} />
       <div id="root">{children}</div>
     </body>
