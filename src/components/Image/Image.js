@@ -1,7 +1,6 @@
-import React, { createRef, useEffect, useState } from 'react';
+import React, { createRef, useState } from 'react';
 import s from './Image.scss';
 import Spinner from '../Spinner/Spinner';
-import { canUseDOM } from '../../utils/utils';
 import { useIntersectionObserver } from '../../hooks/useIntersectionObserver';
 
 const Image = ({
@@ -14,56 +13,47 @@ const Image = ({
   ...props
 }) => {
   const imgRef = createRef();
-  const [visible, setVisible] = useState(false);
+  const [thumbnailHidden, setThumbnailHidden] = useState(false);
 
   const onLoad = () => {
-    setVisible(true);
+    setThumbnailHidden(true);
   };
 
-  const [imgSrc, setImgSrc] = useState('');
+  const [imageShow, setImageShow] = useState(false);
   const handleIntersect = (entries, observer) => {
-    entries.forEach((entry) => {
+    entries.forEach(async (entry) => {
       if (entry.isIntersecting) {
-        setImgSrc(src);
+        setImageShow(true);
         observer.unobserve(entry.target);
       }
     });
   };
 
-  const intersectRef = useIntersectionObserver(handleIntersect, {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0,
-  });
-
-  useEffect(() => {
-    if (canUseDOM() && imgRef.current.complete) {
-      onLoad();
-    }
-  }, [imgRef]);
+  useIntersectionObserver(
+    handleIntersect,
+    {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0,
+    },
+    imgRef
+  );
 
   return (
     <div style={containerStyle} ref={animationRef} className={`${cls.container} ${s.imgGrid}`}>
-      {spinner && <Spinner style={!visible ? {} : { display: 'none' }} />}
+      {spinner && <Spinner style={thumbnailHidden ? { display: 'none' } : {}} />}
       <img
         ref={imgRef}
-        style={!visible ? {} : { visibility: 'hidden' }}
+        style={thumbnailHidden ? { visibility: 'hidden' } : {}}
         // assume thumbnail src is same as src and present in the same path, but with -thumb.jpg suffix
         // todo this is a quick and dirty solution, data flow needs a rework, maybe a global store
         src={`${src.slice(0, -4)}-thumb.jpg`}
         className={`${cls.image} ${s.imgThumbBlur}`}
         alt=""
       />
-      <img
-        ref={intersectRef}
-        style={!visible ? { visibility: 'hidden' } : {}}
-        onLoad={onLoad}
-        className={cls.image}
-        src={imgSrc}
-        alt=""
-        loading={loading}
-        {...props}
-      />
+      {imageShow && (
+        <img onLoad={onLoad} className={cls.image} src={src} alt="" loading={loading} {...props} />
+      )}
     </div>
   );
 };

@@ -19,6 +19,7 @@ export const clean = async () => {
   log('Wipe dist dir..');
   let files = await fs.readdir(distDir);
   files = files.filter((f) => f !== '.gitkeep');
+  // files = files.filter((f) => f !== '.gitkeep' && f !== 'media' && f !== 'fonts');
   await Promise.all(
     files.map(async (file) => {
       const fullPath = path.join(distDir, file);

@@ -16,35 +16,16 @@ const Video = ({
   containerCls,
 }) => {
   const videoRef = createRef();
-  const [visible, setVisible] = useState(true);
+  const [thumbnailHidden, setThumbnailHidden] = useState(false);
   const handleLoadedMetadata = () => {
-    setVisible(false);
+    setThumbnailHidden(true);
   };
 
-  useEffect(() => {
-    // tbd, see https://github.com/facebook/react/issues/10389
-    if (muted) videoRef.current.setAttribute('muted', '');
-  }, [videoRef, muted]);
-
-  useEffect(() => {
-    const instance = videoRef.current;
-    instance.addEventListener('loadedmetadata', handleLoadedMetadata);
-    return () => {
-      instance.removeEventListener('loadedmetadata', handleLoadedMetadata);
-    };
-  }, []);
-
-  useEffect(() => {
-    if (canUseDOM() && videoRef.current.readyState >= 1) handleLoadedMetadata();
-  }, []);
-
-  const [vidSrc, setVidSrc] = useState('');
+  const [videoShow, setVideoShow] = useState(false);
   const handleIntersect = (entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        setVidSrc(src);
-        const video = entry.target.children[2];
-        video.load();
+        setVideoShow(true);
         observer.unobserve(entry.target);
       }
     });
@@ -60,30 +41,36 @@ const Video = ({
     animationRef
   );
 
+  useEffect(() => {
+    if (muted && videoShow) videoRef.current.setAttribute('muted', '');
+  }, [videoRef, videoShow]);
+
   return (
     <div ref={animationRef} className={containerCls || s.videoContainer}>
-      <Spinner style={visible ? {} : { display: 'none' }} />
+      <Spinner style={thumbnailHidden ? { display: 'none' } : {}} />
       <Image
         spinner={false}
         src={poster}
         cls={s}
-        containerStyle={visible ? {} : { visibility: 'hidden' }}
+        containerStyle={thumbnailHidden ? { visibility: 'hidden' } : {}}
       />
-      <video
-        ref={videoRef}
-        style={visible ? { display: 'none' } : {}}
-        className={s.video}
-        // todo: setting poster here makes poster image load twice on clients with disabled cache
-        poster={poster}
-        preload="metadata"
-        controls={controls}
-        loop={loop}
-        muted={muted}
-        autoPlay={autoplay}
-      >
-        <source src={vidSrc} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      {videoShow && (
+        <video
+          ref={videoRef}
+          className={s.video}
+          // todo: setting poster here makes poster image load twice on clients with disabled cache
+          poster={poster}
+          preload="metadata"
+          onLoadedMetadata={handleLoadedMetadata}
+          controls={controls}
+          loop={loop}
+          muted={muted}
+          autoPlay={autoplay}
+        >
+          <source src={src} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      )}
     </div>
   );
 };
