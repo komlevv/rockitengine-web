@@ -1,7 +1,6 @@
 import { createRef, useEffect } from 'react';
 
-export const useIntersectionObserver = (handler, options) => {
-  const elRef = createRef();
+export const useIntersectionObserver = (handler, options, elRef = createRef()) => {
   useEffect(() => {
     const observer = new IntersectionObserver(handler, options);
     if (elRef.current) observer.observe(elRef.current);

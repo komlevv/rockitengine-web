@@ -3,6 +3,7 @@ import s from './Video.scss';
 import Image from '../Image/Image';
 import Spinner from '../Spinner/Spinner';
 import { canUseDOM } from '../../utils/utils';
+import { useIntersectionObserver } from '../../hooks/useIntersectionObserver';
 
 const Video = ({
   src,
@@ -31,11 +32,33 @@ const Video = ({
     return () => {
       instance.removeEventListener('loadedmetadata', handleLoadedMetadata);
     };
-  }, [videoRef]);
+  }, []);
 
   useEffect(() => {
     if (canUseDOM() && videoRef.current.readyState >= 1) handleLoadedMetadata();
-  }, [videoRef]);
+  }, []);
+
+  const [vidSrc, setVidSrc] = useState('');
+  const handleIntersect = (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        setVidSrc(src);
+        const video = entry.target.children[2];
+        video.load();
+        observer.unobserve(entry.target);
+      }
+    });
+  };
+
+  useIntersectionObserver(
+    handleIntersect,
+    {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0,
+    },
+    animationRef
+  );
 
   return (
     <div ref={animationRef} className={containerCls || s.videoContainer}>
@@ -58,7 +81,7 @@ const Video = ({
         muted={muted}
         autoPlay={autoplay}
       >
-        <source src={src} type="video/mp4" />
+        <source src={vidSrc} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>
