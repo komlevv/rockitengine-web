@@ -3,6 +3,25 @@ import { StaticRouter } from 'react-router-dom/server';
 import './polyfill';
 import App from '../components/App/App';
 
+const functionBodyToString = (fn) => {
+  const fnString = fn.toString();
+  return fnString.substring(fnString.indexOf('{') + 1, fnString.lastIndexOf('}'));
+};
+
+const handleFadeIn = () => {
+  /* eslint-disable prefer-arrow-callback */
+  setTimeout(
+    function () {
+      document.body.style.opacity = 1;
+    },
+    setTimeout(function () {
+      document.body.style = null;
+    }, 1000),
+    1000
+  );
+  /* eslint-enable */
+};
+
 const Html = ({ children }) => (
   <html lang="en-US">
     <head>
@@ -18,7 +37,8 @@ const Html = ({ children }) => (
       <link href="/main.css" rel="stylesheet" />
       <title>RockitEngine - Design & Development</title>
     </head>
-    <body>
+    <body style={{ opacity: 0, transition: 'opacity 1s ease-in;' }}>
+      <script dangerouslySetInnerHTML={{ __html: functionBodyToString(handleFadeIn) }} />
       <div id="root">{children}</div>
     </body>
   </html>
