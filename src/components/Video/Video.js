@@ -2,7 +2,6 @@ import { createRef, useEffect, useState } from 'react';
 import s from './Video.scss';
 import Image from '../Image/Image';
 import Spinner from '../Spinner/Spinner';
-import { canUseDOM } from '../../utils/utils';
 import { useIntersectionObserver } from '../../hooks/useIntersectionObserver';
 
 const Video = ({
