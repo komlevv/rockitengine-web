@@ -6,11 +6,15 @@
     owner: nginx
     group: nginx
     mode: 0554
-    recurse: yes
 
 - name: Copy Nginx reverse proxy with static server config
   copy:
     src: nginx.conf
+    dest: /etc/nginx/
+
+- name: Copy Nginx reverse proxy with static server config
+  copy:
+    src: mime.types
     dest: /etc/nginx/
 
 - name: Enable and restart Nginx service
