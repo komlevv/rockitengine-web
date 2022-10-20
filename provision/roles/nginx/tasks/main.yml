@@ -32,15 +32,3 @@
 - include_role:
     name: firewalld-allow-http-https
 
-- name: Copy Nginx reverse proxy config
-  copy:
-    src: nginx.conf
-    dest: /etc/nginx/
-
-- name: Enable and start Nginx service
-  systemd:
-    daemon_reload: yes
-    name: nginx
-    state: started
-    enabled: yes
-

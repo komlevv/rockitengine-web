@@ -1,0 +1,13 @@
+---
+- name: Copy Nginx reverse proxy config
+  copy:
+    src: nginx.conf
+    dest: /etc/nginx/
+
+- name: Enable and restart Nginx service
+  systemd:
+    daemon_reload: yes
+    name: nginx
+    state: restarted
+    enabled: yes
+

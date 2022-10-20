@@ -1,10 +1,5 @@
-# provision production environment
 ---
 - hosts: remote_machines
   become: yes
   roles:
-    - podman
-    - prod-config
-    - certbot
-    - nginx
     - nginx-config-reverse-proxy-with-static

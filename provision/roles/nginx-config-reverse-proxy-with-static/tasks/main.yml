@@ -1,0 +1,22 @@
+---
+- name: Create static directory
+  file:
+    path: /usr/share/nginx/static/rockitengine
+    state: directory
+    owner: nginx
+    group: nginx
+    mode: 0554
+    recurse: yes
+
+- name: Copy Nginx reverse proxy with static server config
+  copy:
+    src: nginx.conf
+    dest: /etc/nginx/
+
+- name: Enable and restart Nginx service
+  systemd:
+    daemon_reload: yes
+    name: nginx
+    state: restarted
+    enabled: yes
+
