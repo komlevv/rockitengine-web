@@ -1,34 +1,34 @@
-import logoCartier from './images/cartier-logo.svg';
-
-import videoWide1 from './videos/cartier-wide-1.mp4';
-import videoWide2 from './videos/cartier-wide-2.mp4';
-
-import videoSquare1 from './videos/cartier-square-1.mp4';
-import videoSquare2 from './videos/cartier-square-2.mp4';
-import videoSquare3 from './videos/cartier-square-3.mp4';
-import videoSquare4 from './videos/cartier-square-4.mp4';
-
-import imgMain from './images/cartier-main.jpg';
-import imgMainThumb from './images/cartier-main-thumb.jpg';
-import imgNext from './images/cartier-next.jpg';
-import imgNextThumb from './images/cartier-next-thumb.jpg';
-
-import imgWide1 from './images/cartier-wide-1.jpg';
-import imgWide1Thumb from './images/cartier-wide-1-thumb.jpg';
-import imgWide2 from './images/cartier-wide-2.jpg';
-import imgWide2Thumb from './images/cartier-wide-2-thumb.jpg';
-
-import imgSquare1 from './images/cartier-square-1.jpg';
-import imgSquare1Thumb from './images/cartier-square-1-thumb.jpg';
-import imgSquare2 from './images/cartier-square-2.jpg';
-import imgSquare2Thumb from './images/cartier-square-2-thumb.jpg';
-import imgSquare3 from './images/cartier-square-3.jpg';
-import imgSquare3Thumb from './images/cartier-square-3-thumb.jpg';
-import imgSquare4 from './images/cartier-square-4.jpg';
-import imgSquare4Thumb from './images/cartier-square-4-thumb.jpg';
-
-import { ROUTES } from '../../App/ROUTES';
+import { ROUTES, URL_MEDIA } from '../../App/ROUTES';
 import Span from '../../Span/Span';
+
+const logoCartier = `${URL_MEDIA}/cartier-logo.svg`;
+
+const videoWide1 = `${URL_MEDIA}/cartier-wide-1.mp4`;
+const videoWide2 = `${URL_MEDIA}/cartier-wide-2.mp4`;
+
+const videoSquare1 = `${URL_MEDIA}/cartier-square-1.mp4`;
+const videoSquare2 = `${URL_MEDIA}/cartier-square-2.mp4`;
+const videoSquare3 = `${URL_MEDIA}/cartier-square-3.mp4`;
+const videoSquare4 = `${URL_MEDIA}/cartier-square-4.mp4`;
+
+const imgMain = `${URL_MEDIA}/cartier-main.jpg`;
+const imgMainThumb = `${URL_MEDIA}/cartier-main-thumb.jpg`;
+const imgNext = `${URL_MEDIA}/cartier-next.jpg`;
+const imgNextThumb = `${URL_MEDIA}/cartier-next-thumb.jpg`;
+
+const imgWide1 = `${URL_MEDIA}/cartier-wide-1.jpg`;
+const imgWide1Thumb = `${URL_MEDIA}/cartier-wide-1-thumb.jpg`;
+const imgWide2 = `${URL_MEDIA}/cartier-wide-2.jpg`;
+const imgWide2Thumb = `${URL_MEDIA}/cartier-wide-2-thumb.jpg`;
+
+const imgSquare1 = `${URL_MEDIA}/cartier-square-1.jpg`;
+const imgSquare1Thumb = `${URL_MEDIA}/cartier-square-1-thumb.jpg`;
+const imgSquare2 = `${URL_MEDIA}/cartier-square-2.jpg`;
+const imgSquare2Thumb = `${URL_MEDIA}/cartier-square-2-thumb.jpg`;
+const imgSquare3 = `${URL_MEDIA}/cartier-square-3.jpg`;
+const imgSquare3Thumb = `${URL_MEDIA}/cartier-square-3-thumb.jpg`;
+const imgSquare4 = `${URL_MEDIA}/cartier-square-4.jpg`;
+const imgSquare4Thumb = `${URL_MEDIA}/cartier-square-4-thumb.jpg`;
 
 export const data = {
   main: {

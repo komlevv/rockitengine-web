@@ -2,6 +2,7 @@ import { renderToPipeableStream } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom/server';
 import './polyfill';
 import App from '../components/App/App';
+import { URL_FONTS } from '../components/App/ROUTES';
 
 const functionBodyToString = (fn) => {
   const fnString = fn.toString();
@@ -30,11 +31,11 @@ const Html = ({ children }) => (
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="description" content="Design &amp; Development agency" />
-      <link href="/fonts/bnl-black.otf" rel="preload" as="font" crossOrigin="" />
-      <link href="/fonts/bnl-bold.otf" rel="preload" as="font" crossOrigin="" />
-      <link href="/fonts/bnl-book.otf" rel="preload" as="font" crossOrigin="" />
-      <link href="/fonts/bnl-light.otf" rel="preload" as="font" crossOrigin="" />
-      <link href="/fonts/bnl-medium.otf" rel="preload" as="font" crossOrigin="" />
+      <link href={`${URL_FONTS}/bnl-black.otf`} rel="preload" as="font" crossOrigin="" />
+      <link href={`${URL_FONTS}/bnl-bold.otf`} rel="preload" as="font" crossOrigin="" />
+      <link href={`${URL_FONTS}/bnl-book.otf`} rel="preload" as="font" crossOrigin="" />
+      <link href={`${URL_FONTS}/bnl-light.otf`} rel="preload" as="font" crossOrigin="" />
+      <link href={`${URL_FONTS}/bnl-medium.otf`} rel="preload" as="font" crossOrigin="" />
       <script src="/bundle.js" defer />
       <link href="/main.css" rel="stylesheet" />
       <title>RockitEngine - Design & Development</title>

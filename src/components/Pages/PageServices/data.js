@@ -1,10 +1,11 @@
-import imgWide1 from './images/services-main.jpg';
-import imgWide1Thumb from './images/services-main-thumb.jpg';
-import imgWide2 from './images/services-reel.jpg';
-import imgWide2Thumb from './images/services-reel-thumb.jpg';
-
 import Span from '../../Span/Span';
-import VideoReel from './videos/reel.mp4';
+import { URL_MEDIA } from '../../App/ROUTES';
+
+const imgWide1 = `${URL_MEDIA}/services-main.jpg`;
+const imgWide1Thumb = `${URL_MEDIA}/services-main-thumb.jpg`;
+const imgWide2 = `${URL_MEDIA}/services-reel.jpg`;
+const imgWide2Thumb = `${URL_MEDIA}/services-reel-thumb.jpg`;
+const VideoReel = `${URL_MEDIA}/reel.mp4`;
 
 export const data = {
   main: {

@@ -1,53 +1,53 @@
-import logoSpotifyHuluH from './images/spotify-hulu-cannes-logo-h.svg';
-import logoSpotifyHuluV from './images/spotify-hulu-cannes-logo-v.svg';
-
-import imgMain from './images/spotify-hulu-cannes-main.jpg';
-import imgMainThumb from './images/spotify-hulu-cannes-main-thumb.jpg';
-import imgNext from './images/spotify-hulu-cannes-next.jpg';
-import imgNextThumb from './images/spotify-hulu-cannes-next-thumb.jpg';
-
-import imgWide1 from './images/spotify-hulu-cannes-wide-1.jpg';
-import imgWide1Thumb from './images/spotify-hulu-cannes-wide-1-thumb.jpg';
-import imgWide2 from './images/spotify-hulu-cannes-wide-2.jpg';
-import imgWide2Thumb from './images/spotify-hulu-cannes-wide-2-thumb.jpg';
-import imgWide3 from './images/spotify-hulu-cannes-wide-3.jpg';
-import imgWide3Thumb from './images/spotify-hulu-cannes-wide-3-thumb.jpg';
-import imgWide4 from './images/spotify-hulu-cannes-wide-4.jpg';
-import imgWide4Thumb from './images/spotify-hulu-cannes-wide-4-thumb.jpg';
-import imgWide5 from './images/spotify-hulu-cannes-wide-5.jpg';
-import imgWide5Thumb from './images/spotify-hulu-cannes-wide-5-thumb.jpg';
-import imgWide6 from './images/spotify-hulu-cannes-wide-6.jpg';
-import imgWide6Thumb from './images/spotify-hulu-cannes-wide-6-thumb.jpg';
-
-import imgSquareS1 from './images/spotify-hulu-cannes-square-s-1.jpg';
-import imgSquareS1Thumb from './images/spotify-hulu-cannes-square-s-1-thumb.jpg';
-import imgSquareS2 from './images/spotify-hulu-cannes-square-s-2.jpg';
-import imgSquareS2Thumb from './images/spotify-hulu-cannes-square-s-2-thumb.jpg';
-import imgSquareS3 from './images/spotify-hulu-cannes-square-s-3.jpg';
-import imgSquareS3Thumb from './images/spotify-hulu-cannes-square-s-3-thumb.jpg';
-import imgSquareS4 from './images/spotify-hulu-cannes-square-s-4.jpg';
-import imgSquareS4Thumb from './images/spotify-hulu-cannes-square-s-4-thumb.jpg';
-import imgSquareS5 from './images/spotify-hulu-cannes-square-s-5.jpg';
-import imgSquareS5Thumb from './images/spotify-hulu-cannes-square-s-5-thumb.jpg';
-import imgSquareS6 from './images/spotify-hulu-cannes-square-s-6.jpg';
-import imgSquareS6Thumb from './images/spotify-hulu-cannes-square-s-6-thumb.jpg';
-import imgSquareS7 from './images/spotify-hulu-cannes-square-s-7.jpg';
-import imgSquareS7Thumb from './images/spotify-hulu-cannes-square-s-7-thumb.jpg';
-import imgSquareS8 from './images/spotify-hulu-cannes-square-s-8.jpg';
-import imgSquareS8Thumb from './images/spotify-hulu-cannes-square-s-8-thumb.jpg';
-
-import imgSquareSD1 from './images/spotify-hulu-cannes-square-sd-1.jpg';
-import imgSquareSD1Thumb from './images/spotify-hulu-cannes-square-sd-1-thumb.jpg';
-import imgSquareSD2 from './images/spotify-hulu-cannes-square-sd-2.jpg';
-import imgSquareSD2Thumb from './images/spotify-hulu-cannes-square-sd-2-thumb.jpg';
-
-import imgVertical1 from './images/spotify-hulu-cannes-vertical-1.jpg';
-import imgVertical1Thumb from './images/spotify-hulu-cannes-vertical-1-thumb.jpg';
-import imgVertical2 from './images/spotify-hulu-cannes-vertical-2.jpg';
-import imgVertical2Thumb from './images/spotify-hulu-cannes-vertical-2-thumb.jpg';
-
-import { ROUTES } from '../../App/ROUTES';
+import { ROUTES, URL_MEDIA } from '../../App/ROUTES';
 import Span from '../../Span/Span';
+
+const logoSpotifyHuluH = `${URL_MEDIA}/spotify-hulu-cannes-logo-h.svg`;
+const logoSpotifyHuluV = `${URL_MEDIA}/spotify-hulu-cannes-logo-v.svg`;
+
+const imgMain = `${URL_MEDIA}/spotify-hulu-cannes-main.jpg`;
+const imgMainThumb = `${URL_MEDIA}/spotify-hulu-cannes-main-thumb.jpg`;
+const imgNext = `${URL_MEDIA}/spotify-hulu-cannes-next.jpg`;
+const imgNextThumb = `${URL_MEDIA}/spotify-hulu-cannes-next-thumb.jpg`;
+
+const imgWide1 = `${URL_MEDIA}/spotify-hulu-cannes-wide-1.jpg`;
+const imgWide1Thumb = `${URL_MEDIA}/spotify-hulu-cannes-wide-1-thumb.jpg`;
+const imgWide2 = `${URL_MEDIA}/spotify-hulu-cannes-wide-2.jpg`;
+const imgWide2Thumb = `${URL_MEDIA}/spotify-hulu-cannes-wide-2-thumb.jpg`;
+const imgWide3 = `${URL_MEDIA}/spotify-hulu-cannes-wide-3.jpg`;
+const imgWide3Thumb = `${URL_MEDIA}/spotify-hulu-cannes-wide-3-thumb.jpg`;
+const imgWide4 = `${URL_MEDIA}/spotify-hulu-cannes-wide-4.jpg`;
+const imgWide4Thumb = `${URL_MEDIA}/spotify-hulu-cannes-wide-4-thumb.jpg`;
+const imgWide5 = `${URL_MEDIA}/spotify-hulu-cannes-wide-5.jpg`;
+const imgWide5Thumb = `${URL_MEDIA}/spotify-hulu-cannes-wide-5-thumb.jpg`;
+const imgWide6 = `${URL_MEDIA}/spotify-hulu-cannes-wide-6.jpg`;
+const imgWide6Thumb = `${URL_MEDIA}/spotify-hulu-cannes-wide-6-thumb.jpg`;
+
+const imgSquareS1 = `${URL_MEDIA}/spotify-hulu-cannes-square-s-1.jpg`;
+const imgSquareS1Thumb = `${URL_MEDIA}/spotify-hulu-cannes-square-s-1-thumb.jpg`;
+const imgSquareS2 = `${URL_MEDIA}/spotify-hulu-cannes-square-s-2.jpg`;
+const imgSquareS2Thumb = `${URL_MEDIA}/spotify-hulu-cannes-square-s-2-thumb.jpg`;
+const imgSquareS3 = `${URL_MEDIA}/spotify-hulu-cannes-square-s-3.jpg`;
+const imgSquareS3Thumb = `${URL_MEDIA}/spotify-hulu-cannes-square-s-3-thumb.jpg`;
+const imgSquareS4 = `${URL_MEDIA}/spotify-hulu-cannes-square-s-4.jpg`;
+const imgSquareS4Thumb = `${URL_MEDIA}/spotify-hulu-cannes-square-s-4-thumb.jpg`;
+const imgSquareS5 = `${URL_MEDIA}/spotify-hulu-cannes-square-s-5.jpg`;
+const imgSquareS5Thumb = `${URL_MEDIA}/spotify-hulu-cannes-square-s-5-thumb.jpg`;
+const imgSquareS6 = `${URL_MEDIA}/spotify-hulu-cannes-square-s-6.jpg`;
+const imgSquareS6Thumb = `${URL_MEDIA}/spotify-hulu-cannes-square-s-6-thumb.jpg`;
+const imgSquareS7 = `${URL_MEDIA}/spotify-hulu-cannes-square-s-7.jpg`;
+const imgSquareS7Thumb = `${URL_MEDIA}/spotify-hulu-cannes-square-s-7-thumb.jpg`;
+const imgSquareS8 = `${URL_MEDIA}/spotify-hulu-cannes-square-s-8.jpg`;
+const imgSquareS8Thumb = `${URL_MEDIA}/spotify-hulu-cannes-square-s-8-thumb.jpg`;
+
+const imgSquareSD1 = `${URL_MEDIA}/spotify-hulu-cannes-square-sd-1.jpg`;
+const imgSquareSD1Thumb = `${URL_MEDIA}/spotify-hulu-cannes-square-sd-1-thumb.jpg`;
+const imgSquareSD2 = `${URL_MEDIA}/spotify-hulu-cannes-square-sd-2.jpg`;
+const imgSquareSD2Thumb = `${URL_MEDIA}/spotify-hulu-cannes-square-sd-2-thumb.jpg`;
+
+const imgVertical1 = `${URL_MEDIA}/spotify-hulu-cannes-vertical-1.jpg`;
+const imgVertical1Thumb = `${URL_MEDIA}/spotify-hulu-cannes-vertical-1-thumb.jpg`;
+const imgVertical2 = `${URL_MEDIA}/spotify-hulu-cannes-vertical-2.jpg`;
+const imgVertical2Thumb = `${URL_MEDIA}/spotify-hulu-cannes-vertical-2-thumb.jpg`;
 
 export const data = {
   main: {

@@ -21,3 +21,6 @@ export const NAVLINKS = [
   { to: ROUTES.ABOUT, text: 'About' },
   { to: ROUTES.CONTACT, text: 'Contact' },
 ];
+
+export const URL_MEDIA = 'https://www.rockitengine.com/media';
+export const URL_FONTS = 'https://www.rockitengine.com/fonts';

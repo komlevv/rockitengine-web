@@ -2,12 +2,13 @@ import { useId, useState } from 'react';
 import { Link } from 'react-router-dom';
 import s from './NavBar.scss';
 import LogoRE from '../LogoRE/LogoRE';
-import hamIconImg from './images/hamburger-icon.svg';
-import hamIconImgClose from './images/hamburger-icon-close.svg';
 import { useTheme } from '../../contexts/themeContext';
-import { ROUTES, NAVLINKS } from '../App/ROUTES';
+import { ROUTES, NAVLINKS, URL_MEDIA } from '../App/ROUTES';
 import { useNavScroll } from '../../hooks/useScrollListener';
 import LinkNav from '../LinkNav/LinkNav';
+
+const hamIconImg = `${URL_MEDIA}/hamburger-icon.svg`;
+const hamIconImgClose = `${URL_MEDIA}/hamburger-icon-close.svg`;
 
 const NavBar = () => {
   const id = useId();

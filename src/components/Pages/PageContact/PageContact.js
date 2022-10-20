@@ -1,7 +1,4 @@
 import BlockHeroText from '../../BlockHeroText/BlockHeroText';
-import videoMain from './videos/contactVideo.mp4';
-import imgMain from './images/contact-main.jpg';
-import './images/contact-main-thumb.jpg';
 import BlockContainer from '../../BlockContainer/BlockContainer';
 import Video from '../../Video/Video';
 import Span from '../../Span/Span';
@@ -10,6 +7,10 @@ import { useSetTheme } from '../../../hooks/useSetTheme';
 import Divider from '../../Divider/Divider';
 import LinkContact from '../../LinkContact/LinkContact';
 import Animate from '../../Animate/Animate';
+import { URL_MEDIA } from '../../App/ROUTES';
+
+const videoMain = `${URL_MEDIA}/contactVideo.mp4`;
+const imgMain = `${URL_MEDIA}/contact-main.jpg`;
 
 const data = {
   main: {

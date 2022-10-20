@@ -1,8 +1,10 @@
 import s from './BlockClients.scss';
 import HeaderM from '../HeaderM/HeaderM';
-import clientLogosImgL from './images/client-logos.png';
-import clientLogosImgS from './images/client-logos-2.png';
 import Divider from '../Divider/Divider';
+import { URL_MEDIA } from '../App/ROUTES';
+
+const clientLogosImgL = `${URL_MEDIA}/client-logos.png`;
+const clientLogosImgS = `${URL_MEDIA}/client-logos-2.png`;
 
 const data = {
   h: 'Our Clients',

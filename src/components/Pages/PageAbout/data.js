@@ -1,11 +1,12 @@
 import Span from '../../Span/Span';
+import { URL_MEDIA } from '../../App/ROUTES';
 
-import imgWide1 from './images/about-main.jpg';
-import imgWide1Thumb from './images/about-main-thumb.jpg';
-import imgWide2 from './images/about-wide-1.jpg';
-import imgWide2Thumb from './images/about-wide-1-thumb.jpg';
-import imgWide3 from './images/about-wide-2.jpg';
-import imgWide3Thumb from './images/about-wide-2-thumb.jpg';
+const imgWide1 = `${URL_MEDIA}/about-main.jpg`;
+const imgWide1Thumb = `${URL_MEDIA}/about-main-thumb.jpg`;
+const imgWide2 = `${URL_MEDIA}/about-wide-1.jpg`;
+const imgWide2Thumb = `${URL_MEDIA}/about-wide-1-thumb.jpg`;
+const imgWide3 = `${URL_MEDIA}/about-wide-2.jpg`;
+const imgWide3Thumb = `${URL_MEDIA}/about-wide-2-thumb.jpg`;
 
 export const data = {
   main: {

@@ -2,9 +2,10 @@ import s from './BlockHeroVideo.scss';
 import HeaderXL from '../HeaderXL/HeaderXL';
 import Video from '../Video/Video';
 import Span from '../Span/Span';
-import heroVideo from './heroVideo.mp4';
-import heroVideoPoster from './heroVideo.jpg';
-import './heroVideo-thumb.jpg';
+import { URL_MEDIA } from '../App/ROUTES';
+
+const heroVideo = `${URL_MEDIA}/heroVideo.mp4`;
+const heroVideoPoster = `${URL_MEDIA}/heroVideo.jpg`;
 
 const data = {
   h: (

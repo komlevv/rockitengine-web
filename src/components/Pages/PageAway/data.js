@@ -1,54 +1,54 @@
-import logoAway from './images/away-logo.svg';
-
-import videoWide1 from './videos/away-wide-1.mp4';
-import videoWide2 from './videos/away-wide-2.mp4';
-
-import videoVertical1 from './videos/away-vertical-1.mp4';
-import videoVertical2 from './videos/away-vertical-2.mp4';
-
-import imgMain from './images/away-main.jpg';
-import imgMainThumb from './images/away-main-thumb.jpg';
-import imgNext from './images/away-next.jpg';
-import imgNextThumb from './images/away-next-thumb.jpg';
-
-import imgWide1 from './images/away-wide-1.jpg';
-import imgWide1Thumb from './images/away-wide-1-thumb.jpg';
-import imgWide2 from './images/away-wide-2.jpg';
-import imgWide2Thumb from './images/away-wide-2-thumb.jpg';
-import imgWide3 from './images/away-wide-3.jpg';
-import imgWide3Thumb from './images/away-wide-3-thumb.jpg';
-
-import imgSquareS1 from './images/away-square-s-1.jpg';
-import imgSquareS1Thumb from './images/away-square-s-1-thumb.jpg';
-import imgSquareS2 from './images/away-square-s-2.jpg';
-import imgSquareS2Thumb from './images/away-square-s-2-thumb.jpg';
-import imgSquareS3 from './images/away-square-s-3.jpg';
-import imgSquareS3Thumb from './images/away-square-s-3-thumb.jpg';
-import imgSquareS4 from './images/away-square-s-4.jpg';
-import imgSquareS4Thumb from './images/away-square-s-4-thumb.jpg';
-
-import imgSquareSD1 from './images/away-square-sd-1.jpg';
-import imgSquareSD1Thumb from './images/away-square-sd-1-thumb.jpg';
-
-import imgVertical1 from './images/away-vertical-1.jpg';
-import imgVertical1Thumb from './images/away-vertical-1-thumb.jpg';
-import imgVertical2 from './images/away-vertical-2.jpg';
-import imgVertical2Thumb from './images/away-vertical-2-thumb.jpg';
-import imgVertical3 from './images/away-vertical-3.jpg';
-import imgVertical3Thumb from './images/away-vertical-3-thumb.jpg';
-import imgVertical4 from './images/away-vertical-4.jpg';
-import imgVertical4Thumb from './images/away-vertical-4-thumb.jpg';
-import imgVertical5 from './images/away-vertical-5.jpg';
-import imgVertical5Thumb from './images/away-vertical-5-thumb.jpg';
-import imgVertical6 from './images/away-vertical-6.jpg';
-import imgVertical6Thumb from './images/away-vertical-6-thumb.jpg';
-import imgVertical7 from './images/away-vertical-7.jpg';
-import imgVertical7Thumb from './images/away-vertical-7-thumb.jpg';
-import imgVertical8 from './images/away-vertical-8.jpg';
-import imgVertical8Thumb from './images/away-vertical-8-thumb.jpg';
-
-import { ROUTES } from '../../App/ROUTES';
+import { ROUTES, URL_MEDIA } from '../../App/ROUTES';
 import Span from '../../Span/Span';
+
+const logoAway = `${URL_MEDIA}/away-logo.svg`;
+
+const videoWide1 = `${URL_MEDIA}/away-wide-1.mp4`;
+const videoWide2 = `${URL_MEDIA}/away-wide-2.mp4`;
+
+const videoVertical1 = `${URL_MEDIA}/away-vertical-1.mp4`;
+const videoVertical2 = `${URL_MEDIA}/away-vertical-2.mp4`;
+
+const imgMain = `${URL_MEDIA}/away-main.jpg`;
+const imgMainThumb = `${URL_MEDIA}/away-main-thumb.jpg`;
+const imgNext = `${URL_MEDIA}/away-next.jpg`;
+const imgNextThumb = `${URL_MEDIA}/away-next-thumb.jpg`;
+
+const imgWide1 = `${URL_MEDIA}/away-wide-1.jpg`;
+const imgWide1Thumb = `${URL_MEDIA}/away-wide-1-thumb.jpg`;
+const imgWide2 = `${URL_MEDIA}/away-wide-2.jpg`;
+const imgWide2Thumb = `${URL_MEDIA}/away-wide-2-thumb.jpg`;
+const imgWide3 = `${URL_MEDIA}/away-wide-3.jpg`;
+const imgWide3Thumb = `${URL_MEDIA}/away-wide-3-thumb.jpg`;
+
+const imgSquareS1 = `${URL_MEDIA}/away-square-s-1.jpg`;
+const imgSquareS1Thumb = `${URL_MEDIA}/away-square-s-1-thumb.jpg`;
+const imgSquareS2 = `${URL_MEDIA}/away-square-s-2.jpg`;
+const imgSquareS2Thumb = `${URL_MEDIA}/away-square-s-2-thumb.jpg`;
+const imgSquareS3 = `${URL_MEDIA}/away-square-s-3.jpg`;
+const imgSquareS3Thumb = `${URL_MEDIA}/away-square-s-3-thumb.jpg`;
+const imgSquareS4 = `${URL_MEDIA}/away-square-s-4.jpg`;
+const imgSquareS4Thumb = `${URL_MEDIA}/away-square-s-4-thumb.jpg`;
+
+const imgSquareSD1 = `${URL_MEDIA}/away-square-sd-1.jpg`;
+const imgSquareSD1Thumb = `${URL_MEDIA}/away-square-sd-1-thumb.jpg`;
+
+const imgVertical1 = `${URL_MEDIA}/away-vertical-1.jpg`;
+const imgVertical1Thumb = `${URL_MEDIA}/away-vertical-1-thumb.jpg`;
+const imgVertical2 = `${URL_MEDIA}/away-vertical-2.jpg`;
+const imgVertical2Thumb = `${URL_MEDIA}/away-vertical-2-thumb.jpg`;
+const imgVertical3 = `${URL_MEDIA}/away-vertical-3.jpg`;
+const imgVertical3Thumb = `${URL_MEDIA}/away-vertical-3-thumb.jpg`;
+const imgVertical4 = `${URL_MEDIA}/away-vertical-4.jpg`;
+const imgVertical4Thumb = `${URL_MEDIA}/away-vertical-4-thumb.jpg`;
+const imgVertical5 = `${URL_MEDIA}/away-vertical-5.jpg`;
+const imgVertical5Thumb = `${URL_MEDIA}/away-vertical-5-thumb.jpg`;
+const imgVertical6 = `${URL_MEDIA}/away-vertical-6.jpg`;
+const imgVertical6Thumb = `${URL_MEDIA}/away-vertical-6-thumb.jpg`;
+const imgVertical7 = `${URL_MEDIA}/away-vertical-7.jpg`;
+const imgVertical7Thumb = `${URL_MEDIA}/away-vertical-7-thumb.jpg`;
+const imgVertical8 = `${URL_MEDIA}/away-vertical-8.jpg`;
+const imgVertical8Thumb = `${URL_MEDIA}/away-vertical-8-thumb.jpg`;
 
 export const data = {
   main: {

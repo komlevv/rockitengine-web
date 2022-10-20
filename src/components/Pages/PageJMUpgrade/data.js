@@ -1,61 +1,61 @@
-import logoJM from './images/jm-upgrade-logo.svg';
-
-import videoWide1 from './videos/jm-upgrade-wide-1.mp4';
-import videoWide2 from './videos/jm-upgrade-wide-2.mp4';
-import videoWide3 from './videos/jm-upgrade-wide-3.mp4';
-import videoWide4 from './videos/jm-upgrade-wide-4.mp4';
-import videoWide5 from './videos/jm-upgrade-wide-5.mp4';
-
-import imgMain from './images/jm-upgrade-main.jpg';
-import imgMainThumb from './images/jm-upgrade-main-thumb.jpg';
-import imgNext from './images/jm-upgrade-next.jpg';
-import imgNextThumb from './images/jm-upgrade-next-thumb.jpg';
-// import imgNextShort from './images/jm-upgrade-next-short.jpg';
-
-import imgWide1 from './images/jm-upgrade-wide-1.jpg';
-import imgWide1Thumb from './images/jm-upgrade-wide-1-thumb.jpg';
-import imgWide2 from './images/jm-upgrade-wide-2.jpg';
-import imgWide2Thumb from './images/jm-upgrade-wide-2-thumb.jpg';
-import imgWide3 from './images/jm-upgrade-wide-3.jpg';
-import imgWide3Thumb from './images/jm-upgrade-wide-3-thumb.jpg';
-import imgWide4 from './images/jm-upgrade-wide-4.jpg';
-import imgWide4Thumb from './images/jm-upgrade-wide-4-thumb.jpg';
-import imgWide5 from './images/jm-upgrade-wide-5.jpg';
-import imgWide5Thumb from './images/jm-upgrade-wide-5-thumb.jpg';
-import imgWide6 from './images/jm-upgrade-wide-6.jpg';
-import imgWide6Thumb from './images/jm-upgrade-wide-6-thumb.jpg';
-
-import imgSquare1 from './images/jm-upgrade-square-1.jpg';
-import imgSquare1Thumb from './images/jm-upgrade-square-1-thumb.jpg';
-import imgSquare2 from './images/jm-upgrade-square-2.jpg';
-import imgSquare2Thumb from './images/jm-upgrade-square-2-thumb.jpg';
-import imgSquare3 from './images/jm-upgrade-square-3.jpg';
-import imgSquare3Thumb from './images/jm-upgrade-square-3-thumb.jpg';
-import imgSquare4 from './images/jm-upgrade-square-4.jpg';
-import imgSquare4Thumb from './images/jm-upgrade-square-4-thumb.jpg';
-import imgSquare5 from './images/jm-upgrade-square-5.jpg';
-import imgSquare5Thumb from './images/jm-upgrade-square-5-thumb.jpg';
-import imgSquare6 from './images/jm-upgrade-square-6.jpg';
-import imgSquare6Thumb from './images/jm-upgrade-square-6-thumb.jpg';
-
-import imgSquareS1 from './images/jm-upgrade-square-s-1.jpg';
-import imgSquareS1Thumb from './images/jm-upgrade-square-s-1-thumb.jpg';
-import imgSquareS2 from './images/jm-upgrade-square-s-2.jpg';
-import imgSquareS2Thumb from './images/jm-upgrade-square-s-2-thumb.jpg';
-import imgSquareS3 from './images/jm-upgrade-square-s-3.jpg';
-import imgSquareS3Thumb from './images/jm-upgrade-square-s-3-thumb.jpg';
-import imgSquareS4 from './images/jm-upgrade-square-s-4.jpg';
-import imgSquareS4Thumb from './images/jm-upgrade-square-s-4-thumb.jpg';
-import imgSquareS5 from './images/jm-upgrade-square-s-5.jpg';
-import imgSquareS5Thumb from './images/jm-upgrade-square-s-5-thumb.jpg';
-import imgSquareS6 from './images/jm-upgrade-square-s-6.jpg';
-import imgSquareS6Thumb from './images/jm-upgrade-square-s-6-thumb.jpg';
-
-import imgVertical1 from './images/jm-upgrade-vertical-1.jpg';
-import imgVertical1Thumb from './images/jm-upgrade-vertical-1-thumb.jpg';
-
-import { ROUTES } from '../../App/ROUTES';
+import { ROUTES, URL_MEDIA } from '../../App/ROUTES';
 import Span from '../../Span/Span';
+
+const logoJM = `${URL_MEDIA}/jm-upgrade-logo.svg`;
+
+const videoWide1 = `${URL_MEDIA}/jm-upgrade-wide-1.mp4`;
+const videoWide2 = `${URL_MEDIA}/jm-upgrade-wide-2.mp4`;
+const videoWide3 = `${URL_MEDIA}/jm-upgrade-wide-3.mp4`;
+const videoWide4 = `${URL_MEDIA}/jm-upgrade-wide-4.mp4`;
+const videoWide5 = `${URL_MEDIA}/jm-upgrade-wide-5.mp4`;
+
+const imgMain = `${URL_MEDIA}/jm-upgrade-main.jpg`;
+const imgMainThumb = `${URL_MEDIA}/jm-upgrade-main-thumb.jpg`;
+const imgNext = `${URL_MEDIA}/jm-upgrade-next.jpg`;
+const imgNextThumb = `${URL_MEDIA}/jm-upgrade-next-thumb.jpg`;
+// const imgNextShort = URL_MEDIA  + 'jm-upgrade-next-short.jpg'
+
+const imgWide1 = `${URL_MEDIA}/jm-upgrade-wide-1.jpg`;
+const imgWide1Thumb = `${URL_MEDIA}/jm-upgrade-wide-1-thumb.jpg`;
+const imgWide2 = `${URL_MEDIA}/jm-upgrade-wide-2.jpg`;
+const imgWide2Thumb = `${URL_MEDIA}/jm-upgrade-wide-2-thumb.jpg`;
+const imgWide3 = `${URL_MEDIA}/jm-upgrade-wide-3.jpg`;
+const imgWide3Thumb = `${URL_MEDIA}/jm-upgrade-wide-3-thumb.jpg`;
+const imgWide4 = `${URL_MEDIA}/jm-upgrade-wide-4.jpg`;
+const imgWide4Thumb = `${URL_MEDIA}/jm-upgrade-wide-4-thumb.jpg`;
+const imgWide5 = `${URL_MEDIA}/jm-upgrade-wide-5.jpg`;
+const imgWide5Thumb = `${URL_MEDIA}/jm-upgrade-wide-5-thumb.jpg`;
+const imgWide6 = `${URL_MEDIA}/jm-upgrade-wide-6.jpg`;
+const imgWide6Thumb = `${URL_MEDIA}/jm-upgrade-wide-6-thumb.jpg`;
+
+const imgSquare1 = `${URL_MEDIA}/jm-upgrade-square-1.jpg`;
+const imgSquare1Thumb = `${URL_MEDIA}/jm-upgrade-square-1-thumb.jpg`;
+const imgSquare2 = `${URL_MEDIA}/jm-upgrade-square-2.jpg`;
+const imgSquare2Thumb = `${URL_MEDIA}/jm-upgrade-square-2-thumb.jpg`;
+const imgSquare3 = `${URL_MEDIA}/jm-upgrade-square-3.jpg`;
+const imgSquare3Thumb = `${URL_MEDIA}/jm-upgrade-square-3-thumb.jpg`;
+const imgSquare4 = `${URL_MEDIA}/jm-upgrade-square-4.jpg`;
+const imgSquare4Thumb = `${URL_MEDIA}/jm-upgrade-square-4-thumb.jpg`;
+const imgSquare5 = `${URL_MEDIA}/jm-upgrade-square-5.jpg`;
+const imgSquare5Thumb = `${URL_MEDIA}/jm-upgrade-square-5-thumb.jpg`;
+const imgSquare6 = `${URL_MEDIA}/jm-upgrade-square-6.jpg`;
+const imgSquare6Thumb = `${URL_MEDIA}/jm-upgrade-square-6-thumb.jpg`;
+
+const imgSquareS1 = `${URL_MEDIA}/jm-upgrade-square-s-1.jpg`;
+const imgSquareS1Thumb = `${URL_MEDIA}/jm-upgrade-square-s-1-thumb.jpg`;
+const imgSquareS2 = `${URL_MEDIA}/jm-upgrade-square-s-2.jpg`;
+const imgSquareS2Thumb = `${URL_MEDIA}/jm-upgrade-square-s-2-thumb.jpg`;
+const imgSquareS3 = `${URL_MEDIA}/jm-upgrade-square-s-3.jpg`;
+const imgSquareS3Thumb = `${URL_MEDIA}/jm-upgrade-square-s-3-thumb.jpg`;
+const imgSquareS4 = `${URL_MEDIA}/jm-upgrade-square-s-4.jpg`;
+const imgSquareS4Thumb = `${URL_MEDIA}/jm-upgrade-square-s-4-thumb.jpg`;
+const imgSquareS5 = `${URL_MEDIA}/jm-upgrade-square-s-5.jpg`;
+const imgSquareS5Thumb = `${URL_MEDIA}/jm-upgrade-square-s-5-thumb.jpg`;
+const imgSquareS6 = `${URL_MEDIA}/jm-upgrade-square-s-6.jpg`;
+const imgSquareS6Thumb = `${URL_MEDIA}/jm-upgrade-square-s-6-thumb.jpg`;
+
+const imgVertical1 = `${URL_MEDIA}/jm-upgrade-vertical-1.jpg`;
+const imgVertical1Thumb = `${URL_MEDIA}/jm-upgrade-vertical-1-thumb.jpg`;
 
 export const data = {
   main: {
