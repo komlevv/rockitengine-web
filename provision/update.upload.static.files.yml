@@ -27,6 +27,7 @@
         rsync_opts:
           - "--chmod=F444"
           - "--chown=nginx:nginx"
+          - "--no-perms"
         mode: push
         checksum: yes
       loop:
