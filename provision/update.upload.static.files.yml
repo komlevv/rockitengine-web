@@ -1,0 +1,37 @@
+---
+- name: Upload static files
+  hosts: remote_machines
+  become: yes
+
+  tasks:
+    - name: Static directories are present
+      file:
+        path: "{{ item }}"
+        state: directory
+        owner: nginx
+        group: nginx
+        mode: 0554
+      with_items:
+        - /usr/share/nginx/static/rockitengine/media
+        - /usr/share/nginx/static/rockitengine/fonts
+
+    - name: Install rsync
+      dnf:
+        name: rsync
+        state: present
+
+    - name: Upload files
+      synchronize:
+        src: "/vagrant/dist{{ item.src }}"
+        dest: "{{ item.dest }}"
+        rsync_opts:
+          - "--chmod=F444"
+          - "--chown=nginx:nginx"
+        mode: push
+        checksum: yes
+      loop:
+        - { src: '/media/', dest: '/usr/share/nginx/static/rockitengine/media/' }
+        - { src: '/fonts/', dest: '/usr/share/nginx/static/rockitengine/fonts/' }
+
+
+
