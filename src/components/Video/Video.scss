@@ -1,7 +1,10 @@
+@use "../../contexts/themeContext.scss";
+
 .videoContainer {
   grid-column: 1 / -1;
   display: grid;
 }
+
 
 .container,
 .video,
@@ -12,9 +15,108 @@
 }
 
 .video {
-  z-index: -1;
+  z-index: -2;
   /* todo this is a temp workaround, video dimensions and poster mismatch
       cause artifacts, need to ensure they match (i.e. replace the video)
       and delete this */
   height: 100%;
+  cursor: pointer;
+}
+
+.cursorDefault {
+  cursor: default;
+}
+
+.button {
+  border: 1px solid themeContext.$defaultAccent;
+  grid-row: 1;
+  grid-column: 1/-1;
+  align-self: center;
+  justify-self: center;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s ease-in;
+  background-color: black;
+  position: relative;
+}
+
+.button:hover {
+  opacity: 1;
+  background-color: white;
+  /* keep 0.09px here, rendering bug causes flicker on Chrome */
+  box-shadow: inset 38px 0 0 0.09px #faf8f3;
+}
+
+.button > svg {
+  width: 12px;
+  color: white;
+}
+
+.button:hover > svg {
+  color: black;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 34px;
+  box-shadow: 4px 4px #8d7b4e;
+  z-index: -1;
+}
+
+
+.hide {
+  opacity: 0;
+}
+
+.progress {
+  grid-row: 1;
+  grid-column: 1/-1;
+  align-self: end;
+  height: 8px;
+  opacity: 50%;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+// https://stackoverflow.com/questions/18368202/how-can-i-set-the-color-for-the-progress-element
+$progressBackground: #4c4c4c;
+$progressForeground: #a5a5a5;
+
+.progress::-webkit-progress-bar {
+  background-color: $progressBackground;
+}
+
+.progress::-webkit-progress-value {
+  background-color: $progressForeground;
+}
+
+.progress {
+  background-color: $progressBackground;
+  color: $progressForeground;
+}
+
+.progress::-moz-progress-bar {
+  background-color: $progressForeground !important;
+}
+
+.progress[value]::-webkit-progress-bar {
+  background-color: $progressBackground;
+}
+
+.progress[value] {
+  -webkit-appearance: none;
+}
+
+.progress[value]::-webkit-progress-value {
+  background-color: $progressForeground;
 }
