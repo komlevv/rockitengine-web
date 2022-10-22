@@ -56,8 +56,8 @@ const loadFonts = {
   },
 };
 
-const loadHtml = {
-  test: /\.(html|ico)$/,
+const loadOther = {
+  test: /\.(html|ico|txt)$/,
   use: [{ loader: 'file-loader', options: { name: '[name].[ext]' } }],
 };
 const loadStyle = {
@@ -102,7 +102,7 @@ const common = {
   watchOptions: { poll: 1000 },
   resolve: { extensions: ['*', '.js', '.jsx'] },
   module: {
-    rules: [loadJS, loadStyle, loadMedia, loadFonts, loadHtml],
+    rules: [loadJS, loadStyle, loadMedia, loadFonts, loadOther],
   },
   plugins: [new MiniCssExtractPlugin()],
 };
@@ -133,7 +133,7 @@ const clientConfig = {
       },
       loadMedia,
       loadFonts,
-      loadHtml,
+      loadOther,
     ],
   },
 };
@@ -194,7 +194,7 @@ const serverConfig = {
           filename: loadFonts.generator.filename,
         },
       },
-      loadHtml,
+      loadOther,
     ],
   },
 };

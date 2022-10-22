@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import App from './components/App/App';
 import './favicon.ico';
+import './robots.txt';
 
 const container = document.getElementById('root');
 ReactDOM.hydrateRoot(
