@@ -51,3 +51,13 @@ a {
   background-color: #1a1a1a;
   color: white;
 }
+
+$selectionColor: #393939;
+
+::selection {
+  background: $selectionColor;
+}
+
+::-moz-selection {
+  background: $selectionColor;
+}
