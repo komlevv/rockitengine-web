@@ -16,10 +16,6 @@
 
 .video {
   z-index: -2;
-  /* todo this is a temp workaround, video dimensions and poster mismatch
-      cause artifacts, need to ensure they match (i.e. replace the video)
-      and delete this */
-  height: 100%;
   cursor: pointer;
 }
 

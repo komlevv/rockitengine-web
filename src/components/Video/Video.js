@@ -105,7 +105,7 @@ const Video = ({
     }
   };
 
-  const [progressValue, setProgressValue] = useState(10);
+  const [progressValue, setProgressValue] = useState(0);
   const [progressMax, setProgressMax] = useState(0);
   const handleTimeUpdate = () => {
     if (progressMax === 0) setProgressMax(videoRef.current.duration);
