@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import '../../fonts/bnl/Fontface.scss';
 import './App.scss';
 
@@ -44,6 +44,7 @@ const App = () => (
         <Route path={ROUTES.PROJECTS_CARTIER_CLASH} element={<PageCartier />} />
         <Route path={ROUTES.ABOUT} element={<PageAbout />} />
         <Route path={ROUTES.CONTACT} element={<PageContact />} />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </GridContainer>
     <BlockFooter />
