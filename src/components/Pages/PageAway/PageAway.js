@@ -28,38 +28,43 @@ const PageAway = () => {
     <Animate>
       <BlockProjectMain data={data.main} />
       <BlockOverview data={data.overview} />
-      <Video controls src={data.media.video[0]} poster={data.media.imgWide[0]} />
+      <Video controls src={data.media.video.wide.i1.src} poster={data.media.video.wide.i1.poster} />
       <GridContainerHalf>
         <HeaderS headerText={data.other.a.h} />
       </GridContainerHalf>
       <VideoHalfWide
         controls
         loop
-        src={data.media.videoVertical[0]}
-        poster={data.media.imgVertical[0]}
+        src={data.media.video.vertical.i1.src}
+        poster={data.media.video.vertical.i1.poster}
       />
       <VideoHalfWide
         controls
         loop
-        src={data.media.videoVertical[1]}
-        poster={data.media.imgVertical[1]}
+        src={data.media.video.vertical.i2.src}
+        poster={data.media.video.vertical.i2.poster}
       />
       <GridContainerHalf>
         <Paragraph paragraphText={data.other.a.p} />
       </GridContainerHalf>
-      <Video controls loop src={data.media.video[1]} poster={data.media.imgWide[1]} />
+      <Video
+        controls
+        loop
+        src={data.media.video.wide.i2.src}
+        poster={data.media.video.wide.i2.poster}
+      />
       <Gap />
       <BlockHeroTextM headerText={data.other.b.h} paragraphText={data.other.b.p} />
-      {data.media.imgVertical.slice(2).map((img, i) => (
-        <ImageHalfWide key={`${id}-${i}`} src={img} />
+      {Object.entries(data.media.img.vertical).map(([k, v]) => (
+        <ImageHalfWide key={`${id}-${k}`} src={v.src} />
       ))}
-      <ImageFullWide src={data.media.imgWide[2]} />
+      <ImageFullWide src={data.media.img.wide.i3.src} />
       <Gap />
       <BlockHeroTextM headerText={data.other.c.h} paragraphText={data.other.c.p} />
-      {data.media.imgSquareS.map((img, i) => (
-        <ImageOneThird key={`${id}-${i}`} src={img} />
+      {Object.entries(data.media.img.squareS).map(([k, v]) => (
+        <ImageOneThird key={`${id}-${k}`} src={v.src} />
       ))}
-      <ImageTwoThird src={data.media.imgSquareSD[0]} />
+      <ImageTwoThird src={data.media.img.squareSD.i1.src} />
       <Gap />
       <BlockProjectNext data={dataNext.next} />
       <BlockContact />

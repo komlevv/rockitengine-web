@@ -22,21 +22,21 @@ const PageCartier = () => {
     <Animate>
       <BlockProjectMain data={data.main} />
       <BlockOverview data={data.overview} />
-      <Video controls src={data.media.video[0]} poster={data.media.imgWide[0]} />
+      <Video controls src={data.media.video.wide.i1.src} poster={data.media.video.wide.i1.poster} />
       <GridContainerHalf>
         <HeaderS headerText={data.other.a.h} />
       </GridContainerHalf>
       <VideoHalfWide
         controls
         loop
-        src={data.media.videoSquare[0]}
-        poster={data.media.imgSquare[0]}
+        src={data.media.video.square.i1.src}
+        poster={data.media.video.square.i1.poster}
       />
       <VideoHalfWide
         controls
         loop
-        src={data.media.videoSquare[1]}
-        poster={data.media.imgSquare[1]}
+        src={data.media.video.square.i2.src}
+        poster={data.media.video.square.i2.poster}
       />
       <GridContainerHalf>
         <Paragraph paragraphText={data.other.a.p} />
@@ -44,18 +44,23 @@ const PageCartier = () => {
       <VideoHalfWide
         controls
         loop
-        src={data.media.videoSquare[2]}
-        poster={data.media.imgSquare[2]}
+        src={data.media.video.square.i3.src}
+        poster={data.media.video.square.i3.poster}
       />
       <VideoHalfWide
         controls
         loop
-        src={data.media.videoSquare[3]}
-        poster={data.media.imgSquare[3]}
+        src={data.media.video.square.i4.src}
+        poster={data.media.video.square.i4.poster}
       />
       <Gap />
       <BlockHeroTextM headerText={data.other.b.h} paragraphText={data.other.b.p} />
-      <Video controls loop src={data.media.video[1]} poster={data.media.imgWide[1]} />
+      <Video
+        controls
+        loop
+        src={data.media.video.wide.i2.src}
+        poster={data.media.video.wide.i2.poster}
+      />
       <Gap />
       <BlockProjectNext data={dataNext.next} />
       <BlockContact />

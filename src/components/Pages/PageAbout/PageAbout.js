@@ -22,7 +22,7 @@ const PageAbout = () => {
       <BlockContainer>
         <Divider />
         <HeaderM headerText={data.ourValues.h} />
-        <ImageFullWide loading="eager" src={data.media.imgWide[0]} />
+        <ImageFullWide loading="eager" src={data.media.img.wide.i1.src} />
       </BlockContainer>
       {Object.keys(data.ourValues.items).map((el, i) => (
         <ListItemBig key={`${id}-${i}`} data={data.ourValues.items[el]} />
@@ -31,7 +31,7 @@ const PageAbout = () => {
       <BlockContainer>
         <Divider />
         <HeaderM headerText={data.work.h} />
-        <ImageFullWide src={data.media.imgWide[1]} />
+        <ImageFullWide src={data.media.img.wide.i2.src} />
       </BlockContainer>
       {Object.keys(data.work.items).map((el, i) => (
         <ListItemBig key={`${id}-${i}`} data={data.work.items[el]} />
@@ -40,7 +40,7 @@ const PageAbout = () => {
       <BlockContainer>
         <Divider />
         <HeaderM headerText={data.process.h} />
-        <ImageFullWide src={data.media.imgWide[2]} />
+        <ImageFullWide src={data.media.img.wide.i3.src} />
       </BlockContainer>
       {Object.keys(data.process.items).map((el, i) => (
         <ListItemBig key={`${id}-${i}`} data={data.process.items[el]} />

@@ -3,51 +3,8 @@ import Span from '../../Span/Span';
 
 const logoSpotifyHuluH = `${URL_MEDIA}/spotify-hulu-cannes-logo-h.svg`;
 const logoSpotifyHuluV = `${URL_MEDIA}/spotify-hulu-cannes-logo-v.svg`;
-
 const imgMain = `${URL_MEDIA}/spotify-hulu-cannes-main.jpg`;
-const imgMainThumb = `${URL_MEDIA}/spotify-hulu-cannes-main-thumb.jpg`;
 const imgNext = `${URL_MEDIA}/spotify-hulu-cannes-next.jpg`;
-const imgNextThumb = `${URL_MEDIA}/spotify-hulu-cannes-next-thumb.jpg`;
-
-const imgWide1 = `${URL_MEDIA}/spotify-hulu-cannes-wide-1.jpg`;
-const imgWide1Thumb = `${URL_MEDIA}/spotify-hulu-cannes-wide-1-thumb.jpg`;
-const imgWide2 = `${URL_MEDIA}/spotify-hulu-cannes-wide-2.jpg`;
-const imgWide2Thumb = `${URL_MEDIA}/spotify-hulu-cannes-wide-2-thumb.jpg`;
-const imgWide3 = `${URL_MEDIA}/spotify-hulu-cannes-wide-3.jpg`;
-const imgWide3Thumb = `${URL_MEDIA}/spotify-hulu-cannes-wide-3-thumb.jpg`;
-const imgWide4 = `${URL_MEDIA}/spotify-hulu-cannes-wide-4.jpg`;
-const imgWide4Thumb = `${URL_MEDIA}/spotify-hulu-cannes-wide-4-thumb.jpg`;
-const imgWide5 = `${URL_MEDIA}/spotify-hulu-cannes-wide-5.jpg`;
-const imgWide5Thumb = `${URL_MEDIA}/spotify-hulu-cannes-wide-5-thumb.jpg`;
-const imgWide6 = `${URL_MEDIA}/spotify-hulu-cannes-wide-6.jpg`;
-const imgWide6Thumb = `${URL_MEDIA}/spotify-hulu-cannes-wide-6-thumb.jpg`;
-
-const imgSquareS1 = `${URL_MEDIA}/spotify-hulu-cannes-square-s-1.jpg`;
-const imgSquareS1Thumb = `${URL_MEDIA}/spotify-hulu-cannes-square-s-1-thumb.jpg`;
-const imgSquareS2 = `${URL_MEDIA}/spotify-hulu-cannes-square-s-2.jpg`;
-const imgSquareS2Thumb = `${URL_MEDIA}/spotify-hulu-cannes-square-s-2-thumb.jpg`;
-const imgSquareS3 = `${URL_MEDIA}/spotify-hulu-cannes-square-s-3.jpg`;
-const imgSquareS3Thumb = `${URL_MEDIA}/spotify-hulu-cannes-square-s-3-thumb.jpg`;
-const imgSquareS4 = `${URL_MEDIA}/spotify-hulu-cannes-square-s-4.jpg`;
-const imgSquareS4Thumb = `${URL_MEDIA}/spotify-hulu-cannes-square-s-4-thumb.jpg`;
-const imgSquareS5 = `${URL_MEDIA}/spotify-hulu-cannes-square-s-5.jpg`;
-const imgSquareS5Thumb = `${URL_MEDIA}/spotify-hulu-cannes-square-s-5-thumb.jpg`;
-const imgSquareS6 = `${URL_MEDIA}/spotify-hulu-cannes-square-s-6.jpg`;
-const imgSquareS6Thumb = `${URL_MEDIA}/spotify-hulu-cannes-square-s-6-thumb.jpg`;
-const imgSquareS7 = `${URL_MEDIA}/spotify-hulu-cannes-square-s-7.jpg`;
-const imgSquareS7Thumb = `${URL_MEDIA}/spotify-hulu-cannes-square-s-7-thumb.jpg`;
-const imgSquareS8 = `${URL_MEDIA}/spotify-hulu-cannes-square-s-8.jpg`;
-const imgSquareS8Thumb = `${URL_MEDIA}/spotify-hulu-cannes-square-s-8-thumb.jpg`;
-
-const imgSquareSD1 = `${URL_MEDIA}/spotify-hulu-cannes-square-sd-1.jpg`;
-const imgSquareSD1Thumb = `${URL_MEDIA}/spotify-hulu-cannes-square-sd-1-thumb.jpg`;
-const imgSquareSD2 = `${URL_MEDIA}/spotify-hulu-cannes-square-sd-2.jpg`;
-const imgSquareSD2Thumb = `${URL_MEDIA}/spotify-hulu-cannes-square-sd-2-thumb.jpg`;
-
-const imgVertical1 = `${URL_MEDIA}/spotify-hulu-cannes-vertical-1.jpg`;
-const imgVertical1Thumb = `${URL_MEDIA}/spotify-hulu-cannes-vertical-1-thumb.jpg`;
-const imgVertical2 = `${URL_MEDIA}/spotify-hulu-cannes-vertical-2.jpg`;
-const imgVertical2Thumb = `${URL_MEDIA}/spotify-hulu-cannes-vertical-2-thumb.jpg`;
 
 export const data = {
   main: {
@@ -150,42 +107,123 @@ export const data = {
     },
   },
   media: {
-    imgWide: [imgWide1, imgWide2, imgWide3, imgWide4, imgWide5, imgWide6],
-    imgSquare: [],
-    imgSquareS: [
-      imgSquareS1,
-      imgSquareS2,
-      imgSquareS3,
-      imgSquareS4,
-      imgSquareS5,
-      imgSquareS6,
-      imgSquareS7,
-      imgSquareS8,
-    ],
-    imgSquareSD: [imgSquareSD1, imgSquareSD2],
-    imgVertical: [imgVertical1, imgVertical2],
-    video: [],
-    thumbs: [
-      imgMainThumb,
-      imgNextThumb,
-      imgWide1Thumb,
-      imgWide2Thumb,
-      imgWide3Thumb,
-      imgWide4Thumb,
-      imgWide5Thumb,
-      imgWide6Thumb,
-      imgSquareS1Thumb,
-      imgSquareS2Thumb,
-      imgSquareS3Thumb,
-      imgSquareS4Thumb,
-      imgSquareS5Thumb,
-      imgSquareS6Thumb,
-      imgSquareS7Thumb,
-      imgSquareS8Thumb,
-      imgSquareSD1Thumb,
-      imgSquareSD2Thumb,
-      imgVertical1Thumb,
-      imgVertical2Thumb,
-    ],
+    img: {
+      wide: {
+        i1: {
+          src: `${URL_MEDIA}/spotify-hulu-cannes-wide-1.jpg`,
+          thumbnail: `${URL_MEDIA}/spotify-hulu-cannes-wide-1-thumb.jpg`,
+          width: 1280,
+          height: 720,
+        },
+        i2: {
+          src: `${URL_MEDIA}/spotify-hulu-cannes-wide-2.jpg`,
+          thumbnail: `${URL_MEDIA}/spotify-hulu-cannes-wide-2-thumb.jpg`,
+          width: 1280,
+          height: 720,
+        },
+        i3: {
+          src: `${URL_MEDIA}/spotify-hulu-cannes-wide-3.jpg`,
+          thumbnail: `${URL_MEDIA}/spotify-hulu-cannes-wide-3-thumb.jpg`,
+          width: 1280,
+          height: 720,
+        },
+        i4: {
+          src: `${URL_MEDIA}/spotify-hulu-cannes-wide-4.jpg`,
+          thumbnail: `${URL_MEDIA}/spotify-hulu-cannes-wide-4-thumb.jpg`,
+          width: 1280,
+          height: 720,
+        },
+        i5: {
+          src: `${URL_MEDIA}/spotify-hulu-cannes-wide-5.jpg`,
+          thumbnail: `${URL_MEDIA}/spotify-hulu-cannes-wide-5-thumb.jpg`,
+          width: 1280,
+          height: 720,
+        },
+        i6: {
+          src: `${URL_MEDIA}/spotify-hulu-cannes-wide-6.jpg`,
+          thumbnail: `${URL_MEDIA}/spotify-hulu-cannes-wide-6-thumb.jpg`,
+          width: 1280,
+          height: 720,
+        },
+      },
+      squareS: {
+        i1: {
+          src: `${URL_MEDIA}/spotify-hulu-cannes-square-s-1.jpg`,
+          thumbnail: `${URL_MEDIA}/spotify-hulu-cannes-square-s-1-thumb.jpg`,
+          width: 440,
+          height: 440,
+        },
+        i2: {
+          src: `${URL_MEDIA}/spotify-hulu-cannes-square-s-2.jpg`,
+          thumbnail: `${URL_MEDIA}/spotify-hulu-cannes-square-s-2-thumb.jpg`,
+          width: 440,
+          height: 440,
+        },
+        i3: {
+          src: `${URL_MEDIA}/spotify-hulu-cannes-square-s-3.jpg`,
+          thumbnail: `${URL_MEDIA}/spotify-hulu-cannes-square-s-3-thumb.jpg`,
+          width: 440,
+          height: 440,
+        },
+        i4: {
+          src: `${URL_MEDIA}/spotify-hulu-cannes-square-s-4.jpg`,
+          thumbnail: `${URL_MEDIA}/spotify-hulu-cannes-square-s-4-thumb.jpg`,
+          width: 440,
+          height: 440,
+        },
+        i5: {
+          src: `${URL_MEDIA}/spotify-hulu-cannes-square-s-5.jpg`,
+          thumbnail: `${URL_MEDIA}/spotify-hulu-cannes-square-s-5-thumb.jpg`,
+          width: 440,
+          height: 440,
+        },
+        i6: {
+          src: `${URL_MEDIA}/spotify-hulu-cannes-square-s-6.jpg`,
+          thumbnail: `${URL_MEDIA}/spotify-hulu-cannes-square-s-6-thumb.jpg`,
+          width: 440,
+          height: 440,
+        },
+        i7: {
+          src: `${URL_MEDIA}/spotify-hulu-cannes-square-s-7.jpg`,
+          thumbnail: `${URL_MEDIA}/spotify-hulu-cannes-square-s-7-thumb.jpg`,
+          width: 440,
+          height: 440,
+        },
+        i8: {
+          src: `${URL_MEDIA}/spotify-hulu-cannes-square-s-8.jpg`,
+          thumbnail: `${URL_MEDIA}/spotify-hulu-cannes-square-s-8-thumb.jpg`,
+          width: 440,
+          height: 440,
+        },
+      },
+      squareSD: {
+        i1: {
+          src: `${URL_MEDIA}/spotify-hulu-cannes-square-sd-1.jpg`,
+          thumbnail: `${URL_MEDIA}/spotify-hulu-cannes-square-sd-1-thumb.jpg`,
+          width: 900,
+          height: 440,
+        },
+        i2: {
+          src: `${URL_MEDIA}/spotify-hulu-cannes-square-sd-2.jpg`,
+          thumbnail: `${URL_MEDIA}/spotify-hulu-cannes-square-sd-2-thumb.jpg`,
+          width: 900,
+          height: 440,
+        },
+      },
+      vertical: {
+        i1: {
+          src: `${URL_MEDIA}/spotify-hulu-cannes-vertical-1.jpg`,
+          thumbnail: `${URL_MEDIA}/spotify-hulu-cannes-vertical-1-thumb.jpg`,
+          width: 670,
+          height: 1000,
+        },
+        i2: {
+          src: `${URL_MEDIA}/spotify-hulu-cannes-vertical-2.jpg`,
+          thumbnail: `${URL_MEDIA}/spotify-hulu-cannes-vertical-2-thumb.jpg`,
+          width: 670,
+          height: 1000,
+        },
+      },
+    },
   },
 };

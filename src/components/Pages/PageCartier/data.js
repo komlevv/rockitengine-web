@@ -2,33 +2,8 @@ import { ROUTES, URL_MEDIA } from '../../App/ROUTES';
 import Span from '../../Span/Span';
 
 const logoCartier = `${URL_MEDIA}/cartier-logo.svg`;
-
-const videoWide1 = `${URL_MEDIA}/cartier-wide-1.mp4`;
-const videoWide2 = `${URL_MEDIA}/cartier-wide-2.mp4`;
-
-const videoSquare1 = `${URL_MEDIA}/cartier-square-1.mp4`;
-const videoSquare2 = `${URL_MEDIA}/cartier-square-2.mp4`;
-const videoSquare3 = `${URL_MEDIA}/cartier-square-3.mp4`;
-const videoSquare4 = `${URL_MEDIA}/cartier-square-4.mp4`;
-
 const imgMain = `${URL_MEDIA}/cartier-main.jpg`;
-const imgMainThumb = `${URL_MEDIA}/cartier-main-thumb.jpg`;
 const imgNext = `${URL_MEDIA}/cartier-next.jpg`;
-const imgNextThumb = `${URL_MEDIA}/cartier-next-thumb.jpg`;
-
-const imgWide1 = `${URL_MEDIA}/cartier-wide-1.jpg`;
-const imgWide1Thumb = `${URL_MEDIA}/cartier-wide-1-thumb.jpg`;
-const imgWide2 = `${URL_MEDIA}/cartier-wide-2.jpg`;
-const imgWide2Thumb = `${URL_MEDIA}/cartier-wide-2-thumb.jpg`;
-
-const imgSquare1 = `${URL_MEDIA}/cartier-square-1.jpg`;
-const imgSquare1Thumb = `${URL_MEDIA}/cartier-square-1-thumb.jpg`;
-const imgSquare2 = `${URL_MEDIA}/cartier-square-2.jpg`;
-const imgSquare2Thumb = `${URL_MEDIA}/cartier-square-2-thumb.jpg`;
-const imgSquare3 = `${URL_MEDIA}/cartier-square-3.jpg`;
-const imgSquare3Thumb = `${URL_MEDIA}/cartier-square-3-thumb.jpg`;
-const imgSquare4 = `${URL_MEDIA}/cartier-square-4.jpg`;
-const imgSquare4Thumb = `${URL_MEDIA}/cartier-square-4-thumb.jpg`;
 
 export const data = {
   main: {
@@ -102,23 +77,65 @@ export const data = {
     },
   },
   media: {
-    imgWide: [imgWide1, imgWide2],
-    imgSquare: [imgSquare1, imgSquare2, imgSquare3, imgSquare4],
-    imgSquareS: [],
-    imgSquareSD: [],
-    imgVertical: [],
-    video: [videoWide1, videoWide2],
-    videoVertical: [],
-    videoSquare: [videoSquare1, videoSquare2, videoSquare3, videoSquare4],
-    thumbs: [
-      imgMainThumb,
-      imgNextThumb,
-      imgWide1Thumb,
-      imgWide2Thumb,
-      imgSquare1Thumb,
-      imgSquare2Thumb,
-      imgSquare3Thumb,
-      imgSquare4Thumb,
-    ],
+    video: {
+      wide: {
+        i1: {
+          src: `${URL_MEDIA}/cartier-wide-1.mp4`,
+          width: 1920,
+          height: 1080,
+          poster: `${URL_MEDIA}/cartier-wide-1.jpg`,
+          posterThumbnail: `${URL_MEDIA}/cartier-wide-1-thumb.jpg`,
+          posterWidth: 1280,
+          posterHeight: 720,
+        },
+        i2: {
+          src: `${URL_MEDIA}/cartier-wide-2.mp4`,
+          width: 1920,
+          height: 1080,
+          poster: `${URL_MEDIA}/cartier-wide-2.jpg`,
+          posterThumbnail: `${URL_MEDIA}/cartier-wide-2-thumb.jpg`,
+          posterWidth: 1280,
+          posterHeight: 720,
+        },
+      },
+      square: {
+        i1: {
+          src: `${URL_MEDIA}/cartier-square-1.mp4`,
+          width: 670,
+          height: 670,
+          poster: `${URL_MEDIA}/cartier-square-1.jpg`,
+          posterThumbnail: `${URL_MEDIA}/cartier-square-1-thumb.jpg`,
+          posterWidth: 670,
+          posterHeight: 670,
+        },
+        i2: {
+          src: `${URL_MEDIA}/cartier-square-2.mp4`,
+          width: 670,
+          height: 670,
+          poster: `${URL_MEDIA}/cartier-square-2.jpg`,
+          posterThumbnail: `${URL_MEDIA}/cartier-square-2-thumb.jpg`,
+          posterWidth: 670,
+          posterHeight: 670,
+        },
+        i3: {
+          src: `${URL_MEDIA}/cartier-square-3.mp4`,
+          width: 670,
+          height: 670,
+          poster: `${URL_MEDIA}/cartier-square-3.jpg`,
+          posterThumbnail: `${URL_MEDIA}/cartier-square-3-thumb.jpg`,
+          posterWidth: 670,
+          posterHeight: 670,
+        },
+        i4: {
+          src: `${URL_MEDIA}/cartier-square-4.mp4`,
+          width: 670,
+          height: 670,
+          poster: `${URL_MEDIA}/cartier-square-4.jpg`,
+          posterThumbnail: `${URL_MEDIA}/cartier-square-4-thumb.jpg`,
+          posterWidth: 670,
+          posterHeight: 670,
+        },
+      },
+    },
   },
 };

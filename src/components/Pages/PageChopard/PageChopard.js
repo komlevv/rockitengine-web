@@ -25,46 +25,48 @@ const PageChopard = () => {
     <Animate>
       <BlockProjectMain data={data.main} />
       <BlockOverview data={data.overview} />
-      <ImageFullWide src={data.media.imgWide[0]} />
+      <ImageFullWide src={data.media.img.wide.i1.src} />
       <Gap />
       <BlockHeroTextM headerText={data.other.a.h} paragraphText={data.other.a.p} />
-      <ImageHalfWide src={data.media.imgSquare[0]} />
-      <ImageHalfWide src={data.media.imgSquare[1]} />
+      <ImageHalfWide src={data.media.img.square.i1.src} />
+      <ImageHalfWide src={data.media.img.square.i2.src} />
       <Gap />
       <BlockHeroTextM headerText={data.other.b.h} paragraphText={data.other.b.p} />
-      <ImageFullWide src={data.media.imgWide[1]} />
-      <ImageHalfWide src={data.media.imgSquare[2]} />
-      <ImageHalfWide src={data.media.imgSquare[3]} />
-      <ImageFullWide src={data.media.imgWide[2]} />
+      <ImageFullWide src={data.media.img.wide.i2.src} />
+      <ImageHalfWide src={data.media.img.square.i3.src} />
+      <ImageHalfWide src={data.media.img.square.i4.src} />
+      <ImageFullWide src={data.media.img.wide.i3.src} />
       <Gap />
       <BlockHeroTextM headerText={data.other.c.h} paragraphText={data.other.c.p} />
-      <ImageHalfWide src={data.media.imgVertical[0]} />
-      <ImageHalfWide src={data.media.imgVertical[1]} />
-      <ImageHalfWide src={data.media.imgSquare[4]} />
+      <ImageHalfWide src={data.media.img.vertical.i1.src} />
+      <ImageHalfWide src={data.media.img.vertical.i2.src} />
+      <ImageHalfWide src={data.media.img.square.i5.src} />
       <GridContainerHalf>
         <Paragraph paragraphText={data.other.d.p} />
       </GridContainerHalf>
       <GridContainerHalf>
         <Paragraph paragraphText={data.other.e.p} />
       </GridContainerHalf>
-      <ImageHalfWide src={data.media.imgSquare[5]} />
-      <ImageHalfWide src={data.media.imgSquare[6]} />
-      <ImageHalfWide src={data.media.imgSquare[7]} />
+      <ImageHalfWide src={data.media.img.square.i6.src} />
+      <ImageHalfWide src={data.media.img.square.i7.src} />
+      <ImageHalfWide src={data.media.img.square.i8.src} />
       <Gap />
       <BlockHeroTextM headerText={data.other.f.h} paragraphText={data.other.f.p} />
-      <ImageFullWide src={data.media.imgWide[3]} />
+      <ImageFullWide src={data.media.img.wide.i4.src} />
       <Gap />
       <BlockHeroTextM headerText={data.other.g.h} paragraphText={data.other.g.p} />
-      <ImageFullWide src={data.media.imgWide[4]} />
+      <ImageFullWide src={data.media.img.wide.i5.src} />
       <Gap />
       <BlockHeroTextM headerText={data.other.h.h} paragraphText={data.other.h.p} />
-      {data.media.imgSquareS.slice(0, 6).map((img, i) => (
-        <ImageOneThird key={`${id}-${i}`} src={img} />
-      ))}
-      <ImageTwoThird src={data.media.imgSquareSD[0]} />
-      <ImageOneThird src={data.media.imgSquareS[6]} />
-      <ImageOneThird src={data.media.imgSquareS[7]} />
-      <ImageTwoThird src={data.media.imgSquareSD[1]} />
+      {Object.entries(data.media.img.squareS)
+        .slice(0, 6)
+        .map(([k, v]) => (
+          <ImageOneThird key={`${id}-${k}`} src={v.src} />
+        ))}
+      <ImageTwoThird src={data.media.img.squareSD.i1.src} />
+      <ImageOneThird src={data.media.img.squareS.i7.src} />
+      <ImageOneThird src={data.media.img.squareS.i8.src} />
+      <ImageTwoThird src={data.media.img.squareSD.i2.src} />
       <Gap />
       <BlockProjectNext data={dataNext.next} />
       <BlockContact />

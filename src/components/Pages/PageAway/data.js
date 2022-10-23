@@ -2,53 +2,8 @@ import { ROUTES, URL_MEDIA } from '../../App/ROUTES';
 import Span from '../../Span/Span';
 
 const logoAway = `${URL_MEDIA}/away-logo.svg`;
-
-const videoWide1 = `${URL_MEDIA}/away-wide-1.mp4`;
-const videoWide2 = `${URL_MEDIA}/away-wide-2.mp4`;
-
-const videoVertical1 = `${URL_MEDIA}/away-vertical-1.mp4`;
-const videoVertical2 = `${URL_MEDIA}/away-vertical-2.mp4`;
-
 const imgMain = `${URL_MEDIA}/away-main.jpg`;
-const imgMainThumb = `${URL_MEDIA}/away-main-thumb.jpg`;
 const imgNext = `${URL_MEDIA}/away-next.jpg`;
-const imgNextThumb = `${URL_MEDIA}/away-next-thumb.jpg`;
-
-const imgWide1 = `${URL_MEDIA}/away-wide-1.jpg`;
-const imgWide1Thumb = `${URL_MEDIA}/away-wide-1-thumb.jpg`;
-const imgWide2 = `${URL_MEDIA}/away-wide-2.jpg`;
-const imgWide2Thumb = `${URL_MEDIA}/away-wide-2-thumb.jpg`;
-const imgWide3 = `${URL_MEDIA}/away-wide-3.jpg`;
-const imgWide3Thumb = `${URL_MEDIA}/away-wide-3-thumb.jpg`;
-
-const imgSquareS1 = `${URL_MEDIA}/away-square-s-1.jpg`;
-const imgSquareS1Thumb = `${URL_MEDIA}/away-square-s-1-thumb.jpg`;
-const imgSquareS2 = `${URL_MEDIA}/away-square-s-2.jpg`;
-const imgSquareS2Thumb = `${URL_MEDIA}/away-square-s-2-thumb.jpg`;
-const imgSquareS3 = `${URL_MEDIA}/away-square-s-3.jpg`;
-const imgSquareS3Thumb = `${URL_MEDIA}/away-square-s-3-thumb.jpg`;
-const imgSquareS4 = `${URL_MEDIA}/away-square-s-4.jpg`;
-const imgSquareS4Thumb = `${URL_MEDIA}/away-square-s-4-thumb.jpg`;
-
-const imgSquareSD1 = `${URL_MEDIA}/away-square-sd-1.jpg`;
-const imgSquareSD1Thumb = `${URL_MEDIA}/away-square-sd-1-thumb.jpg`;
-
-const imgVertical1 = `${URL_MEDIA}/away-vertical-1.jpg`;
-const imgVertical1Thumb = `${URL_MEDIA}/away-vertical-1-thumb.jpg`;
-const imgVertical2 = `${URL_MEDIA}/away-vertical-2.jpg`;
-const imgVertical2Thumb = `${URL_MEDIA}/away-vertical-2-thumb.jpg`;
-const imgVertical3 = `${URL_MEDIA}/away-vertical-3.jpg`;
-const imgVertical3Thumb = `${URL_MEDIA}/away-vertical-3-thumb.jpg`;
-const imgVertical4 = `${URL_MEDIA}/away-vertical-4.jpg`;
-const imgVertical4Thumb = `${URL_MEDIA}/away-vertical-4-thumb.jpg`;
-const imgVertical5 = `${URL_MEDIA}/away-vertical-5.jpg`;
-const imgVertical5Thumb = `${URL_MEDIA}/away-vertical-5-thumb.jpg`;
-const imgVertical6 = `${URL_MEDIA}/away-vertical-6.jpg`;
-const imgVertical6Thumb = `${URL_MEDIA}/away-vertical-6-thumb.jpg`;
-const imgVertical7 = `${URL_MEDIA}/away-vertical-7.jpg`;
-const imgVertical7Thumb = `${URL_MEDIA}/away-vertical-7-thumb.jpg`;
-const imgVertical8 = `${URL_MEDIA}/away-vertical-8.jpg`;
-const imgVertical8Thumb = `${URL_MEDIA}/away-vertical-8-thumb.jpg`;
 
 export const data = {
   main: {
@@ -128,41 +83,129 @@ export const data = {
     },
   },
   media: {
-    imgWide: [imgWide1, imgWide2, imgWide3],
-    imgSquare: [],
-    imgSquareS: [imgSquareS1, imgSquareS2, imgSquareS3, imgSquareS4],
-    imgSquareSD: [imgSquareSD1],
-    imgVertical: [
-      imgVertical1,
-      imgVertical2,
-      imgVertical3,
-      imgVertical4,
-      imgVertical5,
-      imgVertical6,
-      imgVertical7,
-      imgVertical8,
-    ],
-    video: [videoWide1, videoWide2],
-    videoVertical: [videoVertical1, videoVertical2],
-    thumbs: [
-      imgMainThumb,
-      imgNextThumb,
-      imgWide1Thumb,
-      imgWide2Thumb,
-      imgWide3Thumb,
-      imgSquareS1Thumb,
-      imgSquareS2Thumb,
-      imgSquareS3Thumb,
-      imgSquareS4Thumb,
-      imgSquareSD1Thumb,
-      imgVertical1Thumb,
-      imgVertical2Thumb,
-      imgVertical3Thumb,
-      imgVertical4Thumb,
-      imgVertical5Thumb,
-      imgVertical6Thumb,
-      imgVertical7Thumb,
-      imgVertical8Thumb,
-    ],
+    img: {
+      wide: {
+        i3: {
+          src: `${URL_MEDIA}/away-wide-3.jpg`,
+          thumbnail: `${URL_MEDIA}/away-wide-3-thumb.jpg`,
+          width: 1360,
+          height: 770,
+        },
+      },
+      squareS: {
+        i1: {
+          src: `${URL_MEDIA}/away-square-s-1.jpg`,
+          thumbnail: `${URL_MEDIA}/away-square-s-1-thumb.jpg`,
+          width: 440,
+          height: 440,
+        },
+        i2: {
+          src: `${URL_MEDIA}/away-square-s-2.jpg`,
+          thumbnail: `${URL_MEDIA}/away-square-s-2-thumb.jpg`,
+          width: 440,
+          height: 440,
+        },
+        i3: {
+          src: `${URL_MEDIA}/away-square-s-3.jpg`,
+          thumbnail: `${URL_MEDIA}/away-square-s-3-thumb.jpg`,
+          width: 440,
+          height: 440,
+        },
+        i4: {
+          src: `${URL_MEDIA}/away-square-s-4.jpg`,
+          thumbnail: `${URL_MEDIA}/away-square-s-4-thumb.jpg`,
+          width: 440,
+          height: 440,
+        },
+      },
+      squareSD: {
+        i1: {
+          src: `${URL_MEDIA}/away-square-sd-1.jpg`,
+          thumbnail: `${URL_MEDIA}/away-square-sd-1-thumb.jpg`,
+          width: 900,
+          height: 440,
+        },
+      },
+      vertical: {
+        i3: {
+          src: `${URL_MEDIA}/away-vertical-3.jpg`,
+          thumbnail: `${URL_MEDIA}/away-vertical-3-thumb.jpg`,
+          width: 670,
+          height: 1000,
+        },
+        i4: {
+          src: `${URL_MEDIA}/away-vertical-4.jpg`,
+          thumbnail: `${URL_MEDIA}/away-vertical-4-thumb.jpg`,
+          width: 670,
+          height: 1000,
+        },
+        i5: {
+          src: `${URL_MEDIA}/away-vertical-5.jpg`,
+          thumbnail: `${URL_MEDIA}/away-vertical-5-thumb.jpg`,
+          width: 670,
+          height: 1000,
+        },
+        i6: {
+          src: `${URL_MEDIA}/away-vertical-6.jpg`,
+          thumbnail: `${URL_MEDIA}/away-vertical-6-thumb.jpg`,
+          width: 670,
+          height: 1000,
+        },
+        i7: {
+          src: `${URL_MEDIA}/away-vertical-7.jpg`,
+          thumbnail: `${URL_MEDIA}/away-vertical-7-thumb.jpg`,
+          width: 670,
+          height: 1000,
+        },
+        i8: {
+          src: `${URL_MEDIA}/away-vertical-8.jpg`,
+          thumbnail: `${URL_MEDIA}/away-vertical-8-thumb.jpg`,
+          width: 670,
+          height: 1000,
+        },
+      },
+    },
+    video: {
+      wide: {
+        i1: {
+          src: `${URL_MEDIA}/away-wide-1.mp4`,
+          width: 1920,
+          height: 1080,
+          poster: `${URL_MEDIA}/away-wide-1.jpg`,
+          posterThumbnail: `${URL_MEDIA}/away-wide-1-thumb.jpg`,
+          posterWidth: 1280,
+          posterHeight: 720,
+        },
+        i2: {
+          src: `${URL_MEDIA}/away-wide-2.mp4`,
+          width: 1920,
+          height: 1080,
+          poster: `${URL_MEDIA}/away-wide-2.jpg`,
+          posterThumbnail: `${URL_MEDIA}/away-wide-2-thumb.jpg`,
+          posterWidth: 1280,
+          posterHeight: 720,
+        },
+      },
+      vertical: {
+        i1: {
+          src: `${URL_MEDIA}/away-vertical-1.mp4`,
+          width: 670,
+          height: 1000,
+          poster: `${URL_MEDIA}/away-vertical-1.jpg`,
+          posterThumbnail: `${URL_MEDIA}/away-vertical-1-thumb.jpg`,
+          posterWidth: 670,
+          posterHeight: 1000,
+        },
+        i2: {
+          src: `${URL_MEDIA}/away-vertical-2.mp4`,
+          width: 670,
+          height: 1000,
+          poster: `${URL_MEDIA}/away-vertical-2.jpg`,
+          posterThumbnail: `${URL_MEDIA}/away-vertical-2-thumb.jpg`,
+          posterWidth: 670,
+          posterHeight: 1000,
+        },
+      },
+    },
   },
 };

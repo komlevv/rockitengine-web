@@ -2,63 +2,8 @@ import { ROUTES, URL_MEDIA } from '../../App/ROUTES';
 import Span from '../../Span/Span';
 
 const logoGGVertical = `${URL_MEDIA}/grey-goose-logo-black-v.svg`;
-
 const imgMain = `${URL_MEDIA}/grey-goose-main.jpg`;
-const imgMainThumb = `${URL_MEDIA}/grey-goose-main-thumb.jpg`;
 const imgNext = `${URL_MEDIA}/grey-goose-next.jpg`;
-const imgNextThumb = `${URL_MEDIA}/grey-goose-next-thumb.jpg`;
-
-const imgWide1 = `${URL_MEDIA}/grey-goose-wide-1.jpg`;
-const imgWide1Thumb = `${URL_MEDIA}/grey-goose-wide-1-thumb.jpg`;
-const imgWide2 = `${URL_MEDIA}/grey-goose-wide-2.jpg`;
-const imgWide2Thumb = `${URL_MEDIA}/grey-goose-wide-2-thumb.jpg`;
-const imgWide3 = `${URL_MEDIA}/grey-goose-wide-3.jpg`;
-const imgWide3Thumb = `${URL_MEDIA}/grey-goose-wide-3-thumb.jpg`;
-const imgWide4 = `${URL_MEDIA}/grey-goose-wide-4.jpg`;
-const imgWide4Thumb = `${URL_MEDIA}/grey-goose-wide-4-thumb.jpg`;
-const imgWide5 = `${URL_MEDIA}/grey-goose-wide-5.jpg`;
-const imgWide5Thumb = `${URL_MEDIA}/grey-goose-wide-5-thumb.jpg`;
-const imgWide6 = `${URL_MEDIA}/grey-goose-wide-6.jpg`;
-const imgWide6Thumb = `${URL_MEDIA}/grey-goose-wide-6-thumb.jpg`;
-
-const imgSquare1 = `${URL_MEDIA}/grey-goose-square-1.jpg`;
-const imgSquare1Thumb = `${URL_MEDIA}/grey-goose-square-1-thumb.jpg`;
-const imgSquare2 = `${URL_MEDIA}/grey-goose-square-2.jpg`;
-const imgSquare2Thumb = `${URL_MEDIA}/grey-goose-square-2-thumb.jpg`;
-
-const imgSquareS1 = `${URL_MEDIA}/grey-goose-square-s-1.jpg`;
-const imgSquareS1Thumb = `${URL_MEDIA}/grey-goose-square-s-1-thumb.jpg`;
-const imgSquareS2 = `${URL_MEDIA}/grey-goose-square-s-2.jpg`;
-const imgSquareS2Thumb = `${URL_MEDIA}/grey-goose-square-s-2-thumb.jpg`;
-const imgSquareS3 = `${URL_MEDIA}/grey-goose-square-s-3.jpg`;
-const imgSquareS3Thumb = `${URL_MEDIA}/grey-goose-square-s-3-thumb.jpg`;
-const imgSquareS4 = `${URL_MEDIA}/grey-goose-square-s-4.jpg`;
-const imgSquareS4Thumb = `${URL_MEDIA}/grey-goose-square-s-4-thumb.jpg`;
-const imgSquareS5 = `${URL_MEDIA}/grey-goose-square-s-5.jpg`;
-const imgSquareS5Thumb = `${URL_MEDIA}/grey-goose-square-s-5-thumb.jpg`;
-const imgSquareS6 = `${URL_MEDIA}/grey-goose-square-s-6.jpg`;
-const imgSquareS6Thumb = `${URL_MEDIA}/grey-goose-square-s-6-thumb.jpg`;
-const imgSquareS7 = `${URL_MEDIA}/grey-goose-square-s-7.jpg`;
-const imgSquareS7Thumb = `${URL_MEDIA}/grey-goose-square-s-7-thumb.jpg`;
-const imgSquareS8 = `${URL_MEDIA}/grey-goose-square-s-8.jpg`;
-const imgSquareS8Thumb = `${URL_MEDIA}/grey-goose-square-s-8-thumb.jpg`;
-const imgSquareS9 = `${URL_MEDIA}/grey-goose-square-s-9.jpg`;
-const imgSquareS9Thumb = `${URL_MEDIA}/grey-goose-square-s-9-thumb.jpg`;
-const imgSquareS10 = `${URL_MEDIA}/grey-goose-square-s-10.jpg`;
-const imgSquareS10Thumb = `${URL_MEDIA}/grey-goose-square-s-10-thumb.jpg`;
-const imgSquareS11 = `${URL_MEDIA}/grey-goose-square-s-11.jpg`;
-const imgSquareS11Thumb = `${URL_MEDIA}/grey-goose-square-s-11-thumb.jpg`;
-const imgSquareS12 = `${URL_MEDIA}/grey-goose-square-s-12.jpg`;
-const imgSquareS12Thumb = `${URL_MEDIA}/grey-goose-square-s-12-thumb.jpg`;
-
-const imgVertical1 = `${URL_MEDIA}/grey-goose-vertical-1.jpg`;
-const imgVertical1Thumb = `${URL_MEDIA}/grey-goose-vertical-1-thumb.jpg`;
-const imgVertical2 = `${URL_MEDIA}/grey-goose-vertical-2.jpg`;
-const imgVertical2Thumb = `${URL_MEDIA}/grey-goose-vertical-2-thumb.jpg`;
-const imgVertical3 = `${URL_MEDIA}/grey-goose-vertical-3.jpg`;
-const imgVertical3Thumb = `${URL_MEDIA}/grey-goose-vertical-3-thumb.jpg`;
-const imgVertical4 = `${URL_MEDIA}/grey-goose-vertical-4.jpg`;
-const imgVertical4Thumb = `${URL_MEDIA}/grey-goose-vertical-4-thumb.jpg`;
 
 export const data = {
   main: {
@@ -160,52 +105,159 @@ export const data = {
     },
   },
   media: {
-    imgWide: [imgWide1, imgWide2, imgWide3, imgWide4, imgWide5, imgWide6],
-    imgSquare: [imgSquare1, imgSquare2],
-    imgSquareS: [
-      imgSquareS1,
-      imgSquareS2,
-      imgSquareS3,
-      imgSquareS4,
-      imgSquareS5,
-      imgSquareS6,
-      imgSquareS7,
-      imgSquareS8,
-      imgSquareS9,
-      imgSquareS10,
-      imgSquareS11,
-      imgSquareS12,
-    ],
-    momentsimgSquareSD: [],
-    imgVertical: [imgVertical1, imgVertical2, imgVertical3, imgVertical4],
-    video: [],
-    thumbs: [
-      imgMainThumb,
-      imgNextThumb,
-      imgWide1Thumb,
-      imgWide2Thumb,
-      imgWide3Thumb,
-      imgWide4Thumb,
-      imgWide5Thumb,
-      imgWide6Thumb,
-      imgSquare1Thumb,
-      imgSquare2Thumb,
-      imgSquareS1Thumb,
-      imgSquareS2Thumb,
-      imgSquareS3Thumb,
-      imgSquareS4Thumb,
-      imgSquareS5Thumb,
-      imgSquareS6Thumb,
-      imgSquareS7Thumb,
-      imgSquareS8Thumb,
-      imgSquareS9Thumb,
-      imgSquareS10Thumb,
-      imgSquareS11Thumb,
-      imgSquareS12Thumb,
-      imgVertical1Thumb,
-      imgVertical2Thumb,
-      imgVertical3Thumb,
-      imgVertical4Thumb,
-    ],
+    img: {
+      wide: {
+        i1: {
+          src: `${URL_MEDIA}/grey-goose-wide-1.jpg`,
+          thumbnail: `${URL_MEDIA}/grey-goose-wide-1-thumb.jpg`,
+          width: 1360,
+          height: 770,
+        },
+        i2: {
+          src: `${URL_MEDIA}/grey-goose-wide-2.jpg`,
+          thumbnail: `${URL_MEDIA}/grey-goose-wide-2-thumb.jpg`,
+          width: 1360,
+          height: 1490,
+        },
+        i3: {
+          src: `${URL_MEDIA}/grey-goose-wide-3.jpg`,
+          thumbnail: `${URL_MEDIA}/grey-goose-wide-3-thumb.jpg`,
+          width: 670,
+          height: 860,
+        },
+        i4: {
+          src: `${URL_MEDIA}/grey-goose-wide-4.jpg`,
+          thumbnail: `${URL_MEDIA}/grey-goose-wide-4-thumb.jpg`,
+          width: 1360,
+          height: 770,
+        },
+        i5: {
+          src: `${URL_MEDIA}/grey-goose-wide-5.jpg`,
+          thumbnail: `${URL_MEDIA}/grey-goose-wide-5-thumb.jpg`,
+          width: 1360,
+          height: 770,
+        },
+        i6: {
+          src: `${URL_MEDIA}/grey-goose-wide-6.jpg`,
+          thumbnail: `${URL_MEDIA}/grey-goose-wide-6-thumb.jpg`,
+          width: 1360,
+          height: 770,
+        },
+      },
+      square: {
+        i1: {
+          src: `${URL_MEDIA}/grey-goose-square-1.jpg`,
+          thumbnail: `${URL_MEDIA}/grey-goose-square-1-thumb.jpg`,
+          width: 670,
+          height: 670,
+        },
+        i2: {
+          src: `${URL_MEDIA}/grey-goose-square-2.jpg`,
+          thumbnail: `${URL_MEDIA}/grey-goose-square-2-thumb.jpg`,
+          width: 670,
+          height: 670,
+        },
+      },
+      squareS: {
+        i1: {
+          src: `${URL_MEDIA}/grey-goose-square-s-1.jpg`,
+          thumbnail: `${URL_MEDIA}/grey-goose-square-s-1-thumb.jpg`,
+          width: 440,
+          height: 440,
+        },
+        i2: {
+          src: `${URL_MEDIA}/grey-goose-square-s-2.jpg`,
+          thumbnail: `${URL_MEDIA}/grey-goose-square-s-2-thumb.jpg`,
+          width: 440,
+          height: 440,
+        },
+        i3: {
+          src: `${URL_MEDIA}/grey-goose-square-s-3.jpg`,
+          thumbnail: `${URL_MEDIA}/grey-goose-square-s-3-thumb.jpg`,
+          width: 440,
+          height: 440,
+        },
+        i4: {
+          src: `${URL_MEDIA}/grey-goose-square-s-4.jpg`,
+          thumbnail: `${URL_MEDIA}/grey-goose-square-s-4-thumb.jpg`,
+          width: 440,
+          height: 440,
+        },
+        i5: {
+          src: `${URL_MEDIA}/grey-goose-square-s-5.jpg`,
+          thumbnail: `${URL_MEDIA}/grey-goose-square-s-5-thumb.jpg`,
+          width: 440,
+          height: 440,
+        },
+        i6: {
+          src: `${URL_MEDIA}/grey-goose-square-s-6.jpg`,
+          thumbnail: `${URL_MEDIA}/grey-goose-square-s-6-thumb.jpg`,
+          width: 440,
+          height: 440,
+        },
+        i7: {
+          src: `${URL_MEDIA}/grey-goose-square-s-7.jpg`,
+          thumbnail: `${URL_MEDIA}/grey-goose-square-s-7-thumb.jpg`,
+          width: 440,
+          height: 440,
+        },
+        i8: {
+          src: `${URL_MEDIA}/grey-goose-square-s-8.jpg`,
+          thumbnail: `${URL_MEDIA}/grey-goose-square-s-8-thumb.jpg`,
+          width: 440,
+          height: 440,
+        },
+        i9: {
+          src: `${URL_MEDIA}/grey-goose-square-s-9.jpg`,
+          thumbnail: `${URL_MEDIA}/grey-goose-square-s-9-thumb.jpg`,
+          width: 440,
+          height: 440,
+        },
+        i10: {
+          src: `${URL_MEDIA}/grey-goose-square-s-10.jpg`,
+          thumbnail: `${URL_MEDIA}/grey-goose-square-s-10-thumb.jpg`,
+          width: 440,
+          height: 440,
+        },
+        i11: {
+          src: `${URL_MEDIA}/grey-goose-square-s-11.jpg`,
+          thumbnail: `${URL_MEDIA}/grey-goose-square-s-11-thumb.jpg`,
+          width: 440,
+          height: 440,
+        },
+        i12: {
+          src: `${URL_MEDIA}/grey-goose-square-s-12.jpg`,
+          thumbnail: `${URL_MEDIA}/grey-goose-square-s-12-thumb.jpg`,
+          width: 440,
+          height: 440,
+        },
+      },
+      vertical: {
+        i1: {
+          src: `${URL_MEDIA}/grey-goose-vertical-1.jpg`,
+          thumbnail: `${URL_MEDIA}/grey-goose-vertical-1-thumb.jpg`,
+          width: 670,
+          height: 1000,
+        },
+        i2: {
+          src: `${URL_MEDIA}/grey-goose-vertical-2.jpg`,
+          thumbnail: `${URL_MEDIA}/grey-goose-vertical-2-thumb.jpg`,
+          width: 670,
+          height: 1000,
+        },
+        i3: {
+          src: `${URL_MEDIA}/grey-goose-vertical-3.jpg`,
+          thumbnail: `${URL_MEDIA}/grey-goose-vertical-3-thumb.jpg`,
+          width: 670,
+          height: 1000,
+        },
+        i4: {
+          src: `${URL_MEDIA}/grey-goose-vertical-4.jpg`,
+          thumbnail: `${URL_MEDIA}/grey-goose-vertical-4-thumb.jpg`,
+          width: 670,
+          height: 1000,
+        },
+      },
+    },
   },
 };

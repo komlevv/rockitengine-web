@@ -25,32 +25,32 @@ const PageGreyGoose = () => {
     <Animate>
       <BlockProjectMain data={data.main} />
       <BlockOverview data={data.overview} />
-      <ImageFullWide src={data.media.imgWide[0]} />
+      <ImageFullWide src={data.media.img.wide.i1.src} />
       <Gap />
       <BlockHeroTextM headerText={data.other.a.h} paragraphText={data.other.a.p} />
-      <ImageFullWide src={data.media.imgWide[1]} />
+      <ImageFullWide src={data.media.img.wide.i2.src} />
       <GridContainerHalf>
         <HeaderS headerText={data.other.d.h} />
         {data.other.d.items.map((itemText, i) => (
           <ListItem text={itemText} key={`${id}-${i}`} />
         ))}
       </GridContainerHalf>
-      <ImageHalfWide src={data.media.imgWide[2]} />
-      <ImageHalfWide src={data.media.imgSquare[0]} />
-      <ImageHalfWide src={data.media.imgSquare[1]} />
+      <ImageHalfWide src={data.media.img.wide.i3.src} />
+      <ImageHalfWide src={data.media.img.square.i1.src} />
+      <ImageHalfWide src={data.media.img.square.i2.src} />
       <Gap />
       <BlockHeroTextM headerText={data.other.b.h} paragraphText={data.other.b.p} />
-      <ImageFullWide src={data.media.imgWide[3]} />
-      <ImageHalfWide src={data.media.imgVertical[0]} />
-      <ImageHalfWide src={data.media.imgVertical[1]} />
-      <ImageFullWide src={data.media.imgWide[4]} />
-      <ImageHalfWide src={data.media.imgVertical[2]} />
-      <ImageHalfWide src={data.media.imgVertical[3]} />
-      <ImageFullWide src={data.media.imgWide[5]} />
+      <ImageFullWide src={data.media.img.wide.i4.src} />
+      <ImageHalfWide src={data.media.img.vertical.i1.src} />
+      <ImageHalfWide src={data.media.img.vertical.i2.src} />
+      <ImageFullWide src={data.media.img.wide.i5.src} />
+      <ImageHalfWide src={data.media.img.vertical.i3.src} />
+      <ImageHalfWide src={data.media.img.vertical.i4.src} />
+      <ImageFullWide src={data.media.img.wide.i6.src} />
       <Gap />
       <BlockHeroTextM headerText={data.other.c.h} paragraphText={data.other.c.p} />
-      {data.media.imgSquareS.map((img, i) => (
-        <ImageOneThird key={`${id}-${i}`} src={img} />
+      {Object.entries(data.media.img.squareS).map(([k, v]) => (
+        <ImageOneThird key={`${id}-${k}`} src={v.src} />
       ))}
       <Gap />
       <BlockProjectNext data={dataNext.next} />

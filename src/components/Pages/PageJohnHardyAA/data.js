@@ -2,59 +2,8 @@ import { ROUTES, URL_MEDIA } from '../../App/ROUTES';
 import Span from '../../Span/Span';
 
 const logoJH = `${URL_MEDIA}/jh-legends-logo.svg`;
-
-const videoWide1 = `${URL_MEDIA}/jh-legends-adwoa-wide-1.mp4`;
-const videoWide3 = `${URL_MEDIA}/jh-legends-adwoa-wide-3.mp4`;
-
-const videoVertical1 = `${URL_MEDIA}/jh-legends-adwoa-vertical-1.mp4`;
-const videoVertical2 = `${URL_MEDIA}/jh-legends-adwoa-vertical-2.mp4`;
-const videoVertical3 = `${URL_MEDIA}/jh-legends-adwoa-vertical-3.mp4`;
-
 const imgMain = `${URL_MEDIA}/jh-legends-adwoa-main.jpg`;
-const imgMainThumb = `${URL_MEDIA}/jh-legends-adwoa-main-thumb.jpg`;
 const imgNext = `${URL_MEDIA}/jh-legends-adwoa-next.jpg`;
-const imgNextThumb = `${URL_MEDIA}/jh-legends-adwoa-next-thumb.jpg`;
-
-const imgWide1 = `${URL_MEDIA}/jh-legends-adwoa-wide-1.jpg`;
-const imgWide1Thumb = `${URL_MEDIA}/jh-legends-adwoa-wide-1-thumb.jpg`;
-const imgWide2 = `${URL_MEDIA}/jh-legends-adwoa-wide-2.jpg`;
-const imgWide2Thumb = `${URL_MEDIA}/jh-legends-adwoa-wide-2-thumb.jpg`;
-const imgWide3 = `${URL_MEDIA}/jh-legends-adwoa-wide-3.jpg`;
-const imgWide3Thumb = `${URL_MEDIA}/jh-legends-adwoa-wide-3-thumb.jpg`;
-
-const imgSquare1 = `${URL_MEDIA}/jh-legends-adwoa-square-1.jpg`;
-const imgSquare1Thumb = `${URL_MEDIA}/jh-legends-adwoa-square-1-thumb.jpg`;
-const imgSquare2 = `${URL_MEDIA}/jh-legends-adwoa-square-2.jpg`;
-const imgSquare2Thumb = `${URL_MEDIA}/jh-legends-adwoa-square-2-thumb.jpg`;
-
-const imgSquareS1 = `${URL_MEDIA}/jh-legends-adwoa-square-s-1.jpg`;
-const imgSquareS1Thumb = `${URL_MEDIA}/jh-legends-adwoa-square-s-1-thumb.jpg`;
-const imgSquareS2 = `${URL_MEDIA}/jh-legends-adwoa-square-s-2.jpg`;
-const imgSquareS2Thumb = `${URL_MEDIA}/jh-legends-adwoa-square-s-2-thumb.jpg`;
-const imgSquareS3 = `${URL_MEDIA}/jh-legends-adwoa-square-s-3.jpg`;
-const imgSquareS3Thumb = `${URL_MEDIA}/jh-legends-adwoa-square-s-3-thumb.jpg`;
-const imgSquareS4 = `${URL_MEDIA}/jh-legends-adwoa-square-s-4.jpg`;
-const imgSquareS4Thumb = `${URL_MEDIA}/jh-legends-adwoa-square-s-4-thumb.jpg`;
-const imgSquareS5 = `${URL_MEDIA}/jh-legends-adwoa-square-s-5.jpg`;
-const imgSquareS5Thumb = `${URL_MEDIA}/jh-legends-adwoa-square-s-5-thumb.jpg`;
-const imgSquareS6 = `${URL_MEDIA}/jh-legends-adwoa-square-s-6.jpg`;
-const imgSquareS6Thumb = `${URL_MEDIA}/jh-legends-adwoa-square-s-6-thumb.jpg`;
-const imgSquareS7 = `${URL_MEDIA}/jh-legends-adwoa-square-s-7.jpg`;
-const imgSquareS7Thumb = `${URL_MEDIA}/jh-legends-adwoa-square-s-7-thumb.jpg`;
-const imgSquareS8 = `${URL_MEDIA}/jh-legends-adwoa-square-s-8.jpg`;
-const imgSquareS8Thumb = `${URL_MEDIA}/jh-legends-adwoa-square-s-8-thumb.jpg`;
-
-const imgSquareSD1 = `${URL_MEDIA}/jh-legends-adwoa-square-sd-1.jpg`;
-const imgSquareSD1Thumb = `${URL_MEDIA}/jh-legends-adwoa-square-sd-1-thumb.jpg`;
-const imgSquareSD2 = `${URL_MEDIA}/jh-legends-adwoa-square-sd-2.jpg`;
-const imgSquareSD2Thumb = `${URL_MEDIA}/jh-legends-adwoa-square-sd-2-thumb.jpg`;
-
-const imgVertical1 = `${URL_MEDIA}/jh-legends-adwoa-vertical-1.jpg`;
-const imgVertical1Thumb = `${URL_MEDIA}/jh-legends-adwoa-vertical-1-thumb.jpg`;
-const imgVertical2 = `${URL_MEDIA}/jh-legends-adwoa-vertical-2.jpg`;
-const imgVertical2Thumb = `${URL_MEDIA}/jh-legends-adwoa-vertical-2-thumb.jpg`;
-const imgVertical3 = `${URL_MEDIA}/jh-legends-adwoa-vertical-3.jpg`;
-const imgVertical3Thumb = `${URL_MEDIA}/jh-legends-adwoa-vertical-3-thumb.jpg`;
 
 export const data = {
   main: {
@@ -164,43 +113,158 @@ export const data = {
     },
   },
   media: {
-    imgWide: [imgWide1, imgWide2, imgWide3],
-    imgSquare: [imgSquare1, imgSquare2],
-    imgSquareS: [
-      imgSquareS1,
-      imgSquareS2,
-      imgSquareS3,
-      imgSquareS4,
-      imgSquareS5,
-      imgSquareS6,
-      imgSquareS7,
-      imgSquareS8,
-    ],
-    imgSquareSD: [imgSquareSD1, imgSquareSD2],
-    imgVertical: [imgVertical1, imgVertical2, imgVertical3],
-    video: [videoWide1, videoWide3],
-    videoVertical: [videoVertical1, videoVertical2, videoVertical3],
-    thumbs: [
-      imgMainThumb,
-      imgNextThumb,
-      imgWide1Thumb,
-      imgWide2Thumb,
-      imgWide3Thumb,
-      imgSquare1Thumb,
-      imgSquare2Thumb,
-      imgSquareS1Thumb,
-      imgSquareS2Thumb,
-      imgSquareS3Thumb,
-      imgSquareS4Thumb,
-      imgSquareS5Thumb,
-      imgSquareS6Thumb,
-      imgSquareS7Thumb,
-      imgSquareS8Thumb,
-      imgSquareSD1Thumb,
-      imgSquareSD2Thumb,
-      imgVertical1Thumb,
-      imgVertical2Thumb,
-      imgVertical3Thumb,
-    ],
+    img: {
+      wide: {
+        i2: {
+          src: `${URL_MEDIA}/jh-legends-adwoa-wide-2.jpg`,
+          thumbnail: `${URL_MEDIA}/jh-legends-adwoa-wide-2-thumb.jpg`,
+          width: 1360,
+          height: 770,
+        },
+      },
+      square: {
+        i1: {
+          src: `${URL_MEDIA}/jh-legends-adwoa-square-1.jpg`,
+          thumbnail: `${URL_MEDIA}/jh-legends-adwoa-square-1-thumb.jpg`,
+          width: 670,
+          height: 670,
+        },
+        i2: {
+          src: `${URL_MEDIA}/jh-legends-adwoa-square-2.jpg`,
+          thumbnail: `${URL_MEDIA}/jh-legends-adwoa-square-2-thumb.jpg`,
+          width: 670,
+          height: 670,
+        },
+      },
+      squareS: {
+        i1: {
+          src: `${URL_MEDIA}/jh-legends-adwoa-square-s-1.jpg`,
+          thumbnail: `${URL_MEDIA}/jh-legends-adwoa-square-s-1-thumb.jpg`,
+          width: 440,
+          height: 440,
+        },
+        i2: {
+          src: `${URL_MEDIA}/jh-legends-adwoa-square-s-2.jpg`,
+          thumbnail: `${URL_MEDIA}/jh-legends-adwoa-square-s-2-thumb.jpg`,
+          width: 440,
+          height: 440,
+        },
+        i3: {
+          src: `${URL_MEDIA}/jh-legends-adwoa-square-s-3.jpg`,
+          thumbnail: `${URL_MEDIA}/jh-legends-adwoa-square-s-3-thumb.jpg`,
+          width: 440,
+          height: 440,
+        },
+        i4: {
+          src: `${URL_MEDIA}/jh-legends-adwoa-square-s-4.jpg`,
+          thumbnail: `${URL_MEDIA}/jh-legends-adwoa-square-s-4-thumb.jpg`,
+          width: 440,
+          height: 440,
+        },
+        i5: {
+          src: `${URL_MEDIA}/jh-legends-adwoa-square-s-5.jpg`,
+          thumbnail: `${URL_MEDIA}/jh-legends-adwoa-square-s-5-thumb.jpg`,
+          width: 440,
+          height: 440,
+        },
+        i6: {
+          src: `${URL_MEDIA}/jh-legends-adwoa-square-s-6.jpg`,
+          thumbnail: `${URL_MEDIA}/jh-legends-adwoa-square-s-6-thumb.jpg`,
+          width: 440,
+          height: 440,
+        },
+        i7: {
+          src: `${URL_MEDIA}/jh-legends-adwoa-square-s-7.jpg`,
+          thumbnail: `${URL_MEDIA}/jh-legends-adwoa-square-s-7-thumb.jpg`,
+          width: 440,
+          height: 440,
+        },
+        i8: {
+          src: `${URL_MEDIA}/jh-legends-adwoa-square-s-8.jpg`,
+          thumbnail: `${URL_MEDIA}/jh-legends-adwoa-square-s-8-thumb.jpg`,
+          width: 440,
+          height: 440,
+        },
+      },
+      squareSD: {
+        i1: {
+          src: `${URL_MEDIA}/jh-legends-adwoa-square-sd-1.jpg`,
+          thumbnail: `${URL_MEDIA}/jh-legends-adwoa-square-sd-1.jpg`,
+          width: 900,
+          height: 440,
+        },
+        i2: {
+          src: `${URL_MEDIA}/jh-legends-adwoa-square-sd-2.jpg`,
+          thumbnail: `${URL_MEDIA}/jh-legends-adwoa-square-sd-2.jpg`,
+          width: 900,
+          height: 440,
+        },
+      },
+      vertical: {
+        i1: {
+          src: `${URL_MEDIA}/jh-legends-adwoa-vertical-1.jpg`,
+          thumbnail: `${URL_MEDIA}/jh-legends-adwoa-vertical-1-thumb.jpg`,
+          width: 670,
+          height: 1000,
+        },
+        i2: {
+          src: `${URL_MEDIA}/jh-legends-adwoa-vertical-2.jpg`,
+          thumbnail: `${URL_MEDIA}/jh-legends-adwoa-vertical-2-thumb.jpg`,
+          width: 670,
+          height: 1000,
+        },
+      },
+    },
+    video: {
+      wide: {
+        i1: {
+          src: `${URL_MEDIA}/jh-legends-adwoa-wide-1.mp4`,
+          width: 1920,
+          height: 1080,
+          poster: `${URL_MEDIA}/jh-legends-adwoa-wide-1.jpg`,
+          posterThumbnail: `${URL_MEDIA}/jh-legends-adwoa-wide-1-thumb.jpg`,
+          posterWidth: 1280,
+          posterHeight: 720,
+        },
+        i3: {
+          src: `${URL_MEDIA}/jh-legends-adwoa-wide-3.mp4`,
+          width: 1920,
+          height: 1080,
+          poster: `${URL_MEDIA}/jh-legends-adwoa-wide-3.jpg`,
+          posterThumbnail: `${URL_MEDIA}/jh-legends-adwoa-wide-3-thumb.jpg`,
+          posterWidth: 1280,
+          posterHeight: 720,
+        },
+      },
+      vertical: {
+        i1: {
+          src: `${URL_MEDIA}/jh-legends-adwoa-vertical-1.mp4`,
+          width: 670,
+          height: 1000,
+          poster: `${URL_MEDIA}/jh-legends-adwoa-vertical-1.jpg`,
+          posterThumbnail: `${URL_MEDIA}/jh-legends-adwoa-vertical-1-thumb.jpg`,
+          posterWidth: 670,
+          posterHeight: 1000,
+        },
+        i2: {
+          src: `${URL_MEDIA}/jh-legends-adwoa-vertical-2.mp4`,
+          width: 670,
+          height: 1000,
+          poster: `${URL_MEDIA}/jh-legends-adwoa-vertical-2.jpg`,
+          posterThumbnail: `${URL_MEDIA}/jh-legends-adwoa-vertical-2-thumb.jpg`,
+          posterWidth: 670,
+          posterHeight: 1000,
+        },
+        i3: {
+          src: `${URL_MEDIA}/jh-legends-adwoa-vertical-3.mp4`,
+          width: 670,
+          height: 1000,
+          poster: `${URL_MEDIA}/jh-legends-adwoa-vertical-3.jpg`,
+          posterThumbnail: `${URL_MEDIA}/jh-legends-adwoa-vertical-3-thumb.jpg`,
+          posterWidth: 670,
+          posterHeight: 1000,
+        },
+      },
+    },
   },
 };

@@ -9,9 +9,6 @@ import LinkContact from '../../LinkContact/LinkContact';
 import Animate from '../../Animate/Animate';
 import { URL_MEDIA } from '../../App/ROUTES';
 
-const videoMain = `${URL_MEDIA}/contactVideo.mp4`;
-const imgMain = `${URL_MEDIA}/contact-main.jpg`;
-
 const data = {
   main: {
     h: (
@@ -24,6 +21,21 @@ const data = {
       'an agency, or a startup looking to grow and scale-up,' +
       'send us a message and spark a change, today. ',
   },
+  media: {
+    video: {
+      wide: {
+        i1: {
+          src: `${URL_MEDIA}/contactVideo.mp4`,
+          width: 1360,
+          height: 460,
+          poster: `${URL_MEDIA}/contact-main.jpg`,
+          posterThumbnail: `${URL_MEDIA}/contact-main-thumb.jpg`,
+          posterWidth: 1360,
+          posterHeight: 460,
+        },
+      },
+    },
+  },
 };
 
 const PageContact = () => {
@@ -34,7 +46,13 @@ const PageContact = () => {
       <BlockContainer>
         <Divider />
         <LinkContact />
-        <Video autoplay loop muted src={videoMain} poster={imgMain} />
+        <Video
+          autoplay
+          loop
+          muted
+          src={data.media.video.wide.i1.src}
+          poster={data.media.video.wide.i1.poster}
+        />
       </BlockContainer>
     </Animate>
   );

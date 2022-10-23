@@ -1,12 +1,6 @@
 import Span from '../../Span/Span';
 import { URL_MEDIA } from '../../App/ROUTES';
 
-const imgWide1 = `${URL_MEDIA}/services-main.jpg`;
-const imgWide1Thumb = `${URL_MEDIA}/services-main-thumb.jpg`;
-const imgWide2 = `${URL_MEDIA}/services-reel.jpg`;
-const imgWide2Thumb = `${URL_MEDIA}/services-reel-thumb.jpg`;
-const VideoReel = `${URL_MEDIA}/reel.mp4`;
-
 export const data = {
   main: {
     h: (
@@ -180,12 +174,28 @@ export const data = {
     p2: 'hello@rockitengine.com',
   },
   media: {
-    imgWide: [imgWide1, imgWide2],
-    imgSquare: [],
-    imgSquareS: [],
-    imgSquareSD: [],
-    imgVertical: [],
-    video: [VideoReel],
-    thumbs: [imgWide1Thumb, imgWide2Thumb],
+    img: {
+      wide: {
+        i1: {
+          src: `${URL_MEDIA}/services-main.jpg`,
+          thumbnail: `${URL_MEDIA}/services-main-thumb.jpg`,
+          width: 1360,
+          height: 460,
+        },
+      },
+    },
+    video: {
+      wide: {
+        i1: {
+          src: `${URL_MEDIA}/reel.mp4`,
+          width: 1920,
+          height: 1080,
+          poster: `${URL_MEDIA}/services-reel.jpg`,
+          posterThumbnail: `${URL_MEDIA}/services-reel-thumb.jpg`,
+          posterWidth: 1280,
+          posterHeight: 720,
+        },
+      },
+    },
   },
 };

@@ -28,21 +28,21 @@ const PageJohnHardyAA = () => {
     <Animate>
       <BlockProjectMain data={data.main} />
       <BlockOverview data={data.overview} />
-      <Video controls src={data.media.video[0]} poster={data.media.imgWide[0]} />
+      <Video controls src={data.media.video.wide.i1.src} poster={data.media.video.wide.i1.poster} />
       <GridContainerHalf>
         <HeaderS headerText={data.other.a.h} />
       </GridContainerHalf>
       <VideoHalfWide
         controls
         loop
-        src={data.media.videoVertical[0]}
-        poster={data.media.imgVertical[0]}
+        src={data.media.video.vertical.i1.src}
+        poster={data.media.video.vertical.i1.poster}
       />
       <VideoHalfWide
         controls
         loop
-        src={data.media.videoVertical[1]}
-        poster={data.media.imgVertical[1]}
+        src={data.media.video.vertical.i2.src}
+        poster={data.media.video.vertical.i2.poster}
       />
       <GridContainerHalf>
         <Paragraph paragraphText={data.other.a.p} />
@@ -53,25 +53,27 @@ const PageJohnHardyAA = () => {
       <VideoHalfWide
         controls
         loop
-        src={data.media.videoVertical[2]}
-        poster={data.media.imgVertical[2]}
+        src={data.media.video.vertical.i3.src}
+        poster={data.media.video.vertical.i3.poster}
       />
-      <ImageFullWide src={data.media.imgWide[1]} />
+      <ImageFullWide src={data.media.img.wide.i2.src} />
       <Gap />
       <BlockHeroTextM headerText={data.other.c.h} paragraphText={data.other.c.p} />
-      <Video controls src={data.media.video[1]} poster={data.media.imgWide[2]} />
-      {data.media.imgSquare.map((img, i) => (
-        <ImageHalfWide key={`${id}-${i}`} src={img} />
+      <Video controls src={data.media.video.wide.i3.src} poster={data.media.video.wide.i3.poster} />
+      {Object.entries(data.media.img.square).map(([k, v]) => (
+        <ImageHalfWide key={`${id}-${k}`} src={v.src} />
       ))}
       <Gap />
       <BlockHeroTextM headerText={data.other.d.h} paragraphText={data.other.d.p} />
-      {data.media.imgSquareS.slice(0, 6).map((img, i) => (
-        <ImageOneThird key={`${id}-${i}`} src={img} />
-      ))}
-      <ImageTwoThird src={data.media.imgSquareSD[0]} />
-      <ImageOneThird src={data.media.imgSquareS[6]} />
-      <ImageOneThird src={data.media.imgSquareS[7]} />
-      <ImageTwoThird src={data.media.imgSquareSD[1]} />
+      {Object.entries(data.media.img.squareS)
+        .slice(0, 6)
+        .map(([k, v]) => (
+          <ImageOneThird key={`${id}-${k}`} src={v.src} />
+        ))}
+      <ImageTwoThird src={data.media.img.squareSD.i1.src} />
+      <ImageOneThird src={data.media.img.squareS.i7.src} />
+      <ImageOneThird src={data.media.img.squareS.i8.src} />
+      <ImageTwoThird src={data.media.img.squareSD.i2.src} />
       <Gap />
       <BlockProjectNext data={dataNext.next} />
       <BlockContact />
