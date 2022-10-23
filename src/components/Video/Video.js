@@ -26,8 +26,7 @@ const PlayButton = ({ onClick, text, cls, ...props }) => (
 );
 
 const Video = ({
-  src,
-  poster,
+  metaData,
   loop,
   muted,
   controls,
@@ -121,8 +120,14 @@ const Video = ({
     >
       <Spinner style={thumbnailHidden ? { display: 'none' } : {}} />
       <Image
+        metaData={{
+          src: metaData.poster,
+          thumbnail: metaData.posterThumbnail,
+          width: metaData.posterWidth,
+          height: metaData.posterHeight,
+        }}
         spinner={false}
-        src={poster}
+        src={metaData.poster}
         cls={s}
         containerStyle={thumbnailHidden ? { visibility: 'hidden' } : {}}
       />
@@ -148,7 +153,7 @@ const Video = ({
           <video
             ref={videoRef}
             className={`${s.video} ${cursorClass}`}
-            poster={poster}
+            poster={metaData.poster}
             preload="metadata"
             onClick={handleButtonClick}
             onLoadedMetadata={handleLoadedMetadata}
@@ -157,7 +162,7 @@ const Video = ({
             muted={muted}
             autoPlay={autoplay}
           >
-            <source src={src} type="video/mp4" />
+            <source src={metaData.src} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </>

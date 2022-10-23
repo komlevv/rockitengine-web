@@ -2,8 +2,6 @@ import { ROUTES, URL_MEDIA } from '../../App/ROUTES';
 import Span from '../../Span/Span';
 
 const logoGGVertical = `${URL_MEDIA}/grey-goose-logo-black-v.svg`;
-const imgMain = `${URL_MEDIA}/grey-goose-main.jpg`;
-const imgNext = `${URL_MEDIA}/grey-goose-next.jpg`;
 
 export const data = {
   main: {
@@ -24,7 +22,12 @@ export const data = {
         p: 'United States',
       },
     ],
-    img: imgMain,
+    img: {
+      src: `${URL_MEDIA}/grey-goose-main.jpg`,
+      thumbnail: `${URL_MEDIA}/grey-goose-main-thumb.jpg`,
+      width: 1360,
+      height: 460,
+    },
   },
   overview: {
     h: 'Overview',
@@ -97,8 +100,12 @@ export const data = {
     banner: {
       h: 'Find Your Favorite',
       p: 'Experience every corner of the world just the way you like it',
-      img: imgNext,
-      imgShort: imgNext,
+      img: {
+        src: `${URL_MEDIA}/grey-goose-next.jpg`,
+        thumbnail: `${URL_MEDIA}/grey-goose-next-thumb.jpg`,
+        width: 1360,
+        height: 460,
+      },
       logo: logoGGVertical,
       fontColor: 'white',
       linkTo: ROUTES.PROJECTS_GOOSE_F,

@@ -2,8 +2,6 @@ import { ROUTES, URL_MEDIA } from '../../App/ROUTES';
 import Span from '../../Span/Span';
 
 const logoEquinox = `${URL_MEDIA}/equinox-form-logo.svg`;
-const imgMain = `${URL_MEDIA}/equinox-form-main.jpg`;
-const imgNext = `${URL_MEDIA}/equinox-form-next.jpg`;
 
 export const data = {
   main: {
@@ -24,7 +22,12 @@ export const data = {
         p: 'United States',
       },
     ],
-    img: imgMain,
+    img: {
+      src: `${URL_MEDIA}/equinox-form-main.jpg`,
+      thumbnail: `${URL_MEDIA}/equinox-form-main-thumb.jpg`,
+      width: 1360,
+      height: 460,
+    },
   },
   overview: {
     h: 'Overview',
@@ -115,8 +118,12 @@ export const data = {
     banner: {
       h: 'The Times Expert Traveller',
       p: 'Your daily business challenges and your customers’ needs.',
-      img: imgNext,
-      imgShort: imgNext,
+      img: {
+        src: `${URL_MEDIA}/equinox-form-next.jpg`,
+        thumbnail: `${URL_MEDIA}/equinox-form-next-thumb.jpg`,
+        width: 1360,
+        height: 460,
+      },
       logo: logoEquinox,
       fontColor: 'white',
       linkTo: ROUTES.PROJECTS_EQUINOX_F,

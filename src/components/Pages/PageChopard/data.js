@@ -2,8 +2,6 @@ import { ROUTES, URL_MEDIA } from '../../App/ROUTES';
 import Span from '../../Span/Span';
 
 const logoChopard = `${URL_MEDIA}/chopard-loves-london-logo.svg`;
-const imgMain = `${URL_MEDIA}/chopard-loves-london-main.jpg`;
-const imgNext = `${URL_MEDIA}/chopard-loves-london-next.jpg`;
 
 export const data = {
   main: {
@@ -24,7 +22,12 @@ export const data = {
         p: 'United Kingdom',
       },
     ],
-    img: imgMain,
+    img: {
+      src: `${URL_MEDIA}/chopard-loves-london-main.jpg`,
+      thumbnail: `${URL_MEDIA}/chopard-loves-london-main-thumb.jpg`,
+      width: 1360,
+      height: 460,
+    },
   },
   overview: {
     h: 'Overview',
@@ -123,8 +126,12 @@ export const data = {
     banner: {
       h: 'Chopard Loves London',
       p: 'Stylish inauguration of Chopard’s new flagship boutique on Bond Street',
-      img: imgNext,
-      imgShort: imgNext,
+      img: {
+        src: `${URL_MEDIA}/chopard-loves-london-next.jpg`,
+        thumbnail: `${URL_MEDIA}/chopard-loves-london-next-thumb.jpg`,
+        width: 1360,
+        height: 460,
+      },
       logo: logoChopard,
       fontColor: 'white',
       linkTo: ROUTES.PROJECTS_CHOPARD_B,

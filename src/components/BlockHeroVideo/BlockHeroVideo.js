@@ -4,9 +4,6 @@ import Video from '../Video/Video';
 import Span from '../Span/Span';
 import { URL_MEDIA } from '../App/ROUTES';
 
-const heroVideo = `${URL_MEDIA}/heroVideo.mp4`;
-const heroVideoPoster = `${URL_MEDIA}/heroVideo.jpg`;
-
 const data = {
   h: (
     <>
@@ -14,6 +11,19 @@ const data = {
       <Span> digital solutions </Span> to their business needs.
     </>
   ),
+  video: {
+    wide: {
+      i1: {
+        src: `${URL_MEDIA}/heroVideo.mp4`,
+        width: 1360,
+        height: 460,
+        poster: `${URL_MEDIA}/heroVideo.jpg`,
+        posterThumbnail: `${URL_MEDIA}/heroVideo-thumb.jpg`,
+        posterWidth: 1360,
+        posterHeight: 460,
+      },
+    },
+  },
 };
 
 const BlockHeroVideo = ({ animationRef }) => (
@@ -21,7 +31,7 @@ const BlockHeroVideo = ({ animationRef }) => (
     <div className={s.heroText}>
       <HeaderXL headerText={data.h} />
     </div>
-    <Video loop autoplay muted src={heroVideo} poster={heroVideoPoster} />
+    <Video loop autoplay muted metaData={data.video.wide.i1} />
   </div>
 );
 

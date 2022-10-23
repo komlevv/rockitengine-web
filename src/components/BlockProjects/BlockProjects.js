@@ -53,7 +53,7 @@ const BlockProjects = ({ animationRef }) => {
             linkTo={dataPage.next.banner.linkTo}
             headerText={dataPage.next.banner.h}
             paragraphText={dataPage.next.banner.p}
-            imgSrc={dataPage.next.banner.imgShort}
+            imgData={dataPage.next.banner.img}
             logoSrc={dataPage.next.banner.logo}
             fontColor={dataPage.next.banner.fontColor}
           />

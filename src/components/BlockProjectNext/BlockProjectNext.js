@@ -10,7 +10,7 @@ const BlockProjectNext = ({ data, animationRef }) => (
     <BannerHero
       headerText={data.banner.h}
       paragraphText={data.banner.p}
-      imgSrc={data.banner.img}
+      imgData={data.banner.img}
       logoSrc={data.banner.logo}
       fontColor={data.banner.fontColor}
       linkTo={data.banner.linkTo}

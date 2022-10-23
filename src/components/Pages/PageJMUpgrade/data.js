@@ -2,8 +2,6 @@ import { ROUTES, URL_MEDIA } from '../../App/ROUTES';
 import Span from '../../Span/Span';
 
 const logoJM = `${URL_MEDIA}/jm-upgrade-logo.svg`;
-const imgMain = `${URL_MEDIA}/jm-upgrade-main.jpg`;
-const imgNext = `${URL_MEDIA}/jm-upgrade-next.jpg`;
 
 export const data = {
   main: {
@@ -24,7 +22,12 @@ export const data = {
         p: 'United States',
       },
     ],
-    img: imgMain,
+    img: {
+      src: `${URL_MEDIA}/jm-upgrade-main.jpg`,
+      thumbnail: `${URL_MEDIA}/jm-upgrade-main-thumb.jpg`,
+      width: 1360,
+      height: 460,
+    },
   },
   overview: {
     h: 'Overview',
@@ -107,9 +110,12 @@ export const data = {
     banner: {
       h: 'Jessie Murph “Upgrade”',
       p: 'An authentic performance completed with a fierce lyrical structure',
-      img: imgNext,
-      // imgShort: imgNextShort,
-      imgShort: imgNext,
+      img: {
+        src: `${URL_MEDIA}/jm-upgrade-next.jpg`,
+        thumbnail: `${URL_MEDIA}/jm-upgrade-next-thumb.jpg`,
+        width: 1360,
+        height: 460,
+      },
       logo: logoJM,
       fontColor: 'white',
       linkTo: ROUTES.PROJECTS_JM_UPGRADE,

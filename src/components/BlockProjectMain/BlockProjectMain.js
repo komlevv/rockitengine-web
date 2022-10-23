@@ -21,7 +21,7 @@ const BlockProjectMain = ({ data, animationRef }) => (
       <div className={s.projectMainItemText}>{data.items[1].p}</div>
     </div>
 
-    <ImageFullWide loading="eager" src={data.img} />
+    <ImageFullWide loading="eager" metaData={data.img} />
   </div>
 );
 

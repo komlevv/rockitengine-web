@@ -64,7 +64,7 @@ const PageProjects = () => {
           key={`${id}-${i}`}
           headerText={dataPage.next.banner.h}
           paragraphText={dataPage.next.banner.p}
-          imgSrc={dataPage.next.banner.imgShort}
+          imgData={dataPage.next.banner.img}
           logoSrc={dataPage.next.banner.logo}
           fontColor={dataPage.next.banner.fontColor}
         />

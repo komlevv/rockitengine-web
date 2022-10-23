@@ -2,8 +2,6 @@ import { ROUTES, URL_MEDIA } from '../../App/ROUTES';
 import Span from '../../Span/Span';
 
 const logoAway = `${URL_MEDIA}/away-logo.svg`;
-const imgMain = `${URL_MEDIA}/away-main.jpg`;
-const imgNext = `${URL_MEDIA}/away-next.jpg`;
 
 export const data = {
   main: {
@@ -24,7 +22,12 @@ export const data = {
         p: 'United States',
       },
     ],
-    img: imgMain,
+    img: {
+      src: `${URL_MEDIA}/away-main.jpg`,
+      thumbnail: `${URL_MEDIA}/away-main-thumb.jpg`,
+      width: 1360,
+      height: 460,
+    },
   },
   overview: {
     h: 'Overview',
@@ -75,8 +78,12 @@ export const data = {
     banner: {
       h: '“AKA” Service',
       p: 'Away “AKA” campaign to showcasing the newest personalization offerings.',
-      img: imgNext,
-      imgShort: imgNext,
+      img: {
+        src: `${URL_MEDIA}/away-next.jpg`,
+        thumbnail: `${URL_MEDIA}/away-next-thumb.jpg`,
+        width: 1360,
+        height: 460,
+      },
       logo: logoAway,
       fontColor: 'white',
       linkTo: ROUTES.PROJECTS_AWAY_PS,

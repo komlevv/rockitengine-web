@@ -2,8 +2,6 @@ import { ROUTES, URL_MEDIA } from '../../App/ROUTES';
 import Span from '../../Span/Span';
 
 const logoCartier = `${URL_MEDIA}/cartier-logo.svg`;
-const imgMain = `${URL_MEDIA}/cartier-main.jpg`;
-const imgNext = `${URL_MEDIA}/cartier-next.jpg`;
 
 export const data = {
   main: {
@@ -24,7 +22,12 @@ export const data = {
         p: 'United States',
       },
     ],
-    img: imgMain,
+    img: {
+      src: `${URL_MEDIA}/cartier-main.jpg`,
+      thumbnail: `${URL_MEDIA}/cartier-main-thumb.jpg`,
+      width: 1360,
+      height: 460,
+    },
   },
   overview: {
     h: 'Overview',
@@ -69,8 +72,12 @@ export const data = {
     banner: {
       h: 'Clash de Cartier',
       p: 'An aesthetic code, a balancing act, a daring embodiment of dualities.',
-      img: imgNext,
-      imgShort: imgNext,
+      img: {
+        src: `${URL_MEDIA}/cartier-next.jpg`,
+        thumbnail: `${URL_MEDIA}/cartier-next-thumb.jpg`,
+        width: 1360,
+        height: 460,
+      },
       logo: logoCartier,
       fontColor: 'white',
       linkTo: ROUTES.PROJECTS_CARTIER_CLASH,

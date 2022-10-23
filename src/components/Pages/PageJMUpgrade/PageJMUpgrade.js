@@ -26,69 +26,39 @@ const PageJMUpgrade = () => {
     <Animate>
       <BlockProjectMain data={data.main} />
       <BlockOverview data={data.overview} />
-      <Video
-        controls
-        muted
-        loop
-        src={data.media.video.wide.i1.src}
-        poster={data.media.video.wide.i1.poster}
-      />
+      <Video controls muted loop metaData={data.media.video.wide.i1} />
       <Gap />
       <BlockHeroTextM headerText={data.other.a.h} paragraphText={data.other.a.p} />
-      <Video
-        controls
-        muted
-        loop
-        src={data.media.video.wide.i2.src}
-        poster={data.media.video.wide.i2.poster}
-      />
-      <ImageHalfWide src={data.media.img.square.i1.src} />
-      <ImageHalfWide src={data.media.img.square.i2.src} />
+      <Video controls muted loop metaData={data.media.video.wide.i2} />
+      <ImageHalfWide metaData={data.media.img.square.i1} />
+      <ImageHalfWide metaData={data.media.img.square.i2} />
       <Gap />
       <BlockHeroTextM headerText={data.other.b.h} paragraphText={data.other.b.p} />
-      <Video
-        controls
-        muted
-        loop
-        src={data.media.video.wide.i3.src}
-        poster={data.media.video.wide.i3.poster}
-      />
+      <Video controls muted loop metaData={data.media.video.wide.i3} />
       <GridContainerHalf>
         <HeaderS headerText={data.other.c.h} />
         {data.other.c.items.map((itemText, i) => (
           <ListItem text={itemText} key={`${id}-${i}`} />
         ))}
       </GridContainerHalf>
-      <ImageHalfWide src={data.media.img.vertical.i1.src} />
+      <ImageHalfWide metaData={data.media.img.vertical.i1} />
       <Gap />
       <BlockHeroTextM headerText={data.other.d.h} paragraphText={data.other.d.p} />
-      <Video
-        controls
-        muted
-        loop
-        src={data.media.video.wide.i4.src}
-        poster={data.media.video.wide.i4.poster}
-      />
+      <Video controls muted loop metaData={data.media.video.wide.i4} />
       {Object.entries(data.media.img.square)
         .slice(2)
         .map(([k, v]) => (
-          <ImageHalfWide src={v.src} key={`${id}-${k}`} />
+          <ImageHalfWide metaData={v} key={`${id}-${k}`} />
         ))}
       <Gap />
       <BlockHeroTextM headerText={data.other.e.h} paragraphText={data.other.e.p} />
-      <Video
-        controls
-        muted
-        loop
-        src={data.media.video.wide.i5.src}
-        poster={data.media.video.wide.i5.poster}
-      />
+      <Video controls muted loop metaData={data.media.video.wide.i5} />
       {Object.entries(data.media.img.squareS).map(([k, v]) => (
-        <ImageOneThird src={v.src} key={`${id}-${k}`} />
+        <ImageOneThird metaData={v} key={`${id}-${k}`} />
       ))}
       <Gap />
       <BlockHeroTextM headerText={data.other.f.h} paragraphText={data.other.f.p} />
-      <ImageFullWide src={data.media.img.wide.i6.src} />
+      <ImageFullWide metaData={data.media.img.wide.i6} />
       <Gap />
       <BlockProjectNext data={dataNext.next} />
       <BlockContact />

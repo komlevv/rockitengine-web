@@ -2,8 +2,6 @@ import { ROUTES, URL_MEDIA } from '../../App/ROUTES';
 import Span from '../../Span/Span';
 
 const logoJH = `${URL_MEDIA}/jh-legends-logo.svg`;
-const imgMain = `${URL_MEDIA}/jh-legends-jm-main.jpg`;
-const imgNext = `${URL_MEDIA}/jh-legends-jm-next.jpg`;
 
 export const data = {
   main: {
@@ -26,7 +24,12 @@ export const data = {
         p: 'United States',
       },
     ],
-    img: imgMain,
+    img: {
+      src: `${URL_MEDIA}/jh-legends-jm-main.jpg`,
+      thumbnail: `${URL_MEDIA}/jh-legends-jm-main-thumb.jpg`,
+      width: 1360,
+      height: 460,
+    },
   },
   overview: {
     h: 'Overview',
@@ -132,9 +135,12 @@ export const data = {
       p:
         'Celebrating everyday strength, power and unapologetic ' +
         'self-expression that lies within every woman.',
-      img: imgNext,
-      // imgShort: imgNextShort,
-      imgShort: imgNext,
+      img: {
+        src: `${URL_MEDIA}/jh-legends-jm-next.jpg`,
+        thumbnail: `${URL_MEDIA}/jh-legends-jm-next-thumb.jpg`,
+        width: 1360,
+        height: 460,
+      },
       logo: logoJH,
       fontColor: 'white',
       linkTo: ROUTES.PROJECTS_JOHNHARDY_JM,

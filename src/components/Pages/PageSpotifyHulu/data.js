@@ -3,8 +3,6 @@ import Span from '../../Span/Span';
 
 const logoSpotifyHuluH = `${URL_MEDIA}/spotify-hulu-cannes-logo-h.svg`;
 const logoSpotifyHuluV = `${URL_MEDIA}/spotify-hulu-cannes-logo-v.svg`;
-const imgMain = `${URL_MEDIA}/spotify-hulu-cannes-main.jpg`;
-const imgNext = `${URL_MEDIA}/spotify-hulu-cannes-next.jpg`;
 
 export const data = {
   main: {
@@ -26,7 +24,12 @@ export const data = {
         p: 'France',
       },
     ],
-    img: imgMain,
+    img: {
+      src: `${URL_MEDIA}/spotify-hulu-cannes-main.jpg`,
+      thumbnail: `${URL_MEDIA}/spotify-hulu-cannes-main-thumb.jpg`,
+      width: 1360,
+      height: 460,
+    },
   },
   overview: {
     h: 'Overview',
@@ -99,8 +102,12 @@ export const data = {
         </>
       ),
       p: 'Celebration of the finest in storytelling, culture, and entertainment.',
-      img: imgNext,
-      imgShort: imgNext,
+      img: {
+        src: `${URL_MEDIA}/spotify-hulu-cannes-next.jpg`,
+        thumbnail: `${URL_MEDIA}/spotify-hulu-cannes-next-thumb.jpg`,
+        width: 1360,
+        height: 460,
+      },
       logo: logoSpotifyHuluV,
       fontColor: 'white',
       linkTo: ROUTES.PROJECTS_SPOTIFY_HULU_C,

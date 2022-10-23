@@ -4,7 +4,14 @@ import Paragraph from '../Paragraph/Paragraph';
 import HeaderL from '../HeaderL/HeaderL';
 import Image from '../Image/Image';
 
-const BannerHero = ({ headerText, paragraphText, imgSrc, logoSrc, linkTo = '#', animationRef }) => {
+const BannerHero = ({
+  headerText,
+  paragraphText,
+  imgData,
+  logoSrc,
+  linkTo = '#',
+  animationRef,
+}) => {
   const navigate = useNavigate();
   const handleClick = () => {
     navigate(linkTo);
@@ -20,7 +27,7 @@ const BannerHero = ({ headerText, paragraphText, imgSrc, logoSrc, linkTo = '#', 
       <HeaderL headerText={headerText} />
       <img alt="" style={{ filter: 'invert(100%)' }} className={s.bannerLogo} src={logoSrc} />
       <Paragraph paragraphText={paragraphText} />
-      <Image src={imgSrc} cls={s} />
+      <Image metaData={imgData} cls={s} />
     </div>
   );
 };

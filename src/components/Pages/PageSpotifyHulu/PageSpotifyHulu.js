@@ -27,8 +27,8 @@ const PageSpotifyHulu = () => {
     <Animate>
       <BlockProjectMain data={data.main} />
       <BlockOverview data={data.overview} />
-      <ImageFullWide src={data.media.img.wide.i1.src} />
-      <ImageHalfWide src={data.media.img.vertical.i1.src} />
+      <ImageFullWide metaData={data.media.img.wide.i1} />
+      <ImageHalfWide metaData={data.media.img.vertical.i1} />
       <GridContainerHalf>
         <HeaderS headerText={data.other.c.h} />
         {data.other.c.items.map((itemText, i) => (
@@ -38,26 +38,26 @@ const PageSpotifyHulu = () => {
       <GridContainerHalf>
         <Paragraph paragraphText={data.other.a.p} />
       </GridContainerHalf>
-      <ImageHalfWide src={data.media.img.vertical.i2.src} />
-      <ImageFullWide src={data.media.img.wide.i2.src} />
+      <ImageHalfWide metaData={data.media.img.vertical.i2} />
+      <ImageFullWide metaData={data.media.img.wide.i2} />
       <Gap />
       <BlockHeroTextM headerText={data.other.b.h} paragraphText={data.other.b.p} />
       {Object.entries(data.media.img.wide)
         .slice(2, 6)
         .map(([k, v]) => (
-          <ImageFullWide key={`${id}-${k}`} src={v.src} />
+          <ImageFullWide key={`${id}-${k}`} metaData={v} />
         ))}
       <Gap />
       <BlockHeroTextM headerText={data.other.d.h} paragraphText={data.other.d.p} />
       {Object.entries(data.media.img.squareS)
         .slice(0, 6)
         .map(([k, v]) => (
-          <ImageOneThird key={`${id}-${k}`} src={v.src} />
+          <ImageOneThird key={`${id}-${k}`} metaData={v} />
         ))}
-      <ImageTwoThird src={data.media.img.squareSD.i1.src} />
-      <ImageOneThird src={data.media.img.squareS.i7.src} />
-      <ImageOneThird src={data.media.img.squareS.i8.src} />
-      <ImageTwoThird src={data.media.img.squareSD.i2.src} />
+      <ImageTwoThird metaData={data.media.img.squareSD.i1} />
+      <ImageOneThird metaData={data.media.img.squareS.i7} />
+      <ImageOneThird metaData={data.media.img.squareS.i8} />
+      <ImageTwoThird metaData={data.media.img.squareSD.i2} />
       <Gap />
       <BlockProjectNext data={dataNext.next} />
       <BlockContact />

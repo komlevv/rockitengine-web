@@ -4,10 +4,10 @@ import Spinner from '../Spinner/Spinner';
 import { useIntersectionObserver } from '../../hooks/useIntersectionObserver';
 
 const Image = ({
+  metaData,
   spinner = true,
   loading = 'lazy',
   cls,
-  src,
   animationRef,
   containerStyle,
   ...props
@@ -45,14 +45,19 @@ const Image = ({
       <img
         ref={imgRef}
         style={thumbnailHidden ? { visibility: 'hidden' } : {}}
-        // assume thumbnail src is same as src and present in the same path, but with -thumb.jpg suffix
-        // todo this is a quick and dirty solution, data flow needs a rework, maybe a global store
-        src={`${src.slice(0, -4)}-thumb.jpg`}
+        src={metaData.thumbnail}
         className={`${cls.image} ${s.imgThumbBlur}`}
         alt=""
       />
       {imageShow && (
-        <img onLoad={onLoad} className={cls.image} src={src} alt="" loading={loading} {...props} />
+        <img
+          onLoad={onLoad}
+          className={cls.image}
+          src={metaData.src}
+          alt=""
+          loading={loading}
+          {...props}
+        />
       )}
     </div>
   );

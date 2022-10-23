@@ -24,7 +24,7 @@ const PageServices = () => {
       <BlockContainer>
         <Divider />
         <HeaderM headerText={data.services.h} />
-        <ImageFullWide loading="eager" src={data.media.imgWide.i1.src} />
+        <ImageFullWide loading="eager" metaData={data.media.img.wide.i1} />
       </BlockContainer>
       {Object.keys(data.services.items).map((el, i) => (
         <ListItemBig key={`${id}-${i}`} data={data.services.items[el]} />
@@ -33,11 +33,7 @@ const PageServices = () => {
       <BlockContainer>
         <Divider />
         <HeaderM headerText={data.reel.h} />
-        <Video
-          controls
-          poster={data.media.video.wide.i1.poster}
-          src={data.media.video.wide.i1.src}
-        />
+        <Video controls metaData={data.media.video.wide.i1} />
       </BlockContainer>
       <BlockTools data={data.tools} />
       <BlockTeaserProjects />

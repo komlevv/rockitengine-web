@@ -46,13 +46,7 @@ const PageContact = () => {
       <BlockContainer>
         <Divider />
         <LinkContact />
-        <Video
-          autoplay
-          loop
-          muted
-          src={data.media.video.wide.i1.src}
-          poster={data.media.video.wide.i1.poster}
-        />
+        <Video autoplay loop muted metaData={data.media.video.wide.i1} />
       </BlockContainer>
     </Animate>
   );

@@ -2,8 +2,6 @@ import { ROUTES, URL_MEDIA } from '../../App/ROUTES';
 import Span from '../../Span/Span';
 
 const logoJH = `${URL_MEDIA}/jh-legends-logo.svg`;
-const imgMain = `${URL_MEDIA}/jh-legends-adwoa-main.jpg`;
-const imgNext = `${URL_MEDIA}/jh-legends-adwoa-next.jpg`;
 
 export const data = {
   main: {
@@ -26,7 +24,12 @@ export const data = {
         p: 'United States',
       },
     ],
-    img: imgMain,
+    img: {
+      src: `${URL_MEDIA}/jh-legends-adwoa-main.jpg`,
+      thumbnail: `${URL_MEDIA}/jh-legends-adwoa-main-thumb.jpg`,
+      width: 1360,
+      height: 460,
+    },
   },
   overview: {
     h: 'Overview',
@@ -105,8 +108,12 @@ export const data = {
       p:
         'After fronting a campaign for the Bali-based jewelers, ' +
         'Adwoa launched her own John Hardy collection.',
-      img: imgNext,
-      imgShort: imgNext,
+      img: {
+        src: `${URL_MEDIA}/jh-legends-adwoa-next.jpg`,
+        thumbnail: `${URL_MEDIA}/jh-legends-adwoa-next-thumb.jpg`,
+        width: 1360,
+        height: 460,
+      },
       logo: logoJH,
       fontColor: 'white',
       linkTo: ROUTES.PROJECTS_JOHNHARDY_AA,
