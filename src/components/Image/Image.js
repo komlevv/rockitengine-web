@@ -43,6 +43,8 @@ const Image = ({
     <div style={containerStyle} ref={animationRef} className={`${cls.container} ${s.imgGrid}`}>
       {spinner && <Spinner style={thumbnailHidden ? { display: 'none' } : {}} />}
       <img
+        width={metaData.width}
+        height={metaData.height}
         ref={imgRef}
         style={thumbnailHidden ? { visibility: 'hidden' } : {}}
         src={metaData.thumbnail}
@@ -51,6 +53,8 @@ const Image = ({
       />
       {imageShow && (
         <img
+          width={metaData.width}
+          height={metaData.height}
           onLoad={onLoad}
           className={cls.image}
           src={metaData.src}

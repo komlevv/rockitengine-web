@@ -151,6 +151,8 @@ const Video = ({
           )}
 
           <video
+            width={metaData.width}
+            height={metaData.height}
             ref={videoRef}
             className={`${s.video} ${cursorClass}`}
             poster={metaData.poster}
