@@ -157,6 +157,7 @@ const Video = ({
             height={metaData.height}
             ref={videoRef}
             className={`${s.video} ${cursorClass}`}
+            style={{ aspectRatio: `${metaData.width}/${metaData.height}` }}
             poster={metaData.poster}
             preload="metadata"
             onClick={handleButtonClick}
