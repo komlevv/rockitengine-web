@@ -10,6 +10,7 @@ export const throttle = (func, timeFrame) => {
 };
 
 export const randomChoice = (number) => Math.floor(Math.random() * number);
+export const getExtension = (str) => str.substring(str.lastIndexOf('.') + 1);
 
 // const hex = [...Array(256).keys()].map((index) => index.toString(16).padStart(2, '0'));
 // export const uuid = () => {

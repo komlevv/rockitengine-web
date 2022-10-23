@@ -1,8 +1,9 @@
-import { createRef, useEffect, useState } from 'react';
+import { createRef, useEffect, useId, useState } from 'react';
 import s from './Video.scss';
 import Image from '../Image/Image';
 import Spinner from '../Spinner/Spinner';
 import { useIntersectionObserver } from '../../hooks/useIntersectionObserver';
+import { getExtension } from '../../utils/utils';
 
 // todo: this is a Work in Progress
 const IconPlay = () => (
@@ -34,6 +35,7 @@ const Video = ({
   animationRef = createRef(),
   containerCls,
 }) => {
+  const id = useId();
   const videoRef = createRef();
   const [thumbnailHidden, setThumbnailHidden] = useState(false);
   const handleLoadedMetadata = () => {
@@ -164,7 +166,13 @@ const Video = ({
             muted={muted}
             autoPlay={autoplay}
           >
-            <source src={metaData.src} type="video/mp4" />
+            {Array.isArray(metaData.src) ? (
+              metaData.src.map((src, i) => (
+                <source key={`${id}-${i}`} src={src} type={`video/${getExtension(src)}`} />
+              ))
+            ) : (
+              <source src={metaData.src} type={`video/${getExtension(metaData.src)}`} />
+            )}
             Your browser does not support the video tag.
           </video>
         </>

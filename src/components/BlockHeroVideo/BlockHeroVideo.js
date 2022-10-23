@@ -14,7 +14,7 @@ const data = {
   video: {
     wide: {
       i1: {
-        src: `${URL_MEDIA}/heroVideo.mp4`,
+        src: [`${URL_MEDIA}/heroVideo.webm`, `${URL_MEDIA}/heroVideo.mp4`],
         width: 1360,
         height: 460,
         poster: `${URL_MEDIA}/heroVideo.jpg`,
