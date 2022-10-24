@@ -20,10 +20,18 @@ module.exports = {
         ignoreSelectors: [':export', ':import'],
       },
     ],
-    // todo replace css module @value with variables and delete this
-    'scss/at-rule-no-unknown': [true, { ignoreAtRules: ['value'] }],
-    'at-rule-no-unknown': [true, { ignoreAtRules: ['value'] }],
     'function-no-unknown': [true, { ignoreFunctions: ['global'] }],
-    'selector-class-pattern': '^[a-z][a-zA-Z0-9]+$',
+    'selector-class-pattern': [
+      '^[a-z][a-zA-Z0-9]+$',
+      {
+        message: 'Expected selector class to be camelCase',
+      },
+    ],
+    'scss/dollar-variable-pattern': [
+      '^[a-z][a-zA-Z0-9]+$',
+      {
+        message: 'Expected variable to be camelCase',
+      },
+    ],
   },
 };
