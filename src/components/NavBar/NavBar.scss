@@ -35,12 +35,15 @@
 .navIcon {
   display: none;
   align-self: center;
+  transition: all 0.3s;
+  width: 26px;
+  padding: 10px;
+  border-radius: 3px;
 }
 
 .navIcon:hover {
   cursor: pointer;
-  /* todo figure out better transition here */
-  /* filter: invert(11%) sepia(99%) saturate(6978%) hue-rotate(7deg) brightness(109%) contrast(116%); */
+  background-color: #242424;
 }
 
 .overlay {
