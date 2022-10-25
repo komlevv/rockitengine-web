@@ -1,6 +1,6 @@
 const LogoRE = ({ colorA = '#000', colorB = '#000' }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width="214" height="30" viewBox="0 0 214 30">
-    <title>rocket-engine-logo</title>
+    <title>rockit-engine-logo</title>
     <g>
       <g>
         <path

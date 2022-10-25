@@ -29,9 +29,9 @@ const data = {
       </>
     ),
     p:
-      'We build digital solutions for global brands, ' +
-      'enterprises, agencies, and startups that want to ' +
-      'grow and scale-up. Take a look at our selected projects ' +
+      'We build digital solutions for\u00A0global brands, ' +
+      'enterprises, agencies, and\u00A0startups that want to\u00A0' +
+      'grow and\u00A0scale-up. Take a\u00A0look at\u00A0our selected projects ' +
       'from various industries.',
   },
   cases: {

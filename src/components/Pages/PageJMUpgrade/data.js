@@ -11,7 +11,7 @@ export const data = {
         Jessie Murph <Span>“Upgrade”</Span>
       </>
     ),
-    p: 'An authentic performance completed with a fierce lyrical structure.',
+    p: 'An authentic performance completed with a\u00A0fierce lyrical structure.',
     items: [
       {
         h: 'Industry',
@@ -32,9 +32,9 @@ export const data = {
   overview: {
     h: 'Overview',
     p:
-      'Our partners directed “Upgrade” — a debut music video by an aspiring alternative-pop ' +
-      'artist Jessie Murph. We were called upon to handle a variety of post-production tasks, ' +
-      'as well as to enhance live action with the VFX of snow flurry.',
+      'Our partners directed “Upgrade” — a\u00A0debut music video by\u00A0an aspiring alternative-pop ' +
+      'artist Jessie Murph. We were called upon to\u00A0handle a\u00A0variety of\u00A0post-production tasks, ' +
+      'as\u00A0well as\u00A0to\u00A0enhance live action with the\u00A0VFX of\u00A0snow flurry.',
     items: {
       a: {
         n: '01',
@@ -68,19 +68,19 @@ export const data = {
     a: {
       h: 'Process',
       p:
-        'The live action footage we received incorporated several independent shots fused together to look like one seamless clip. ' +
-        'To simulate the snow effect, we were to recreate the scene in 3d from scratch. Each shot was to be 3d tracked, matching real ' +
-        'life lens to 3-dimensional one. We then rebuilt the venue in 3d space, where we could run the simulations for the snow ' +
-        'flurry, which we would later render out and compose into the sequence. While we were busy with the 3d side of things, ' +
-        'the other part of our team focused on cleaning up the footage artifacts, such as tracking markers, exit signs and light leaks, ' +
-        'creating rotoscoping masks to simplify the compositing step later on.',
+        'The live action footage we received incorporated several independent shots fused together to\u00A0look like one seamless clip. ' +
+        'To simulate the\u00A0snow effect, we were to\u00A0recreate the\u00A0scene in\u00A03d from scratch. Each shot was to\u00A0be 3d tracked, matching real ' +
+        'life lens to\u00A03-dimensional one. We then rebuilt the\u00A0venue in\u00A03d space, where we could run the\u00A0simulations for\u00A0the\u00A0snow ' +
+        'flurry, which we would later render out and\u00A0compose into the\u00A0sequence. While we were busy with the\u00A03d side of\u00A0things, ' +
+        'the\u00A0other part of\u00A0our team focused on\u00A0cleaning\u00A0up the\u00A0footage artifacts, such as\u00A0tracking markers, exit signs and\u00A0light leaks, ' +
+        'creating rotoscoping masks to\u00A0simplify the\u00A0compositing step later on.',
     },
     b: {
       h: 'Matchmoving',
       p:
-        'Since live action footage was not a truly continuous sequence, varying in focal distance and position within the venue, ' +
-        'each camera had to be tracked separately. Missing parts of the track were either animated by hand or interpolated. ' +
-        'The cameras were later stitched together to optimize the simulation workflow.',
+        'Since live action footage was not a\u00A0truly continuous sequence, varying in\u00A0focal distance and\u00A0position within the\u00A0venue, ' +
+        'each camera had to\u00A0be tracked separately. Missing parts of\u00A0the\u00A0track were either animated by\u00A0hand or interpolated. ' +
+        'The cameras were later stitched together to\u00A0optimize the\u00A0simulation workflow.',
     },
     c: {
       h: 'Cleanup Tasks',
@@ -89,27 +89,27 @@ export const data = {
     },
     d: {
       h: 'Simulating Flurry',
-      p: 'Autodesk Maya was used to reconstuct the scene in 3d and simulate the effect of snow flurry.',
+      p: 'Autodesk Maya was used to\u00A0reconstuct the\u00A0scene in\u00A03d and\u00A0simulate the\u00A0effect of\u00A0snow flurry.',
     },
     e: {
       h: 'Look Development',
       p:
-        'Our client was open to experiment with the look, so we generated a number of options for the snow motion and' +
-        'for the snowflake design itself. The approved effect we arrived at was composited into the sequence, enhancing' +
-        'the emotional immersion of the video.',
+        'Our client was open to\u00A0experiment with the\u00A0look, so we generated a\u00A0number of\u00A0options for\u00A0the\u00A0snow motion and' +
+        'for the\u00A0snowflake design itself. the\u00A0approved effect we arrived at\u00A0was composited into the\u00A0sequence, enhancing' +
+        'the\u00A0emotional immersion of\u00A0the\u00A0video.',
     },
     f: {
       h: 'Impact',
       p:
-        'The final clip premiered on YouTube with 3.000.000+ views ' +
-        'marking a successful video debut for the aspiring artist.',
+        'The final clip premiered on\u00A0YouTube with 3.000.000+ views ' +
+        'marking a\u00A0successful video debut for\u00A0the\u00A0aspiring artist.',
     },
   },
   next: {
     h: 'Next Project',
     banner: {
       h: 'Jessie Murph “Upgrade”',
-      p: 'An authentic performance completed with a fierce lyrical structure',
+      p: 'An authentic performance completed with a\u00A0fierce lyrical structure',
       img: {
         src: `${URL_MEDIA}/jm-upgrade-next.jpg`,
         thumbnail: `${URL_MEDIA}/jm-upgrade-next-thumb.jpg`,

@@ -11,7 +11,7 @@ export const data = {
         “AKA” <Span>Service</Span>
       </>
     ),
-    p: 'Away “AKA” campaign showcasing the newest personalization offerings.',
+    p: 'Away “AKA” campaign showcasing the\u00A0newest personalization offerings.',
     items: [
       {
         h: 'Industry',
@@ -32,9 +32,9 @@ export const data = {
   overview: {
     h: 'Overview',
     p:
-      'Away was looking to develop and produce a new campaign to kick off the luggage brand’s “Personalization” service ' +
-      'for its line of Carry-Ons and Everywhere Bags. Our partner, responsible for creative and production, approached ' +
-      'us with the task to execute retouching and color correction of the campaign.',
+      'Away was looking to\u00A0develop and\u00A0produce a\u00A0new campaign to\u00A0kick\u00A0off the\u00A0luggage brand’s “Personalization” service ' +
+      'for its line of\u00A0Carry-Ons and\u00A0Everywhere Bags. Our partner, responsible for\u00A0creative and\u00A0production, approached ' +
+      'us with the\u00A0task to\u00A0execute retouching and\u00A0color correction of\u00A0the\u00A0campaign.',
     items: {
       a: {
         n: '01',
@@ -52,32 +52,32 @@ export const data = {
   },
   other: {
     a: {
-      h: 'Luggage Built to Transform Modern Travel',
+      h: 'Luggage Built to\u00A0Transform Modern Travel',
       p:
-        'The campaign wanted to convey that personalizing your luggage/travel ' +
-        'goods lets you express your travel style in a whole new way by celebrating who ' +
-        'you are, where you’ve been, and where you’re headed next.',
+        'The campaign wanted to\u00A0convey that personalizing your luggage/travel ' +
+        'goods lets you express your travel style in\u00A0a\u00A0whole new way by\u00A0celebrating who ' +
+        'you are, where you’ve been, and\u00A0where you’re headed next.',
     },
     b: {
       h: 'Process',
       p:
-        'Sometimes color spills all over the place. We took special care color-correcting every tiny detail of the product to ensure video ' +
-        'and photography perfectly matched real life samples. Multiple rotoscoping masks were creted in Mocha Pro and transfered down ' +
-        'the pipeline so the team could control each color with fine-grained precision.',
+        'Sometimes color spills all over the\u00A0place. We took special care color-correcting every tiny detail of\u00A0the\u00A0product to\u00A0ensure video ' +
+        'and photography perfectly matched real life samples. Multiple rotoscoping masks were creted in\u00A0Mocha Pro and\u00A0transfered down ' +
+        'the\u00A0pipeline so the\u00A0team could control each color with fine-grained precision.',
     },
     c: {
       h: 'Impact',
       p:
-        'Through imagery and film, the campaign told the story of five main characters who used only three letters to express their ' +
-        'personalities and add unique touches to their personal travel uniforms. The resulting images ran across social, OOH, media web, ' +
-        'mailers, and in-store print.',
+        'Through imagery and\u00A0film, the\u00A0campaign told the\u00A0story of\u00A0five main characters who used only three letters to\u00A0express their ' +
+        'personalities and\u00A0add unique touches to\u00A0their personal travel uniforms. the\u00A0resulting images ran across social, OOH, media web, ' +
+        'mailers, and\u00A0in-store print.',
     },
   },
   next: {
     h: 'Next Project',
     banner: {
       h: '“AKA” Service',
-      p: 'Away “AKA” campaign to showcasing the newest personalization offerings.',
+      p: 'Away “AKA” campaign to\u00A0showcasing the\u00A0newest personalization offerings.',
       img: {
         src: `${URL_MEDIA}/away-next.jpg`,
         thumbnail: `${URL_MEDIA}/away-next-thumb.jpg`,

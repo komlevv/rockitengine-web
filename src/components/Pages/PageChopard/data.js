@@ -11,7 +11,7 @@ export const data = {
         Chopard Loves <Span>London</Span>
       </>
     ),
-    p: 'Stylish inauguration of Chopard’s new flagship boutique on Bond Street.',
+    p: 'Stylish inauguration of\u00A0Chopard’s new flagship boutique on\u00A0Bond Street.',
     items: [
       {
         h: 'Industry',
@@ -32,9 +32,9 @@ export const data = {
   overview: {
     h: 'Overview',
     p:
-      'Chopard was looking to expand and refurbish it’s flagship Bond Street store. The highly anticipated reopening was ' +
-      'expected to be a star studded occasion with supermodels, Oscar winners and style icons jetting to London ' +
-      'to celebrate. RockitLab was tasked with development & visualization of creative concepts decorating the store’s ' +
+      'Chopard was looking to\u00A0expand and\u00A0refurbish it’s flagship Bond Street store. the\u00A0highly anticipated reopening was ' +
+      'expected to\u00A0be a\u00A0star studded occasion with supermodels, Oscar winners and\u00A0style icons jetting to\u00A0London ' +
+      'to\u00A0celebrate. RockitEngine was tasked with development &\u00A0visualization of\u00A0creative concepts decorating the\u00A0store’s ' +
       'festive facade.',
     items: {
       a: {
@@ -67,65 +67,65 @@ export const data = {
     a: {
       h: 'Weightless',
       p:
-        'Inspired by the human form, the Equinox brand, ' +
-        'and the landscape of Arizona’s desert, we looked ' +
-        'to create a reflective sanctuary space that could ' +
-        'also be used for innovative workout classes, ' +
-        'meditations, sound baths, and gatherings.',
+        'Inspired by\u00A0the\u00A0human form, the\u00A0Equinox brand, ' +
+        'and the\u00A0landscape of\u00A0Arizona’s desert, we looked ' +
+        'to\u00A0create a\u00A0reflective sanctuary space that could ' +
+        'also be used for\u00A0innovative workout classes, ' +
+        'meditations, sound baths, and\u00A0gatherings.',
     },
     b: {
       h: '',
       p:
-        'The beautifully expanded and refurbished store reflects Chopard’s Journey to Sustainable Luxury, using local ' +
-        'environmentally friendly materials and collaborating with local artists. To create an immersive experience RockitEngine ' +
-        'developed both daily and nightly looks of the decorative sculpture.',
+        'The beautifully expanded and\u00A0refurbished store reflects Chopard’s Journey to\u00A0Sustainable Luxury, using local ' +
+        'environmentally friendly materials and\u00A0collaborating with local artists. to\u00A0create an\u00A0immersive experience RockitEngine ' +
+        'developed both daily and\u00A0nightly looks of\u00A0the\u00A0decorative sculpture.',
     },
     c: {
       h: 'Love Spin',
       p:
-        'To capture the dynamic and elegant design of the Happy Hearts collection, ' +
-        'we proposed building a kinetic sculpture upon the New Bond Street store facade.',
+        'To capture the\u00A0dynamic and\u00A0elegant design of\u00A0the\u00A0Happy Hearts collection, ' +
+        'we proposed building a\u00A0kinetic sculpture upon the\u00A0New Bond Street store facade.',
     },
     d: {
       h: '',
       p:
-        'The design focuses on the layering of the Happy Heart and the free flowing movement ' +
-        'of the diamonds inside in series of anamorphic, kinetic and dynamic shape suggestions.',
+        'The design focuses on\u00A0the\u00A0layering of\u00A0the\u00A0Happy Heart and\u00A0the\u00A0free flowing movement ' +
+        'of\u00A0the\u00A0diamonds inside in\u00A0series of\u00A0anamorphic, kinetic and\u00A0dynamic shape suggestions.',
     },
     e: {
       h: '',
       p:
-        'Creative fusion of metals, patterns and shapes to celebrate Chopard’s expressive' +
-        'craftsmanship combined with a constant quest for excellence.',
+        'Creative fusion of\u00A0metals, patterns and\u00A0shapes to\u00A0celebrate Chopard’s expressive' +
+        'craftsmanship combined with a\u00A0constant quest for\u00A0excellence.',
     },
     f: {
       h: 'Neovictorian',
       p:
-        'An installation that transforms the New Bond Street facade into a contemporary floral scape, glistening and ' +
-        'breathing with the city. Taking inspiration from the stores modern take on Victorian inspired decor and classic English ' +
-        'floral patterns in the vain of William Morris, the store opening event will transport guests through a surreal yet ' +
-        'contemporaryVictorian hanging garden into a space ready to be painted by Thomas Gainsborough.',
+        'An installation that transforms the\u00A0New Bond Street facade into a\u00A0contemporary floral scape, glistening and\u00A0' +
+        'breathing with the\u00A0city. Taking inspiration from the\u00A0stores modern take on\u00A0Victorian inspired decor and\u00A0classic English ' +
+        'floral patterns in\u00A0the\u00A0vain of\u00A0William Morris, the\u00A0store opening event will transport guests through a\u00A0surreal yet ' +
+        'contemporaryVictorian hanging garden into a\u00A0space ready to\u00A0be painted by\u00A0Thomas Gainsborough.',
     },
     g: {
       h: '',
       p:
-        'An abstract L-shaped golden trellis will partially cover the store faced whilst accenting the architecture. ' +
-        'A hanging garden of cream, yellow and orange flowers mixed in with hanging golden hearts will cascade down ' +
-        'the building blowing and glittering in the windand carpeting parts of the pavement.',
+        'An abstract L-shaped golden trellis will partially cover the\u00A0store faced whilst accenting the\u00A0architecture. ' +
+        'A hanging garden of\u00A0cream, yellow and\u00A0orange flowers mixed in\u00A0with hanging golden hearts will cascade down ' +
+        'the\u00A0building blowing and\u00A0glittering in\u00A0the\u00A0windand carpeting parts of\u00A0the\u00A0pavement.',
     },
     h: {
       h: 'Process',
       p:
-        'We visited Bond Street and took the photos of the space, helping in recreation the store’s facade ' +
-        'in a 3-dimensional environment. From the broad stroke approach sketches designed in SketchUp, ' +
-        'we used 3ds Max, Autodesk Maya and Maxon Redshift to finalize the concepts.',
+        'We visited Bond Street and\u00A0took the\u00A0photos of\u00A0the\u00A0space, helping in\u00A0recreation the\u00A0store’s facade ' +
+        'in\u00A0a\u00A03-dimensional environment. From the\u00A0broad stroke approach sketches designed in\u00A0SketchUp, ' +
+        'we used 3ds Max, Autodesk Maya and\u00A0Maxon Redshift to\u00A0finalize the\u00A0concepts.',
     },
   },
   next: {
     h: 'Next Project',
     banner: {
       h: 'Chopard Loves London',
-      p: 'Stylish inauguration of Chopard’s new flagship boutique on Bond Street',
+      p: 'Stylish inauguration of\u00A0Chopard’s new flagship boutique on\u00A0Bond Street',
       img: {
         src: `${URL_MEDIA}/chopard-loves-london-next.jpg`,
         thumbnail: `${URL_MEDIA}/chopard-loves-london-next-thumb.jpg`,

@@ -11,7 +11,7 @@ export const data = {
         Clash de <Span>Cartier</Span>
       </>
     ),
-    p: 'More powerful and confident than ever before, serious spirit with original charm.',
+    p: 'More powerful and\u00A0confident than ever before, serious spirit with original charm.',
     items: [
       {
         h: 'Industry',
@@ -32,9 +32,9 @@ export const data = {
   overview: {
     h: 'Overview',
     p:
-      'Clash de Cartier, jewelry that simultaneously champions and eschews classic forms, that balances clean design with an excess ' +
-      'of energy, and a serious spirit with original charm. Our partner produced a video starring one of the collection’s pieces ' +
-      'and called on us to handle retouching & color of the edit.',
+      'Clash de Cartier, jewelry that simultaneously champions and\u00A0eschews classic forms, that balances clean design with an\u00A0excess ' +
+      'of\u00A0energy, and\u00A0a serious spirit with original charm. Our partner produced a\u00A0video starring one of\u00A0the\u00A0collection’s pieces ' +
+      'and called on\u00A0us to\u00A0handle retouching &\u00A0color of\u00A0the\u00A0edit.',
     items: {
       a: {
         n: '01',
@@ -52,18 +52,18 @@ export const data = {
   },
   other: {
     a: {
-      h: 'Independent, Elegant, and Instantly Recognizable',
+      h: 'Independent, Elegant, and\u00A0Instantly Recognizable',
       p:
-        'We made skin-tones smooth, removed excessive wrinkles and blemishes, repaired ' +
-        'skin texture where was necessary, and made sure nail polish was perfect in texture and in color.' +
-        'The edit was color graded to reflect Cartier confident and powerful vibe.',
+        'We made skin-tones smooth, removed excessive wrinkles and\u00A0blemishes, repaired ' +
+        'skin texture where was necessary, and\u00A0made sure nail polish was perfect in\u00A0texture and\u00A0in color.' +
+        'The edit was color graded to\u00A0reflect Cartier confident and\u00A0powerful vibe.',
     },
     b: {
       h: 'Impact',
       p:
-        'Clash De Cartier is a house icon. A collection that deeply explores intricacies in geometry, ' +
-        'dualities, fine jewellery mechanics and most importantly, imbuing a clash of attitudes. ' +
-        'RockitEngine helped Cartier realise their vision of visual rhythm, aesthetic charm ' +
+        'Clash De Cartier is\u00A0a\u00A0house icon. a\u00A0collection that deeply explores intricacies in\u00A0geometry, ' +
+        'dualities, fine jewellery mechanics and\u00A0most importantly, imbuing a\u00A0clash of\u00A0attitudes. ' +
+        'RockitEngine helped Cartier realise their vision of\u00A0visual rhythm, aesthetic charm ' +
         'and intensive elegance.',
     },
   },
@@ -71,7 +71,7 @@ export const data = {
     h: 'Next Project',
     banner: {
       h: 'Clash de Cartier',
-      p: 'An aesthetic code, a balancing act, a daring embodiment of dualities.',
+      p: 'An aesthetic code, a\u00A0balancing act, a\u00A0daring embodiment of\u00A0dualities.',
       img: {
         src: `${URL_MEDIA}/cartier-next.jpg`,
         thumbnail: `${URL_MEDIA}/cartier-next-thumb.jpg`,

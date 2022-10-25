@@ -11,7 +11,7 @@ const data = {
   p:
     'Digital solutions provided ' +
     'by carefully selected and talented people who ' +
-    'see the bigger picture - your daily business ' +
+    'see the\u00A0bigger picture — your daily business ' +
     'challenges and your customers’ needs.',
   buttonText: 'See our services',
   items: [

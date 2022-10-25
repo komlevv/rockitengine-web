@@ -12,7 +12,7 @@ export const data = {
       </>
     ),
     p:
-      'After fronting a campaign for the Bali-based jewelers, ' +
+      'After fronting a\u00A0campaign for\u00A0the\u00A0Bali-based jewelers, ' +
       'Adwoa launched her own John Hardy collection.',
     items: [
       {
@@ -34,9 +34,9 @@ export const data = {
   overview: {
     h: 'Overview',
     p:
-      'Model and muse to the world over, and most recently to the fine-jewelry makers at John Hardy, Adwoa Aboah has now taken ' +
-      'to designing the jewelry in which she’s photographed. Our partner produced the campaign videos and we were tasked with ' +
-      'handling it’s post production, including beauty retouching, color & silhouette correction.',
+      'Model and\u00A0muse to\u00A0the\u00A0world over, and\u00A0most recently to\u00A0the\u00A0fine-jewelry makers at\u00A0John Hardy, Adwoa Aboah has now taken ' +
+      'to\u00A0designing the\u00A0jewelry in\u00A0which she’s photographed. Our partner produced the\u00A0campaign videos and\u00A0we were tasked with ' +
+      'handling it’s post production, including beauty retouching, color &\u00A0silhouette correction.',
     items: {
       a: {
         n: '01',
@@ -60,41 +60,41 @@ export const data = {
   other: {
     a: {
       h:
-        '“I envisioned the girls that I love — my friends, ' +
+        '“I envisioned the\u00A0girls that I love — my friends, ' +
         'mum, sisters — wearing this jewelry”.',
       p:
-        'Adwoa Aboah‘s jewelry line is a representation of her Ghanaian culture ' +
-        'and roots. The 34-piece collection in collaboration with John Hardy includes earrings, rings, ' +
-        'and more. Jewelry might be hard to get right on camera. To ensure the product looked ' +
-        'perfect, we retouched and color-corrected each jewelry piece, removing metal tints, smudges, ' +
+        'Adwoa Aboah‘s jewelry line is\u00A0a\u00A0representation of\u00A0her Ghanaian culture ' +
+        'and roots. the\u00A034-piece collection in\u00A0collaboration with John Hardy includes earrings, rings, ' +
+        'and more. Jewelry might be hard to\u00A0get right on\u00A0camera. to\u00A0ensure the\u00A0product looked ' +
+        'perfect, we retouched and\u00A0color-corrected each jewelry piece, removing metal tints, smudges, ' +
         'and sometimes even rearranging pieces.',
     },
     b: {
       h: '',
       p:
-        'Adwoa’s collection is a form of self expression ' +
-        'and love for her culture.  The natural elements ' +
-        'used to make her jewelry express strong cultural ' +
-        'ties and free artistic range. Additionaly to retouching ' +
-        'jewelry pieces we handled beauty retouching of Adwoa, ' +
-        'removing unnecesary creases, blemishes and softening ' +
-        'skin as needed.',
+        'Adwoa’s collection is\u00A0a\u00A0form of\u00A0self expression ' +
+        'and love for\u00A0her culture.  the\u00A0natural elements ' +
+        'used to\u00A0make her jewelry express strong cultural ' +
+        'ties and\u00A0free artistic range. Additionaly to\u00A0retouching ' +
+        'jewelry pieces we handled beauty retouching of\u00A0Adwoa, ' +
+        'removing unnecesary creases, blemishes and\u00A0softening ' +
+        'skin as\u00A0needed.',
     },
     c: {
       h: 'Iconic Shift',
       p:
-        'When creating the capsule collection, Aboah with John Hardy’s creative ' +
-        'director Hollie Bonneville Barden, decided to use the brand’s iconic chains ' +
-        'as their starting point, and transformed them into body harnesses, single ' +
-        'drop earrings and twisted bracelets.',
+        'When creating the\u00A0capsule collection, Aboah with John Hardy’s creative ' +
+        'director Hollie Bonneville Barden, decided to\u00A0use the\u00A0brand’s iconic chains ' +
+        'as\u00A0their starting point, and\u00A0transformed them into body harnesses, single ' +
+        'drop earrings and\u00A0twisted bracelets.',
     },
     d: {
       h: 'Impact',
       p:
         '\n' +
-        'Jewelry has transformative power. John Hardy x Adwoa collab is nothing short of luxurious. ' +
-        'Creating pieces that speak to one’s authenticity and that could be personalized ' +
-        'in a variety of ways was very important to John Hardy connoisseurs.',
+        'Jewelry has transformative power. John Hardy x Adwoa collab is\u00A0nothing short of\u00A0luxurious. ' +
+        'Creating pieces that speak to\u00A0one’s authenticity and\u00A0that could be personalized ' +
+        'in\u00A0a\u00A0variety of\u00A0ways was very important to\u00A0John Hardy connoisseurs.',
     },
   },
   next: {
@@ -106,7 +106,7 @@ export const data = {
         </>
       ),
       p:
-        'After fronting a campaign for the Bali-based jewelers, ' +
+        'After fronting a\u00A0campaign for\u00A0the\u00A0Bali-based jewelers, ' +
         'Adwoa launched her own John Hardy collection.',
       img: {
         src: `${URL_MEDIA}/jh-legends-adwoa-next.jpg`,

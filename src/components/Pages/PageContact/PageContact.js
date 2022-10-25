@@ -17,9 +17,9 @@ const data = {
       </>
     ),
     p:
-      'Weather you are a global brand, an enterprise, ' +
-      'an agency, or a startup looking to grow and scale-up,' +
-      'send us a message and spark a change, today. ',
+      'Weather you are a\u00A0global brand, an\u00A0enterprise, ' +
+      'an\u00A0agency, or a\u00A0startup looking to\u00A0grow and\u00A0scale-up,' +
+      'send us a\u00A0message and\u00A0spark a\u00A0change, today. ',
   },
   media: {
     video: {

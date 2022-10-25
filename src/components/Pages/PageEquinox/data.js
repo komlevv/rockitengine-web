@@ -11,7 +11,7 @@ export const data = {
         Equinox <Span>Form</Span>
       </>
     ),
-    p: 'Promise of substance and style, mirrored surfaces, minimalism and an artful approach.',
+    p: 'Promise of\u00A0substance and\u00A0style, mirrored surfaces, minimalism and\u00A0an artful approach.',
     items: [
       {
         h: 'Industry',
@@ -32,10 +32,10 @@ export const data = {
   overview: {
     h: 'Overview',
     p:
-      'Form is a creative retreat in the visionary eco-city of Arcosanti with three days of ' +
-      'music, art, ideas, architecture, nature, wellness & community. RockitLab was approached ' +
-      'to help design & visualize an artistic installation that debuted on Form’s desert grounds. ' +
-      'Art as a moment to build brand.',
+      'Form is\u00A0a\u00A0creative retreat in\u00A0the\u00A0visionary eco-city of\u00A0Arcosanti with three days of\u00A0' +
+      'music, art, ideas, architecture, nature, wellness &\u00A0community. RockitEngine was approached ' +
+      'to\u00A0help design &\u00A0visualize an\u00A0artistic installation that debuted on\u00A0Form’s desert grounds. ' +
+      'Art as\u00A0a\u00A0moment to\u00A0build brand.',
     items: {
       a: {
         n: '01',
@@ -65,24 +65,24 @@ export const data = {
   },
   other: {
     a: {
-      h: 'Balance of Wellness, Entertainment, & Experience',
+      h: 'Balance of\u00A0Wellness, Entertainment, &\u00A0Experience',
       p:
-        'Inspired by the human form, the Equinox brand, ' +
-        'and the landscape of Arizona’s desert, we looked ' +
-        'to create a reflective sanctuary space that could ' +
-        'also be used for innovative workout classes, ' +
-        'meditations, sound baths, and gatherings.',
+        'Inspired by\u00A0the\u00A0human form, the\u00A0Equinox brand, ' +
+        'and the\u00A0landscape of\u00A0Arizona’s desert, we looked ' +
+        'to\u00A0create a\u00A0reflective sanctuary space that could ' +
+        'also be used for\u00A0innovative workout classes, ' +
+        'meditations, sound baths, and\u00A0gatherings.',
     },
     b: {
       h: 'Approach',
       p:
-        'Promise of substance and style, mirrored surfaces, minimalism ' +
-        'and an artful approach that incorporates the surrounding ' +
-        'environment created an arresting space for attendees to get back ' +
-        'to peak form.',
+        'Promise of\u00A0substance and\u00A0style, mirrored surfaces, minimalism ' +
+        'and an\u00A0artful approach that incorporates the\u00A0surrounding ' +
+        'environment created an\u00A0arresting space for\u00A0attendees to\u00A0get back ' +
+        'to\u00A0peak form.',
     },
     c: {
-      h: 'Canvas for Content Creation',
+      h: 'Canvas for\u00A0Content Creation',
       p: '',
       items: [
         'Smoked Mirrored Surfaces',
@@ -95,29 +95,29 @@ export const data = {
     d: {
       h: '',
       p:
-        'Taking the form of the Equinox split ‘O’ — we created a space out of the ' +
+        'Taking the\u00A0form of\u00A0the\u00A0Equinox split ‘O’ — we created a\u00A0space out of\u00A0the\u00A0' +
         'brand language that didn’t feel overbearing. Branded monoliths spread around ' +
-        'the main installation adding increase visual weight to the Equinox footprint.',
+        'the\u00A0main installation adding increase visual weight to\u00A0the\u00A0Equinox footprint.',
     },
     e: {
       h: 'Brand Film',
       p:
-        'Surrounded by the desert landscape, the installation was also' +
-        'leveraged to create a brand film that captured Equinox’s unique aesthetic.',
+        'Surrounded by\u00A0the\u00A0desert landscape, the\u00A0installation was also' +
+        'leveraged to\u00A0create a\u00A0brand film that captured Equinox’s unique aesthetic.',
     },
     f: {
       h: 'Process',
       p:
-        'The activation became a ‘best-in-class’ example companywide for how Equinox ' +
+        'The activation became a\u00A0‘best-in-class’ example companywide for\u00A0how Equinox ' +
         'should create brand activations, blending workout space, wellness retreat, ' +
-        'stunning installation, and content studio.',
+        'stunning installation, and\u00A0content studio.',
     },
   },
   next: {
     h: 'Next Project',
     banner: {
       h: 'The Times Expert Traveller',
-      p: 'Your daily business challenges and your customers’ needs.',
+      p: 'Your daily business challenges and\u00A0your customers’ needs.',
       img: {
         src: `${URL_MEDIA}/equinox-form-next.jpg`,
         thumbnail: `${URL_MEDIA}/equinox-form-next-thumb.jpg`,

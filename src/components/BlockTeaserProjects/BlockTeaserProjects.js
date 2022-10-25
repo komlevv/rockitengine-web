@@ -10,7 +10,7 @@ const data = {
   p:
     'Accumulated diverse experience. Challenging projects. Continuous learning. ' +
     "This is why you'll always get results from our team, on time. Start a project " +
-    'with us to see your business grow.',
+    'with us to\u00A0see your business grow.',
   buttonText: 'See our projects',
 };
 

@@ -12,7 +12,7 @@ export const data = {
       </>
     ),
     p:
-      'Celebrating everyday strength, power and unapologetic ' +
+      'Celebrating everyday strength, power and\u00A0unapologetic ' +
       'self-expression that lies within every woman.',
     items: [
       {
@@ -34,8 +34,8 @@ export const data = {
   overview: {
     h: 'Overview',
     p:
-      'Rooted in Balinese heritage, John Hardy’s new platform “Made For Legends” flipped the switch on the traditional ' +
-      'jewelry model. We were called upon to handle post-production of the campaign, ensuring product and on-screen ' +
+      'Rooted in\u00A0Balinese heritage, John Hardy’s new platform “Made for\u00A0Legends” flipped the\u00A0switch on\u00A0the\u00A0traditional ' +
+      'jewelry model. We were called upon to\u00A0handle post-production of\u00A0the\u00A0campaign, ensuring product and\u00A0on-screen ' +
       'talent looked legendary.',
     items: {
       a: {
@@ -54,86 +54,86 @@ export const data = {
   },
   other: {
     a: {
-      h: 'Jewelry as a Force for Legendary Empowerment',
+      h: 'Jewelry as\u00A0a\u00A0Force for\u00A0Legendary Empowerment',
       p:
-        '“A legacy is a story. It’s more than what you’ve ' +
-        'accomplished. Jewelry tells a Story. It’s very personal.”' +
-        '– Julianne Moore. ' +
-        'Starring modern-day legends, the campaign was ' +
-        'an open invitation to create your own legend. ' +
-        'In order to perfect the perfomance of on-screen ' +
+        '“A legacy is\u00A0a\u00A0story. It’s more than what you’ve ' +
+        'accomplished. Jewelry tells a\u00A0Story. It’s very personal.”' +
+        ' — Julianne Moore. ' +
+        'Starring modern-day legends, the\u00A0campaign was ' +
+        'an\u00A0open invitation to\u00A0create your own legend. ' +
+        'In order to\u00A0perfect the\u00A0perfomance of\u00A0on-screen ' +
         'talent our work included color correction, skin ' +
-        '& hair retouching, silhouette correction and ' +
+        '& hair retouching, silhouette correction and\u00A0' +
         'de-aging visual effects.',
     },
     b: {
       h: '',
       p:
-        'The campaign’s imagery is intended to be ' +
-        'arresting and powerful just like the inner ' +
-        '“warrior” of every woman who wears the ' +
-        'pieces. Jewelry can be hard to get right ' +
-        'on camera, causing all kinds of artifacts and ' +
+        'The campaign’s imagery is\u00A0intended to\u00A0be ' +
+        'arresting and\u00A0powerful just like the\u00A0inner ' +
+        '“warrior” of\u00A0every woman who wears the\u00A0' +
+        'pieces. Jewelry can be hard to\u00A0get right ' +
+        'on\u00A0camera, causing all kinds of\u00A0artifacts and\u00A0' +
         'unexpected tints. When you work with legendary ' +
-        'talent, often you don’t have the luxury of ' +
-        'reshooting the take, but we couldn’t allow ' +
-        'the reality of hasty production workflows ' +
-        'get in front of the creative vision. We made ' +
+        'talent, often you don’t have the\u00A0luxury of\u00A0' +
+        'reshooting the\u00A0take, but we couldn’t allow ' +
+        'the\u00A0reality of\u00A0hasty production workflows ' +
+        'get in\u00A0front of\u00A0the\u00A0creative vision. We made ' +
         'sure our client was well hedged against ' +
-        'the uncertainty. Using a combination ' +
-        'of post-production tools, we made the product ' +
-        'look right, removing the artifacts, making ' +
-        'the colors look like they do in real life and ' +
-        'adding/removing jewelry pieces to help ' +
-        'the director take the picture ' +
-        'to a legendary level.',
+        'the\u00A0uncertainty. Using a\u00A0combination ' +
+        'of\u00A0post-production tools, we made the\u00A0product ' +
+        'look right, removing the\u00A0artifacts, making ' +
+        'the\u00A0colors look like they do in\u00A0real life and\u00A0' +
+        'adding/removing jewelry pieces to\u00A0help ' +
+        'the\u00A0director take the\u00A0picture ' +
+        'to\u00A0a\u00A0legendary level.',
     },
     c: {
       h: 'Process',
       p:
-        "Pushing beyond the traditional convention of women being gifted jewelry by men, friends, and family, John Hardy's Made " +
-        'For Legends platform calls on women to also acquire their own pieces as a means to strengthen spirit and bolster courage. ' +
-        'Every piece celebrates achievement and demonstrates the power of personal expression.',
+        "Pushing beyond the\u00A0traditional convention of\u00A0women being gifted jewelry by\u00A0men, friends, and\u00A0family, John Hardy's Made " +
+        'For Legends platform calls on\u00A0women to\u00A0also acquire their own pieces as\u00A0a\u00A0means to\u00A0strengthen spirit and\u00A0bolster courage. ' +
+        'Every piece celebrates achievement and\u00A0demonstrates the\u00A0power of\u00A0personal expression.',
     },
     d: {
       h: 'Impact',
       p:
-        'Working with this team was an awe-inspiring experience. Not only does this campaign celebrate feminine individuality, ' +
-        'it also showcases the duality of women’s strength and vulnerability they possess. In the imagery, as in life, they are armed ' +
-        'by John Hardy to take on the world.',
+        'Working with this team was an\u00A0awe-inspiring experience. Not only does this campaign celebrate feminine individuality, ' +
+        'it also showcases the\u00A0duality of\u00A0women’s strength and\u00A0vulnerability they possess. in\u00A0the\u00A0imagery, as\u00A0in life, they are armed ' +
+        'by\u00A0John Hardy to\u00A0take on\u00A0the\u00A0world.',
     },
     e: {
       h: 'Redefining Artistry',
       p:
-        'Redefining what it means to be a legend, John Hardy connects the individual to the myth, mastery, and achievement of artistry. ' +
-        'Building on the dynamic, pioneering legacy of Cynthia Hardy—adventurer, muse, and wife to founder John Hardy—women ' +
-        'everywhere are invited to create their own legend through the art of wearing dramatic, powerful, and inspiring one-of-a-kind ' +
-        'pieces handcrafted by Balinese  artisans at the Ubud workshop using techniques passed down from generations of Master ' +
+        'Redefining what it means to\u00A0be a\u00A0legend, John Hardy connects the\u00A0individual to\u00A0the\u00A0myth, mastery, and\u00A0achievement of\u00A0artistry. ' +
+        'Building on\u00A0the\u00A0dynamic, pioneering legacy of\u00A0Cynthia Hardy — adventurer, muse, and\u00A0wife to\u00A0founder John Hardy — women ' +
+        'everywhere are invited to\u00A0create their own legend through the\u00A0art of\u00A0wearing dramatic, powerful, and\u00A0inspiring one-of-a-kind ' +
+        'pieces handcrafted by\u00A0Balinese  artisans at\u00A0the\u00A0Ubud workshop using techniques passed down from generations of\u00A0Master ' +
         'Artisans.',
     },
     f: {
-      h: 'Jewelry Not Afraid to Be Different. It’s Legendary.',
+      h: 'Jewelry Not Afraid to\u00A0Be Different. It’s Legendary.',
       p:
-        'Perfect in its imperfection, John Hardy jewelry is as distinctive as the women who ' +
-        'wear it. In the campaign, model/Activist Adwoa Aboah explore what it means to be a ' +
-        'legend, telling the story of the Classic Chain, Modern Chain, and Naga Collections —' +
-        'meaningful designs crafted from the raw power and strength of John ' +
-        "Hardy's origin in Bali.",
+        'Perfect in\u00A0its imperfection, John Hardy jewelry is\u00A0as distinctive as\u00A0the\u00A0women who ' +
+        'wear it. in\u00A0the\u00A0campaign, model/Activist Adwoa Aboah explore what it means to\u00A0be a\u00A0' +
+        'legend, telling the\u00A0story of\u00A0the\u00A0Classic Chain, Modern Chain, and\u00A0Naga Collections — ' +
+        'meaningful designs crafted from the\u00A0raw power and\u00A0strength of\u00A0John ' +
+        "Hardy's origin in\u00A0Bali.",
     },
     g: {
       h: '',
       p:
-        '“Made for Legends” is a call for women to live on their own terms and build their legend –\n' +
-        'the campaign is made to cut through the noise: where jewelry advertising often plays it safe, ' +
-        "John Hardy isn't afraid to be dramatic, inspiring and powerful.",
+        '“Made for\u00A0Legends” is\u00A0a\u00A0call for\u00A0women to\u00A0live on\u00A0their own terms and\u00A0build their legend — ' +
+        'the\u00A0campaign is\u00A0made to\u00A0cut through the\u00A0noise: where jewelry advertising often plays it safe, ' +
+        "John Hardy isn't afraid to\u00A0be dramatic, inspiring and\u00A0powerful.",
     },
   },
   next: {
     h: 'Next Project',
     banner: {
-      h: 'Made For Legends',
+      h: 'Made for\u00A0Legends',
       p:
-        'Celebrating everyday strength, power and unapologetic ' +
+        'Celebrating everyday strength, power and\u00A0unapologetic ' +
         'self-expression that lies within every woman.',
       img: {
         src: `${URL_MEDIA}/jh-legends-jm-next.jpg`,

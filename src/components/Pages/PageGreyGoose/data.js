@@ -11,7 +11,7 @@ export const data = {
         Find Your <Span>Favorite</Span>
       </>
     ),
-    p: 'Experience every corner of the world just the way you like it.',
+    p: 'Experience every corner of\u00A0the\u00A0world just the\u00A0way you like it.',
     items: [
       {
         h: 'Industry',
@@ -32,9 +32,9 @@ export const data = {
   overview: {
     h: 'Overview',
     p:
-      "For the launch of their 'Live Victoriously' campaign, Grey Goose challenged us to develop and visualize an experiential " +
-      'toolkit to celebrate big and small moments.  The direction of this creative work marks a further evolution of Grey Goose’s ' +
-      'brand world, opting for a more self-aware and sensory-oriented approach to the premium spirit’s brand communications.',
+      "For the\u00A0launch of\u00A0their 'Live Victoriously' campaign, Grey Goose challenged us to\u00A0develop and\u00A0visualize an\u00A0experiential " +
+      'toolkit to\u00A0celebrate big and\u00A0small moments.  the\u00A0direction of\u00A0this creative work marks a\u00A0further evolution of\u00A0Grey Goose’s ' +
+      'brand world, opting for\u00A0a\u00A0more self-aware and\u00A0sensory-oriented approach to\u00A0the\u00A0premium spirit’s brand communications.',
     items: {
       a: {
         n: '01',
@@ -63,24 +63,24 @@ export const data = {
     a: {
       h: 'Approach',
       p:
-        'Whether it’s a promotion, an anniversary or a vacation, we’re always saving our celebrations for a big event — ' +
-        'but what if you were the special occasion? And what if you decided to celebrate you today? Grey Goose, like us, ' +
-        "believes in living Victoriously – treating yourself in both the big and the small moments in life.  Don't wait for a special " +
-        'occasion – you are the celebration. ',
+        'Whether it’s a\u00A0promotion, an\u00A0anniversary or a\u00A0vacation, we’re always saving our celebrations for\u00A0a\u00A0big event — ' +
+        'but what if you were the\u00A0special occasion? and\u00A0what if you decided to\u00A0celebrate you today? Grey Goose, like us, ' +
+        "believes in\u00A0living Victoriously — treating yourself in\u00A0both the\u00A0big and\u00A0the\u00A0small moments in\u00A0life.  Don't wait for\u00A0a\u00A0special " +
+        'occasion — you are the\u00A0celebration. ',
     },
     b: {
       h: 'The Toolkit',
       p:
-        "Following Grey Goose 'Live Victoriously' campaign guidelines RockitLab developed a toolkit to help Grey Goose " +
-        'customers celebrate their moments. We designed signature bars for Outdoor and Indoor activations together ' +
-        'with a set of furniture and branded accessories.',
+        "Following Grey Goose 'Live Victoriously' campaign guidelines RockitEngine developed a\u00A0toolkit to\u00A0help Grey Goose " +
+        'customers celebrate their moments. We designed signature bars for\u00A0Outdoor and\u00A0Indoor activations together ' +
+        'with a\u00A0set of\u00A0furniture and\u00A0branded accessories.',
     },
     c: {
       h: 'Process',
       p:
-        'For every bucket list activity, there’s a celebration with your name on it. The toolkit we created showcases the assets in both ' +
-        'clean studio environment and immersed in classic outdoor and indoor settings. Wood, metals and plastic fused together help ' +
-        'deliver a refreshed brand image, while preserving the authenticity of Grey Goose.',
+        'For every bucket list activity, there’s a\u00A0celebration with your name on\u00A0it. the\u00A0toolkit we created showcases the\u00A0assets in\u00A0both ' +
+        'clean studio environment and\u00A0immersed in\u00A0classic outdoor and\u00A0indoor settings. Wood, metals and\u00A0plastic fused together help ' +
+        'deliver a\u00A0refreshed brand image, while preserving the\u00A0authenticity of\u00A0Grey Goose.',
     },
     d: {
       h: 'Visual Language',
@@ -99,7 +99,7 @@ export const data = {
     h: 'Next Project',
     banner: {
       h: 'Find Your Favorite',
-      p: 'Experience every corner of the world just the way you like it',
+      p: 'Experience every corner of\u00A0the\u00A0world just the\u00A0way you like it',
       img: {
         src: `${URL_MEDIA}/grey-goose-next.jpg`,
         thumbnail: `${URL_MEDIA}/grey-goose-next-thumb.jpg`,
