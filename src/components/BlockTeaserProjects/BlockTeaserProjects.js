@@ -1,6 +1,6 @@
 import s from './BlockTeaserProjects.scss';
 import HeaderM from '../HeaderM/HeaderM';
-import Paragraph from '../Paragraph/Paragraph';
+import ParagraphHalfWide from '../ParagraphHalfWide/ParagraphHalfWide';
 import Button from '../Button/Button';
 import { ROUTES } from '../App/ROUTES';
 import Divider from '../Divider/Divider';
@@ -18,7 +18,7 @@ const BlockTeaserProjects = ({ animationRef }) => (
   <div ref={animationRef} className={s.blockTeaserProjects}>
     <Divider />
     <HeaderM headerText={data.h} />
-    <Paragraph paragraphText={data.p} />
+    <ParagraphHalfWide paragraphText={data.p} />
     <Button buttonText={data.buttonText} href={ROUTES.PROJECTS} />
   </div>
 );

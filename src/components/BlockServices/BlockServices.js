@@ -1,7 +1,7 @@
 import { useId } from 'react';
 import s from './BlockServices.scss';
 import HeaderM from '../HeaderM/HeaderM';
-import Paragraph from '../Paragraph/Paragraph';
+import ParagraphHalfWide from '../ParagraphHalfWide/ParagraphHalfWide';
 import Button from '../Button/Button';
 import { ROUTES } from '../App/ROUTES';
 import Divider from '../Divider/Divider';
@@ -30,7 +30,7 @@ const BlockServices = ({ animationRef }) => {
     <div ref={animationRef} className={s.services}>
       <Divider />
       <HeaderM accent headerText={data.h} />
-      <Paragraph paragraphText={data.p} />
+      <ParagraphHalfWide paragraphText={data.p} />
       <div className={s.listL}>
         <ul>
           {data.items.slice(0, 3).map((item, i) => (

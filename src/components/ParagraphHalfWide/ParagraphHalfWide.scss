@@ -1,0 +1,18 @@
+@use "../App/commonVars.scss";
+
+.paragraphHalfWide {
+  grid-column: 1 / 6;
+  line-height: 1.7;
+}
+
+@media only screen and (max-width: commonVars.$screenL) {
+  .paragraphHalfWide {
+    grid-column: 1 / -1;
+  }
+}
+
+@media only screen and (max-width: commonVars.$screenM) {
+  .paragraphHalfWide {
+    font-size: 12pt;
+  }
+}
