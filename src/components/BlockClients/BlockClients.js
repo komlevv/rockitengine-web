@@ -14,8 +14,8 @@ const BlockClients = ({ animationRef }) => (
   <div ref={animationRef} className={s.blockClients}>
     <Divider />
     <HeaderM accent headerText={data.h} />
-    <img className={s.imgClientsL} src={clientLogosImgL} alt="" />
-    <img className={s.imgClientsS} src={clientLogosImgS} alt="" />
+    <img width="1360" height="670" className={s.imgClientsL} src={clientLogosImgL} alt="" />
+    <img width="760" height="900" className={s.imgClientsS} src={clientLogosImgS} alt="" />
   </div>
 );
 
