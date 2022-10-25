@@ -1,5 +1,6 @@
 .container {
   z-index: 2;
+  pointer-events: none;
   padding: 20px;
   grid-row: 1;
   grid-column: 1 / -1;
