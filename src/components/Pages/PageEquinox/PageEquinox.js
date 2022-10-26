@@ -20,6 +20,7 @@ import { THEMES } from '../../../contexts/themeContext';
 import { useSetTheme } from '../../../hooks/useSetTheme';
 import Gap from '../../Gap/Gap';
 import Animate from '../../Animate/Animate';
+import ListHalfWithHeader from '../../ListHalfWithHeader/ListHalfWithHeader';
 
 const PageEquinox = () => {
   const id = useId();
@@ -44,12 +45,7 @@ const PageEquinox = () => {
       <BlockHeroTextM headerText={data.other.b.h} paragraphText={data.other.b.p} />
       <ImageFullWide metaData={data.media.img.wide.i3} />
       <ImageHalfWide metaData={data.media.img.vertical.i3} />
-      <GridContainerHalf>
-        <HeaderS headerText={data.other.c.h} />
-        {data.other.c.items.map((itemText, i) => (
-          <ListItem text={itemText} key={`${id}-${i}`} />
-        ))}
-      </GridContainerHalf>
+      <ListHalfWithHeader h={data.other.c.h} items={data.other.c.items} />
       <GridContainerHalf>
         <Paragraph paragraphText={data.other.d.p} />
       </GridContainerHalf>

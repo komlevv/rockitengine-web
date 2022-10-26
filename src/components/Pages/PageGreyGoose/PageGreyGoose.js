@@ -17,6 +17,7 @@ import { THEMES } from '../../../contexts/themeContext';
 import { useSetTheme } from '../../../hooks/useSetTheme';
 import Gap from '../../Gap/Gap';
 import Animate from '../../Animate/Animate';
+import ListHalfWithHeader from '../../ListHalfWithHeader/ListHalfWithHeader';
 
 const PageGreyGoose = () => {
   const id = useId();
@@ -29,12 +30,7 @@ const PageGreyGoose = () => {
       <Gap />
       <BlockHeroTextM headerText={data.other.a.h} paragraphText={data.other.a.p} />
       <ImageFullWide metaData={data.media.img.wide.i2} />
-      <GridContainerHalf>
-        <HeaderS headerText={data.other.d.h} />
-        {data.other.d.items.map((itemText, i) => (
-          <ListItem text={itemText} key={`${id}-${i}`} />
-        ))}
-      </GridContainerHalf>
+      <ListHalfWithHeader h={data.other.d.h} items={data.other.d.items} />
       <ImageHalfWide metaData={data.media.img.wide.i3} />
       <ImageHalfWide metaData={data.media.img.square.i1} />
       <ImageHalfWide metaData={data.media.img.square.i2} />

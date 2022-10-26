@@ -44,7 +44,7 @@ const PageJohnHardyJM = () => {
       <ImageFullWide metaData={data.media.img.wide.i2} />
       <Gap />
       <BlockHeroTextM headerText={data.other.e.h} paragraphText={data.other.e.p} />
-      <Video controls metaData={data.media.video.wide.i3} />
+      <Video loop controls metaData={data.media.video.wide.i4} />
       <GridContainerHalf>
         <HeaderS headerText={data.other.f.h} />
       </GridContainerHalf>

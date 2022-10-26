@@ -19,6 +19,7 @@ import { THEMES } from '../../../contexts/themeContext';
 import { useSetTheme } from '../../../hooks/useSetTheme';
 import Gap from '../../Gap/Gap';
 import Animate from '../../Animate/Animate';
+import ListHalfWithHeader from '../../ListHalfWithHeader/ListHalfWithHeader';
 
 const PageSpotifyHulu = () => {
   const id = useId();
@@ -29,12 +30,7 @@ const PageSpotifyHulu = () => {
       <BlockOverview data={data.overview} />
       <ImageFullWide metaData={data.media.img.wide.i1} />
       <ImageHalfWide metaData={data.media.img.vertical.i1} />
-      <GridContainerHalf>
-        <HeaderS headerText={data.other.c.h} />
-        {data.other.c.items.map((itemText, i) => (
-          <ListItem text={itemText} key={`${id}-${i}`} />
-        ))}
-      </GridContainerHalf>
+      <ListHalfWithHeader h={data.other.c.h} items={data.other.c.items} />
       <GridContainerHalf>
         <Paragraph paragraphText={data.other.a.p} />
       </GridContainerHalf>

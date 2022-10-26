@@ -18,6 +18,7 @@ import { THEMES } from '../../../contexts/themeContext';
 import { useSetTheme } from '../../../hooks/useSetTheme';
 import Gap from '../../Gap/Gap';
 import Animate from '../../Animate/Animate';
+import ListHalfWithHeader from '../../ListHalfWithHeader/ListHalfWithHeader';
 
 const PageJMUpgrade = () => {
   const id = useId();
@@ -35,12 +36,7 @@ const PageJMUpgrade = () => {
       <Gap />
       <BlockHeroTextM headerText={data.other.b.h} paragraphText={data.other.b.p} />
       <Video controls muted loop metaData={data.media.video.wide.i3} />
-      <GridContainerHalf>
-        <HeaderS headerText={data.other.c.h} />
-        {data.other.c.items.map((itemText, i) => (
-          <ListItem text={itemText} key={`${id}-${i}`} />
-        ))}
-      </GridContainerHalf>
+      <ListHalfWithHeader h={data.other.c.h} items={data.other.c.items} />
       <ImageHalfWide metaData={data.media.img.vertical.i1} />
       <Gap />
       <BlockHeroTextM headerText={data.other.d.h} paragraphText={data.other.d.p} />
