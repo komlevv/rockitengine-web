@@ -58,7 +58,7 @@ export const data = {
         n: '03',
         h: 'Post Production',
         p:
-          'We handle every aspect of\u00A0post— from editorial through ' +
+          'We handle every aspect of\u00A0post — from editorial through ' +
           'color grading and\u00A0visual effects, to\u00A0final delivery so you can ' +
           'concentrate on\u00A0creating inspirational content.',
         subItems: [
@@ -74,11 +74,11 @@ export const data = {
         n: '04',
         h: 'Retouching',
         p:
-          'Great retouching today is\u00A0largely a\u00A0question of\u00A0taste ' +
-          'and understanding the\u00A0right amount of\u00A0enhancement that ' +
+          'Great retouching is\u00A0 all about' +
+          'understanding the\u00A0right amount of\u00A0refinement which ' +
           'goes into creating realistic look. We follow current trends and\u00A0wield ' +
           'a\u00A0wide array of\u00A0retouching &\u00A0coloring techniques, augmented ' +
-          'with 3D imagery and\u00A0an eye to\u00A0make it look right.',
+          'with 3D imagery and\u00A0an eye for detail to\u00A0make\u00A0it look just right.',
         subItems: [
           'Beauty Retouching',
           'Product Retouching',

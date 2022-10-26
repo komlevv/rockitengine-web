@@ -76,9 +76,9 @@ export const data = {
     b: {
       h: 'Approach',
       p:
-        'Promise of\u00A0substance and\u00A0style, mirrored surfaces, minimalism ' +
-        'and an\u00A0artful approach that incorporates the\u00A0surrounding ' +
-        'environment created an\u00A0arresting space for\u00A0attendees to\u00A0get back ' +
+        'We designed an\u00A0area, where substance and\u00A0style, minimalism ' +
+        'and an\u00A0artful approach incorporate the\u00A0surrounding ' +
+        'environment, creating an\u00A0arresting space for\u00A0attendees to\u00A0get back ' +
         'to\u00A0peak form.',
     },
     c: {
@@ -102,7 +102,7 @@ export const data = {
     e: {
       h: 'Brand Film',
       p:
-        'Surrounded by\u00A0the\u00A0desert landscape, the\u00A0installation was also' +
+        'Surrounded by\u00A0the\u00A0desert landscape, the\u00A0installation was ' +
         'leveraged to\u00A0create a\u00A0brand film that captured Equinox’s unique aesthetic.',
     },
     f: {
@@ -117,7 +117,7 @@ export const data = {
     h: 'Next Project',
     banner: {
       h: 'The Times Expert Traveller',
-      p: 'Your daily business challenges and\u00A0your customers’ needs.',
+      p: 'Promise of\u00A0substance and\u00A0style, minimalism and\u00A0an\u00A0artful approach',
       img: {
         src: `${URL_MEDIA}/equinox-form-next.jpg`,
         thumbnail: `${URL_MEDIA}/equinox-form-next-thumb.jpg`,

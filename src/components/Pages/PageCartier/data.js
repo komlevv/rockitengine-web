@@ -55,15 +55,15 @@ export const data = {
       h: 'Independent, Elegant, and\u00A0Instantly Recognizable',
       p:
         'We made skin-tones smooth, removed excessive wrinkles and\u00A0blemishes, repaired ' +
-        'skin texture where was necessary, and\u00A0made sure nail polish was perfect in\u00A0texture and\u00A0in color.' +
-        'The edit was color graded to\u00A0reflect Cartier confident and\u00A0powerful vibe.',
+        'skin texture where was necessary, made sure nail polish was perfect in\u00A0texture and\u00A0in color. ' +
+        "The edit was color graded to\u00A0reflect Cartier's confident and\u00A0powerful vibe.",
     },
     b: {
       h: 'Impact',
       p:
         'Clash De Cartier is\u00A0a\u00A0house icon. a\u00A0collection that deeply explores intricacies in\u00A0geometry, ' +
         'dualities, fine jewellery mechanics and\u00A0most importantly, imbuing a\u00A0clash of\u00A0attitudes. ' +
-        'RockitEngine helped Cartier realise their vision of\u00A0visual rhythm, aesthetic charm ' +
+        'We assisted Cartier in realising their vision of\u00A0visual rhythm, aesthetic charm ' +
         'and intensive elegance.',
     },
   },
@@ -71,7 +71,7 @@ export const data = {
     h: 'Next Project',
     banner: {
       h: 'Clash de Cartier',
-      p: 'An aesthetic code, a\u00A0balancing act, a\u00A0daring embodiment of\u00A0dualities.',
+      p: 'An aesthetic code of Cartier “Clash” collection puts a jewel in jewelry',
       img: {
         src: `${URL_MEDIA}/cartier-next.jpg`,
         thumbnail: `${URL_MEDIA}/cartier-next-thumb.jpg`,

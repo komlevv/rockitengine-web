@@ -68,19 +68,19 @@ export const data = {
     a: {
       h: 'Process',
       p:
-        'The live action footage we received incorporated several independent shots fused together to\u00A0look like one seamless clip. ' +
-        'To simulate the\u00A0snow effect, we were to\u00A0recreate the\u00A0scene in\u00A03d from scratch. Each shot was to\u00A0be 3d tracked, matching real ' +
-        'life lens to\u00A03-dimensional one. We then rebuilt the\u00A0venue in\u00A03d space, where we could run the\u00A0simulations for\u00A0the\u00A0snow ' +
-        'flurry, which we would later render out and\u00A0compose into the\u00A0sequence. While we were busy with the\u00A03d side of\u00A0things, ' +
-        'the\u00A0other part of\u00A0our team focused on\u00A0cleaning\u00A0up the\u00A0footage artifacts, such as\u00A0tracking markers, exit signs and\u00A0light leaks, ' +
-        'creating rotoscoping masks to\u00A0simplify the\u00A0compositing step later on.',
+        'The edit incorporated several independent shots fused together to\u00A0look like one seamless sequence. ' +
+        'To simulate the snow effect, we recreated the venue in 3d, tracking each shot to match real life lens. ' +
+        'We ran and rendered out the\u00A0simulations for\u00A0the\u00A0snow flurry, which were then composed into ' +
+        'the\u00A0edit. The\u00A0other part of\u00A0our team focused on\u00A0cleaning\u00A0up the\u00A0footage from ' +
+        'artifacts like tracking markers, exit signs and\u00A0light leaks. We rotoscoped Jessie to\u00A0better ' +
+        'integrate the\u00A0snow.',
     },
     b: {
       h: 'Matchmoving',
       p:
-        'Since live action footage was not a\u00A0truly continuous sequence, varying in\u00A0focal distance and\u00A0position within the\u00A0venue, ' +
-        'each camera had to\u00A0be tracked separately. Missing parts of\u00A0the\u00A0track were either animated by\u00A0hand or interpolated. ' +
-        'The cameras were later stitched together to\u00A0optimize the\u00A0simulation workflow.',
+        'We had three shots to\u00A0track, varying in\u00A0focal distance and\u00A0position within the\u00A0venue. ' +
+        'We animated missing parts of\u00A0the\u00A0track and combined the cameras to\u00A0optimize ' +
+        'the\u00A0simulation workflow.',
     },
     c: {
       h: 'Cleanup Tasks',
@@ -94,14 +94,15 @@ export const data = {
     e: {
       h: 'Look Development',
       p:
-        'Our client was open to\u00A0experiment with the\u00A0look, so we generated a\u00A0number of\u00A0options for\u00A0the\u00A0snow motion and' +
-        'for the\u00A0snowflake design itself. the\u00A0approved effect we arrived at\u00A0was composited into the\u00A0sequence, enhancing' +
-        'the\u00A0emotional immersion of\u00A0the\u00A0video.',
+        'We developed a\u00A0variety of\u00A0options for\u00A0the\u00A0snow motion ' +
+        'and\u00A0snowflake design. The\u00A0final effect was merged into ' +
+        'the\u00A0sequence, blending the visual symbolism with the lyrics to create ' +
+        'a lasting emotional impact.',
     },
     f: {
       h: 'Impact',
       p:
-        'The final clip premiered on\u00A0YouTube with 3.000.000+ views ' +
+        'The clip premiered on\u00A0YouTube with 3.000.000+ views ' +
         'marking a\u00A0successful video debut for\u00A0the\u00A0aspiring artist.',
     },
   },
@@ -109,7 +110,7 @@ export const data = {
     h: 'Next Project',
     banner: {
       h: 'Jessie Murph “Upgrade”',
-      p: 'An authentic performance completed with a\u00A0fierce lyrical structure',
+      p: 'An authentic performance and a\u00A0fierce lyrical structure, enhanced with visual effects',
       img: {
         src: `${URL_MEDIA}/jm-upgrade-next.jpg`,
         thumbnail: `${URL_MEDIA}/jm-upgrade-next-thumb.jpg`,

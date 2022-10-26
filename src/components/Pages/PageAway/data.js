@@ -54,30 +54,31 @@ export const data = {
     a: {
       h: 'Luggage Built to\u00A0Transform Modern Travel',
       p:
-        'The campaign wanted to\u00A0convey that personalizing your luggage/travel ' +
-        'goods lets you express your travel style in\u00A0a\u00A0whole new way by\u00A0celebrating who ' +
-        'you are, where you’ve been, and\u00A0where you’re headed next.',
+        'Personalizing your luggage/travel goods lets you express your travel style ' +
+        'in\u00A0a\u00A0whole new way by\u00A0celebrating who you are, where you’ve been, ' +
+        'and\u00A0where you’re headed next. To amplify the performance of on-screen talent ' +
+        'we beauty-retouched the sequence.',
     },
     b: {
       h: 'Process',
       p:
-        'Sometimes color spills all over the\u00A0place. We took special care color-correcting every tiny detail of\u00A0the\u00A0product to\u00A0ensure video ' +
-        'and photography perfectly matched real life samples. Multiple rotoscoping masks were creted in\u00A0Mocha Pro and\u00A0transfered down ' +
-        'the\u00A0pipeline so the\u00A0team could control each color with fine-grained precision.',
+        'We took special care color-correcting every detail of\u00A0the\u00A0product to\u00A0ensure video ' +
+        'and photography perfectly matched real life samples. We rotoscoped the items piece by piece ' +
+        'so we would have precise control over color.',
     },
     c: {
       h: 'Impact',
       p:
-        'Through imagery and\u00A0film, the\u00A0campaign told the\u00A0story of\u00A0five main characters who used only three letters to\u00A0express their ' +
-        'personalities and\u00A0add unique touches to\u00A0their personal travel uniforms. the\u00A0resulting images ran across social, OOH, media web, ' +
-        'mailers, and\u00A0in-store print.',
+        'Away used three letters to express the personalities and add unique touches to their travel uniforms. ' +
+        'The\u00A0resulting visuals ran across social, OOH, media web, mailers, and\u00A0in-store print. ' +
+        'We are happy to take part in a quest to tranform modern travel.',
     },
   },
   next: {
     h: 'Next Project',
     banner: {
       h: '“AKA” Service',
-      p: 'Away “AKA” campaign to\u00A0showcasing the\u00A0newest personalization offerings.',
+      p: 'Away “AKA” campaign showcasing the\u00A0newest personalization offerings',
       img: {
         src: `${URL_MEDIA}/away-next.jpg`,
         thumbnail: `${URL_MEDIA}/away-next-thumb.jpg`,

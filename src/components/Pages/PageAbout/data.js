@@ -54,10 +54,10 @@ export const data = {
           'In an\u00A0industry that requires ' +
           'a\u00A0ton of\u00A0communication between clients, agencies and\u00A0' +
           'vendors, it’s important not to\u00A0let acronyms, “proprietary ' +
-          'processes,” and\u00A0buzzwords lead to\u00A0confusion and\u00A0time lost.' +
+          'processes,” and\u00A0buzzwords lead to\u00A0confusion and\u00A0time lost. ' +
           'We stay transparent in\u00A0what we do, so you stay aware ' +
-          'of\u00A0any difficulties the\u00A0project faces way before the\u00A0deadline, ' +
-          'and able to\u00A0act on\u00A0it rapidly.',
+          'of\u00A0any challenges that\u00A0arise way before the\u00A0deadline, ' +
+          'and are\u00A0able to\u00A0act rapidly.',
       },
       e: {
         n: '05',
@@ -116,7 +116,7 @@ export const data = {
           'possess a\u00A0wide array of\u00A0skills, experiences and\u00A0first-hand knowledge ' +
           'that match project requirements and\u00A0your expectations. If our ' +
           'expertise doesn’t fully cover the\u00A0project, we onboard additional team ' +
-          'members from our prescreened list of\u00A0quality talent..',
+          'members from our prescreened list of\u00A0quality talent.',
       },
       c: {
         n: '03',

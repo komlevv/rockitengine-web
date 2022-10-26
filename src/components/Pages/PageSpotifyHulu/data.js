@@ -35,7 +35,7 @@ export const data = {
     h: 'Overview',
     p:
       'RockitEngine helped envision a\u00A0one-of-a-kind experience for\u00A0Spotify and\u00A0Hulu at\u00A0Cannes Lions. With a\u00A0brief to\u00A0inspire guest’s ' +
-      'discovery through spatial design, we designed and\u00A0rendered a\u00A0concept that celebrated the\u00A0natural landscape ' +
+      'discovery through spatial design, we designed and\u00A0rendered a\u00A0concept which celebrated natural landscape ' +
       "of Cannes and\u00A0the\u00A0chateau's unique architecture.",
     items: {
       a: {
@@ -63,23 +63,21 @@ export const data = {
     a: {
       h: '',
       p:
-        'Chateau Saint-Georges is\u00A0a\u00A0private historical ' +
-        'property on\u00A0the\u00A0hights of\u00A0Grasse, with ' +
-        'commending sea view over the\u00A0valley. ' +
-        'Its sublime location and\u00A044 hectares of\u00A0vines ' +
-        'in\u00A0a\u00A0single stretch make it perfect for\u00A0hosting ' +
-        'the\u00A0event. to\u00A0convey the\u00A0mood of\u00A0the\u00A0chateau, ' +
-        'RockitEngine recreated the\u00A0chateau as\u00A0a\u00A03d ' +
-        'environment and\u00A0made sure the\u00A0lighting ' +
-        'perfectly matched real life experience.',
+        'Chateau Saint-Georges is\u00A0a\u00A0private historical property on\u00A0the\u00A0hights ' +
+        'of\u00A0Grasse. Its sublime location, commending sea view over the\u00A0valley, made ' +
+        'it perfect for\u00A0hosting the\u00A0event. To\u00A0convey the\u00A0mood ' +
+        'of\u00A0the\u00A0chateau, we recreated the\u00A0space as\u00A0a\u00A03d ' +
+        'environment and\u00A0simulated the\u00A0lighting ' +
+        'to perfectly match real life experience.',
     },
     b: {
       h: 'Triumph of\u00A0Creativity',
       p:
-        'Thousands have descended upon the\u00A0French Riviera for\u00A0the\u00A0annual Cannes Lions Festival of\u00A0Creativity. Artists, podcasters ' +
-        'and influencers all set to\u00A0join each other in\u00A0relevant conversations and\u00A0to\u00A0celebrate all the\u00A0creative potential that streaming ' +
-        'has to\u00A0offer. Spotify and\u00A0Hulu did just that, co-hosting a\u00A0kickoff gathering to\u00A0toast the\u00A0best in\u00A0storytelling, culture, ' +
-        'and entertainment.',
+        'Thousands have descended upon the\u00A0French Riviera for\u00A0the\u00A0annual Cannes Lions ' +
+        'Festival of\u00A0Creativity. Artists, podcasters and influencers all set to\u00A0join each ' +
+        'other in\u00A0relevant conversations and\u00A0to\u00A0celebrate all the\u00A0creative potential ' +
+        'that streaming has to\u00A0offer. We supplemented the space with branded installations, ' +
+        'helping activate Spotify and Hulu brands',
     },
     c: {
       h: 'Visual Tone',
@@ -89,8 +87,9 @@ export const data = {
     d: {
       h: 'Impact',
       p:
-        'An evening to\u00A0remember which set a\u00A0pitch-perfect ' +
-        'tone for\u00A0a\u00A0week of\u00A0collaboration and\u00A0inspiration.',
+        'We were glad to partake in the Spotify and Hulu venture. The result of our collaboration was ' +
+        'an evening to\u00A0remember, which set a\u00A0pitch-perfect tone for\u00A0a\u00A0week ' +
+        'of\u00A0creativity and\u00A0inspiration.',
     },
   },
   next: {
@@ -101,7 +100,7 @@ export const data = {
           Spotify <sup>x</sup> Hulu Cannes Lions
         </>
       ),
-      p: 'Celebration of\u00A0the\u00A0finest in\u00A0storytelling, culture, and\u00A0entertainment.',
+      p: 'Celebration of\u00A0the\u00A0finest in\u00A0storytelling, culture, and\u00A0entertainment',
       img: {
         src: `${URL_MEDIA}/spotify-hulu-cannes-next.jpg`,
         thumbnail: `${URL_MEDIA}/spotify-hulu-cannes-next-thumb.jpg`,

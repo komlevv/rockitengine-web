@@ -67,17 +67,16 @@ export const data = {
     a: {
       h: 'Weightless',
       p:
-        'Inspired by\u00A0the\u00A0human form, the\u00A0Equinox brand, ' +
-        'and the\u00A0landscape of\u00A0Arizona’s desert, we looked ' +
-        'to\u00A0create a\u00A0reflective sanctuary space that could ' +
-        'also be used for\u00A0innovative workout classes, ' +
-        'meditations, sound baths, and\u00A0gatherings.',
+        'Inspired by\u00A0the\u00A0Chopard blue ribbon featured in\u00A0the\u00A0Happy Hearts ' +
+        'campaign, we proposed a\u00A0large scale sculpture that interacts with\u00A0' +
+        'store’s architecture making for\u00A0an\u00A0eye catching intervention on\u00A0the\u00A0' +
+        'street, whilst creating a\u00A0playful experience for\u00A0the\u00A0store re-opening.',
     },
     b: {
       h: '',
       p:
         'The beautifully expanded and\u00A0refurbished store reflects Chopard’s Journey to\u00A0Sustainable Luxury, using local ' +
-        'environmentally friendly materials and\u00A0collaborating with local artists. to\u00A0create an\u00A0immersive experience RockitEngine ' +
+        'environmentally friendly materials and\u00A0collaborating with local artists. To\u00A0create an\u00A0immersive experience we ' +
         'developed both daily and\u00A0nightly looks of\u00A0the\u00A0decorative sculpture.',
     },
     c: {
@@ -101,10 +100,10 @@ export const data = {
     f: {
       h: 'Neovictorian',
       p:
-        'An installation that transforms the\u00A0New Bond Street facade into a\u00A0contemporary floral scape, glistening and\u00A0' +
+        'We disigned an installation that transforms the\u00A0New Bond Street facade into a\u00A0contemporary floral scape, glistening and\u00A0' +
         'breathing with the\u00A0city. Taking inspiration from the\u00A0stores modern take on\u00A0Victorian inspired decor and\u00A0classic English ' +
         'floral patterns in\u00A0the\u00A0vain of\u00A0William Morris, the\u00A0store opening event will transport guests through a\u00A0surreal yet ' +
-        'contemporaryVictorian hanging garden into a\u00A0space ready to\u00A0be painted by\u00A0Thomas Gainsborough.',
+        'contemporary victorian hanging garden into\u00A0a\u00A0space ready to\u00A0be painted by\u00A0Thomas Gainsborough.',
     },
     g: {
       h: '',
