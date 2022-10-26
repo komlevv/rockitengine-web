@@ -4,27 +4,6 @@ import './polyfill';
 import App from '../components/App/App';
 import { URL_FONTS } from '../components/App/ROUTES';
 
-const functionBodyToString = (fn) => {
-  const fnString = fn.toString();
-  return fnString.substring(fnString.indexOf('{') + 1, fnString.lastIndexOf('}'));
-};
-
-const styleBaseFadeIn = { opacity: 0, transition: 'opacity 1s ease-in' };
-
-const handleFadeIn = () => {
-  /* eslint-disable prefer-arrow-callback */
-  setTimeout(
-    function () {
-      document.body.style.opacity = 1;
-    },
-    setTimeout(function () {
-      document.body.style = null;
-    }, 1000),
-    1000
-  );
-  /* eslint-enable */
-};
-
 const Html = ({ children }) => (
   <html lang="en-US">
     <head>
@@ -40,8 +19,7 @@ const Html = ({ children }) => (
       <link href="/main.css" rel="stylesheet" />
       <title>RockitEngine - Design & Development</title>
     </head>
-    <body style={styleBaseFadeIn}>
-      <script dangerouslySetInnerHTML={{ __html: functionBodyToString(handleFadeIn) }} />
+    <body>
       <div id="root">{children}</div>
     </body>
   </html>
