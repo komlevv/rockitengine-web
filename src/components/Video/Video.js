@@ -3,7 +3,7 @@ import s from './Video.scss';
 import Image from '../Image/Image';
 import Spinner from '../Spinner/Spinner';
 import { useIntersectionObserver } from '../../hooks/useIntersectionObserver';
-import { getExtension } from '../../utils/utils';
+import { delay, getExtension } from '../../utils/utils';
 
 // todo: this is a Work in Progress
 const IconPlay = () => (
@@ -76,7 +76,11 @@ const Video = ({
 
   const [buttonFadeOut, setButtonFadeOut] = useState('');
   const handleButtonClick = () => {
-    if (!buttonFadeOut) setButtonFadeOut(s.fadeOut);
+    if (!buttonFadeOut) {
+      delay(500).then(() => {
+        if (playing || waiting) setButtonFadeOut(s.fadeOut);
+      });
+    }
     if (progressHidden) setProgressHidden(false);
 
     if (!playing.current && !waiting.current) {

@@ -42,20 +42,9 @@
   position: relative;
 }
 
-.video:hover ~ .button {
-  opacity: 1;
-  background-color: white;
-  /* keep 0.09px here, rendering bug causes flicker on Chrome */
-  box-shadow: inset 52px 0 0 0.09px #faf8f3;
-}
-
 .button > svg {
   width: 15px;
   color: white;
-}
-
-.video:hover ~ .button > svg {
-  color: black;
 }
 
 .button::after {
@@ -113,4 +102,18 @@ $progressForeground: #a5a5a5;
 
 .progress[value]::-webkit-progress-value {
   background-color: $progressForeground;
+}
+
+// disable hover events on non-supporting devices
+@media (hover: hover) {
+  .video:hover ~ .button {
+    opacity: 1;
+    background-color: white;
+    /* keep 0.09px here, rendering bug causes flicker on Chrome */
+    box-shadow: inset 52px 0 0 0.09px #faf8f3;
+  }
+
+  .video:hover ~ .button > svg {
+    color: black;
+  }
 }
