@@ -33,5 +33,11 @@ module.exports = {
         message: 'Expected variable to be camelCase',
       },
     ],
+    'scss/at-mixin-pattern': [
+      '^[a-z][a-zA-Z0-9]+$',
+      {
+        message: 'Expected mixin to be camelCase',
+      },
+    ],
   },
 };
