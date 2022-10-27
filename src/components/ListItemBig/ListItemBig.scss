@@ -40,7 +40,6 @@
   .listItemBigSubBlock {
     grid-column: 1 / -1;
     grid-template-columns: repeat(10, 1fr);
-    gap: 20px;
   }
 
   .listItemBigSubBlock > div {
