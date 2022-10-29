@@ -58,7 +58,3 @@ $selectionColor: #393939;
 ::selection {
   background: $selectionColor;
 }
-
-::-moz-selection {
-  background: $selectionColor;
-}

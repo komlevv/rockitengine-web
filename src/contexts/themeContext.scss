@@ -1,14 +1,14 @@
 /* todo too much boilerplate here, this needs a rewamp */
-$defaultAccent: #EECCAA;
-$equinoxAccent: #0070BE;
-$chopardAccent: #1C60E8;
-$spotifyHuluAccent: #1ED560;
-$greyGooseAccent: #0054CE;
+$defaultAccent: #eca;
+$equinoxAccent: #0070be;
+$chopardAccent: #1c60e8;
+$spotifyHuluAccent: #1ed560;
+$greyGooseAccent: #0054ce;
 $jMUpgradeAccent: #658269;
-$awayAccent: #EF3C29;
-$cartierAccent: #99140A;
-$johnHardyAAAccent: #AFA74A;
-$johnHardyJMAccent: #B17F4A;
+$awayAccent: #ef3c29;
+$cartierAccent: #99140a;
+$johnHardyAAAccent: #afa74a;
+$johnHardyJMAccent: #b17f4a;
 $defaultTransition: all 0.3s ease-in-out;
 
 :export {
@@ -81,7 +81,7 @@ $defaultTransition: all 0.3s ease-in-out;
   composes: defaultMenuHover;
 }
 
-.equinoxMenuHover:hover, {
+.equinoxMenuHover:hover {
   color: $equinoxAccent;
 }
 
