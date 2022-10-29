@@ -1,11 +1,11 @@
 remote_machines:
   hosts:
-    vm_remote:
+    remote:
       ansible_host: 107.152.43.183
 
 local_machines:
   hosts:
-    vm_local:
+    local:
       ansible_host: 192.168.56.40
       ansible_ssh_host: 192.168.56.40
       ansible_ssh_user: vagrant

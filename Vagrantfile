@@ -16,7 +16,7 @@ require 'yaml'
 inventory_local = YAML.load_file('./provision/inventory.yml')["local_machines"]["hosts"]
 
 nodes = {
-  :vm_local => inventory_local["vm_local"]["ansible_host"],
+  :local => inventory_local["local"]["ansible_host"],
 }
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
@@ -24,7 +24,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.define node_name do |node_config|
       node_config.vm.box = "almalinux/8" # todo replace with own build here
       node_config.vm.synced_folder "./provision", "/provision/", mount_options: ["dmode=755"]
-      node_config.vm.synced_folder "./.vagrant/machines/vm_local/virtualbox",
+      node_config.vm.synced_folder "./.vagrant/machines/local/virtualbox",
                                    "/key/", mount_options: ["dmode=755,fmode=600" ]
       node_config.vm.network :private_network, ip: node_ip
       node_config.vm.hostname = "#{node_name}"
