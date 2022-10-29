@@ -25,7 +25,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       node_config.vm.box = "almalinux/8" # todo replace with own build here
       node_config.vm.synced_folder "./provision", "/provision/", mount_options: ["dmode=755"]
       node_config.vm.synced_folder "./.vagrant/machines/local/virtualbox",
-                                   "/key/", mount_options: ["dmode=755,fmode=600" ]
+                                   "/key/", mount_options: ["dmode=755,fmode=600"]
       node_config.vm.network :private_network, ip: node_ip
       node_config.vm.hostname = "#{node_name}"
       node_config.vm.base_mac = nil # each machine should have unique mac
@@ -43,6 +43,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       # enable epel for latest ansible version
       node_config.vm.provision :shell, inline: "yum -y install epel-release"
       node_config.vm.provision :shell, inline: $set_env_vars
+      # ansible_local needs known_hosts populated or private_key auth will fail
+      node_config.vm.provision :shell, privileged: false,
+                               inline: "ssh-keyscan #{node_ip} >> /home/vagrant/.ssh/known_hosts"
       node_config.vm.provision :ansible_local, run: "always" do |ansible|
         ansible.compatibility_mode = "2.0"
         ansible.inventory_path = '/provision/inventory.yml'
