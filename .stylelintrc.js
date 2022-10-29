@@ -1,7 +1,7 @@
 module.exports = {
   plugins: ['stylelint-prettier'],
   linebreaks: 'unix',
-  ignoreFiles: ['**/*.js'],
+  ignoreFiles: ['**/*.js', 'dist/*'],
   extends: ['stylelint-config-standard-scss', 'stylelint-config-prettier'],
   rules: {
     'prettier/prettier': true,
