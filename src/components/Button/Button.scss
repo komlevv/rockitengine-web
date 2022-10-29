@@ -10,7 +10,8 @@
   position: relative;
 }
 
-.button:hover {
+.button:hover,
+.button:active {
   /* keep 0.09px here, rendering bug causes flicker on Chrome */
   box-shadow: inset 210px 0 0 0.09px #faf8f3;
   color: black;
