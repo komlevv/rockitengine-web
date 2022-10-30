@@ -4,12 +4,9 @@ import BlockOverview from '../../BlockOverview/BlockOverview';
 import BlockProjectNext from '../../BlockProjectNext/BlockProjectNext';
 import BlockContact from '../../BlockContact/BlockContact';
 import BlockHeroTextM from '../../BlockHeroTextM/BlockHeroTextM';
-import GridContainerHalf from '../../GridContainerHalf/GridContainerHalf';
 import ImageFullWide from '../../ImageFullWide/ImageFullWide';
 import ImageHalfWide from '../../ImageHalfWide/ImageHalfWide';
 import ImageOneThird from '../../ImageOneThird/ImageOneThird';
-import HeaderS from '../../HeaderS/HeaderS';
-import ListItem from '../../ListItem/ListItem';
 import Video from '../../Video/Video';
 
 import { data } from './data';

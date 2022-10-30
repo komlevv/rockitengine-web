@@ -11,7 +11,6 @@ import ImageOneThird from '../../ImageOneThird/ImageOneThird';
 import ImageTwoThird from '../../ImageTwoThird/ImageTwoThird';
 import HeaderS from '../../HeaderS/HeaderS';
 import Paragraph from '../../Paragraph/Paragraph';
-import ListItem from '../../ListItem/ListItem';
 import Video from '../../Video/Video';
 
 import { data } from './data';

@@ -9,9 +9,7 @@ import ImageFullWide from '../../ImageFullWide/ImageFullWide';
 import ImageHalfWide from '../../ImageHalfWide/ImageHalfWide';
 import ImageOneThird from '../../ImageOneThird/ImageOneThird';
 import ImageTwoThird from '../../ImageTwoThird/ImageTwoThird';
-import HeaderS from '../../HeaderS/HeaderS';
 import Paragraph from '../../Paragraph/Paragraph';
-import ListItem from '../../ListItem/ListItem';
 
 import { data } from './data';
 import { data as dataNext } from '../PageJohnHardyAA/data';
