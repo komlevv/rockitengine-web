@@ -1,19 +1,19 @@
 @use "../App/commonVars.scss";
 
 h4 {
-  font-size: 29pt;
+  font-size: 38px;
   font-weight: 300;
   margin: 0;
 }
 
 @media only screen and (max-width: commonVars.$screenL) {
   h4 {
-    font-size: 25pt;
+    font-size: 33px;
   }
 }
 
 @media only screen and (max-width: commonVars.$screenM) {
   h4 {
-    font-size: 19pt;
+    font-size: 25px;
   }
 }
