@@ -45,6 +45,10 @@ stores private key to dev machine required by Ansible \
   and fixing this is out of scope for this repo
 - Vagrant on Windows: `npm install` symlinks won't work.
   To make them work you need to run `vagrant up` as admin
+- Since development host doesn't have Node or NPM installed,
+  Husky commit hooks will not work from outside of Vagrant VM, so git should be authorized and run
+  from inside Vagrant VM for now. Linting should be handled by CI server ideally, but it's out of scope
+  for now.
 
 ## Common commands:
 
