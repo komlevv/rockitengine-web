@@ -2,7 +2,8 @@ import { ROUTES, URL_MEDIA } from '../../App/ROUTES';
 import Span from '../../Span/Span';
 
 const logoSpotifyHuluH = `${URL_MEDIA}/spotify-hulu-cannes-logo-h.svg`;
-const logoSpotifyHuluV = `${URL_MEDIA}/spotify-hulu-cannes-logo-v.svg`;
+const logoSpotifyHuluHV2 = `${URL_MEDIA}/spotify-hulu-cannes-logo-h-v2.svg`;
+// const logoSpotifyHuluV = `${URL_MEDIA}/spotify-hulu-cannes-logo-v.svg`;
 
 export const data = {
   main: {
@@ -95,11 +96,7 @@ export const data = {
   next: {
     h: 'Next Project',
     banner: {
-      h: (
-        <>
-          Spotify <sup>x</sup> Hulu Cannes Lions
-        </>
-      ),
+      h: <>Cannes Lions Party</>,
       p: 'Celebration of\u00A0the\u00A0finest in\u00A0storytelling, culture, and\u00A0entertainment',
       img: {
         src: `${URL_MEDIA}/spotify-hulu-cannes-next.jpg`,
@@ -107,7 +104,7 @@ export const data = {
         width: 1360,
         height: 460,
       },
-      logo: logoSpotifyHuluV,
+      logo: logoSpotifyHuluHV2,
       fontColor: 'white',
       linkTo: ROUTES.PROJECTS_SPOTIFY_HULU_C,
     },

@@ -2,6 +2,7 @@ import { ROUTES, URL_MEDIA } from '../../App/ROUTES';
 import Span from '../../Span/Span';
 
 const logoGGVertical = `${URL_MEDIA}/grey-goose-logo-black-v.svg`;
+const logoGGHorizontal = `${URL_MEDIA}/grey-goose-logo-black-h.svg`;
 
 export const data = {
   main: {
@@ -108,7 +109,7 @@ export const data = {
         width: 1360,
         height: 460,
       },
-      logo: logoGGVertical,
+      logo: logoGGHorizontal,
       fontColor: 'white',
       linkTo: ROUTES.PROJECTS_GOOSE_F,
     },

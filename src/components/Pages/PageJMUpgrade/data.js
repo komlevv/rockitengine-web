@@ -1,11 +1,12 @@
 import { ROUTES, URL_MEDIA } from '../../App/ROUTES';
 import Span from '../../Span/Span';
 
-const logoJM = `${URL_MEDIA}/jm-upgrade-logo.svg`;
+const logoJMVertical = `${URL_MEDIA}/jm-upgrade-logo.svg`;
+const logoJMHorizontal = `${URL_MEDIA}/jm-upgrade-logo-v2.svg`;
 
 export const data = {
   main: {
-    logo: logoJM,
+    logo: logoJMVertical,
     h: (
       <>
         Jessie Murph <Span>“Upgrade”</Span>
@@ -117,7 +118,7 @@ export const data = {
         width: 1360,
         height: 460,
       },
-      logo: logoJM,
+      logo: logoJMHorizontal,
       fontColor: 'white',
       linkTo: ROUTES.PROJECTS_JM_UPGRADE,
     },
