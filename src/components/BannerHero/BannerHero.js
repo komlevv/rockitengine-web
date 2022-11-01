@@ -3,6 +3,7 @@ import s from './BannerHero.scss';
 import Paragraph from '../Paragraph/Paragraph';
 import HeaderL from '../HeaderL/HeaderL';
 import Image from '../Image/Image';
+import Button from '../Button/Button';
 
 const BannerHero = ({
   headerText,
@@ -27,6 +28,7 @@ const BannerHero = ({
       <HeaderL headerText={headerText} />
       <img alt="" style={{ filter: 'invert(100%)' }} className={s.bannerLogo} src={logoSrc} />
       <Paragraph paragraphText={paragraphText} />
+      <Button buttonText="View Case Study" href={linkTo} />
       <Image metaData={imgData} cls={s} />
     </div>
   );
