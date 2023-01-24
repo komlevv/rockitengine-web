@@ -10,3 +10,16 @@
     sysctl_set: yes
     state: present
     reload: yes
+
+
+- name: Install syslog
+  dnf:
+    name: rsyslog
+    state: present
+
+- name: Enable and start syslog service
+  systemd:
+    daemon_reload: true
+    enabled: yes
+    state: started
+    name: rsyslog

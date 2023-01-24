@@ -33,4 +33,5 @@
     minute: "0"
     hour: "0"
     user: root
-    job: "certbot renew --quiet"
+    # certbot renew requires unbound port 80, which is occupied by nginx
+    job: "systemctl stop nginx; certbot renew --quiet; systemctl start nginx"
