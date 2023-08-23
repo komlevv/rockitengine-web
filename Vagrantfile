@@ -38,7 +38,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/vagrant", "1"]
       end
       node_config.vm.provision :shell, inline: "dnf -y install epel-release"
-      # rsync used to sync static media to remote host
+      # rsync used to sync static media to remote host, TODO move this to playbook
       node_config.vm.provision :shell, inline: "dnf -y install rsync"
       node_config.vm.provision :shell, inline: "dnf -y install ansible-core-2.14.*"
       # ansible_local needs known_hosts populated or private_key auth will fail
