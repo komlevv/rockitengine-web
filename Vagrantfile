@@ -38,6 +38,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/vagrant", "1"]
       end
       node_config.vm.provision :shell, inline: "dnf -y install epel-release"
+      # rsync used to sync static media to remote host
+      node_config.vm.provision :shell, inline: "dnf -y install rsync"
       node_config.vm.provision :shell, inline: "dnf -y install ansible-core-2.14.*"
       # ansible_local needs known_hosts populated or private_key auth will fail
       node_config.vm.provision :shell, privileged: false,
@@ -46,6 +48,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       node_config.vm.provision :shell, privileged: false,
                                inline: "ansible-galaxy collection install community.general"
       # need posix for sysctl module to work, see https://github.com/ansible/ansible/issues/68416
+      node_config.vm.provision :shell, privileged: false,
+                               inline: "ansible-galaxy collection install ansible.posix"
+      # need for containers.podman.podman_image to work
       node_config.vm.provision :shell, privileged: false,
                                inline: "ansible-galaxy collection install ansible.posix"
       node_config.vm.provision :ansible_local, run: "always" do |ansible|
