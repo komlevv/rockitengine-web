@@ -1,7 +1,7 @@
 remote_machines:
   hosts:
     remote:
-      ansible_host: 107.152.43.183
+      ansible_host: 192.3.24.151
 
 local_machines:
   hosts:
