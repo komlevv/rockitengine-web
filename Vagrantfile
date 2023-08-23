@@ -45,6 +45,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       # enable ansible yaml output
       node_config.vm.provision :shell, privileged: false,
                                inline: "ansible-galaxy collection install community.general"
+      # need posix for sysctl module to work, see https://github.com/ansible/ansible/issues/68416
+      node_config.vm.provision :shell, privileged: false,
+                               inline: "ansible-galaxy collection install ansible.posix"
       node_config.vm.provision :ansible_local, run: "always" do |ansible|
         ansible.install = false
         ansible.compatibility_mode = "auto"
