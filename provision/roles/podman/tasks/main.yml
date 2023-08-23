@@ -3,8 +3,8 @@
 - name: Install Podman & Podman-docker CLI
   dnf:
     name:
-      - podman-4.1.*
-      - podman-docker-4.1.*
+      - podman-4.4.*
+      - podman-docker-4.4.*
     state: present
 
 - name: Install docker-compose
